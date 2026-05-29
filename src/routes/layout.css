@@ -2,23 +2,18 @@
 @import "tailwindcss";
 @plugin '@tailwindcss/typography';
 
+@theme {
+  --color-textDark: #64a6d2;
+  --color-textLight: #dce5df;
+}
+
 * {
-  font-family: sofi "Roboto";
-  font-weight: 500;
+  font-family: "Roboto";
 }
-.barItem {
-  padding: 10px;
-  border: 2px solid black;
-  border-radius: 8px;
-
-  font-weight: light;
-  text-align: center;
-
-  color: #dce5df;
-
-  /* min-width: 5%; */
-}
-
-.siteTitle {
-  color: #dce5df;
+.mainContainer.homepage {
+  background-image:
+    linear-gradient(rgba(5, 29, 52, 0.9), rgba(5, 29, 52, 0.9)),
+    url("../lib/images/background_image.webp");
+  background-size: cover;
+  background-position: center;
 }
