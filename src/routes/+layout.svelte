@@ -22,17 +22,19 @@
       >
     </div>
     <div
-      class="navItems flex flex-wrap gap-4 sm:gap-9 text-textLight text-xs sm:text-base"
+      class="navItems flex flex-wrap gap-4 sm:gap-9 text-textLight text-xs sm:text-base *:rounded-md"
     >
-      <div class="barItem">Home</div>
-      <div class="barItem">Gods</div>
-      <div class="barItem">Boons</div>
-      <div class="barItem">Weapons</div>
-      <div class="barItem">Arcana Cards</div>
-      <div class="barItem">Tools</div>
-      <div class="barItem">Items</div>
-      <div class="barItem">Keepsakes</div>
-      <div class="barItem">Curses</div>
+      <a class="barItem" href="/">Home</a>
+      <a class="barItem" href="/hades2/gods">Gods</a>
+      <a class="barItem" href="/hades2/boons">Boons</a>
+      <a class="barItem" href="/hades2/weapons">Weapons</a>
+      <a class="barItem" href="/hades2/cards">Arcana Cards</a>
+      <a class="barItem" href="/hades2/tools">Tools</a>
+      <a class="barItem" href="/hades2/items">Items</a>
+      <a class="barItem" href="/hades2/keepsakes">Keepsakes</a>
+      <a class="barItem" href="/hades2/curses">Curses</a>
+      <a class="barItem" href="/hades2/incantations">Incantations</a>
+      <a class="barItem" href="/hades2/animals">Animal Familiars</a>
     </div>
   </nav>
   <div class="contentContainer flex-1 w-full flex-col">
