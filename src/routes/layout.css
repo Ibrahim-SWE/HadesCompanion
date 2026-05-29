@@ -1,2 +1,24 @@
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
 @plugin '@tailwindcss/typography';
+
+* {
+  font-family: sofi "Roboto";
+  font-weight: 500;
+}
+.barItem {
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 8px;
+
+  font-weight: light;
+  text-align: center;
+
+  color: #dce5df;
+
+  /* min-width: 5%; */
+}
+
+.siteTitle {
+  color: #dce5df;
+}
