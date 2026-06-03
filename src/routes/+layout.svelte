@@ -13,18 +13,48 @@
   class="mainContainer bg-[#07110b] min-w-screen min-h-dvh flex flex-col items-center font-normal"
   class:homepage={page.url.pathname === "/"}
 >
-  <nav
-    class="navBar flex items-center justify-center w-full px-4 py-1 gap-1 sm:gap-2 md:gap-3 bg-[#162116] pt-2 pb-2 border-t border-b border-[#3f4f39]"
+  <!-- top bar: logo/title + locked toggles -->
+  <header
+    class="topBar flex items-center justify-between w-full px-4 py-1 bg-[#0b160b] border-b border-[#2a3a2a]"
   >
-    <div class="titleContainer flex items-center gap-2 mr-6 sm:mr-12">
-      <img src={favicon} alt="logo" class="w-6 h-6" />
-      <span
-        class="text-textLight font-semibold text-sm sm:text-base whitespace-nowrap"
+    <div class="flex items-center gap-2">
+      <img src={favicon} alt="logo" class="w-5 h-5" />
+      <span class="text-textLight font-semibold text-sm whitespace-nowrap"
         >Hades Companion</span
       >
     </div>
+    <div class="flex items-center gap-2">
+      <!-- game version toggle (locked to Hades 2) -->
+      <div
+        class="flex items-center bg-[#0f1f0f] border border-[#2e3e2e] rounded-full p-0.5 text-[11px] cursor-not-allowed select-none"
+        title="Hades 1 support coming soon"
+      >
+        <span class="px-2 py-0.5 rounded-full text-[#5a6e56]">Hades 1</span>
+        <span
+          class="px-2 py-0.5 rounded-full bg-[#2a4430] text-[#c8dfc0] font-medium"
+          >Hades 2</span
+        >
+      </div>
+      <!-- theme toggle (locked to Dark) -->
+      <div
+        class="flex items-center bg-[#0f1f0f] border border-[#2e3e2e] rounded-full p-0.5 text-[11px] cursor-not-allowed select-none"
+        title="Light theme coming soon"
+      >
+        <span
+          class="px-2 py-0.5 rounded-full bg-[#2a4430] text-[#c8dfc0] font-medium"
+          >Dark</span
+        >
+        <span class="px-2 py-0.5 rounded-full text-[#5a6e56]">Light</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- nav bar: page links only -->
+  <nav
+    class="navBar flex items-center justify-center w-full px-4 py-1.5 gap-1 sm:gap-2 md:gap-3 bg-[#162116] border-b border-[#3f4f39]"
+  >
     <div
-      class="navItems flex flex-wrap gap-4 sm:gap-9 text-textLight text-xs sm:text-base *:rounded-md"
+      class="navItems flex flex-wrap gap-2 sm:gap-3 md:gap-4 lg:gap-9 text-textLight text-xs sm:text-sm *:rounded-md"
     >
       <a class="barItem" href={resolve("/")}>Home</a>
       <a class="barItem" href={resolve("/hades2/gods")}>Gods</a>

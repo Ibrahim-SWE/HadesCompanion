@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { resolve } from "$app/paths";
   const features = [
     {
       title: "Gods",
@@ -69,7 +70,7 @@
   >
     {#each features as f (f.title)}
       <a
-        href={f.route}
+        href={resolve(f.route)}
         class="bg-white/15 border border-white/10 rounded-xl p-5 flex flex-col gap-2 last:col-span-full"
       >
         <h2 class="text-textDark font-semibold text-lg">{f.title}</h2>
