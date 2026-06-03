@@ -1,5 +1,6 @@
 <script lang="ts">
   import Boon from "$lib/components/Boon.svelte";
+  import Container from "$lib/components/Container.svelte";
   import boonsData from "$lib/data/hades2/boons.json";
 
   type DescriptionPart =
@@ -24,9 +25,7 @@
   const boonEntries = Object.entries(boonsData) as [string, BoonData][];
 </script>
 
-<section
-  class="max-w-7xl items-center flex flex-col bg-[#343f34] p-1 border border-[#4c5a44] mt-2"
->
+<Container>
   <div class="filtersContainer"></div>
   <div
     class="boonsGridContainer grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-1"
@@ -35,4 +34,4 @@
       <Boon {boon} />
     {/each}
   </div>
-</section>
+</Container>
