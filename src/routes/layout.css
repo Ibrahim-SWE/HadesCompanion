@@ -3,8 +3,14 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-  --color-textDark: #64a6d2;
-  --color-textLight: #dce5df;
+  --color-textDark: #8fbb8c;
+  --color-textLight: #d8e3d0;
+
+  --color-common: #d6d1c2;
+  --color-rare: #3f35ec;
+  --color-epic: #9c37a6;
+  --color-heroic: #d0102b;
+  --color-otherRarities: #1dbf11;
 }
 
 * {
@@ -12,10 +18,11 @@
 }
 .mainContainer {
   background-image:
-    linear-gradient(rgba(5, 29, 52, 0.9), rgba(5, 29, 52, 0.9)),
+    linear-gradient(rgba(6, 14, 8, 0.92), rgba(11, 20, 12, 0.94)),
     url("../lib/images/background_image.webp");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 .navItems a {
@@ -26,6 +33,17 @@
   transition: background-color 0.25s ease;
 }
 .navItems a:hover {
-  color: white;
-  background-color: rgba(255, 255, 255, 0.1);
+  color: #eff7e8;
+  background-color: rgba(147, 177, 120, 0.12);
+}
+
+.regularBoon {
+  background-color: rgba(21, 29, 20, 0.8);
+  border: 1px solid rgba(66, 81, 58, 0 0.8);
+}
+
+.detailsContainer > span {
+  background-color: #313430cc;
+  /* padding: 2px 6px; */
+  border: solid 1px #4d5449;
 }
