@@ -1,0 +1,62 @@
+{
+  "Apollo": {
+    "title": "God of Light",
+    "hades_1": null,
+    "hades_2": { "keepsake": "Harmonic Photon", "curses": ["Daze"] }
+  },
+  "Aphrodite": {
+    "title": "Goddess of Love",
+    "hades_1": { "keepsake": "Eternal Rose", "curses": ["Weak"] },
+    "hades_2": { "keepsake": "Beautiful Mirror", "curses": ["Weak"] }
+  },
+  "Ares": {
+    "title": "God of War",
+    "hades_1": { "keepsake": "Blood-Filled Vial", "curses": ["Doom"] },
+    "hades_2": { "keepsake": "Sword Hilt", "curses": ["Wounds"] }
+  },
+  "Artemis": {
+    "title": "Goddess of the Hunt",
+    "hades_1": { "keepsake": "Adamant Arrowhead", "curses": ["Marked"] },
+    "hades_2": { "keepsake": "White Antler", "curses": ["Marked"] }
+  },
+  "Athena": {
+    "title": "Goddess of Wisdom",
+    "hades_1": { "keepsake": "Owl Pendant", "curses": ["Exposed"] },
+    "hades_2": { "keepsake": "Gorgon Amulet", "curses": [] }
+  },
+  "Demeter": {
+    "title": "Goddess of Seasons",
+    "hades_1": { "keepsake": "Frostbitten Horn", "curses": ["Chill"] },
+    "hades_2": { "keepsake": "Barley Sheaf", "curses": ["Freeze", "Gust"] }
+  },
+  "Hephaestus": {
+    "title": "God of the Forge",
+    "hades_1": null,
+    "hades_2": { "keepsake": "Adamant Shard", "curses": ["Glow"] }
+  },
+  "Hera": {
+    "title": "Queen of the Gods",
+    "hades_1": null,
+    "hades_2": { "keepsake": "Iridescent Fan", "curses": ["Hitch"] }
+  },
+  "Hermes": {
+    "title": "God of Swiftness",
+    "hades_1": { "keepsake": "Lambent Plume", "curses": [] },
+    "hades_2": { "keepsake": "Metallic Droplet", "curses": [] }
+  },
+  "Hestia": {
+    "title": "Goddess of the Hearth",
+    "hades_1": null,
+    "hades_2": { "keepsake": "Everlasting Ember", "curses": ["Scorch"] }
+  },
+  "Poseidon": {
+    "title": "God of the Sea",
+    "hades_1": { "keepsake": "Conch Shell", "curses": ["Ruptured"] },
+    "hades_2": { "keepsake": "Vivid Sea", "curses": ["Froth"] }
+  },
+  "Zeus": {
+    "title": "King of the Olympians",
+    "hades_1": { "keepsake": "Thunder Signet", "curses": ["Jolted"] },
+    "hades_2": { "keepsake": "Cloud Bangle", "curses": ["Blitz"] }
+  }
+}
