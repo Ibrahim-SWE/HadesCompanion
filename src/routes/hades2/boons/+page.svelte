@@ -2,6 +2,40 @@
   import Boon from "$lib/components/Boon.svelte";
   import Container from "$lib/components/Container.svelte";
   import boonsData from "$lib/data/hades2/boons.json";
+  import godsData from "$lib/data/gods.json";
+
+  type godsKeepsakeAndCurses = { keepsake: string; curses: string[] };
+
+  type GodDetails = {
+    title: string;
+    hades_1: godsKeepsakeAndCurses | null;
+    hades_2: godsKeepsakeAndCurses | null;
+  };
+  const gods: Record<string, GodDetails> = godsData;
+  const sortedGodNames: string[] = Object.keys(gods).sort();
+
+  let godsSelected = 2;
+  let isGodsMenuOpen = $state(false);
+  let selectedGods: string[] = $state([]);
+  const toggleDropdown = () => {
+    isGodsMenuOpen = !isGodsMenuOpen;
+  };
+
+  function clickOutside(node: HTMLElement, handler: () => void) {
+    const handleClick = (event: MouseEvent) => {
+      if (node && !node.contains(event.target as Node)) {
+        handler();
+      }
+    };
+
+    document.addEventListener("click", handleClick, true);
+
+    return {
+      destroy() {
+        document.removeEventListener("click", handleClick, true);
+      },
+    };
+  }
 
   type DescriptionPart =
     | { type: "text_normal"; value: string }
@@ -23,14 +57,82 @@
   };
 
   const boonEntries = Object.entries(boonsData) as [string, BoonData][];
+
+  let filteredBoons = $derived(
+    selectedGods.length === 0
+      ? boonEntries
+      : boonEntries.filter(([boonId, boonDetails]) => {
+          return boonDetails.gods.some((god) => selectedGods.includes(god));
+        }),
+  );
 </script>
 
 <Container>
-  <div class="filtersContainer"></div>
+  <div class="filtersContainer mb-1">
+    <div
+      class="godsFilterContainer relative inline-block justify-center items-center"
+      use:clickOutside={() => (isGodsMenuOpen = false)}
+    >
+      <button
+        type="button"
+        onclick={toggleDropdown}
+        class="border border-white/25 p-2 rounded-xl text-textLight bg-emerald-950/30 flex items-center gap-2"
+      >
+        Gods {#if selectedGods.length > 0}({selectedGods.length}){/if}
+        <span class="arrow text-xs ml-1">{isGodsMenuOpen ? "▲" : "▼"}</span>
+      </button>
+
+      {#if isGodsMenuOpen}
+        <div
+          class="dropdownMenuGods absolute flex flex-col z-10 left-1/2 -translate-x-1/2 w-max bg-emerald-950 border border-white/20 text-white/90 p-2 rounded-xl mt-1"
+        >
+          {#each sortedGodNames as god (god)}
+            <label
+              class="flex items-center gap-3 p-2 cursor-pointer hover:bg-white/10 rounded-lg transition-colors select-none group"
+            >
+              <input
+                class="sr-only peer"
+                type="checkbox"
+                value={god}
+                bind:group={selectedGods}
+              />
+
+              <div
+                class="w-5 h-5 flex items-center justify-center border-2 border-white/30 rounded-md bg-emerald-950/50
+                      transition-all duration-200
+                      peer-checked:bg-emerald-500 peer-checked:border-emerald-400
+                      group-hover:border-white/60
+                      peer-focus-visible:ring-2 peer-focus-visible:ring-emerald-400"
+              >
+                <svg
+                  class="w-3.5 h-3.5 text-emerald-950 scale-0 transition-transform duration-200 peer-checked:scale-100"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+
+              <span
+                class="godName text-sm font-medium tracking-wide text-white/80 group-hover:text-white transition-colors"
+              >
+                {god}
+              </span>
+            </label>
+          {/each}
+        </div>
+      {/if}
+    </div>
+  </div>
   <div
     class="boonsGridContainer grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-1"
   >
-    {#each boonEntries as [boonId, boon] (boonId)}
+    {#each filteredBoons as [boonId, boon] (boonId)}
       <Boon {boon} />
     {/each}
   </div>

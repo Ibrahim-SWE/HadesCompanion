@@ -69,9 +69,7 @@
       <a class="barItem" href={resolve("/hades2/animals")}>Animal Familiars</a>
     </div>
   </nav>
-  <div
-    class="contentContainer flex flex-1 w-full flex-col items-center justify-center"
-  >
+  <div class="contentContainer flex flex-1 w-full flex-col items-center">
     {@render children()}
   </div>
   <div class="footer mt-auto text-center mb-2 text-xs text-textLight">
