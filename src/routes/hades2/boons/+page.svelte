@@ -14,7 +14,6 @@
   const gods: Record<string, GodDetails> = godsData;
   const sortedGodNames: string[] = Object.keys(gods).sort();
 
-  let godsSelected = 2;
   let isGodsMenuOpen = $state(false);
   let selectedGods: string[] = $state([]);
   const toggleDropdown = () => {
@@ -45,6 +44,7 @@
   type BoonData = {
     gods: string[];
     name: string;
+    description: string;
     description_rich: DescriptionPart[];
     effect: string;
     image_path: string;
@@ -59,32 +59,46 @@
   const boonEntries = Object.entries(boonsData) as [string, BoonData][];
 
   let filteredBoons = $derived(
-    selectedGods.length === 0
-      ? boonEntries
-      : boonEntries.filter(([boonId, boonDetails]) => {
-          return boonDetails.gods.some((god) => selectedGods.includes(god));
-        }),
+    boonEntries.filter(([boonId, boonDetails]) => {
+      const matchesGod =
+        selectedGods.length === 0 ||
+        boonDetails.gods.some((god) => selectedGods.includes(god));
+
+      const searchLower = searchQuery.toLowerCase().trim();
+      const searchWords = searchLower.split(/\s+/);
+      const combinedText =
+        `${boonDetails.name} ${boonDetails.description} ${boonDetails.effect}`.toLowerCase();
+
+      const matchesSearch =
+        searchLower === "" ||
+        searchWords.every((word) => combinedText.includes(word));
+
+      return matchesGod && matchesSearch;
+    }),
   );
+
+  let searchQuery: string = $state("");
+
+  const filterStyle =
+    "border border-white/25 p-2 rounded-xl text-textLight bg-emerald-950/30 flex items-center";
 </script>
 
 <Container>
-  <div class="filtersContainer mb-1">
+  <div
+    class="filtersContainer mb-1 flex flex-row items-center gap-2 text-xs sm:text-sm"
+  >
     <div
       class="godsFilterContainer relative inline-block justify-center items-center"
       use:clickOutside={() => (isGodsMenuOpen = false)}
     >
-      <button
-        type="button"
-        onclick={toggleDropdown}
-        class="border border-white/25 p-2 rounded-xl text-textLight bg-emerald-950/30 flex items-center gap-2"
-      >
+      <button type="button" onclick={toggleDropdown} class={filterStyle}>
         Gods {#if selectedGods.length > 0}({selectedGods.length}){/if}
         <span class="arrow text-xs ml-1">{isGodsMenuOpen ? "▲" : "▼"}</span>
       </button>
 
       {#if isGodsMenuOpen}
         <div
-          class="dropdownMenuGods absolute flex flex-col z-10 left-1/2 -translate-x-1/2 w-max bg-emerald-950 border border-white/20 text-white/90 p-2 rounded-xl mt-1"
+          class="dropdownMenuGods mx-1 absolute flex flex-col z-10 left-1/2 -translate-x-1/2 w-max bg-emerald-950 border border-white/20 text-white/90 p-2 rounded-xl mt-1"
         >
           {#each sortedGodNames as god (god)}
             <label
@@ -119,7 +133,7 @@
               </div>
 
               <span
-                class="godName text-sm font-medium tracking-wide text-white/80 group-hover:text-white transition-colors"
+                class="godName tracking-wide text-white/80 group-hover:text-white transition-colors"
               >
                 {god}
               </span>
@@ -127,6 +141,17 @@
           {/each}
         </div>
       {/if}
+    </div>
+    <div class="searchboxContainer {filterStyle}">
+      <input
+        class="focus:outline-none focus:ring-0"
+        type="text"
+        name=""
+        bind:value={searchQuery}
+        title="Search Boons"
+        placeholder="Search..."
+        id=""
+      />
     </div>
   </div>
   <div

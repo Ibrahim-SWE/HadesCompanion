@@ -127,7 +127,7 @@
     "description": "Damage from Omega_Icon Moves immediately activates Blitz effects and makes them stronger.",
     "description_rich": [
       { "type": "text_normal", "value": "Damage from " },
-      { "type": "image", "name": "Omega_Icon", "img_path": "omega_icon.webp" },
+      { "type": "text_bold", "value": "Ω " },
       { "type": "text_bold", "value": "Moves" },
       { "type": "text_normal", "value": " immediately activates " },
       { "type": "text_bold", "value": "Blitz" },
@@ -1292,7 +1292,7 @@
         "type": "text_normal",
         "value": "A piercing arrow fires towards any foe damaged by your "
       },
-      { "type": "image", "name": "Omega_Icon", "img_path": "omega_icon.webp" },
+      { "type": "text_bold", "value": "Ω " },
       { "type": "text_bold", "value": "Cast" },
       { "type": "text_normal", "value": "." }
     ],
@@ -1520,7 +1520,7 @@
     "description": "Your Omega_Icon Moves create a fissure that deals damage in a long line, but use +15 Magick_Icon.",
     "description_rich": [
       { "type": "text_normal", "value": "Your " },
-      { "type": "image", "name": "Omega_Icon", "img_path": "omega_icon.webp" },
+      { "type": "text_bold", "value": "Ω " },
       { "type": "text_bold", "value": "Moves" },
       {
         "type": "text_normal",
@@ -3218,7 +3218,7 @@
     "description": "Your Omega_Icon Cast deals more damage. If you are in the binding circle, the bonus is doubled.",
     "description_rich": [
       { "type": "text_normal", "value": "Your " },
-      { "type": "image", "name": "Omega_Icon", "img_path": "omega_icon.webp" },
+      { "type": "text_bold", "value": "Ω " },
       { "type": "text_bold", "value": "Cast" },
       {
         "type": "text_normal",
@@ -4376,7 +4376,7 @@
     "description": "Your Omega_Icon Moves are faster.",
     "description_rich": [
       { "type": "text_normal", "value": "Your " },
-      { "type": "image", "name": "Omega_Icon", "img_path": "omega_icon.webp" },
+      { "type": "text_bold", "value": "Ω " },
       { "type": "text_bold", "value": "Moves" },
       { "type": "text_normal", "value": " are faster." }
     ],
@@ -4979,7 +4979,7 @@
       { "type": "text_normal", "value": "After you " },
       { "type": "text_bold", "value": "Dash" },
       { "type": "text_normal", "value": ", your " },
-      { "type": "image", "name": "Omega_Icon", "img_path": "omega_icon.webp" },
+      { "type": "text_bold", "value": "Ω " },
       { "type": "text_bold", "value": "Moves" },
       { "type": "text_normal", "value": " may deal " },
       { "type": "text_bold", "value": "Critical" },
@@ -6703,7 +6703,7 @@
     "description": "Your Omega_Icon Attack deals more damage, but uses +10 Magick_Icon.",
     "description_rich": [
       { "type": "text_normal", "value": "Your " },
-      { "type": "image", "name": "Omega_Icon", "img_path": "omega_icon.webp" },
+      { "type": "text_bold", "value": "Ω " },
       { "type": "text_bold", "value": "Attack" },
       { "type": "text_normal", "value": " deals more damage, but uses " },
       { "type": "text_bold", "value": "+10" },
@@ -6771,7 +6771,7 @@
       { "type": "text_normal", "value": "You " },
       { "type": "text_bold", "value": "Channel" },
       { "type": "text_normal", "value": " your " },
-      { "type": "image", "name": "Omega_Icon", "img_path": "omega_icon.webp" },
+      { "type": "text_bold", "value": "Ω " },
       { "type": "text_bold", "value": "Cast" },
       { "type": "text_normal", "value": " faster and your " },
       { "type": "text_bold", "value": "Casts" },

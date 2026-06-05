@@ -61,7 +61,7 @@
 </script>
 
 <div
-  class="boonContainer grid grid-cols-[1fr_1.8fr] w-full sm:max-w-xs text-white text-sm rounded-2xl overflow-hidden {boonStyle}"
+  class="boonContainer grid grid-cols-[1fr_1.8fr] w-full sm:max-w-xs text-white text-xs rounded-2xl overflow-hidden {boonStyle}"
 >
   <!-- top-left: boon image + element icon -->
   <BoonImgElemIcon {boon} />
@@ -73,7 +73,7 @@
     <h2 class="text-base sm:text-lg font-bold leading-tight text-[#eff7e8]">
       {boonName}
     </h2>
-    <p class="text-xs text-[#a8b59f] leading-snug">
+    <p class=" text-[#a8b59f] leading-snug">
       {#each desc as part, i (`${part.type}-${i}`)}
         {#if part.type === "text_normal"}<span>{part.value}</span>
         {:else if part.type === "text_bold"}<strong
@@ -82,7 +82,7 @@
         {:else if part.type === "image"}<img
             src={miscImages[`/src/lib/assets/misc/${part.img_path}`]}
             alt={part.name}
-            class="inline-block h-[0.95em] w-auto object-contain align-middle"
+            class="inline-block h-[1.4em] w-auto object-contain align-middle"
           />{/if}
       {/each}
     </p>
@@ -92,7 +92,7 @@
   <div class="detailsContainer col-start-1 row-start-2 flex flex-col gap-1 p-2">
     {#if boon.type}
       <span
-        class="text-center px-2 py-0.5 rounded-md border border-[#4c5a44] text-[11px] text-[#d4dec8] bg-[#182118]"
+        class="text-center px-2 py-0.5 rounded-md border border-[#4c5a44] text-[#d4dec8] bg-[#182118]"
       >
         {boon.type}
       </span>
@@ -100,7 +100,7 @@
 
     {#if isCore}
       <span
-        class="text-center px-2 py-0.5 rounded-md border border-[#4c5a44] bg-[#182118] text-[11px] text-[#e3ead8]"
+        class="text-center px-2 py-0.5 rounded-md border border-[#4c5a44] bg-[#182118] text-[#e3ead8]"
       >
         Core
       </span>
@@ -108,7 +108,7 @@
 
     {#if isOlympDamage}
       <span
-        class="text-center px-1 py-0.5 rounded-md border border-[#4c5a44] bg-[#182118] text-[10px] sm:text-[11px] text-[#e3ead8] truncate"
+        class="text-center px-1 py-0.5 rounded-md border border-[#4c5a44] bg-[#182118] text-[#e3ead8] truncate"
         title="Olympian Damage"
       >
         Olympian DMG
