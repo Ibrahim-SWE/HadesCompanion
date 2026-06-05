@@ -10,7 +10,7 @@
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 <div
-  class="mainContainer bg-[#07110b] min-w-screen min-h-dvh flex flex-col items-center font-normal"
+  class="mainContainer bg-[#07110b] min-h-dvh flex flex-col items-center font-normal"
   class:homepage={page.url.pathname === "/"}
 >
   <!-- top bar: logo/title + locked toggles -->
@@ -73,7 +73,7 @@
     {@render children()}
   </div>
   <div class="footer mt-auto text-center mb-2 text-xs text-textLight">
-    <p class="mt-1">
+    <p class="mt-3">
       Built by <a
         href="https://github.com/Ibrahim-SWE/HadesCompanion"
         class="text-textDark">Ibrahim</a

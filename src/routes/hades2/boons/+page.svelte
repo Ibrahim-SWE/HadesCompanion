@@ -14,10 +14,24 @@
   const gods: Record<string, GodDetails> = godsData;
   const sortedGodNames: string[] = Object.keys(gods).sort();
 
+  let isBoonTypeOpen = $state(false);
   let isGodsMenuOpen = $state(false);
   let selectedGods: string[] = $state([]);
-  const toggleDropdown = () => {
-    isGodsMenuOpen = !isGodsMenuOpen;
+  let selectedTypes: string[] = $state([]);
+  const boonTypes = [
+    "Attack",
+    "Special",
+    "Cast",
+    "Sprint",
+    "Magick",
+    "Infusion",
+    "Duo",
+    "Legendary",
+  ];
+
+  const toggleDropdown = (title: string) => {
+    if (title == "Gods") isGodsMenuOpen = !isGodsMenuOpen;
+    if (title == "Type") isBoonTypeOpen = !isBoonTypeOpen;
   };
 
   function clickOutside(node: HTMLElement, handler: () => void) {
@@ -92,7 +106,11 @@
       const matchesCore =
         coreFilter === null || boonDetails.is_core === coreFilter;
 
-      return matchesGod && matchesSearch && matchesCore;
+      const matchesTypes =
+        selectedTypes.length === 0 ||
+        selectedTypes.includes(boonDetails.type as string);
+
+      return matchesGod && matchesSearch && matchesCore && matchesTypes;
     }),
   );
 
@@ -111,7 +129,8 @@
     >
       <button
         type="button"
-        onclick={toggleDropdown}
+        title="Gods"
+        onclick={(e) => toggleDropdown(e.currentTarget.title)}
         class="{filterStyle} bg-emerald-950/50"
       >
         Gods {#if selectedGods.length > 0}({selectedGods.length}){/if}
@@ -174,6 +193,66 @@
         placeholder="Search..."
         id=""
       />
+    </div>
+    <div
+      class="boonTypeContainer relative inline-block justify-center items-center"
+      use:clickOutside={() => (isBoonTypeOpen = false)}
+    >
+      <button
+        type="button"
+        title="Type"
+        onclick={(e) => toggleDropdown(e.currentTarget.title)}
+        class="{filterStyle} bg-emerald-950/50"
+      >
+        Type {#if selectedTypes.length > 0}({selectedTypes.length}){/if}
+        <span class="arrow text-xs ml-1">{isBoonTypeOpen ? "▲" : "▼"}</span>
+      </button>
+
+      {#if isBoonTypeOpen}
+        <div
+          class="dropdownMenuTypes mx-1 absolute flex flex-col z-10 left-1/2 -translate-x-1/2 w-max bg-emerald-950 border border-white/20 text-white/90 p-2 rounded-xl mt-1"
+        >
+          {#each boonTypes as type (type)}
+            <label
+              class="flex items-center gap-3 p-2 cursor-pointer hover:bg-white/10 rounded-lg transition-colors select-none group"
+            >
+              <input
+                class="sr-only peer"
+                type="checkbox"
+                value={type}
+                bind:group={selectedTypes}
+              />
+
+              <div
+                class="w-5 h-5 flex items-center justify-center border-2 border-white/30 rounded-md bg-emerald-950/50
+                      transition-all duration-200
+                      peer-checked:bg-emerald-500 peer-checked:border-emerald-400
+                      group-hover:border-white/60
+                      peer-focus-visible:ring-2 peer-focus-visible:ring-emerald-400"
+              >
+                <svg
+                  class="w-3.5 h-3.5 text-emerald-950 scale-0 transition-transform duration-200 peer-checked:scale-100"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+
+              <span
+                class="typeName tracking-wide text-white/80 group-hover:text-white transition-colors"
+              >
+                {type}
+              </span>
+            </label>
+          {/each}
+        </div>
+      {/if}
     </div>
     <div class="isCoreContainer">
       <button
