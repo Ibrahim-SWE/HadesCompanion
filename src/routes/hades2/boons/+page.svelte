@@ -74,23 +74,24 @@
 
   let coreFilter: boolean | null = $state(null);
   let coreStyle = $state("");
+  let olympDmgFilter: boolean | null = $state(null);
 
-  const coreClick = () => {
-    if (coreFilter == null) {
-      coreFilter = true;
-      coreStyle = "bg-emerald-900";
-    } else if (coreFilter == true) {
-      coreFilter = false;
-      coreStyle = "bg-red-600/30";
-    } else {
-      coreFilter = null;
-      coreStyle = "bg-emerald-950/50";
-    }
+  const cycleState = (currentState: boolean | null): boolean | null => {
+    if (currentState === null) return true;
+    if (currentState === true) return false;
+    return null;
   };
+  const getFilterStyles = (state: boolean | null): string => {
+    if (state === true) return "bg-emerald-700 text-white"; // Core Only
+    if (state === false) return "bg-red-900/30 text-white/30 line-through"; // Exclude Core
+    return "bg-emerald-950/50 "; // Neutral / Any
+  };
+
   let searchQuery: string = $state("");
 
   let filteredBoons = $derived(
     boonEntries.filter(([boonId, boonDetails]) => {
+      // selected gods filter
       const matchesGod =
         selectedGods.length === 0 ||
         boonDetails.gods.some((god) => selectedGods.includes(god));
@@ -100,17 +101,31 @@
       const combinedText =
         `${boonDetails.name} ${boonDetails.description} ${boonDetails.effect}`.toLowerCase();
 
+      // search filter (searches boon title, descreption, and effect)
       const matchesSearch =
         searchLower === "" ||
         searchWords.every((word) => combinedText.includes(word));
+
+      // is boon Core? filter
       const matchesCore =
         coreFilter === null || boonDetails.is_core === coreFilter;
 
+      // olymp DMG filter
+      const matchesOlympDmgFilter =
+        olympDmgFilter === null ||
+        olympDmgFilter === boonDetails.deals_olympian_damage;
+      // types filter
       const matchesTypes =
         selectedTypes.length === 0 ||
         selectedTypes.includes(boonDetails.type as string);
 
-      return matchesGod && matchesSearch && matchesCore && matchesTypes;
+      return (
+        matchesGod &&
+        matchesSearch &&
+        matchesCore &&
+        matchesTypes &&
+        matchesOlympDmgFilter
+      );
     }),
   );
 
@@ -256,10 +271,19 @@
     </div>
     <div class="isCoreContainer">
       <button
-        class="{coreStyle} {filterStyle} "
-        name="Core?"
+        class="{coreStyle} {filterStyle} {getFilterStyles(coreFilter)}"
+        name="Core"
         title="Core"
-        onclick={coreClick}>Core</button
+        onclick={() => (coreFilter = cycleState(coreFilter))}>Core</button
+      >
+    </div>
+    <div class="isOlympDmgContainer">
+      <button
+        class="{coreStyle} {filterStyle} {getFilterStyles(olympDmgFilter)}"
+        name="Olympian DMG"
+        title="Olympian DMG"
+        onclick={() => (olympDmgFilter = cycleState(olympDmgFilter))}
+        >Olympian DMG</button
       >
     </div>
   </div>
