@@ -58,6 +58,23 @@
 
   const boonEntries = Object.entries(boonsData) as [string, BoonData][];
 
+  let coreFilter: boolean | null = $state(null);
+  let coreStyle = $state("");
+
+  const coreClick = () => {
+    if (coreFilter == null) {
+      coreFilter = true;
+      coreStyle = "bg-emerald-900";
+    } else if (coreFilter == true) {
+      coreFilter = false;
+      coreStyle = "bg-red-600/30";
+    } else {
+      coreFilter = null;
+      coreStyle = "bg-emerald-950/50";
+    }
+  };
+  let searchQuery: string = $state("");
+
   let filteredBoons = $derived(
     boonEntries.filter(([boonId, boonDetails]) => {
       const matchesGod =
@@ -72,15 +89,16 @@
       const matchesSearch =
         searchLower === "" ||
         searchWords.every((word) => combinedText.includes(word));
+      const matchesCore =
+        coreFilter === null || boonDetails.is_core === coreFilter;
 
-      return matchesGod && matchesSearch;
+      return matchesGod && matchesSearch && matchesCore;
     }),
   );
 
-  let searchQuery: string = $state("");
-
   const filterStyle =
-    "border border-white/25 p-2 rounded-xl text-textLight bg-emerald-950/30 flex items-center";
+    "border border-white/25 p-2 rounded-xl text-textLight flex items-center pl-3 pr-3";
+  //  bg-emerald-950/30
 </script>
 
 <Container>
@@ -91,7 +109,11 @@
       class="godsFilterContainer relative inline-block justify-center items-center"
       use:clickOutside={() => (isGodsMenuOpen = false)}
     >
-      <button type="button" onclick={toggleDropdown} class={filterStyle}>
+      <button
+        type="button"
+        onclick={toggleDropdown}
+        class="{filterStyle} bg-emerald-950/50"
+      >
         Gods {#if selectedGods.length > 0}({selectedGods.length}){/if}
         <span class="arrow text-xs ml-1">{isGodsMenuOpen ? "▲" : "▼"}</span>
       </button>
@@ -142,7 +164,7 @@
         </div>
       {/if}
     </div>
-    <div class="searchboxContainer {filterStyle}">
+    <div class="searchboxContainer bg-emerald-950/50 {filterStyle}">
       <input
         class="focus:outline-none focus:ring-0"
         type="text"
@@ -152,6 +174,14 @@
         placeholder="Search..."
         id=""
       />
+    </div>
+    <div class="isCoreContainer">
+      <button
+        class="{coreStyle} {filterStyle} "
+        name="Core?"
+        title="Core"
+        onclick={coreClick}>Core</button
+      >
     </div>
   </div>
   <div

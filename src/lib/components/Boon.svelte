@@ -68,7 +68,7 @@
 
   <!-- top-right: name + description -->
   <div
-    class="infoContainer col-start-2 row-start-1 flex flex-col justify-center gap-1 p-2 min-w-0 self-start"
+    class="infoContainer col-start-2 row-start-1 flex flex-col justify-center gap-1 p-2 min-w-0 self-start border-l border-white/20 rounded-xl"
   >
     <h2 class="text-base sm:text-lg font-bold leading-tight text-[#eff7e8]">
       {boonName}
@@ -89,10 +89,12 @@
   </div>
 
   <!-- bottom-left: type / core / olympian damage badges -->
-  <div class="detailsContainer col-start-1 row-start-2 flex flex-col gap-1 p-2">
+  <div
+    class="detailsContainer col-start-1 row-start-2 flex flex-col gap-0.5 p-1.5"
+  >
     {#if boon.type}
       <span
-        class="text-center px-2 py-0.5 rounded-md border border-[#4c5a44] text-[#d4dec8] bg-[#182118]"
+        class="text-center py-0.5 rounded-sm border border-[#4c5a44] text-[#d4dec8] bg-[#182118]"
       >
         {boon.type}
       </span>
@@ -100,7 +102,7 @@
 
     {#if isCore}
       <span
-        class="text-center px-2 py-0.5 rounded-md border border-[#4c5a44] bg-[#182118] text-[#e3ead8]"
+        class="text-center py-0.5 rounded-sm border border-[#4c5a44] bg-[#182118] text-[#e3ead8]"
       >
         Core
       </span>
@@ -108,7 +110,7 @@
 
     {#if isOlympDamage}
       <span
-        class="text-center px-1 py-0.5 rounded-md border border-[#4c5a44] bg-[#182118] text-[#e3ead8] truncate"
+        class="text-center py-0.5 rounded-sm border border-[#4c5a44] bg-[#182118] text-[#e3ead8] truncate"
         title="Olympian Damage"
       >
         Olympian DMG
