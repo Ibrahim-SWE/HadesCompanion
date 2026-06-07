@@ -14,10 +14,14 @@
   const gods: Record<string, GodDetails> = godsData;
   const sortedGodNames: string[] = Object.keys(gods).sort();
 
-  let isBoonTypeOpen = $state(false);
-  let isGodsMenuOpen = $state(false);
+  let isBoonTypeOpen: boolean = $state(false);
+  let isGodsMenuOpen: boolean = $state(false);
+  let isElementMenuOpen: boolean = $state(false);
+
   let selectedGods: string[] = $state([]);
   let selectedTypes: string[] = $state([]);
+  let selectedElements: string[] = $state([]);
+
   const boonTypes = [
     "Attack",
     "Special",
@@ -28,10 +32,12 @@
     "Duo",
     "Legendary",
   ];
+  const boonElements = ["Earth", "Water", "Air", "Fire", "Aether", "None"];
 
   const toggleDropdown = (title: string) => {
     if (title == "Gods") isGodsMenuOpen = !isGodsMenuOpen;
     if (title == "Type") isBoonTypeOpen = !isBoonTypeOpen;
+    if (title == "Elements") isElementMenuOpen = !isElementMenuOpen;
   };
 
   function clickOutside(node: HTMLElement, handler: () => void) {
@@ -119,12 +125,19 @@
         selectedTypes.length === 0 ||
         selectedTypes.includes(boonDetails.type as string);
 
+      // boon element filter
+
+      const matchesElements =
+        selectedElements.length === 0 ||
+        selectedElements.includes(boonDetails.element as string);
+
       return (
         matchesGod &&
         matchesSearch &&
         matchesCore &&
         matchesTypes &&
-        matchesOlympDmgFilter
+        matchesOlympDmgFilter &&
+        matchesElements
       );
     }),
   );
@@ -263,6 +276,66 @@
                 class="typeName tracking-wide text-white/80 group-hover:text-white transition-colors"
               >
                 {type}
+              </span>
+            </label>
+          {/each}
+        </div>
+      {/if}
+    </div>
+    <div
+      class="elementFilterContainer relative inline-block justify-center items-center"
+      use:clickOutside={() => (isElementMenuOpen = false)}
+    >
+      <button
+        type="button"
+        title="Elements"
+        onclick={(e) => toggleDropdown(e.currentTarget.title)}
+        class="{filterStyle} bg-emerald-950/50"
+      >
+        Element {#if selectedElements.length > 0}({selectedElements.length}){/if}
+        <span class="arrow text-xs ml-1">{isElementMenuOpen ? "▲" : "▼"}</span>
+      </button>
+
+      {#if isElementMenuOpen}
+        <div
+          class="dropdownMenuTypes mx-1 absolute flex flex-col z-10 left-1/2 -translate-x-1/2 w-max bg-emerald-950 border border-white/20 text-white/90 p-2 rounded-xl mt-1"
+        >
+          {#each boonElements as element (element)}
+            <label
+              class="flex items-center gap-3 p-2 cursor-pointer hover:bg-white/10 rounded-lg transition-colors select-none group"
+            >
+              <input
+                class="sr-only peer"
+                type="checkbox"
+                value={element === "None" ? null : element}
+                bind:group={selectedElements}
+              />
+
+              <div
+                class="w-5 h-5 flex items-center justify-center border-2 border-white/30 rounded-md bg-emerald-950/50
+                      transition-all duration-200
+                      peer-checked:bg-emerald-500 peer-checked:border-emerald-400
+                      group-hover:border-white/60
+                      peer-focus-visible:ring-2 peer-focus-visible:ring-emerald-400"
+              >
+                <svg
+                  class="w-3.5 h-3.5 text-emerald-950 scale-0 transition-transform duration-200 peer-checked:scale-100"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+
+              <span
+                class="typeName tracking-wide text-white/80 group-hover:text-white transition-colors"
+              >
+                {element}
               </span>
             </label>
           {/each}
