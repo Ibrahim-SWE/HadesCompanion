@@ -76,6 +76,7 @@
     <p class="mt-3">
       Built by <a
         href="https://github.com/Ibrahim-SWE/HadesCompanion"
+        target="_blank"
         class="text-textDark">Ibrahim</a
       >
     </p>
