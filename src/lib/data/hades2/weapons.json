@@ -1,0 +1,281 @@
+{
+  "Witch's Staff": {
+    "entry": "Amongst the Nocturnal Arms, Descura was first to wake when you approached. She is yours. How does it feel to wield her, something which should have never been used? Forged in Chaos as a last resort, to bring her brother-arms to heel if need arose.",
+    "image_path": "witchs_staff.webp",
+    "upgrades": [
+      {
+        "name": "Wicked Thrasher",
+        "description_rich": [
+          { "type": "text_normal", "value": "Your " },
+          { "type": "text_bold", "value": "Attacks" },
+          { "type": "text_normal", "value": " have " },
+          { "type": "text_bold", "value": "+30 Power." }
+        ],
+        "image_path": "wicked_thrasher.webp"
+      },
+      {
+        "name": "Extending Wallop",
+        "description_rich": [
+          { "type": "text_normal", "value": "Your " },
+          { "type": "text_bold", "value": "Attack" },
+          { "type": "text_normal", "value": " has more range and deals " },
+          { "type": "text_bold", "value": "+100%" },
+          { "type": "text_normal", "value": " damage to distant foes." }
+        ],
+        "image_path": "extending_wallop.webp"
+      },
+      {
+        "name": "Melting Swipe",
+        "description_rich": [
+          { "type": "text_normal", "value": "Your " },
+          { "type": "text_bold", "value": "Dash-Strike" },
+          {
+            "type": "text_normal",
+            "value": " hits a larger area and destroys "
+          },
+          { "type": "text_bold", "value": "+900" },
+          { "type": "text_normal", "value": " damage to " },
+          { "type": "text_bold", "value": "Armor" },
+          { "type": "text_normal", "value": "." }
+        ],
+        "image_path": "melting_swipe.webp"
+      },
+      {
+        "name": "Dual Moonshot",
+        "description_rich": [
+          { "type": "text_normal", "value": "Your " },
+          { "type": "text_bold", "value": "Specials" },
+          { "type": "text_normal", "value": " fire " },
+          { "type": "text_bold", "value": "2" },
+          { "type": "text_normal", "value": " projectiles, but have " },
+          { "type": "text_bold", "value": "-40%" },
+          { "type": "text_normal", "value": " range." }
+        ],
+        "image_path": "dual_moonshot.webp"
+      },
+      {
+        "name": "Shimmering Moonshot",
+        "description_rich": [
+          { "type": "text_normal", "value": "Your " },
+          { "type": "text_bold", "value": "Specials" },
+          { "type": "text_normal", "value": " bounces toward up to " },
+          { "type": "text_bold", "value": "+2" },
+          { "type": "text_normal", "value": " foes, dealing " },
+          { "type": "text_bold", "value": "+10%" },
+          { "type": "text_normal", "value": " damage for each hit." }
+        ],
+        "image_path": "shimmering_moonshot.webp"
+      },
+      {
+        "name": "Cross Cataclysm",
+        "description_rich": [
+          { "type": "text_normal", "value": "Your " },
+          { "type": "text_bold", "value": "Ω Attack" },
+          { "type": "text_normal", "value": " deals " },
+          { "type": "text_bold", "value": "+50%" },
+          {
+            "type": "text_normal",
+            "value": " damage and also strikes sideways."
+          }
+        ],
+        "image_path": "cross_cataclysm.webp"
+      },
+      {
+        "name": "Rapid Thrasher",
+        "description_rich": [
+          { "type": "text_normal", "value": "Your " },
+          { "type": "text_bold", "value": "Attacks" },
+          { "type": "text_normal", "value": " are " },
+          { "type": "text_bold", "value": "50%" },
+          { "type": "text_normal", "value": " faster." }
+        ],
+        "image_path": "rapid_thrasher.webp"
+      },
+      {
+        "name": "Rapid Moonshot",
+        "description_rich": [
+          { "type": "text_normal", "value": "Your " },
+          { "type": "text_bold", "value": "Specials" },
+          { "type": "text_normal", "value": " are " },
+          { "type": "text_bold", "value": "25%" },
+          { "type": "text_normal", "value": " faster." }
+        ],
+        "image_path": "rapid_moonshot.webp"
+      },
+      {
+        "name": "Vampiric Cataclysm",
+        "description_rich": [
+          {
+            "type": "text_normal",
+            "value": "Whenever you slay a foe with your "
+          },
+          { "type": "text_bold", "value": "Ω Attack" },
+          { "type": "text_normal", "value": ", restore " },
+          { "type": "text_bold", "value": "5" },
+          { "type": "text_normal", "value": " " },
+          {
+            "type": "image",
+            "name": "Health_Icon",
+            "img_path": "health_icon.webp"
+          },
+          { "type": "text_normal", "value": "." }
+        ],
+        "image_path": "vampiric_cataclysm.webp"
+      },
+      {
+        "name": "Giga Moonburst",
+        "description_rich": [
+          { "type": "text_normal", "value": "You can " },
+          { "type": "text_bold", "value": "Channel +30 " },
+          {
+            "type": "image",
+            "name": "Magick_Icon",
+            "img_path": "magick_icon.webp"
+          },
+          { "type": "text_normal", "value": " in your " },
+          { "type": "text_bold", "value": "Ω Special" },
+          { "type": "text_normal", "value": " to deal " },
+          { "type": "text_bold", "value": "+300%" },
+          { "type": "text_normal", "value": " damage in a larger area." }
+        ],
+        "image_path": "giga_moonburst.webp"
+      },
+      {
+        "name": "Aetheric Moonburst",
+        "description_rich": [
+          { "type": "text_normal", "value": "Your " },
+          { "type": "text_bold", "value": "Ω Special" },
+          { "type": "text_normal", "value": " gains a " },
+          { "type": "text_bold", "value": "Power Shot" },
+          { "type": "text_normal", "value": " that deals " },
+          { "type": "text_bold", "value": "+50%" },
+          { "type": "text_normal", "value": " damage and restores " },
+          { "type": "text_bold", "value": "20" },
+          { "type": "text_normal", "value": "." }
+        ],
+        "image_path": "aetheric_moonburst.webp"
+      },
+      {
+        "name": "Mirrored Thrasher",
+        "description_rich": [
+          { "type": "text_normal", "value": "Your " },
+          { "type": "text_bold", "value": "Attacks" },
+          { "type": "text_normal", "value": " hit " },
+          { "type": "text_bold", "value": "2" },
+          { "type": "text_normal", "value": " times, but use " },
+          { "type": "text_bold", "value": "5" },
+          { "type": "text_normal", "value": " " },
+          {
+            "type": "image",
+            "name": "Magick_Icon",
+            "img_path": "magick_icon.webp"
+          },
+          { "type": "text_normal", "value": "." }
+        ],
+        "image_path": "mirrored_thrasher.webp"
+      }
+    ],
+    "aspects": [
+      {
+        "name": "Aspect of Melino\u00eb",
+        "description_rich": [
+          { "type": "text_normal", "value": "Gain " },
+          {
+            "type": "image",
+            "name": "Max_Magick_Icon",
+            "img_path": "max_magick_icon.webp"
+          },
+          { "type": "text_normal", "value": " and greater " },
+          { "type": "text_bold", "value": "Power" },
+          { "type": "text_normal", "value": " for your " },
+          { "type": "text_bold", "value": "Specials." }
+        ],
+        "effect": "Max Magick & Special Power:",
+        "effect_ranks": [
+          { "effect_value": "+0", "upgrade_cost": "None" },
+          {
+            "effect_value": "+10",
+            "upgrade_cost": { "Silver": 2, "Psyche": 10 }
+          },
+          {
+            "effect_value": "+20",
+            "upgrade_cost": { "Silver": 3, "Psyche": 20 }
+          },
+          {
+            "effect_value": "+30",
+            "upgrade_cost": { "Silver": 4, "Psyche": 30 }
+          },
+          {
+            "effect_value": "+40",
+            "upgrade_cost": { "Silver": 10, "Psyche": 50 }
+          },
+          { "effect_value": "+50", "upgrade_cost": "Premium Service Boon" }
+        ]
+      },
+      {
+        "name": "Aspect of Circe",
+        "description_rich": [
+          { "type": "text_normal", "value": "Whenever you use " },
+          { "type": "text_bold", "value": "Casts" },
+          { "type": "text_normal", "value": ", so does your " },
+          { "type": "text_bold", "value": "Animal Familiar" },
+          { "type": "text_normal", "value": ", forming a " },
+          { "type": "text_bold", "value": "Psychic Leash." }
+        ],
+        "effect": "Psychic Leash Damage (every 0.2 Sec.):",
+        "effect_ranks": [
+          { "effect_value": "10", "upgrade_cost": { "Lotus": 5, "Marble": 5 } },
+          { "effect_value": "15", "upgrade_cost": { "Nightmare": 1 } },
+          { "effect_value": "20", "upgrade_cost": { "Nightmare": 1 } },
+          { "effect_value": "25", "upgrade_cost": { "Nightmare": 1 } },
+          { "effect_value": "30", "upgrade_cost": { "Nightmare": 2 } },
+          { "effect_value": "45", "upgrade_cost": "Premium Service Boon" }
+        ]
+      },
+      {
+        "name": "Aspect of Momus",
+        "description_rich": [
+          { "type": "text_normal", "value": "Whenever you use " },
+          { "type": "text_bold", "value": "\u03a9 Moves" },
+          { "type": "text_normal", "value": ", each fires in place up to " },
+          { "type": "text_bold", "value": "3" },
+          { "type": "text_normal", "value": " times until you use it again." }
+        ],
+        "effect": "Delay Between Omega Bursts:",
+        "effect_ranks": [
+          {
+            "effect_value": "4 Sec",
+            "upgrade_cost": { "Pearl": 1, "Limestone": 3 }
+          },
+          { "effect_value": "3.5 Sec", "upgrade_cost": { "Nightmare": 1 } },
+          { "effect_value": "3 Sec", "upgrade_cost": { "Nightmare": 1 } },
+          { "effect_value": "2.5 Sec", "upgrade_cost": { "Nightmare": 1 } },
+          { "effect_value": "2 Sec", "upgrade_cost": { "Nightmare": 2 } },
+          { "effect_value": "1 Sec", "upgrade_cost": "Premium Service Boon" }
+        ]
+      },
+      {
+        "name": "Aspect of Anubis",
+        "description_rich": [
+          { "type": "text_normal", "value": "You have the " },
+          { "type": "text_bold", "value": "Ankh Scepter" },
+          { "type": "text_normal", "value": ", which raises " },
+          { "type": "text_bold", "value": "Lone Shades" },
+          { "type": "text_normal", "value": " wherever you slay foes." }
+        ],
+        "effect": "Ω Move Speed & Damage:",
+        "effect_ranks": [
+          {
+            "effect_value": "+10%",
+            "upgrade_cost": { "Tears": 5, "Fangs": 2 }
+          },
+          { "effect_value": "+15%", "upgrade_cost": { "Nightmare": 2 } },
+          { "effect_value": "+20%", "upgrade_cost": { "Nightmare": 2 } },
+          { "effect_value": "+25%", "upgrade_cost": { "Nightmare": 2 } },
+          { "effect_value": "+30%", "upgrade_cost": { "Nightmare": 3 } },
+          { "effect_value": "+45%", "upgrade_cost": "Premium Service Boon" }
+        ]
+      }
+    ]
+  }
+}
