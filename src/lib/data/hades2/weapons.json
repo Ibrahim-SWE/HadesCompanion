@@ -178,6 +178,7 @@
     "aspects": [
       {
         "name": "Aspect of Melino\u00eb",
+        "image_file": "aspect_of_melinoe.webp",
         "description_rich": [
           { "type": "text_normal", "value": "Gain " },
           {
@@ -214,6 +215,7 @@
       },
       {
         "name": "Aspect of Circe",
+        "image_file": "aspect_of_circe.webp",
         "description_rich": [
           { "type": "text_normal", "value": "Whenever you use " },
           { "type": "text_bold", "value": "Casts" },
@@ -234,6 +236,7 @@
       },
       {
         "name": "Aspect of Momus",
+        "image_file": "aspect_of_momus.webp",
         "description_rich": [
           { "type": "text_normal", "value": "Whenever you use " },
           { "type": "text_bold", "value": "\u03a9 Moves" },
@@ -256,6 +259,7 @@
       },
       {
         "name": "Aspect of Anubis",
+        "image_file": "aspect_of_anubis.webp",
         "description_rich": [
           { "type": "text_normal", "value": "You have the " },
           { "type": "text_bold", "value": "Ankh Scepter" },
