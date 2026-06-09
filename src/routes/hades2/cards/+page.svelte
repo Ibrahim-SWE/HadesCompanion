@@ -112,7 +112,7 @@
                       </div>
 
                       {#if costIndex !== tier.length - 1}
-                        <div class="w-[1px] h-3.5 bg-white/20"></div>
+                        <div class="w-px h-3.5 bg-white/20"></div>
                       {/if}
                     {/each}
                   {/each}
