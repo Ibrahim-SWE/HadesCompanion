@@ -1,0 +1,498 @@
+{
+  "The Sorceress": {
+    "name": "The Sorceress",
+    "image_file": "the_sorceress.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "Your " },
+      { "type": "text_bold", "value": "Ω Moves" },
+      { "type": "text_normal", "value": " are " },
+      { "type": "text_normal", "value": " faster." }
+    ],
+    "effect_values": ["20%", "25%", "30%", "35%"],
+    "graspCost": "1",
+    "upgradeCosts": [
+      [{ "Ashes": 1 }],
+      [{ "Moon Dust": 1 }],
+      [{ "Moon Dust": 3 }, { "Tears": 1 }]
+    ],
+    "note": ""
+  },
+  "The Wayward Son": {
+    "name": "The Wayward Son",
+    "image_file": "the_wayward_son.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "After you exit a " },
+      { "type": "text_bold", "value": "Location" },
+      { "type": "text_normal", "value": ", restore " },
+      { "type": "image", "image_file": "health_icon.webp" },
+      { "type": "text_normal", "value": "." }
+    ],
+    "effect_values": ["3 HP", "4 HP", "5 HP", "6 HP"],
+    "graspCost": "1",
+    "upgradeCosts": [
+      [{ "Ashes": 3 }],
+      [{ "Moon Dust": 2 }],
+      [{ "Moon Dust": 3 }, { "Cinder": 3 }]
+    ],
+    "note": ""
+  },
+  "The Huntress": {
+    "name": "The Huntress",
+    "image_file": "the_huntress.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "While you have less than " },
+      { "type": "text_bold", "value": "100%" },
+      { "type": "image", "image_file": "magick_icon.webp" },
+      { "type": "text_normal", "value": ", your " },
+      { "type": "text_bold", "value": "Attack" },
+      { "type": "text_normal", "value": " and " },
+      { "type": "text_bold", "value": "Special" },
+      { "type": "text_normal", "value": " deal " },
+      { "type": "text_normal", "value": " damage." }
+    ],
+    "effect_values": ["+30%", "+40%", "+50%", "+60%"],
+    "graspCost": "2",
+    "upgradeCosts": [
+      [{ "Ashes": 15 }],
+      [{ "Moon Dust": 2 }],
+      [{ "Moon Dust": 3 }, { "Wool": 2 }]
+    ],
+    "note": ""
+  },
+  "Eternity": {
+    "name": "Eternity",
+    "image_file": "eternity.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "While you " },
+      { "type": "text_bold", "value": "Channel" },
+      { "type": "text_normal", "value": " your " },
+      { "type": "text_bold", "value": "Ω Moves" },
+      { "type": "text_normal", "value": ", everything moves slower for " },
+      { "type": "text_normal", "value": " " },
+      { "type": "text_bold", "value": "Sec" },
+      { "type": "text_normal", "value": "." }
+    ],
+    "effect_values": ["0.8 Sec", "1.0 Sec", "1.2 Sec", "1.5 Sec"],
+    "graspCost": "3",
+    "upgradeCosts": [
+      [{ "Ashes": 30 }, { "Pearl": 1 }],
+      [{ "Moon Dust": 3 }],
+      [{ "Moon Dust": 6 }, { "Pearl": 4 }]
+    ],
+    "note": ""
+  },
+  "The Moon": {
+    "name": "The Moon",
+    "image_file": "the_moon.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "Your " },
+      { "type": "text_bold", "value": "Hex" },
+      {
+        "type": "text_normal",
+        "value": " also charges up automatically as though you used "
+      },
+      { "type": "image", "image_file": "magick_icon.webp" },
+      { "type": "text_normal", "value": " every " },
+      { "type": "text_bold", "value": "1 Sec." }
+    ],
+    "effect_values": ["1", "2", "3", "4"],
+    "graspCost": "0",
+    "upgradeCosts": [
+      [{ "Ashes": 20 }, { "Pearl": 1 }],
+      [{ "Moon Dust": 3 }],
+      [{ "Moon Dust": 6 }, { "Pearl": 3 }]
+    ],
+    "note": "Activate any surrounding card."
+  },
+  "The Furies": {
+    "name": "The Furies",
+    "image_file": "the_furies.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "You deal " },
+      { "type": "text_normal", "value": " damage to foes in your " },
+      { "type": "text_bold", "value": "Casts" },
+      { "type": "text_normal", "value": "." }
+    ],
+    "effect_values": ["+20%", "+25%", "+30%", "+35%"],
+    "graspCost": "2",
+    "upgradeCosts": [
+      [{ "Ashes": 3 }],
+      [{ "Moon Dust": 2 }],
+      [{ "Moon Dust": 3 }, { "Cinder": 3 }]
+    ],
+    "note": ""
+  },
+  "Persistence": {
+    "name": "Persistence",
+    "image_file": "persistence.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "You have " },
+      { "type": "image", "image_file": "max_health_icon.webp" },
+      { "type": "text_normal", "value": " and " },
+      { "type": "image", "image_file": "max_magick_icon.webp" },
+      { "type": "text_normal", "value": "." }
+    ],
+    "effect_values": ["+20", "+30", "+40", "+50"],
+    "graspCost": "2",
+    "upgradeCosts": [
+      [{ "Ashes": 10 }],
+      [{ "Moon Dust": 2 }],
+      [{ "Moon Dust": 4 }, { "Feather": 1 }]
+    ],
+    "note": ""
+  },
+  "The Messenger": {
+    "name": "The Messenger",
+    "image_file": "the_messenger.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "You Casts momentarily make you " },
+      { "type": "text_bold", "value": "Impervious" },
+      { "type": "text_normal", "value": " and move " },
+      { "type": "text_normal", "value": " faster." }
+    ],
+    "effect_values": ["50%", "60%", "70%", "80%"],
+    "graspCost": "1",
+    "upgradeCosts": [
+      [{ "Ashes": 20 }],
+      [{ "Moon Dust": 1 }],
+      [{ "Moon Dust": 3 }, { "Feather": 1 }]
+    ],
+    "note": ""
+  },
+  "The Unseen": {
+    "name": "The Unseen",
+    "image_file": "the_unseen.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "You restore " },
+      { "type": "image", "image_file": "magick_icon.webp" },
+      { "type": "text_normal", "value": " every " },
+      { "type": "text_bold", "value": "1 Sec." }
+    ],
+    "effect_values": ["6", "8", "10", "12"],
+    "graspCost": "5",
+    "upgradeCosts": [
+      [{ "Ashes": 30 }],
+      [{ "Moon Dust": 5 }],
+      [{ "Moon Dust": 10 }, { "Tears": 3 }]
+    ],
+    "note": ""
+  },
+  "Night": {
+    "name": "Night",
+    "image_file": "night.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "You have " },
+      { "type": "text_normal", "value": " chance to deal " },
+      { "type": "text_bold", "value": "Critical" },
+      { "type": "text_normal", "value": " damage with each move in an " },
+      { "type": "text_bold", "value": "Ω Combo" },
+      { "type": "text_normal", "value": "." }
+    ],
+    "effect_values": ["+9%", "+12%", "+15%", "+18%"],
+    "graspCost": "2",
+    "upgradeCosts": [
+      [{ "Ashes": 35 }],
+      [{ "Moon Dust": 3 }],
+      [{ "Moon Dust": 5 }, { "Darkness": 1 }]
+    ],
+    "note": ""
+  },
+  "The Swift Runner": {
+    "name": "The Swift Runner",
+    "image_file": "the_swift_runner.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "Your " },
+      { "type": "text_bold", "value": "Sprint" },
+      { "type": "text_normal", "value": " is " },
+      {
+        "type": "text_normal",
+        "value": " faster and lets you pass right through most dangers in your way."
+      }
+    ],
+    "effect_values": ["5%", "7%", "10%", "13%"],
+    "graspCost": "1",
+    "upgradeCosts": [
+      [{ "Ashes": 15 }],
+      [{ "Moon Dust": 1 }],
+      [{ "Moon Dust": 3 }, { "Golden Apple": 1 }]
+    ],
+    "note": ""
+  },
+  "Death": {
+    "name": "Death",
+    "image_file": "death.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "You have " },
+      { "type": "image", "image_file": "death_defiance_icon.webp" },
+      { "type": "text_normal", "value": " " },
+      { "type": "text_bold", "value": "Death Defiance" },
+      { "type": "text_normal", "value": "." }
+    ],
+    "effect_values": ["+1", "+2", "+3", "+4"],
+    "graspCost": "4",
+    "upgradeCosts": [
+      [{ "Ashes": 25 }],
+      [{ "Moon Dust": 6 }],
+      [{ "Moon Dust": 12 }, { "Star Dust": 1 }]
+    ],
+    "note": ""
+  },
+  "The Centaur": {
+    "name": "The Centaur",
+    "image_file": "the_centaur.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "You gain " },
+      { "type": "image", "image_file": "max_health_icon.webp" },
+      { "type": "text_normal", "value": " and " },
+      { "type": "image", "image_file": "max_magick_icon.webp" },
+      { "type": "text_normal", "value": " whenever you pass through 5 " },
+      { "type": "text_bold", "value": "Locations" },
+      { "type": "text_normal", "value": "." }
+    ],
+    "effect_values": ["+3", "+4", "+5", "+6"],
+    "graspCost": "0",
+    "upgradeCosts": [
+      [{ "Ashes": 30 }, { "Cinder": 1 }],
+      [{ "Moon Dust": 2 }],
+      [{ "Moon Dust": 4 }, { "Golden Apple": 3 }]
+    ],
+    "note": "Activate Cards that use 1 Grasp through 5 Grasp."
+  },
+  "Origination": {
+    "name": "Origination",
+    "image_file": "origination.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "You deal " },
+      {
+        "type": "text_normal",
+        "value": " damage to foes afflicted with at least "
+      },
+      { "type": "text_bold", "value": "2 Curses" },
+      { "type": "text_normal", "value": " from different Olympians." }
+    ],
+    "effect_values": ["+25%", "+38%", "+50%", "+63%"],
+    "graspCost": "5",
+    "upgradeCosts": [
+      [{ "Ashes": 35 }],
+      [{ "Moon Dust": 5 }],
+      [{ "Moon Dust": 10 }, { "Thalamus": 3 }]
+    ],
+    "note": ""
+  },
+  "The Lovers": {
+    "name": "The Lovers",
+    "image_file": "the_lovers.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "You take " },
+      { "type": "text_bold", "value": "0" },
+      { "type": "text_normal", "value": " damage the first " },
+      { "type": "text_normal", "value": " time(s) you are hit in " },
+      { "type": "text_bold", "value": "Guardian Encounter" },
+      { "type": "text_normal", "value": "." }
+    ],
+    "effect_values": ["1", "2", "3", "4"],
+    "graspCost": "3",
+    "upgradeCosts": [
+      [{ "Ashes": 40 }],
+      [{ "Moon Dust": 3 }],
+      [{ "Moon Dust": 5 }, { "Tears": 2 }]
+    ],
+    "note": ""
+  },
+  "The Enchantress": {
+    "name": "The Enchantress",
+    "image_file": "the_enchantress.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "You have " },
+      { "type": "image", "image_file": "dice.webp" },
+      { "type": "text_normal", "value": ", and can alter " },
+      { "type": "text_bold", "value": "Location Rewards" },
+      { "type": "text_normal", "value": "." }
+    ],
+    "effect_values": ["+1", "+2", "+3", "+4"],
+    "graspCost": "3",
+    "upgradeCosts": [
+      [{ "Ashes": 25 }],
+      [{ "Moon Dust": 3 }],
+      [{ "Moon Dust": 5 }, { "Pearl": 3 }]
+    ],
+    "note": ""
+  },
+  "The Boatman": {
+    "name": "The Boatman",
+    "image_file": "the_boatman.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "You have " },
+      { "type": "image", "image_file": "gold_coins_icon.webp" },
+      { "type": "text_normal", "value": "." }
+    ],
+    "effect_values": ["+200", "+250", "+300", "+350"],
+    "graspCost": "5",
+    "upgradeCosts": [
+      [{ "Ashes": 30 }],
+      [{ "Moon Dust": 5 }],
+      [{ "Moon Dust": 10 }, { "Zodiac Sand": 1 }]
+    ],
+    "note": ""
+  },
+  "The Artificer": {
+    "name": "The Artificer",
+    "image_file": "the_artificer.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "You have " },
+      { "type": "text_normal", "value": " chance(s) this night to turn any " },
+      { "type": "text_bold", "value": "Minor Find" },
+      { "type": "text_normal", "value": " into a random " },
+      { "type": "text_bold", "value": "Major Find" },
+      { "type": "text_normal", "value": "." }
+    ],
+    "effect_values": ["1", "2", "3", "4"],
+    "graspCost": "3",
+    "upgradeCosts": [
+      [{ "Ashes": 35 }],
+      [{ "Moon Dust": 3 }],
+      [{ "Moon Dust": 5 }, { "Wool": 3 }]
+    ],
+    "note": ""
+  },
+  "Excellence": {
+    "name": "Excellence",
+    "image_file": "excellence.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "Any " },
+      { "type": "text_bold", "value": "Boons" },
+      { "type": "text_normal", "value": " you find have " },
+      { "type": "text_normal", "value": " chance to include " },
+      { "type": "text_bold", "value": "Legendary" },
+      { "type": "text_normal", "value": " or at least " },
+      { "type": "text_bold", "value": "Rare" },
+      { "type": "text_normal", "value": " blessings." }
+    ],
+    "effect_values": ["+30%", "+40%", "+50%", "+60%"],
+    "graspCost": "5",
+    "upgradeCosts": [
+      [{ "Ashes": 40 }],
+      [{ "Moon Dust": 4 }],
+      [{ "Moon Dust": 6 }, { "Wool": 2 }]
+    ],
+    "note": ""
+  },
+  "The Queen": {
+    "name": "The Queen",
+    "image_file": "the_queen.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "Any " },
+      { "type": "text_bold", "value": "Boons" },
+      { "type": "text_normal", "value": " you find have " },
+      { "type": "text_normal", "value": " chance to include " },
+      { "type": "text_bold", "value": "Duo" },
+      { "type": "text_normal", "value": " blessings." }
+    ],
+    "effect_values": ["+6%", "+8%", "+10%", "+12%"],
+    "graspCost": "0",
+    "upgradeCosts": [
+      [{ "Ashes": 45 }, { "Tears": 1 }],
+      [{ "Moon Dust": 2 }],
+      [{ "Moon Dust": 4 }, { "Pearl": 3 }]
+    ],
+    "note": "Activate no more than 2 Cards that use the same amount of Grasp."
+  },
+  "The Fates": {
+    "name": "The Fates",
+    "image_file": "the_fates.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "You have " },
+      { "type": "image", "image_file": "dice.webp" },
+      { "type": "text_normal", "value": "." }
+    ],
+    "effect_values": ["+2", "+3", "+4", "+5"],
+    "graspCost": "0",
+    "upgradeCosts": [
+      [{ "Ashes": 30 }, { "Wool": 1 }],
+      [{ "Moon Dust": 3 }],
+      [{ "Moon Dust": 6 }, { "Wool": 3 }]
+    ],
+    "note": "Activate all surrounding Cards."
+  },
+  "The Champions": {
+    "name": "The Champions",
+    "image_file": "the_champions.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "You have " },
+      { "type": "image", "image_file": "dice.webp" },
+      { "type": "text_normal", "value": ", and can alter " },
+      { "type": "text_bold", "value": "Boons" },
+      { "type": "text_normal", "value": " and certain other choices." }
+    ],
+    "effect_values": ["+1", "+2", "+3", "+4"],
+    "graspCost": "4",
+    "upgradeCosts": [
+      [{ "Ashes": 35 }],
+      [{ "Moon Dust": 5 }],
+      [{ "Moon Dust": 10 }, { "Golden Apple": 3 }]
+    ],
+    "note": ""
+  },
+  "Strength": {
+    "name": "Strength",
+    "image_file": "strength.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "While you have no " },
+      { "type": "image", "image_file": "death_defiance_icon.webp" },
+      { "type": "text_normal", "value": " " },
+      { "type": "text_bold", "value": "Death Defiance" },
+      { "type": "text_normal", "value": ", you take " },
+      { "type": "text_normal", "value": " damage and deal " },
+      { "type": "text_bold", "value": "+20%" },
+      { "type": "text_normal", "value": "." }
+    ],
+    "effect_values": ["-30%", "-35%", "-40%", "-45%"],
+    "graspCost": "4",
+    "upgradeCosts": [
+      [{ "Ashes": 40 }],
+      [{ "Moon Dust": 5 }],
+      [{ "Moon Dust": 12 }, { "Feather": 2 }]
+    ],
+    "note": ""
+  },
+  "Divinity": {
+    "name": "Divinity",
+    "image_file": "divinity.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "Any " },
+      { "type": "text_bold", "value": "Boons" },
+      { "type": "text_normal", "value": " you find have " },
+      { "type": "text_normal", "value": " chance to include " },
+      { "type": "text_bold", "value": "Epic" },
+      { "type": "text_normal", "value": " blessings." }
+    ],
+    "effect_values": ["+10%", "+15%", "+20%", "+25%"],
+    "graspCost": "0",
+    "upgradeCosts": [
+      [{ "Ashes": 45 }, { "Golden Apple": 1 }],
+      [{ "Moon Dust": 2 }],
+      [{ "Moon Dust": 10 }, { "Feather": 2 }]
+    ],
+    "note": "Activate all 5 Cards in any other row or column."
+  },
+  "Judgement": {
+    "name": "Judgement",
+    "image_file": "judgement.webp",
+    "description_rich": [
+      { "type": "text_normal", "value": "You activate " },
+      { "type": "text_normal", "value": " random inactive " },
+      { "type": "text_bold", "value": "Arcana Cards" },
+      { "type": "text_normal", "value": " whenever you vanquish a " },
+      { "type": "text_bold", "value": "Guardian" },
+      { "type": "text_normal", "value": "." }
+    ],
+    "effect_values": ["3", "4", "5", "6"],
+    "graspCost": "0",
+    "upgradeCosts": [
+      [{ "Ashes": 50 }, { "Feather": 1 }],
+      [{ "Moon Dust": 10 }],
+      [{ "Moon Dust": 20 }, { "Fate Fabric": 20 }]
+    ],
+    "note": "Activate no more than 3 cards total."
+  }
+}
