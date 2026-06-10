@@ -1,0 +1,532 @@
+{
+  "Silver Wheel": {
+    "name": "Silver Wheel",
+    "image_file": "silver_wheel.webp",
+    "provider": "Hecate",
+    "effect_values": ["50", "75", "100", "150"],
+    "description_rich": [
+      { "type": "text_normal", "value": "Gain " },
+      { "type": "effect_values" },
+      { "type": "image", "image_file": "max_magick_icon.webp" },
+      { "type": "text_normal", "value": "this night. " }
+    ]
+  },
+  "Knuckle Bones": {
+    "name": "Knuckle Bones",
+    "image_file": "knuckle_bones.webp",
+    "provider": "Odysseus",
+    "effect_values": ["-5%", "-10%", "-15%", "-25%"],
+    "description_rich": [
+      { "type": "text_normal", "value": "The next " },
+      { "type": "text_bold", "value": "Guardian " },
+      { "type": "text_normal", "value": "loses " },
+      { "type": "effect_values" },
+      { "type": "text_normal", "value": ". You take " },
+      { "type": "text_bold", "value": "-10% " },
+      { "type": "text_normal", "value": "damage from " },
+      { "type": "text_bold", "value": "Guardians " },
+      { "type": "text_normal", "value": ". " }
+    ]
+  },
+  "Luckier Tooth": {
+    "name": "Luckier Tooth",
+    "image_file": "luckier_tooth.webp",
+    "provider": "Schelemeus",
+    "effect_values": ["51", "76", "101", "151"],
+    "description_rich": [
+      { "type": "text_normal", "value": "After you fall to " },
+      { "type": "text_bold", "value": "0 " },
+      { "type": "image", "image_file": "health_icon.webp" },
+      { "type": "text_normal", "value": ", automatically restore " },
+      { "type": "effect_values" },
+      { "type": "text_normal", "value": "once this night. " }
+    ]
+  },
+  "Ghost Onion": {
+    "name": "Ghost Onion",
+    "image_file": "ghost_onion.webp",
+    "provider": "Dora",
+    "effect_values": ["50", "75", "100", "150"],
+    "description_rich": [
+      { "type": "text_normal", "value": "Whenever you exit a " },
+      { "type": "text_bold", "value": "Location" },
+      { "type": "text_normal", "value": ", fully restore your " },
+      { "type": "image", "image_file": "health_icon.webp" },
+      { "type": "text_normal", "value": " up to a total of " },
+      { "type": "effect_values" },
+      { "type": "text_normal", "value": "this night." }
+    ]
+  },
+  "Evil Eye": {
+    "name": "Evil Eye",
+    "image_file": "evil_eye.webp",
+    "provider": "Nemesis",
+    "effect_values": ["20%", "25%", "30%", "40%"],
+    "description_rich": [
+      { "type": "text_normal", "value": "Deal " },
+      { "type": "effect_values" },
+      {
+        "type": "text_normal",
+        "value": "to the last foe that vanquished you. "
+      }
+    ]
+  },
+  "Gold Purse": {
+    "name": "Gold Purse",
+    "image_file": "gold_purse.webp",
+    "provider": "Charon",
+    "effect_values": ["100", "125", "150", "200"],
+    "description_rich": [
+      { "type": "text_normal", "value": "Gain " },
+      { "type": "effect_values" },
+      { "type": "image", "image_file": "gold_coins_icon.webp" },
+      { "type": "text_normal", "value": "this night. " }
+    ]
+  },
+  "Engraved Pin": {
+    "name": "Engraved Pin",
+    "image_file": "engraved_pin.webp",
+    "provider": "Moros",
+    "effect_values": ["30", "45", "60", "90"],
+    "description_rich": [
+      { "type": "text_normal", "value": "When first you fall to " },
+      { "type": "text_bold", "value": "0 " },
+      { "type": "image", "image_file": "health_icon.webp" },
+      { "type": "text_normal", "value": ", become " },
+      { "type": "text_bold", "value": "Doomed" },
+      { "type": "text_normal", "value": ". Clear it in time for " },
+      { "type": "effect_values" },
+      { "type": "image", "image_file": "health_icon.webp" },
+      { "type": "text_normal", "value": "." }
+    ]
+  },
+  "Discordant Bell": {
+    "name": "Discordant Bell",
+    "image_file": "discordant_bell.webp",
+    "provider": "Eris",
+    "effect_values": ["0.5%", "0.75%", "1%", "1.5%"],
+    "description_rich": [
+      { "type": "text_normal", "value": "After each " },
+      { "type": "text_bold", "value": "Encounter " },
+      { "type": "text_normal", "value": "all this night, you deal " },
+      { "type": "effect_values" },
+      {
+        "type": "text_normal",
+        "value": "damage, but also take that much more. "
+      }
+    ]
+  },
+  "Metallic Droplet": {
+    "name": "Metallic Droplet",
+    "image_file": "metallic_droplet.webp",
+    "provider": "Hermes",
+    "effect_values": ["200", "250", "300", "400"],
+    "description_rich": [
+      { "type": "text_normal", "value": "You move, strike, and " },
+      { "type": "text_bold", "value": "Channel 20% " },
+      { "type": "text_normal", "value": "faster for the next " },
+      { "type": "effect_values" }
+    ]
+  },
+  "White Antler": {
+    "name": "White Antler",
+    "image_file": "white_antler.webp",
+    "provider": "Artemis",
+    "effect_values": ["20%", "25%", "30%", "50%"],
+    "description_rich": [
+      { "type": "text_normal", "value": "For the next " },
+      { "type": "text_bold", "value": "Region " },
+      { "type": "text_normal", "value": ", gain " },
+      { "type": "effect_values" },
+      { "type": "text_bold", "value": "Critical " },
+      {
+        "type": "text_normal",
+        "value": "damage chance, but you are limited to "
+      },
+      { "type": "text_bold", "value": "30 " },
+      { "type": "image", "image_file": "max_health_icon.webp" },
+      { "type": "text_normal", "value": ". " }
+    ]
+  },
+  "Moon Beam": {
+    "name": "Moon Beam",
+    "image_file": "moon_beam.webp",
+    "provider": "Selene",
+    "effect_values": ["3", "4", "5", "7"],
+    "description_rich": [
+      { "type": "text_normal", "value": "A reward from " },
+      { "type": "text_bold", "value": "Selene " },
+      { "type": "text_normal", "value": "is likely. The next " },
+      { "type": "text_bold", "value": "Path of Stars " },
+      { "type": "text_normal", "value": "you find grants " },
+      { "type": "effect_values" },
+      { "type": "text_normal", "value": "upgrades. " }
+    ]
+  },
+  "Cloud Bangle": {
+    "name": "Cloud Bangle",
+    "image_file": "cloud_bangle.webp",
+    "provider": "Zeus",
+    "effect_values": ["Common", "Rare", "Epic"],
+    "description_rich": [
+      { "type": "text_normal", "value": "A " },
+      { "type": "text_bold", "value": "Boon " },
+      { "type": "text_normal", "value": "of " },
+      { "type": "text_bold", "value": "Zeus " },
+      { "type": "text_normal", "value": "is likely. You can " },
+      { "type": "text_bold", "value": "Rarify " },
+      { "type": "text_normal", "value": "his " },
+      { "type": "effect_values" },
+      { "type": "text_normal", "value": "blessings once this night. " }
+    ]
+  },
+  "Iridescent Fan": {
+    "name": "Iridescent Fan",
+    "image_file": "iridescent_fan.webp",
+    "provider": "Hera",
+    "effect_values": ["Common", "Rare", "Epic"],
+    "description_rich": [
+      { "type": "text_normal", "value": "A " },
+      { "type": "text_bold", "value": "Boon " },
+      { "type": "text_normal", "value": "of " },
+      { "type": "text_bold", "value": "Hera " },
+      { "type": "text_normal", "value": "is likely. You can " },
+      { "type": "text_bold", "value": "Rarify " },
+      { "type": "text_normal", "value": "her " },
+      { "type": "effect_values" },
+      { "type": "text_normal", "value": "blessings once this night. " }
+    ]
+  },
+  "Vivid Sea": {
+    "name": "Vivid Sea",
+    "image_file": "vivid_sea.webp",
+    "provider": "Poseidon",
+    "effect_values": ["Common", "Rare", "Epic"],
+    "description_rich": [
+      { "type": "text_normal", "value": "A " },
+      { "type": "text_bold", "value": "Boon " },
+      { "type": "text_normal", "value": "of " },
+      { "type": "text_bold", "value": "Poseidon " },
+      { "type": "text_normal", "value": "is likely. You can " },
+      { "type": "text_bold", "value": "Rarify " },
+      { "type": "text_normal", "value": "his " },
+      { "type": "effect_values" },
+      { "type": "text_normal", "value": "blessings once this night. " }
+    ]
+  },
+  "Barley Sheaf": {
+    "name": "Barley Sheaf",
+    "image_file": "barley_sheaf.webp",
+    "provider": "Demeter",
+    "effect_values": ["Common", "Rare", "Epic"],
+    "description_rich": [
+      { "type": "text_normal", "value": "A " },
+      { "type": "text_bold", "value": "Boon " },
+      { "type": "text_normal", "value": "of " },
+      { "type": "text_bold", "value": "Demeter " },
+      { "type": "text_normal", "value": "is likely. You can " },
+      { "type": "text_bold", "value": "Rarify " },
+      { "type": "text_normal", "value": "her " },
+      { "type": "effect_values" },
+      { "type": "text_normal", "value": "blessings once this night. " }
+    ]
+  },
+  "Harmonic Photon": {
+    "name": "Harmonic Photon",
+    "image_file": "harmonic_photon.webp",
+    "provider": "Apollo",
+    "effect_values": ["Common", "Rare", "Epic"],
+    "description_rich": [
+      { "type": "text_normal", "value": "A " },
+      { "type": "text_bold", "value": "Boon " },
+      { "type": "text_normal", "value": "of " },
+      { "type": "text_bold", "value": "Apollo " },
+      { "type": "text_normal", "value": "is likely. You can " },
+      { "type": "text_bold", "value": "Rarify " },
+      { "type": "text_normal", "value": "his " },
+      { "type": "effect_values" },
+      { "type": "text_normal", "value": "blessings once this night. " }
+    ]
+  },
+  "Beautiful Mirror": {
+    "name": "Beautiful Mirror",
+    "image_file": "beautiful_mirror.webp",
+    "provider": "Aphrodite",
+    "effect_values": ["Common", "Rare", "Epic"],
+    "description_rich": [
+      { "type": "text_normal", "value": "A " },
+      { "type": "text_bold", "value": "Boon " },
+      { "type": "text_normal", "value": "of " },
+      { "type": "text_bold", "value": "Aphrodite " },
+      { "type": "text_normal", "value": "is likely. You can " },
+      { "type": "text_bold", "value": "Rarify " },
+      { "type": "text_normal", "value": "her " },
+      { "type": "effect_values" },
+      { "type": "text_normal", "value": "blessings once this night. " }
+    ]
+  },
+  "Adamant Shard": {
+    "name": "Adamant Shard",
+    "image_file": "adamant_shard.webp",
+    "provider": "Hephaestus",
+    "effect_values": ["Common", "Rare", "Epic"],
+    "description_rich": [
+      { "type": "text_normal", "value": "A " },
+      { "type": "text_bold", "value": "Boon " },
+      { "type": "text_normal", "value": "of " },
+      { "type": "text_bold", "value": "Hephaestus " },
+      { "type": "text_normal", "value": "is likely. You can " },
+      { "type": "text_bold", "value": "Rarify " },
+      { "type": "text_normal", "value": "his " },
+      { "type": "effect_values" },
+      { "type": "text_normal", "value": "blessings once this night. " }
+    ]
+  },
+  "Everlasting Ember": {
+    "name": "Everlasting Ember",
+    "image_file": "everlasting_ember.webp",
+    "provider": "Hestia",
+    "effect_values": ["Common", "Rare", "Epic"],
+    "description_rich": [
+      { "type": "text_normal", "value": "A " },
+      { "type": "text_bold", "value": "Boon " },
+      { "type": "text_normal", "value": "of " },
+      { "type": "text_bold", "value": "Hestia " },
+      { "type": "text_normal", "value": "is likely. You can " },
+      { "type": "text_bold", "value": "Rarify " },
+      { "type": "text_normal", "value": "her " },
+      { "type": "effect_values" },
+      { "type": "text_normal", "value": "blessings once this night. " }
+    ]
+  },
+  "Sword Hilt": {
+    "name": "Sword Hilt",
+    "image_file": "sword_hilt.webp",
+    "provider": "Ares",
+    "effect_values": ["Common", "Rare", "Epic"],
+    "description_rich": [
+      { "type": "text_normal", "value": "A " },
+      { "type": "text_bold", "value": "Boon " },
+      { "type": "text_normal", "value": "of " },
+      { "type": "text_bold", "value": "Ares " },
+      { "type": "text_normal", "value": "is likely. You can " },
+      { "type": "text_bold", "value": "Rarify " },
+      { "type": "text_normal", "value": "his " },
+      { "type": "effect_values" },
+      { "type": "text_normal", "value": "blessings once this night. " }
+    ]
+  },
+  "Gorgon Amulet": {
+    "name": "Gorgon Amulet",
+    "image_file": "gorgon_amulet.webp",
+    "provider": "Athena",
+    "effect_values": ["Common", "Rare", "Epic", "Heroic"],
+    "description_rich": [
+      { "type": "text_normal", "value": "While you have no " },
+      { "type": "image", "image_file": "death_defiance_icon.webp" },
+      { "type": "text_normal", "value": ", " },
+      { "type": "text_bold", "value": "Athena " },
+      {
+        "type": "text_normal",
+        "value": "may appear once this night with at least "
+      },
+      { "type": "effect_values" }
+    ]
+  },
+  "Fig Leaf": {
+    "name": "Fig Leaf",
+    "image_file": "fig_leaf.webp",
+    "provider": "Dionysus",
+    "effect_values": ["1", "2", "3", "4"],
+    "description_rich": [
+      { "type": "text_normal", "value": "A single " },
+      { "type": "text_bold", "value": "Encounter " },
+      { "type": "text_normal", "value": "in " },
+      { "type": "effect_values" },
+      { "type": "text_bold", "value": "Region(s) " },
+      {
+        "type": "text_normal",
+        "value": "may be blissfully free from foes the rest of this night. "
+      }
+    ]
+  },
+  "Silken Sash": {
+    "name": "Silken Sash",
+    "image_file": "silken_sash.webp",
+    "provider": "Arachne",
+    "effect_values": ["2", "3", "4", "6"],
+    "description_rich": [
+      { "type": "text_normal", "value": "Gain " },
+      { "type": "text_bold", "value": "+30 " },
+      { "type": "image", "image_file": "armor_icon.webp" },
+      { "type": "text_normal", "value": ". While you have at least " },
+      { "type": "text_bold", "value": "1 " },
+      { "type": "image", "image_file": "armor_icon.webp" },
+      { "type": "text_normal", "value": ", gain " },
+      { "type": "effect_values" },
+      { "type": "image", "image_file": "armor_icon.webp" },
+      { "type": "text_normal", "value": "after each " },
+      { "type": "text_bold", "value": "Location " },
+      { "type": "text_normal", "value": ". " }
+    ]
+  },
+  "Aromatic Phial": {
+    "name": "Aromatic Phial",
+    "image_file": "aromatic_phial.webp",
+    "provider": "Narcissus",
+    "effect_values": ["Rare", "Epic", "Heroic"],
+    "description_rich": [
+      { "type": "text_bold", "value": "Fountains " },
+      { "type": "text_normal", "value": "restore " },
+      { "type": "text_bold", "value": "+20% " },
+      { "type": "image", "image_file": "health_icon.webp" },
+      { "type": "text_normal", "value": ". The next makes " },
+      { "type": "text_bold", "value": "1 " },
+      { "type": "text_normal", "value": "random " },
+      { "type": "text_bold", "value": "Common Boon " },
+      { "type": "text_normal", "value": "of yours " },
+      { "type": "effect_values" },
+      { "type": "text_normal", "value": ". " }
+    ]
+  },
+  "Concave Stone": {
+    "name": "Concave Stone",
+    "image_file": "concave_stone.webp",
+    "provider": "Echo",
+    "effect_values": ["25%", "50%", "75%", "100%"],
+    "description_rich": [
+      { "type": "text_normal", "value": "After choosing a " },
+      { "type": "text_bold", "value": "Boon " },
+      { "type": "text_normal", "value": ", " },
+      { "type": "effect_values" },
+      { "type": "text_normal", "value": "of the time randomly take " },
+      { "type": "text_bold", "value": "1 " },
+      { "type": "text_normal", "value": "more, once this night. " }
+    ]
+  },
+  "Lion Fang": {
+    "name": "Lion Fang",
+    "image_file": "lion_fang.webp",
+    "provider": "Heracles",
+    "effect_values": ["30%", "40%", "50%", "70%"],
+    "description_rich": [
+      { "type": "text_normal", "value": "Deal " },
+      { "type": "effect_values" },
+      { "type": "text_normal", "value": "damage, but lose " },
+      { "type": "text_bold", "value": "5% " },
+      { "type": "text_normal", "value": "of this bonus after each " },
+      { "type": "text_bold", "value": "Encounter " },
+      { "type": "text_normal", "value": ". " }
+    ]
+  },
+  "Blackened Fleece": {
+    "name": "Blackened Fleece",
+    "image_file": "blackened_fleece.webp",
+    "provider": "Medea",
+    "effect_values": ["20%", "30%", "40%", "60%"],
+    "description_rich": [
+      { "type": "text_normal", "value": "After you take " },
+      { "type": "text_bold", "value": "250 " },
+      { "type": "text_normal", "value": "damage, your " },
+      { "type": "text_bold", "value": "Ω Moves " },
+      { "type": "text_normal", "value": "deal " },
+      { "type": "effect_values" },
+      { "type": "text_normal", "value": "damage. " }
+    ]
+  },
+  "Crystal Figurine": {
+    "name": "Crystal Figurine",
+    "image_file": "crystal_figurine.webp",
+    "provider": "Circe",
+    "effect_values": ["Common", "Rare", "Epic", "Heroic"],
+    "description_rich": [
+      { "type": "text_normal", "value": "After the next " },
+      { "type": "text_bold", "value": "Guardian " },
+      { "type": "text_normal", "value": ", activate " },
+      { "type": "text_bold", "value": "2 " },
+      { "type": "text_normal", "value": "random inactive " },
+      { "type": "effect_values" },
+      { "type": "text_bold", "value": "Arcana Cards " },
+      { "type": "text_normal", "value": ". " }
+    ]
+  },
+  "Experimental Hammer": {
+    "name": "Experimental Hammer",
+    "image_file": "experimental_hammer.webp",
+    "provider": "Icarus",
+    "effect_values": ["10", "15", "20", "30"],
+    "description_rich": [
+      { "type": "text_normal", "value": "Gain " },
+      { "type": "text_bold", "value": "1 " },
+      { "type": "text_normal", "value": "random " },
+      { "type": "image", "image_file": "daedalus_hammer.webp" },
+      { "type": "text_normal", "value": "that lasts for " },
+      { "type": "effect_values" },
+      { "type": "text_bold", "value": "Encounters " },
+      { "type": "text_normal", "value": ". " }
+    ]
+  },
+  "Jeweled Pom": {
+    "name": "Jeweled Pom",
+    "image_file": "jeweled_pom.webp",
+    "provider": "Hades & Persephone",
+    "effect_values": ["1", "2", "3", "4"],
+    "description_rich": [
+      { "type": "text_normal", "value": "While at " },
+      { "type": "text_bold", "value": "Fates' Whim " },
+      { "type": "text_normal", "value": ", gain a random " },
+      { "type": "text_bold", "value": "Hades " },
+      { "type": "text_normal", "value": "blessing and most " },
+      { "type": "text_bold", "value": "Boons " },
+      { "type": "text_normal", "value": "have a " },
+      { "type": "effect_values" },
+      { "type": "image", "image_file": "arrow_up_icon.webp" },
+      { "type": "text_bold", "value": "Lv. " }
+    ]
+  },
+  "Calling Card": {
+    "name": "Calling Card",
+    "image_file": "calling_card.webp",
+    "provider": "Zagreus",
+    "effect_values": ["2", "4", "6", "8"],
+    "description_rich": [
+      { "type": "text_normal", "value": "While at " },
+      { "type": "text_bold", "value": "Fates' Whim " },
+      {
+        "type": "text_normal",
+        "value": ", you can rarify Olympian blessings up to "
+      },
+      { "type": "effect_values" },
+      { "type": "text_normal", "value": "times this night. " }
+    ]
+  },
+  "Time Piece": {
+    "name": "Time Piece",
+    "image_file": "time_piece.webp",
+    "provider": "Chronos",
+    "effect_values": ["2", "3", "4", "5"],
+    "description_rich": [
+      { "type": "text_normal", "value": "While at " },
+      { "type": "text_bold", "value": "Fates' Whim " },
+      { "type": "text_normal", "value": ", you can purge most rewards for " },
+      { "type": "image", "image_file": "gold_coins_icon.webp" },
+      { "type": "text_normal", "value": "up to " },
+      { "type": "effect_values" },
+      { "type": "text_normal", "value": "time(s) this night. " }
+    ]
+  },
+  "Transcendent Embryo": {
+    "name": "Transcendent Embryo",
+    "image_file": "transcendent_embryo.webp",
+    "provider": "Chaos",
+    "effect_values": ["Common", "Rare", "Epic", "Heroic"],
+    "description_rich": [
+      { "type": "text_normal", "value": "Gain a random " },
+      { "type": "effect_values" },
+      { "type": "text_bold", "value": " Chaos" },
+      { "type": "text_normal", "value": " blessing once this night. Every " },
+      { "type": "text_bold", "value": "8 Encounters " },
+      { "type": "text_normal", "value": ", replace it. " }
+    ]
+  }
+}
