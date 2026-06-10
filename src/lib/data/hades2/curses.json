@@ -1,0 +1,86 @@
+{
+  "Blitz": {
+    "name": "Blitz",
+    "effect": "After taking 120 damage, afflicted foes get struck by lightning.",
+    "duration": "4 Sec",
+    "source": "Zeus"
+  },
+  "Daze": {
+    "name": "Daze",
+    "effect": "Afflicted foes have 20% chance to deal no damage.",
+    "duration": "9 Sec",
+    "source": "Apollo"
+  },
+  "Freeze": {
+    "name": "Freeze",
+    "effect": "Afflicted foes are stopped for 2 Sec. Can be reapplied after 10 Sec.",
+    "duration": "2 Sec",
+    "source": "Demeter"
+  },
+  "Froth": {
+    "name": "Froth",
+    "effect": "When hit, afflicted foes have a 25% chance to take 50 damage.",
+    "duration": "3 Sec",
+    "source": "Poseidon"
+  },
+  "Glow": {
+    "name": "Glow",
+    "effect": "Afflicted foes take +15% damage for 5 Sec.",
+    "duration": "5 Sec",
+    "source": "Hephaestus"
+  },
+  "Gust": {
+    "name": "Gust",
+    "effect": "Afflicted foes are 20% slower and their ranged shots 60% slower.",
+    "duration": "3 Sec",
+    "source": "Demeter"
+  },
+  "Hangover": {
+    "name": "Hangover",
+    "effect": "Afflicted foes take damage continuously.",
+    "duration": "4 Sec",
+    "source": "Dionysus"
+  },
+  "Hitch": {
+    "name": "Hitch",
+    "effect": "Afflicted foes take 30% of damage dealt to other afflicted foes.",
+    "duration": "8 Sec",
+    "source": "Hera"
+  },
+  "Marked": {
+    "name": "Marked",
+    "effect": "Afflicted foes have +30% chance to take Critical damage.",
+    "duration": "6 Sec",
+    "source": "Artemis"
+  },
+  "Morph": {
+    "name": "Morph",
+    "effect": "Afflicted foes turn into harmless critters.",
+    "duration": "4 Sec",
+    "source": "Selene"
+  },
+  "Scorch": {
+    "name": "Scorch",
+    "effect": "Afflicted foes take 100 damage accrued from this every 1 Sec.",
+    "duration": "1 Sec",
+    "source": "Hestia"
+  },
+  "Scorn": {
+    "name": "Scorn",
+    "effect": "Afflicted foes take +30% Attack and Special damage.",
+    "duration": "10 Sec",
+    "source": "Hades"
+  },
+  "Weak": {
+    "name": "Weak",
+    "effect": "Afflicted foes deal at least 30% less damage.",
+    "duration": "1 Sec",
+    "source": "Aphrodite"
+  },
+  "Wounds": {
+    "name": "Wounds",
+    "effect": "Your strike has +50 Power when inflicting this. Can be re-applied after 3 Sec.",
+    "duration": "Instant",
+    "source": "Ares"
+  }
+}
