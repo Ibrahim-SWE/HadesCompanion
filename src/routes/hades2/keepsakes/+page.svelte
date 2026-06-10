@@ -156,7 +156,7 @@
                   >
                     {#each details.effect_values as effect, index (index)}
                       <span
-                        class="text-xs ml-0.5 mr-0.5 font-bold font-mono leading-none {effectValueColors[
+                        class="text-xs font-bold font-mono leading-none border-r border-white/50 pr-1 last:border-r-0 last:pr-0 {effectValueColors[
                           index
                         ] ?? 'text-textLight'}"
                       >
