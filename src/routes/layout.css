@@ -25,16 +25,48 @@
   background-attachment: fixed;
 }
 
-.navItems a {
-  color: inherit;
+.navLink,
+.mobileNavLink {
+  color: var(--color-textLight);
   text-decoration: none;
-  padding: 4px 6px;
-  margin: -4px -6px;
-  transition: background-color 0.25s ease;
+  white-space: nowrap;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
 }
-.navItems a:hover {
+
+.navLink {
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+
+.mobileNavLink {
+  display: block;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  line-height: 1.1rem;
+}
+
+.navLink:hover,
+.mobileNavLink:hover {
   color: #eff7e8;
   background-color: rgba(147, 177, 120, 0.12);
+}
+
+.navLinkActive {
+  color: #eff7e8;
+  background-color: rgba(74, 110, 68, 0.35);
+  font-weight: 500;
+}
+
+.desktopNav {
+  scrollbar-width: none;
+}
+.desktopNav::-webkit-scrollbar {
+  display: none;
 }
 
 .regularBoon {
