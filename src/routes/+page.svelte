@@ -26,21 +26,21 @@
       route: "/hades2/keepsakes",
       desc: "Find the right keepsake for every region. See their effect and who gifts them.",
     },
-    {
-      title: "Items & Resources",
-      route: "/hades2/items",
-      desc: "View items, collectibles, currencies, and upgrade materials in the game.",
-    },
+    // {
+    //   title: "Items & Resources",
+    //   route: "/hades2/items",
+    //   desc: "View items, collectibles, currencies, and upgrade materials in the game.",
+    // },
     {
       title: "Curses",
       route: "/hades2/curses",
       desc: "View all curses and status effects to find the perfect combination for your build.",
     },
-    {
-      title: "Incantations",
-      route: "/hades2/incantations",
-      desc: "Browse all cauldron incantations, their ingredients, and their effect.",
-    },
+    // {
+    //   title: "Incantations",
+    //   route: "/hades2/incantations",
+    //   desc: "Browse all cauldron incantations, their ingredients, and their effect.",
+    // },
     {
       title: "Animal Familiars",
       route: "/hades2/animals",
@@ -71,7 +71,7 @@
     {#each features as f (f.title)}
       <a
         href={resolve(f.route)}
-        class="bg-white/15 border border-white/10 rounded-xl p-5 flex flex-col gap-2 last:col-span-full"
+        class="bg-white/15 border border-white/10 rounded-xl p-5 flex flex-col gap-2 last:col-span-2"
       >
         <h2 class="text-textDark font-semibold text-lg">{f.title}</h2>
         <p class="text-textLight text-sm">{f.desc}</p>

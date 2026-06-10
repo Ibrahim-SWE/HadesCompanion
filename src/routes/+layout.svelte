@@ -15,10 +15,10 @@
       | "/hades2/weapons"
       | "/hades2/cards"
       | "/hades2/tools"
-      | "/hades2/items"
+      // | "/hades2/items"
       | "/hades2/keepsakes"
       | "/hades2/curses"
-      | "/hades2/incantations"
+      // | "/hades2/incantations"
       | "/hades2/animals";
     label: string;
     shortLabel?: string;
@@ -31,11 +31,19 @@
     { href: "/hades2/weapons", label: "Weapons" },
     { href: "/hades2/cards", label: "Arcana Cards", shortLabel: "Cards" },
     { href: "/hades2/tools", label: "Tools" },
-    { href: "/hades2/items", label: "Items" },
+    // { href: "/hades2/items", label: "Items" },
     { href: "/hades2/keepsakes", label: "Keepsakes" },
     { href: "/hades2/curses", label: "Curses" },
-    { href: "/hades2/incantations", label: "Incantations", shortLabel: "Incant." },
-    { href: "/hades2/animals", label: "Animal Familiars", shortLabel: "Familiars" },
+    // {
+    //   href: "/hades2/incantations",
+    //   label: "Incantations",
+    //   shortLabel: "Incant.",
+    // },
+    {
+      href: "/hades2/animals",
+      label: "Animal Familiars",
+      shortLabel: "Familiars",
+    },
   ];
 
   let mobileMenuOpen = $state(false);
