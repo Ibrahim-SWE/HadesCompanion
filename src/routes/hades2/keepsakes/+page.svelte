@@ -3,6 +3,22 @@
   import keepsakesData from "$lib/data/hades2/keepsakes.json";
   import godsData from "$lib/data/gods.json";
   import { resolve } from "$app/paths";
+  import { page } from "$app/state";
+
+  let activeKeepsake = $derived(
+    decodeURIComponent(page.url.hash).replace("#keepsake-", ""),
+  );
+
+  $effect(() => {
+    if (activeKeepsake) {
+      const element = document.getElementById(`keepsake-${activeKeepsake}`);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 50);
+      }
+    }
+  });
 
   const keepsakeImages = import.meta.glob("$lib/assets/keepsakes/*.webp", {
     eager: true,
@@ -96,7 +112,11 @@
             {/if}
           </div>
 
-          <div class="cardBody flex flex-col flex-1 gap-2 p-2.5 min-h-0">
+          <div
+            class="cardBody flex flex-col flex-1 gap-2 p-2.5 min-h-0"
+            id="keepsake-{details.name}"
+            class:highlighted={details.name === activeKeepsake}
+          >
             <div class="text-center flex flex-col gap-0.5">
               <h2
                 class="text-sm sm:text-base font-bold text-textDark leading-tight"
@@ -132,7 +152,7 @@
                   >
                 {:else if part.type === "effect_values"}
                   <span
-                    class="effectsTextContainer pl-0.5 pr-0.5 ml-0.5 mr-0.5 bg-[#0d140d] border rounded-md border-white/20 inline-block"
+                    class="effectsTextContainer bg-[#0d140d] border rounded-md border-white/20 inline-flex flex-wrap justify-center gap-x-1 p-0.5 mr-0.5 ml-0.5 gap-y-0.5 align-middle"
                   >
                     {#each details.effect_values as effect, index (index)}
                       <span
@@ -160,3 +180,11 @@
     </div>
   </div>
 </Container>
+
+<style>
+  .highlighted {
+    background-color: #5d7459;
+    /* border: 2px solid #fbc02d; */
+    /* box-shadow: 0 4px 12px rgba(251, 192, 45, 0.3); */
+  }
+</style>

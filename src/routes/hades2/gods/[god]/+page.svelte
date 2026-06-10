@@ -10,10 +10,7 @@
 
   type godsKeepsakeAndCurses = { keepsake: string; curses: string[] };
 
-  type GodDetails = {
-    title: string;
-    hades_2: godsKeepsakeAndCurses | null;
-  };
+  type GodDetails = { title: string; hades_2: godsKeepsakeAndCurses | null };
 
   type DescriptionPart =
     | { type: "text_normal"; value: string }
@@ -36,18 +33,14 @@
   };
 
   const godName = $derived(data.godName);
-  const godData = $derived(
-    (godsData as Record<string, GodDetails>)[godName],
-  );
+  const godData = $derived((godsData as Record<string, GodDetails>)[godName]);
 
   const godImages = import.meta.glob("$lib/assets/gods/*.webp", {
     eager: true,
     import: "default",
   }) as Record<string, string>;
 
-  const imageUrl = $derived(
-    godImages[`/src/lib/assets/gods/${godName}.webp`],
-  );
+  const imageUrl = $derived(godImages[`/src/lib/assets/gods/${godName}.webp`]);
 
   const godBoons = $derived(
     (Object.values(boonsData) as BoonData[])
@@ -97,10 +90,10 @@
             class="detailsPanel flex flex-col gap-2 rounded-xl border border-white/20 bg-black/25 p-4"
           >
             {#if godData.hades_2.keepsake}
-              <p>
+              <a href="../keepsakes#keepsake-{godData.hades_2.keepsake}">
                 <span class="text-textDark font-medium">Keepsake:</span>
                 {godData.hades_2.keepsake}
-              </p>
+              </a>
             {/if}
             {#if godData.hades_2.curses.length > 0}
               <div>
@@ -122,7 +115,9 @@
     </header>
 
     <section class="boonsSection flex flex-col gap-3">
-      <h2 class="text-xl font-bold text-[#eff7e8] border-b border-white/20 pb-2">
+      <h2
+        class="text-xl font-bold text-[#eff7e8] border-b border-white/20 pb-2"
+      >
         Boons
         <span class="text-sm font-normal text-textDark ml-2"
           >({godBoons.length})</span
