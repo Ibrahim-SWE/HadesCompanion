@@ -1,0 +1,197 @@
+{
+  "Frinos": {
+    "name": "Frinos",
+    "bond1": {
+      "bondName": "Life Bond",
+      "imageFile": "life_bond.webp",
+      "description_rich": [
+        { "type": "text_normal", "value": "While together, gain " },
+        { "type": "effect_values" },
+        { "type": "image", "image_file": "max_health_icon.webp" }
+      ],
+      "effects": ["+20", "+30", "+40", "+80"]
+    },
+    "bond2": {
+      "bondName": "Soul Bond",
+      "imageFile": "soul_bond.webp",
+      "description_rich": [
+        { "type": "text_normal", "value": "While together, you are " },
+        { "type": "effect_values" },
+        { "type": "text_normal", "value": " more likely to find Lost Shades." }
+      ],
+      "effects": ["+30%", "+40%", "+50%"]
+    },
+    "bond3": {
+      "bondName": "Drive Bond",
+      "imageFile": "drive_bond.webp",
+      "description_rich": [
+        { "type": "text_normal", "value": "Frinos deals " },
+        { "type": "effect_values" },
+        { "type": "text_normal", "value": " damage when leaping onto foes. " }
+      ],
+      "effects": ["10", "20", "30"]
+    }
+  },
+  "Toula": {
+    "name": "Toula",
+    "bond1": {
+      "bondName": "Heart Bond",
+      "imageFile": "heart_bond.webp",
+      "description_rich": [
+        {
+          "type": "text_normal",
+          "value": "Gain 1 Death Defiance from Toula, "
+        },
+        { "type": "image", "image_file": "death_defiance_icon.webp" },
+        { "type": "text_normal", "value": " effects restore " },
+        { "type": "effect_values" },
+        { "type": "image", "image_file": "health_icon.webp" }
+      ],
+      "effects": ["+40", "+60", "+80"],
+      "note": "Primal Psychic Connection boon from Circe grants an extra Death Defiance"
+    },
+    "bond2": {
+      "bondName": "Sense Bond",
+      "imageFile": "sense_bond.webp",
+      "description_rich": [
+        { "type": "text_normal", "value": "While together, you are " },
+        { "type": "effect_values" },
+        {
+          "type": "text_normal",
+          "value": " more likely to find Fishing Points."
+        }
+      ],
+      "effects": ["+30%", "+40%", "+50%"]
+    },
+    "bond3": {
+      "bondName": "Claw Bond",
+      "imageFile": "claw_bond.webp",
+      "description_rich": [
+        { "type": "text_normal", "value": "Toula claws at surrounding foes " },
+        { "type": "effect_values" },
+        { "type": "text_normal", "value": " time(s) prior to losing interest." }
+      ],
+      "effects": ["6", "8", "10"],
+      "note": "The claw strike deals 99 damage"
+    }
+  },
+  "Raki": {
+    "name": "Raki",
+    "bond1": {
+      "bondName": "Vision Bond",
+      "imageFile": "vision_bond.webp",
+      "description_rich": [
+        {
+          "type": "text_normal",
+          "value": "While together, gain an additional "
+        },
+        { "type": "effect_values" },
+        {
+          "type": "text_normal",
+          "value": " chance for any damage you deal to be Critical."
+        }
+      ],
+      "effects": ["+2%", "+3%", "+4%", "+8%"],
+      "note": "This Critical Chance is not affected by Success Rate boon from Hermes"
+    },
+    "bond2": {
+      "bondName": "Stone Bond",
+      "imageFile": "stone_bond.webp",
+      "description_rich": [
+        { "type": "text_normal", "value": "While together, you are " },
+        { "type": "effect_values" },
+        { "type": "text_normal", "value": " more likely to find Outcroppings." }
+      ],
+      "effects": ["+30%", "+40%", "+50%"]
+    },
+    "bond3": {
+      "bondName": "Wing Bond",
+      "imageFile": "wing_bond.webp",
+      "description_rich": [
+        {
+          "type": "text_normal",
+          "value": "Raki swoops down to peck at foes every "
+        },
+        { "type": "effect_values" }
+      ],
+      "effects": ["7-8 Sec", "5-6 Sec", "3-4 Sec"],
+      "note": "This strike deals 15 damage in three hits and applies Marked"
+    }
+  },
+  "Hecuba": {
+    "name": "Hecuba",
+    "bond1": {
+      "bondName": "Spirit Bond",
+      "imageFile": "spirit_bond.webp",
+      "description_rich": [
+        { "type": "text_normal", "value": "While together, you have " },
+        { "type": "effect_values" },
+        { "type": "text_normal", "value": " " },
+        { "type": "image", "image_file": "max_magick_icon.webp" }
+      ],
+      "effects": ["+30", "+45", "+60", "+120"]
+    },
+    "bond2": {
+      "bondName": "Earth Bond",
+      "imageFile": "earth_bond.webp",
+      "description_rich": [
+        { "type": "text_normal", "value": "While together, you are " },
+        { "type": "effect_values" },
+        {
+          "type": "text_normal",
+          "value": " more likely to find Digging Spots."
+        }
+      ],
+      "effects": ["+30%", "+40%", "+50%"],
+      "note": "Digging Spots can also give a healing item that heals +10 or an item that restores 100 Magick"
+    },
+    "bond3": {
+      "bondName": "Guard Bond",
+      "imageFile": "guard_bond.webp",
+      "description_rich": [
+        {
+          "type": "text_normal",
+          "value": "Hecuba stuns surrounding foes every "
+        },
+        { "type": "effect_values" }
+      ],
+      "effects": ["7-8 Sec", "6-7 Sec", "5-6 Sec"]
+    }
+  },
+  "Gale": {
+    "name": "Gale",
+    "bond1": {
+      "bondName": "Veil Bond",
+      "imageFile": "veil_bond.webp",
+      "description_rich": [
+        { "type": "text_normal", "value": "While together, you have " },
+        { "type": "effect_values" },
+        { "type": "text_normal", "value": " Dodge chance and move speed." }
+      ],
+      "effects": ["+4%", "+5%", "+6%", "+12%"]
+    },
+    "bond2": {
+      "bondName": "Nature Bond",
+      "imageFile": "nature_bond.webp",
+      "description_rich": [
+        { "type": "text_normal", "value": "While together, you are " },
+        { "type": "effect_values" },
+        { "type": "text_normal", "value": " more likely to find Flora." }
+      ],
+      "effects": ["+30%", "+40%", "+50%"]
+    },
+    "bond3": {
+      "bondName": "Wild Bond",
+      "imageFile": "wild_bond.webp",
+      "description_rich": [
+        { "type": "text_normal", "value": "Gale deals " },
+        { "type": "effect_values" },
+        {
+          "type": "text_normal",
+          "value": " damage when scratching foes in retaliation."
+        }
+      ],
+      "effects": ["300", "350", "400"]
+    }
+  }
+}
