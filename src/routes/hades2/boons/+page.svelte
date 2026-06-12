@@ -3,6 +3,7 @@
   import Container from "$lib/components/Container.svelte";
   import boonsData from "$lib/data/hades2/boons.json";
   import godsData from "$lib/data/gods.json";
+  import { page } from "$app/state";
 
   type godsKeepsakeAndCurses = { keepsake: string; curses: string[] };
 
@@ -93,7 +94,14 @@
     return "bg-emerald-950/50 "; // Neutral / Any
   };
 
-  let searchQuery: string = $state("");
+  let searchQuery: string = $state(page.url.searchParams.get("search") ?? "");
+
+  $effect(() => {
+    const query = page.url.searchParams.get("search");
+    if (query) {
+      searchQuery = query;
+    }
+  });
 
   let filteredBoons = $derived(
     boonEntries.filter(([boonId, boonDetails]) => {

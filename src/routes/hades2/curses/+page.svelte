@@ -22,7 +22,8 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
       {#each Object.entries(curses) as [curse, details] (curse)}
-        <article
+        <a
+          href="/hades2/boons?search={curse}"
           class="flex flex-col bg-linear-to-r from-[#0a140d] to-[#0d1c13] border border-[#1c3623] border-l-4 rounded-xl p-4 shadow-[0_4px_15px_rgba(0,0,0,0.5)] relative overflow-hidden transition-all hover:border-[#46f08f]/50 hover:shadow-[0_4px_20px_rgba(70,240,143,0.1)] group"
           style="border-left-color: #46f08f;"
         >
@@ -50,7 +51,7 @@
               </p>
             {/if}
           </div>
-        </article>
+        </a>
       {/each}
     </div>
   </div>
