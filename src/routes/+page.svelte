@@ -41,7 +41,7 @@
       route: "/hades2/tools",
       desc: "View all gathering tools available. See their unlock and upgrade requirements.",
     },
-  ];
+  ] as const;
 </script>
 
 <div
