@@ -106,7 +106,7 @@
   <div class="max-w-300 mx-auto text-[#e5f4e7] p-2 sm:p-3 font-serif">
     <header class="flex flex-col pb-1.5 border-b border-[#58ffa5]/25 mb-2">
       <h1
-        class="text-[#ccff90] font-serif text-xl sm:text-2xl font-normal uppercase tracking-widest m-0 drop-shadow-[0_0_10px_rgba(204,255,144,0.3)]"
+        class="text-[#ccff90] font-serif text-2xl sm:text-3xl font-normal uppercase tracking-widest m-0 drop-shadow-[0_0_10px_rgba(204,255,144,0.3)]"
       >
         Keepsakes
       </h1>
