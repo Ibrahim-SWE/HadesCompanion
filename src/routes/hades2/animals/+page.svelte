@@ -96,21 +96,21 @@
 </script>
 
 <Container>
-  <div class="max-w-300 mx-auto text-[#e5f4e7] p-2 sm:p-4 font-serif">
+  <div class="max-w-300 mx-auto text-[#e5f4e7] p-2 sm:p-3 font-serif">
     <header
-      class="flex justify-between items-center pb-3 border-b border-[#58ffa5]/25 mb-4"
+      class="flex justify-between items-center pb-1.5 border-b border-[#58ffa5]/25 mb-2"
     >
       <h1
-        class="text-[#ccff90] font-serif text-3xl font-normal uppercase tracking-widest m-0 drop-shadow-[0_0_10px_rgba(204,255,144,0.3)]"
+        class="text-[#ccff90] font-serif text-2xl sm:text-3xl font-normal uppercase tracking-widest m-0 drop-shadow-[0_0_10px_rgba(204,255,144,0.3)]"
       >
         Animal Familiars
       </h1>
     </header>
 
-    <nav class="flex gap-2 mb-4 flex-wrap" aria-label="Filter familiars">
+    <nav class="flex gap-1.5 mb-2 flex-wrap" aria-label="Filter familiars">
       <button
         type="button"
-        class="bg-[#0d1a12] border px-3.5 py-1.5 rounded text-sm uppercase tracking-wider cursor-pointer transition-all duration-200 {activeTab ===
+        class="bg-[#0d1a12] border px-2.5 py-1 rounded text-xs uppercase tracking-wider cursor-pointer transition-all duration-200 {activeTab ===
         'all'
           ? 'border-[#46f08f] text-[#ccff90] shadow-[0_0_8px_rgba(77,252,142,0.2)] bg-[#153320]'
           : 'border-[#1a3a25] text-[#8da693] hover:bg-[#153320] hover:text-[#ccff90] hover:border-[#46f08f]'}"
@@ -122,7 +122,7 @@
         {@const theme = petThemes[petKey] || petThemes.Frinos}
         <button
           type="button"
-          class="bg-[#0d1a12] border px-3.5 py-1.5 rounded text-sm uppercase tracking-wider cursor-pointer transition-all duration-200 {activeTab ===
+          class="bg-[#0d1a12] border px-2.5 py-1 rounded text-xs uppercase tracking-wider cursor-pointer transition-all duration-200 {activeTab ===
           petKey
             ? 'bg-[#153320] text-[#ccff90] shadow-[0_0_8px_var(--accent-dim)] border-(--accent)'
             : 'border-[#1a3a25] text-[#8da693] hover:bg-[#153320] hover:text-[#ccff90] hover:border-(--accent) hover:shadow-[0_0_8px_var(--accent-dim)]'}"
@@ -134,7 +134,7 @@
       {/each}
     </nav>
 
-    <div class="flex flex-col gap-3">
+    <div class="flex flex-col gap-2">
       {#each pets as [petKey, pet] (petKey)}
         {#if activeTab === "all" || activeTab === petKey}
           {@const theme = petThemes[petKey] || petThemes.Frinos}
@@ -142,15 +142,15 @@
             getImagePath(`${petKey}.webp`) || getImagePath(`${pet.name}.webp`)}
 
           <article
-            class="flex flex-col xl:flex-row gap-5 bg-linear-to-r from-[#0a140d] to-[#0d1c13] border border-[#1c3623] border-l-4 rounded-md p-4 shadow-[0_4px_10px_rgba(0,0,0,0.5)] relative overflow-hidden"
+            class="flex flex-col xl:flex-row gap-3 bg-linear-to-r from-[#0a140d] to-[#0d1c13] border border-[#1c3623] border-l-4 rounded-lg p-2.5 sm:p-3 shadow-[0_4px_10px_rgba(0,0,0,0.5)] relative overflow-hidden"
             style="border-left-color: var(--accent); {themeStyle(theme)}"
           >
             <section
-              class="flex flex-row xl:flex-col items-center xl:items-center justify-start xl:justify-center min-w-50 text-left xl:text-center pr-0 xl:pr-5 border-b xl:border-b-0 xl:border-r border-[#1c3623] pb-4 xl:pb-0 gap-5 xl:gap-0"
+              class="flex flex-row xl:flex-col items-center xl:items-center justify-start xl:justify-center shrink-0 text-left xl:text-center xl:pr-3 border-b xl:border-b-0 xl:border-r border-[#1c3623] pb-2.5 xl:pb-0 gap-3 xl:gap-1.5"
               aria-label={`${pet.name} familiar`}
             >
               <div
-                class="w-24 h-24 sm:w-28 sm:h-28 bg-black rounded-full border-2 flex items-center justify-center xl:mb-3 overflow-hidden shadow-[0_0_15px_var(--accent-dim)] shrink-0"
+                class="w-24 h-24 sm:w-28 sm:h-28 bg-black rounded-full border-2 flex items-center justify-center xl:mb-1.5 overflow-hidden shadow-[0_0_15px_var(--accent-dim)] shrink-0"
                 style="border-color: var(--accent);"
               >
                 {#if petPortrait}
@@ -166,13 +166,13 @@
                 {/if}
               </div>
 
-              <div class="min-w-0 flex flex-col justify-center">
+              <div class="min-w-0 flex flex-col justify-center xl:items-center">
                 <span
-                  class="text-[0.7rem] uppercase tracking-widest text-(--accent) block leading-tight mb-1"
+                  class="text-[0.6rem] uppercase tracking-widest text-(--accent) block leading-tight mb-0.5"
                   >Familiar</span
                 >
                 <h2
-                  class="text-xl sm:text-2xl text-white m-0 tracking-wider leading-none"
+                  class="text-lg sm:text-xl text-white m-0 tracking-wide leading-tight"
                 >
                   {pet.name}
                 </h2>
@@ -180,17 +180,17 @@
             </section>
 
             <section
-              class="flex flex-col md:flex-row gap-4 flex-1"
+              class="flex flex-col md:flex-row gap-2 flex-1 min-w-0"
               aria-label={`${pet.name} bonds`}
             >
               {#each petBonds(pet) as bond (bond.bondName)}
                 {@const bondImage = getImagePath(bond.imageFile)}
 
                 <div
-                  class="flex-1 bg-black/20 border border-white/5 rounded-lg p-4 flex flex-col items-center text-center"
+                  class="flex-1 bg-black/20 border border-white/5 rounded-lg p-2.5 flex flex-col items-center text-center min-w-0"
                 >
                   <div
-                    class="flex flex-col items-center mb-3 pb-3 border-b border-white/5 w-full gap-3"
+                    class="flex flex-col items-center mb-2 pb-2 border-b border-white/5 w-full gap-2"
                   >
                     <div
                       class="w-20 h-20 sm:w-24 sm:h-24 bg-black rounded-lg border border-[#2a4030] shrink-0 flex items-center justify-center p-2 shadow-inner"
@@ -204,14 +204,14 @@
                       {/if}
                     </div>
                     <h3
-                      class="text-base sm:text-lg m-0 text-[#e5f4e7] font-medium leading-tight"
+                      class="text-sm sm:text-base m-0 text-[#e5f4e7] font-medium leading-tight"
                     >
                       {bond.bondName}
                     </h3>
                   </div>
 
                   <p
-                    class="text-[0.8rem] sm:text-sm leading-relaxed text-[#a4bea9] m-0 mb-3 flex-1 font-sans text-left w-full"
+                    class="text-xs sm:text-sm leading-snug text-[#a4bea9] m-0 mb-2 flex-1 font-sans text-left w-full"
                   >
                     {#each bond.description_rich as part, index (index)}
                       {#if part.type === "text_normal"}
@@ -257,7 +257,7 @@
 
                   {#if bond.note}
                     <p
-                      class="text-[0.75rem] text-[#7b9981] italic m-0 border-l-2 pl-2.5 font-sans text-left w-full"
+                      class="text-[0.7rem] text-[#7b9981] italic m-0 border-l-2 pl-2 font-sans text-left w-full"
                       style="border-color: var(--accent);"
                     >
                       {bond.note}
