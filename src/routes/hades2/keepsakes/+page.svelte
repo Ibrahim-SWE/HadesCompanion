@@ -111,10 +111,10 @@
         Keepsakes
       </h1>
       <p class="text-[0.7rem] sm:text-xs text-[#8da693] font-sans mt-0.5 tracking-wide leading-snug">
-        Gifts from allies that grow stronger over a run. Rank 2 unlocks after 25
+        Gifts from allies that grow stronger as you complete runs. Rank 2 unlocks after 25
         encounters, Rank 3 after 50. The Quickening of Sentimental Value
         Incantation halves these requirements. Heroic rank requires the Cherished
-        Heirloom boon.
+        Heirloom duo boon from Demeter and Hera.
       </p>
     </header>
 
