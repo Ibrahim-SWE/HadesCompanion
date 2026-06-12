@@ -52,127 +52,143 @@
 
   const effectValueColors = [
     "text-white",
-    "text-blue-400",
-    "text-purple-400",
-    "text-rose-500",
+    "text-[#5bc0eb]",
+    "text-[#c071ff]",
+    "text-[#ff5e7e]",
   ];
 
   function isGodProvider(provider: string): boolean {
     return gods.includes(provider);
   }
 
-  function keepsakeImageUrl(imageFile: string): string | undefined {
-    return keepsakeImages[`/src/lib/assets/keepsakes/${imageFile}`];
+  function keepsakeImageUrl(imageFile: string): string {
+    return keepsakeImages[`/src/lib/assets/keepsakes/${imageFile}`] ?? "";
   }
 </script>
 
+{#snippet descriptionRich(
+  parts: DescriptionRich[],
+  effectValues: string[],
+)}
+  {#each parts as part, i (`${part.type}-${i}`)}
+    {#if part.type === "text_normal"}
+      <span>{part.value}</span>
+    {:else if part.type === "text_bold"}
+      <span class="font-semibold text-[#e5f4e7]">{part.value}</span>
+    {:else if part.type === "effect_values"}
+      <span
+        class="inline-flex flex-wrap gap-0.5 align-middle mx-0.5"
+        aria-label="Keepsake ranks"
+      >
+        {#each effectValues as effect, index (index)}
+          <span
+            class="bg-black px-1 py-px rounded font-mono text-[0.7rem] leading-tight {effectValueColors[
+              index
+            ] ?? 'text-[#b3c2b7]'}"
+          >
+            {effect}
+          </span>
+        {/each}
+      </span>
+    {:else if part.type === "image"}
+      <img
+        src={miscImages[`/src/lib/assets/misc/${part.image_file}`]}
+        alt={part.image_file.replace("_icon.webp", "").replace(/_/g, " ")}
+        class="inline-block h-[1.65em] w-auto object-contain align-middle mx-0.5"
+        loading="lazy"
+        decoding="async"
+      />
+    {/if}
+  {/each}
+{/snippet}
+
 <Container>
-  <div class="keepsakesPage w-full p-2 max-w-6xl mx-auto flex flex-col gap-3">
-    <header class="text-center px-1">
-      <h1 class="text-2xl sm:text-3xl font-bold text-[#eff7e8]">Keepsakes</h1>
-      <p class="text-sm text-textLight/80 mt-1">
-        Keepsakes can be upgraded 2 times through clearing encounters. <b
-          >Rank 2</b
-        >
-        is gained after 25 Encounters. <b>Rank 3</b> is gained after 50 Encounters.
-        The Quickening of Sentimental Value Incantation can cut these numbers by half.
-      </p>
-      <p class="text-sm text-textLight/80 mt-1">
-        The Heroic rank is only gained through the Cherished Heirloom boon.
+  <div class="max-w-300 mx-auto text-[#e5f4e7] p-2 sm:p-3 font-serif">
+    <header class="flex flex-col pb-1.5 border-b border-[#58ffa5]/25 mb-2">
+      <h1
+        class="text-[#ccff90] font-serif text-xl sm:text-2xl font-normal uppercase tracking-widest m-0 drop-shadow-[0_0_10px_rgba(204,255,144,0.3)]"
+      >
+        Keepsakes
+      </h1>
+      <p class="text-[0.7rem] sm:text-xs text-[#8da693] font-sans mt-0.5 tracking-wide leading-snug">
+        Gifts from allies that grow stronger over a run. Rank 2 unlocks after 25
+        encounters, Rank 3 after 50. The Quickening of Sentimental Value
+        Incantation halves these requirements. Heroic rank requires the Cherished
+        Heirloom boon.
       </p>
     </header>
 
-    <div
-      class="keepsakesGrid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-3"
-    >
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1.5">
       {#each keepsakes as [, details] (details.name)}
         {@const imageUrl = keepsakeImageUrl(details.image_file)}
+        {@const highlighted = details.name === activeKeepsake}
+
         <article
-          class="keepsakeCard flex flex-col h-full rounded-xl border border-white/20 bg-[#1a221a]/80 shadow-lg shadow-black/30 overflow-hidden hover:border-[#5a7a52]/60 hover:bg-[#1f2a1f]/90 transition-colors"
+          id="keepsake-{details.name}"
+          aria-current={highlighted ? "true" : undefined}
+          class="flex flex-col items-center bg-linear-to-r from-[#0a140d] to-[#0d1c13] border border-[#1c3623] border-l-[3px] rounded-md p-1.5 shadow-[0_2px_10px_rgba(0,0,0,0.5)] relative overflow-hidden transition-all hover:border-[#46f08f]/50 hover:shadow-[0_2px_14px_rgba(70,240,143,0.1)] group {highlighted
+            ? 'highlighted-card border-[#46f08f] border-l-4 bg-[#122418] shadow-[0_0_0_2px_rgba(70,240,143,0.7),0_0_28px_rgba(70,240,143,0.45)] scale-[1.04] z-20'
+            : ''}"
+          style="border-left-color: #46f08f;"
         >
           <div
-            class="imageWrap relative w-full flex justify-center items-center bg-[#0d140d]"
+            class="absolute left-0 top-0 bottom-0 w-0.5 bg-linear-to-b from-[#46f08f]/80 to-transparent transition-opacity duration-300 z-10 {highlighted
+              ? 'opacity-100 w-1'
+              : 'opacity-0 group-hover:opacity-100'}"
+          ></div>
+
+          <div
+            class="relative w-14 h-14 shrink-0 bg-black rounded border flex items-center justify-center p-1 z-10 transition-shadow {highlighted
+              ? 'border-[#46f08f] shadow-[0_0_14px_rgba(70,240,143,0.55)]'
+              : 'border-[#1a3a25] shadow-[0_0_8px_rgba(0,0,0,0.8)]'}"
           >
             {#if imageUrl}
               <img
                 src={imageUrl}
                 alt={details.name}
-                class="h-auto max-w-30 object-contain"
+                class="w-full h-full object-contain drop-shadow-lg"
+                loading="lazy"
+                decoding="async"
               />
             {:else}
-              <div
-                class="flex aspect-square items-center justify-center bg-linear-to-br from-emerald-950 to-[#0d140d] p-4"
-              >
-                <span
-                  class="text-center text-xs text-textDark/70 font-medium leading-tight"
-                >
-                  {details.name}
-                </span>
-              </div>
-            {/if}
-          </div>
-
-          <div
-            class="cardBody flex flex-col flex-1 gap-2 p-2.5 min-h-0"
-            id="keepsake-{details.name}"
-            class:highlighted={details.name === activeKeepsake}
-          >
-            <div class="text-center flex flex-col gap-0.5">
-              <h2
-                class="text-sm sm:text-base font-bold text-textDark leading-tight"
+              <span
+                class="text-center text-[0.55rem] text-[#8da693] font-sans leading-tight"
               >
                 {details.name}
-              </h2>
-              <p class="text-[11px] sm:text-xs text-textLight/70">
-                from
-                {#if isGodProvider(details.provider)}
-                  <a
-                    href={resolve(`/hades2/gods/${details.provider}`)}
-                    class="text-textDark font-medium hover:text-[#eff7e8] transition-colors underline-offset-2 hover:underline"
-                  >
-                    {details.provider}
-                  </a>
-                {:else}
-                  <span class="text-textLight font-medium"
-                    >{details.provider}</span
-                  >
-                {/if}
-              </p>
-            </div>
+              </span>
+            {/if}
+            <div
+              class="absolute inset-0 shadow-[inset_0_0_6px_rgba(0,0,0,0.8)] pointer-events-none rounded"
+            ></div>
+          </div>
 
-            <p
-              class="text-center text-textLight text-[11px] sm:text-xs leading-snug flex-1 font-light"
+          <div class="flex flex-col gap-0.5 min-w-0 w-full z-10 relative text-center mt-1">
+            <span
+              class="text-[0.65rem] uppercase tracking-widest text-[#46f08f] block leading-tight truncate"
             >
-              {#each details.description_rich as part, i (`${part.type}-${i}`)}
-                {#if part.type === "text_normal"}
-                  {part.value}
-                {:else if part.type === "text_bold"}
-                  <strong class="text-[#eff7e8] font-semibold"
-                    >{part.value}</strong
-                  >
-                {:else if part.type === "effect_values"}
-                  <span
-                    class="effectsTextContainer bg-[#0d140d] border rounded-md border-white/20 inline-flex flex-wrap justify-center gap-x-1 p-0.5 mr-0.5 ml-0.5 gap-y-0.5 align-middle"
-                  >
-                    {#each details.effect_values as effect, index (index)}
-                      <span
-                        class="text-xs font-bold font-mono leading-none border-r border-white/50 pr-1 last:border-r-0 last:pr-0 {effectValueColors[
-                          index
-                        ] ?? 'text-textLight'}"
-                      >
-                        {effect}
-                      </span>
-                    {/each}
-                  </span>
-                {:else if part.type === "image"}
-                  <img
-                    class="inline-block h-[1.55em] w-auto object-contain align-middle"
-                    src={miscImages[`/src/lib/assets/misc/${part.image_file}`]}
-                    alt={part.image_file}
-                    title={part.image_file}
-                  />
-                {/if}
-              {/each}
+              {#if isGodProvider(details.provider)}
+                <a
+                  href={resolve(`/hades2/gods/${details.provider}`)}
+                  class="hover:text-[#ccff90] transition-colors"
+                >
+                  {details.provider}
+                </a>
+              {:else}
+                {details.provider}
+              {/if}
+            </span>
+            <h2
+              class="text-sm font-serif uppercase tracking-wide m-0 leading-tight {highlighted
+                ? 'text-white drop-shadow-[0_0_10px_rgba(204,255,144,0.7)]'
+                : 'text-[#ccff90] drop-shadow-sm'}"
+            >
+              {details.name}
+            </h2>
+            <p class="text-xs text-[#a4bea9] font-sans leading-snug">
+              {@render descriptionRich(
+                details.description_rich,
+                details.effect_values,
+              )}
             </p>
           </div>
         </article>
@@ -182,9 +198,21 @@
 </Container>
 
 <style>
-  .highlighted {
-    background-color: #5d7459;
-    /* border: 2px solid #fbc02d; */
-    /* box-shadow: 0 4px 12px rgba(251, 192, 45, 0.3); */
+  .highlighted-card {
+    animation: keepsake-highlight-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes keepsake-highlight-pulse {
+    0%,
+    100% {
+      box-shadow:
+        0 0 0 2px rgba(70, 240, 143, 0.65),
+        0 0 24px rgba(70, 240, 143, 0.35);
+    }
+    50% {
+      box-shadow:
+        0 0 0 3px rgba(70, 240, 143, 0.95),
+        0 0 36px rgba(70, 240, 143, 0.55);
+    }
   }
 </style>
