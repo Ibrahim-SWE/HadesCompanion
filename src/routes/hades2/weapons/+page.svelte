@@ -1,19 +1,8 @@
 <script lang="ts">
-  import { slide } from "svelte/transition";
   import Container from "$lib/components/Container.svelte";
   import weaponsData from "$lib/data/hades2/weapons.json";
 
-  const weaponImages = import.meta.glob("/src/lib/assets/weapons/*.webp", {
-    eager: true,
-    import: "default",
-  }) as Record<string, string>;
-
-  const upgradeImages = import.meta.glob(
-    "/src/lib/assets/weaponupgrades/*.webp",
-    { eager: true, import: "default" },
-  ) as Record<string, string>;
-
-  const aspectImages = import.meta.glob("/src/lib/assets/weapons/*.webp", {
+  const weaponImages = import.meta.glob("/src/lib/assets/weapons/**/*.webp", {
     eager: true,
     import: "default",
   }) as Record<string, string>;
@@ -32,8 +21,8 @@
 
   type WeaponUpgrade = {
     name: string;
-    description_rich: RichTextNode[];
     image_path: string;
+    description_rich: RichTextNode[];
   };
 
   type EffectRank = {
@@ -43,270 +32,284 @@
 
   type WeaponAspect = {
     name: string;
-    image_file: string;
+    image_path: string;
     description_rich: RichTextNode[];
     effect: string;
     effect_ranks: EffectRank[];
   };
 
   type WeaponDetails = {
-    entry: string;
+    name: string;
     image_path: string;
-    upgrades: WeaponUpgrade[];
+    book_of_shadows: string;
     aspects: WeaponAspect[];
+    upgrades: WeaponUpgrade[];
   };
 
-  const weapons = weaponsData as Record<string, WeaponDetails>;
+  const weapons = Object.entries(weaponsData as Record<string, WeaponDetails>);
 
-  // Track expanded/collapsed states for each weapon
-  let expandedStates = Object.keys(weapons).reduce(
-    (acc, key) => {
-      acc[key] = { upgrades: false, aspects: false };
-      return acc;
-    },
-    {} as Record<string, { upgrades: boolean; aspects: boolean }>,
+  let activeTab = $state(weapons[0][0]);
+  let activeWeapon = $derived(
+    weapons.find(([key]) => key === activeTab)?.[1] ?? weapons[0][1],
   );
 
-  function toggleSection(weaponName: string, section: "upgrades" | "aspects") {
-    expandedStates[weaponName][section] = !expandedStates[weaponName][section];
-    // Reassign to trigger Svelte reactivity
-    expandedStates = { ...expandedStates };
+  function weaponImage(path: string) {
+    return weaponImages[`/src/lib/assets/weapons/${path}`] ?? "";
   }
 
   function toSnakeCase(str: string) {
     return str.toLowerCase().replace(/\s+/g, "_");
   }
 
-  // Define the colors for each rank level (1 through 6)
+  // Rank value colors: Common, Rare, Epic, Heroic, Legendary, Max
   const rankColors = [
-    "text-white", // 1st: Common
-    "text-blue-400", // 2nd: Rare
-    "text-purple-400", // 3rd: Epic
-    "text-rose-500", // 4th: Heroic
-    "text-orange-400", // 5th: Legendary (Gold/Orange)
-    "text-green-400", // 6th: Light Green
+    "text-white",
+    "text-[#5bc0eb]",
+    "text-[#c071ff]",
+    "text-[#ff5e7e]",
+    "text-[#ffb454]",
+    "text-[#46f08f]",
   ];
 </script>
 
-<Container>
-  <div class="max-w-6xl mx-auto flex flex-col gap-10 text-gray-200">
-    {#each Object.entries(weapons) as [weaponName, details] (weaponName)}
-      <div class="weapon-block">
-        <header
-          class="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-4"
+{#snippet richText(parts: RichTextNode[])}
+  {#each parts as part, i (i)}
+    {#if part.type === "text_normal"}
+      <span>{part.value}</span>
+    {:else if part.type === "text_bold"}
+      <span class="font-semibold text-[#e5f4e7]">{part.value}</span>
+    {:else if part.type === "image"}
+      <img
+        src={miscImages[`/src/lib/assets/misc/${part.img_path}`]}
+        alt={part.name}
+        class="inline h-[1.2em] object-contain align-text-bottom mx-0.5"
+        loading="lazy"
+        decoding="async"
+      />
+    {/if}
+  {/each}
+{/snippet}
+
+{#snippet costChips(cost: Record<string, number> | string)}
+  {#if typeof cost === "string"}
+    <span class="text-[#8da693] italic">{cost}</span>
+  {:else}
+    <div class="flex flex-wrap gap-1">
+      {#each Object.entries(cost) as [resName, amt] (resName)}
+        <div
+          class="flex items-center gap-1 bg-[#1a3a25] px-1.5 py-0.5 rounded border border-[#2d5a3c]"
+          title={resName}
         >
-          {#if details.image_path}
+          <span class="text-xs font-bold text-[#ccff90] font-mono leading-none">
+            {amt}
+          </span>
+          <img
+            src={miscImages[`/src/lib/assets/misc/${toSnakeCase(resName)}.webp`]}
+            alt={resName}
+            class="w-4 h-4 object-contain"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+      {/each}
+    </div>
+  {/if}
+{/snippet}
+
+<Container>
+  <div class="max-w-300 mx-auto text-[#e5f4e7] p-2 sm:p-4 font-serif">
+    <header class="flex flex-col pb-2 border-b border-[#58ffa5]/25 mb-4">
+      <h1
+        class="text-[#ccff90] font-serif text-2xl sm:text-3xl font-normal uppercase tracking-widest m-0 drop-shadow-[0_0_10px_rgba(204,255,144,0.3)]"
+      >
+        Nocturnal Arms
+      </h1>
+      <p class="text-xs sm:text-sm text-[#8da693] font-sans mt-1 tracking-wide">
+        The weapons of Melinoë, their Aspects, and Daedalus Hammer upgrades.
+      </p>
+    </header>
+
+    <nav class="flex gap-2 mb-4 flex-wrap" aria-label="Select weapon">
+      {#each weapons as [weaponKey, weapon] (weaponKey)}
+        <button
+          type="button"
+          class="flex items-center gap-2 bg-[#0d1a12] border px-3 py-1.5 rounded text-xs sm:text-sm uppercase tracking-wider cursor-pointer transition-all duration-200 {activeTab ===
+          weaponKey
+            ? 'border-[#46f08f] text-[#ccff90] shadow-[0_0_8px_rgba(77,252,142,0.2)] bg-[#153320]'
+            : 'border-[#1a3a25] text-[#8da693] hover:bg-[#153320] hover:text-[#ccff90] hover:border-[#46f08f]'}"
+          onclick={() => (activeTab = weaponKey)}
+        >
+          <img
+            src={weaponImage(weapon.image_path)}
+            alt=""
+            class="w-5 h-5 object-contain"
+            loading="lazy"
+            decoding="async"
+          />
+          {weapon.name}
+        </button>
+      {/each}
+    </nav>
+
+    {#key activeTab}
+      <article
+        class="flex flex-col gap-4 bg-linear-to-r from-[#0a140d] to-[#0d1c13] border border-[#1c3623] border-l-4 rounded-xl p-3 sm:p-4 shadow-[0_4px_15px_rgba(0,0,0,0.5)] relative overflow-hidden"
+        style="border-left-color: #46f08f;"
+      >
+        <header class="flex items-start gap-3 sm:gap-4">
+          <div
+            class="relative w-16 h-16 sm:w-20 sm:h-20 shrink-0 bg-black rounded-lg border border-[#1a3a25] flex items-center justify-center p-2 shadow-[0_0_15px_rgba(0,0,0,0.8)]"
+          >
             <img
-              src={weaponImages[
-                `/src/lib/assets/weapons/${details.image_path}`
-              ]}
-              alt={weaponName}
-              class="w-20 h-20 object-contain drop-shadow-md flex-none"
+              src={weaponImage(activeWeapon.image_path)}
+              alt={activeWeapon.name}
+              class="w-full h-full object-contain drop-shadow-lg"
             />
-          {/if}
-          <div>
-            <h1 class="text-3xl font-bold text-amber-400 mb-1">{weaponName}</h1>
-            <p class="text-sm italic text-gray-400 leading-snug">
-              "{details.entry}"
+            <div
+              class="absolute inset-0 shadow-[inset_0_0_10px_rgba(0,0,0,0.8)] pointer-events-none rounded-lg"
+            ></div>
+          </div>
+          <div class="flex-1 min-w-0">
+            <span
+              class="text-[0.6rem] uppercase tracking-widest text-[#46f08f] block leading-tight mb-0.5"
+              >Nocturnal Arm</span
+            >
+            <h2
+              class="text-lg sm:text-2xl font-serif text-[#ccff90] uppercase tracking-wider m-0 drop-shadow-sm"
+            >
+              {activeWeapon.name}
+            </h2>
+            <p
+              class="text-[0.75rem] sm:text-xs text-[#8da693] font-sans italic leading-snug mt-1 whitespace-pre-line"
+            >
+              {activeWeapon.book_of_shadows}
             </p>
           </div>
         </header>
 
-        <section class="mb-4">
-          <button
-            class="w-full flex items-center justify-between text-left border-b border-white/10 pb-2 mb-3 hover:bg-white/5 transition-colors group cursor-pointer"
-            on:click={() => toggleSection(weaponName, "upgrades")}
+        <section aria-label="Aspects">
+          <h3
+            class="text-sm font-bold uppercase tracking-widest text-[#46f08f] border-b border-[#1c3623] pb-1.5 mb-3"
           >
-            <h2
-              class="text-sm font-bold uppercase tracking-wider text-amber-500 pl-2"
-            >
-              Daedalus Upgrades
-            </h2>
-            <div
-              class="pr-2 text-amber-500 transition-transform duration-200 mr-2 {expandedStates[
-                weaponName
-              ].upgrades
-                ? 'rotate-180'
-                : ''}"
-            >
-              ▼
-            </div>
-          </button>
-
-          {#if expandedStates[weaponName].upgrades}
-            <div
-              transition:slide={{ duration: 300 }}
-              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 overflow-hidden px-1 pb-4"
-            >
-              {#each details.upgrades as upgrade (upgrade.name)}
-                <div
-                  class="flex gap-3 bg-black/30 rounded p-3 border border-white/5"
-                >
-                  <img
-                    src={upgradeImages[
-                      `/src/lib/assets/weaponupgrades/${upgrade.image_path}`
-                    ]}
-                    alt={upgrade.name}
-                    class="w-10 h-10 object-contain rounded bg-black/50 p-1 flex-none"
-                  />
-                  <div class="flex flex-col">
-                    <h3 class="text-sm font-bold text-white leading-none mb-1">
-                      {upgrade.name}
-                    </h3>
-                    <p class="text-xs text-gray-300 leading-tight">
-                      {#each upgrade.description_rich as part, i (i)}
-                        {#if part.type === "text_normal"}
-                          <span>{part.value}</span>
-                        {:else if part.type === "text_bold"}
-                          <span class="font-bold text-white">{part.value}</span>
-                        {:else if part.type === "image"}
-                          <img
-                            src={miscImages[
-                              `/src/lib/assets/misc/${part.img_path}`
-                            ]}
-                            alt={part.name}
-                            class="inline h-[1.2em] object-contain align-text-bottom mx-0.5"
-                          />
-                        {/if}
-                      {/each}
+            Aspects
+          </h3>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+            {#each activeWeapon.aspects as aspect (aspect.name)}
+              <div
+                class="flex flex-col gap-2.5 bg-black/20 border border-white/5 rounded-lg p-3"
+              >
+                <div class="flex items-start gap-3">
+                  <div
+                    class="w-12 h-12 sm:w-14 sm:h-14 shrink-0 bg-black rounded-lg border border-[#2a4030] flex items-center justify-center p-1.5 shadow-inner"
+                  >
+                    <img
+                      src={weaponImage(aspect.image_path)}
+                      alt={aspect.name}
+                      class="w-full h-full object-contain drop-shadow-lg"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="min-w-0">
+                    <h4
+                      class="text-base font-medium text-[#e5f4e7] tracking-wide m-0"
+                    >
+                      {aspect.name}
+                    </h4>
+                    <p
+                      class="text-xs text-[#a4bea9] font-sans leading-snug mt-1"
+                    >
+                      {@render richText(aspect.description_rich)}
                     </p>
                   </div>
                 </div>
-              {/each}
-            </div>
-          {/if}
-        </section>
 
-        <section>
-          <button
-            class="w-full flex items-center justify-between text-left border-b border-white/10 pb-2 mb-3 hover:bg-white/5 transition-colors group cursor-pointer"
-            on:click={() => toggleSection(weaponName, "aspects")}
-          >
-            <h2
-              class="text-sm font-bold uppercase tracking-wider text-emerald-400 pl-2"
-            >
-              Aspects
-            </h2>
-            <div
-              class="pr-2 text-emerald-400 transition-transform duration-200 mr-2 {expandedStates[
-                weaponName
-              ].aspects
-                ? 'rotate-180'
-                : ''}"
-            >
-              ▼
-            </div>
-          </button>
-
-          {#if expandedStates[weaponName].aspects}
-            <div
-              transition:slide={{ duration: 300 }}
-              class="grid grid-cols-1 lg:grid-cols-2 gap-4 overflow-hidden px-1"
-            >
-              {#each details.aspects as aspect (aspect.name)}
-                <div
-                  class="bg-black/30 rounded p-4 border border-white/5 flex flex-col gap-3"
-                >
-                  <div class="flex items-start gap-3">
-                    {#if aspect.image_file}
-                      <img
-                        src={aspectImages[
-                          `/src/lib/assets/weapons/${aspect.image_file}`
-                        ]}
-                        alt={aspect.name}
-                        class="w-12 h-12 object-contain rounded flex-none"
-                      />
-                    {/if}
-                    <div>
-                      <h3 class="text-base font-bold text-white">
-                        {aspect.name}
-                      </h3>
-                      <p class="text-xs text-gray-300 mt-0.5">
-                        {#each aspect.description_rich as part, i (i)}
-                          {#if part.type === "text_normal"}
-                            <span>{part.value}</span>
-                          {:else if part.type === "text_bold"}
-                            <span class="font-bold text-white"
-                              >{part.value}</span
-                            >
-                          {:else if part.type === "image"}
-                            <img
-                              src={miscImages[
-                                `/src/lib/assets/misc/${part.img_path}`
-                              ]}
-                              alt={part.name}
-                              class="inline h-[1.2em] object-contain align-text-bottom mx-0.5"
-                            />
-                          {/if}
-                        {/each}
-                      </p>
-                    </div>
+                <div class="mt-auto pt-2 border-t border-white/5">
+                  <div
+                    class="text-xs text-[#46f08f] font-sans font-semibold mb-1"
+                  >
+                    {aspect.effect}
                   </div>
-
-                  <div class="mt-auto pt-2 border-t border-white/10">
-                    <div class="text-xs text-emerald-400 font-bold mb-1">
-                      {aspect.effect}
-                    </div>
-                    <table class="w-full text-xs text-left text-gray-300">
-                      <thead>
-                        <tr class="border-b border-white/5 text-gray-500">
-                          <th class="py-1 font-normal w-12">Rank</th>
-                          <th class="py-1 font-normal w-16">Value</th>
-                          <th class="py-1 font-normal">Cost</th>
+                  <table
+                    class="w-full text-xs text-left text-[#b3c2b7] font-sans"
+                  >
+                    <thead>
+                      <tr
+                        class="border-b border-white/5 text-[#8da693] text-[0.65rem] uppercase tracking-wider"
+                      >
+                        <th class="py-1 font-normal w-12">Rank</th>
+                        <th class="py-1 font-normal w-18">Value</th>
+                        <th class="py-1 font-normal">Cost</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {#each aspect.effect_ranks as rank, rankIdx (rankIdx)}
+                        <tr class="border-b border-white/5 last:border-0">
+                          <td class="py-1 text-[#8da693]">{rankIdx + 1}</td>
+                          <td
+                            class="py-1 font-bold font-mono {rankColors[
+                              rankIdx
+                            ] || 'text-white'}"
+                          >
+                            {rank.effect_value}
+                          </td>
+                          <td class="py-1">
+                            {@render costChips(rank.upgrade_cost)}
+                          </td>
                         </tr>
-                      </thead>
-                      <tbody>
-                        {#each aspect.effect_ranks as rank, rankIdx (rankIdx)}
-                          <tr class="border-b border-white/5 last:border-0">
-                            <td class="py-1">{rankIdx + 1}</td>
-
-                            <td
-                              class="py-1 font-bold {rankColors[rankIdx] ||
-                                'text-white'}"
-                            >
-                              {rank.effect_value}
-                            </td>
-
-                            <td class="py-1">
-                              {#if typeof rank.upgrade_cost === "string"}
-                                <span class="text-gray-500"
-                                  >{rank.upgrade_cost}</span
-                                >
-                              {:else}
-                                <div class="flex flex-wrap gap-1.5">
-                                  {#each Object.entries(rank.upgrade_cost) as [resName, amt] (resName)}
-                                    <div
-                                      class="flex items-center gap-1 bg-black/40 px-1.5 py-0.5 rounded border border-white/10"
-                                      title={resName}
-                                    >
-                                      <span
-                                        class="text-xs font-bold text-amber-400 font-mono leading-none"
-                                      >
-                                        {amt}
-                                      </span>
-                                      <img
-                                        src={miscImages[
-                                          `/src/lib/assets/misc/${toSnakeCase(resName)}.webp`
-                                        ]}
-                                        alt={resName}
-                                        class="w-3.5 h-3.5 object-contain"
-                                      />
-                                    </div>
-                                  {/each}
-                                </div>
-                              {/if}
-                            </td>
-                          </tr>
-                        {/each}
-                      </tbody>
-                    </table>
-                  </div>
+                      {/each}
+                    </tbody>
+                  </table>
                 </div>
-              {/each}
-            </div>
-          {/if}
+              </div>
+            {/each}
+          </div>
         </section>
-      </div>
-    {/each}
+
+        <section aria-label="Daedalus Hammer upgrades">
+          <h3
+            class="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-[#ccff90] border-b border-[#1c3623] pb-1.5 mb-3"
+          >
+            <img
+              src={miscImages["/src/lib/assets/misc/daedalus_hammer.webp"]}
+              alt=""
+              class="w-5 h-5 object-contain"
+              loading="lazy"
+              decoding="async"
+            />
+            Daedalus Upgrades
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2.5">
+            {#each activeWeapon.upgrades as upgrade (upgrade.name)}
+              <div
+                class="flex gap-2.5 bg-black/20 border border-white/5 rounded-lg p-2.5 transition-colors hover:border-[#46f08f]/30"
+              >
+                <div
+                  class="w-10 h-10 shrink-0 bg-black rounded border border-[#2a4030] flex items-center justify-center p-1 shadow-inner"
+                >
+                  <img
+                    src={weaponImage(upgrade.image_path)}
+                    alt={upgrade.name}
+                    class="w-full h-full object-contain"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="min-w-0">
+                  <h4
+                    class="text-sm font-medium text-[#e5f4e7] tracking-wide leading-tight m-0"
+                  >
+                    {upgrade.name}
+                  </h4>
+                  <p class="text-xs text-[#a4bea9] font-sans leading-snug mt-0.5">
+                    {@render richText(upgrade.description_rich)}
+                  </p>
+                </div>
+              </div>
+            {/each}
+          </div>
+        </section>
+      </article>
+    {/key}
   </div>
 </Container>
