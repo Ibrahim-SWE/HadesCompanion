@@ -1,6 +1,7 @@
 <script lang="ts">
   import Container from "$lib/components/Container.svelte";
   import cardsData from "$lib/data/hades2/arcana_cards.json";
+
   const cardImages = import.meta.glob("$lib/assets/cards/*.webp", {
     eager: true,
     import: "default",
@@ -27,141 +28,204 @@
 
   const cards = Object.entries(cardsData) as [string, CardDetails][];
 
+  let selected = $state<string | null>(null);
+
+  function toggleCard(card: string) {
+    selected = selected === card ? null : card;
+  }
+
   function toSnakeCase(str: string) {
     return str.toLowerCase().replace(/\s+/g, "_");
   }
+
+  // Rank value colors: Common, Rare, Epic, Heroic
+  const effectValueColors = [
+    "text-white",
+    "text-[#5bc0eb]",
+    "text-[#c071ff]",
+    "text-[#ff5e7e]",
+  ];
+
+  // Cost to reach Rank II / III / IV
+  const rankLabels = ["Rank I", "Rank II", "Rank III"];
+  const tierColors = ["text-white", "text-[#5bc0eb]", "text-[#c071ff]"];
 </script>
 
-<Container>
-  <div class="cardsContainer grid grid-cols-5 gap-3 max-w-4xl mx-auto">
-    {#each cards as [card, details] (card)}
-      <div
-        class="cardContainer flex flex-col h-full p-2 border border-white/20 rounded-lg bg-black/20 hover:bg-black/40 transition-colors shadow-md"
-      >
-        <div class="imgsContainer relative w-full flex-none">
-          <img
-            src={cardImages[`/src/lib/assets/cards/${details.image_file}`]}
-            alt={details.name}
-            class="w-full h-auto rounded-md shadow-sm"
-          />
+{#snippet cardInfo(card: string, details: CardDetails)}
+  <h2
+    class="text-sm font-serif text-[#ccff90] uppercase tracking-wide m-0 drop-shadow-sm leading-tight text-center"
+  >
+    {card}
+  </h2>
 
-          <div
-            class="graspContainer absolute top-1 left-1 z-10 flex items-center bg-black/40 backdrop-blur-sm px-1.5 rounded-md border border-white/20 shadow-lg"
+  <p class="text-xs text-[#a4bea9] font-sans leading-snug text-center">
+    {#each details.description_rich as part, i (i)}
+      {#if part.type === "text_normal"}
+        <span>{part.value}</span>
+      {:else if part.type === "text_bold"}
+        <span class="font-semibold text-[#e5f4e7]">{part.value}</span>
+      {:else if part.type === "image"}
+        <img
+          class="inline-block h-[1.5em] w-auto object-contain align-middle mx-0.5"
+          src={miscImages[`/src/lib/assets/misc/${part.image_file}`]}
+          alt={part.image_file.replace("_icon.webp", "").replace(/_/g, " ")}
+          loading="lazy"
+          decoding="async"
+        />
+      {/if}
+    {/each}
+  </p>
+
+  {#if details.effect_values && details.effect_values.length > 0}
+    <div
+      class="flex flex-wrap justify-center gap-0.5"
+      aria-label="Effect per rank"
+    >
+      {#each details.effect_values as effect, index (index)}
+        <span
+          class="bg-black px-1 py-px rounded font-mono text-[0.7rem] leading-tight {effectValueColors[
+            index
+          ] ?? 'text-[#b3c2b7]'}"
+        >
+          {effect}
+        </span>
+      {/each}
+    </div>
+  {/if}
+
+  {#if details.upgradeCosts && details.upgradeCosts.length > 0}
+    <div
+      class="grid grid-cols-3 gap-1 mt-auto pt-1.5 border-t border-white/5 w-full"
+      aria-label="Upgrade costs"
+    >
+      {#each details.upgradeCosts as tier, tierIndex (tierIndex)}
+        <div class="flex flex-col items-center gap-0.5 min-w-0">
+          <span
+            class="text-[0.6rem] uppercase tracking-wider font-sans font-semibold leading-none text-center {tierColors[
+              tierIndex
+            ] ?? 'text-white'}"
           >
-            <span
-              class="text-xs font-bold text-amber-400 font-mono leading-none"
-            >
-              {details.graspCost}
-            </span>
-            <img
-              src={miscImages[`/src/lib/assets/misc/grasp.webp`]}
-              alt="Grasp"
-              class="w-6 h-6 object-contain"
-            />
-          </div>
-
-          {#if details.effect_values && details.effect_values.length > 0}
-            <div
-              class="effectsContainer absolute bottom-1 left-1 z-10 flex flex-col items-start gap-1 bg-black/60 backdrop-blur-sm px-1.5 py-1 rounded-md border border-white/20 shadow-lg"
-            >
-              {#each details.effect_values as effect, index (index)}
+            {rankLabels[tierIndex] ?? `Rank ${tierIndex + 1}`}
+          </span>
+          <div
+            class="flex flex-col items-center gap-1 bg-[#1a3a25] px-1 py-1 rounded border border-[#2d5a3c] w-full"
+          >
+            {#each tier as costObject, costIndex (costIndex)}
+              {#each Object.entries(costObject) as [item, amount] (item)}
                 <span
-                  class="text-xs font-bold font-mono leading-none
-          {index === 0 ? 'text-white' : ''}
-          {index === 1 ? 'text-blue-400' : ''}
-          {index === 2 ? 'text-purple-400' : ''}
-          {index === 3 ? 'text-rose-500' : ''}
-        "
+                  class="flex items-center gap-1"
+                  title={item}
                 >
-                  {effect}
+                  <span
+                    class="text-sm font-bold font-mono leading-none {tierColors[
+                      tierIndex
+                    ] ?? 'text-white'}"
+                  >
+                    {amount}
+                  </span>
+                  <img
+                    src={miscImages[
+                      `/src/lib/assets/misc/${toSnakeCase(item)}.webp`
+                    ]}
+                    alt={item}
+                    class="w-5 h-5 object-contain"
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </span>
               {/each}
-            </div>
-          {/if}
-
-          {#if details.upgradeCosts && details.upgradeCosts.length > 0}
-            <div
-              class="upgradesContainer absolute top-1 right-1 z-10 flex flex-col items-end gap-1"
-            >
-              {#each details.upgradeCosts as tier, tierIndex (tierIndex)}
-                <div
-                  class="flex items-center w-fit pl-1 bg-black/60 backdrop-blur-sm rounded border border-white/20 shadow-sm overflow-hidden"
-                >
-                  {#each tier as costObject, costIndex (costIndex)}
-                    {#each Object.entries(costObject) as [item, amount] (item)}
-                      <div
-                        class="flex items-center gap-1 px-0.5 py-0.5"
-                        title={item}
-                      >
-                        <span
-                          class="text-xs font-bold font-mono leading-none
-                  {tierIndex === 0 ? 'text-white' : ''}
-                  {tierIndex === 1 ? 'text-blue-400' : ''}
-                  {tierIndex === 2 ? 'text-purple-400' : ''}
-                "
-                        >
-                          {amount}
-                        </span>
-                        <img
-                          src={miscImages[
-                            `/src/lib/assets/misc/${toSnakeCase(item)}.webp`
-                          ]}
-                          alt={item}
-                          class="w-3.5 h-3.5 object-contain"
-                        />
-                      </div>
-
-                      {#if costIndex !== tier.length - 1}
-                        <div class="w-px h-3.5 bg-white/20"></div>
-                      {/if}
-                    {/each}
-                  {/each}
-                </div>
-              {/each}
-            </div>
-          {/if}
-        </div>
-
-        <div class="textContainer flex flex-col flex-1">
-          <h1
-            class="text-center text-textDark font-bold text-sm sm:text-lg flex-none"
-          >
-            {card}
-          </h1>
-
-          <div class="flex flex-col flex-1 mt-2">
-            <p
-              class="text-center text-white font-extralight text-xs sm:text-sm flex-1 flex items-center justify-center px-1"
-            >
-              <span>
-                {#each details.description_rich as part (part)}
-                  {#if part.type === "text_normal"}
-                    {part.value}
-                  {:else if part.type === "text_bold"}
-                    <span class="font-bold">{part.value}</span>
-                  {:else if part.type === "image"}
-                    <img
-                      class="inline-block h-[1.4em] w-auto object-contain align-middle"
-                      src={miscImages[
-                        `/src/lib/assets/misc/${part.image_file}`
-                      ]}
-                      alt="{part.image_file} Icon"
-                    />
-                  {/if}
-                {/each}
-              </span>
-            </p>
-
-            {#if details.note && details.note.length > 0}
-              <p
-                class="text-center text-xs p-1 text-emerald-400 flex-1 flex items-center justify-center border-t border-white/10 mt-1"
-              >
-                {details.note}
-              </p>
-            {/if}
+            {/each}
           </div>
         </div>
+      {/each}
+    </div>
+  {/if}
+
+  {#if details.note && details.note.length > 0}
+    <p
+      class="text-[0.7rem] text-[#7b9981] italic font-sans leading-snug text-center border-t border-white/5 pt-1"
+    >
+      {details.note}
+    </p>
+  {/if}
+{/snippet}
+
+<Container>
+  <div class="max-w-300 mx-auto text-[#e5f4e7] p-2 sm:p-3 font-serif">
+    <header class="flex flex-col pb-1.5 border-b border-[#58ffa5]/25 mb-3">
+      <h1
+        class="text-[#ccff90] font-serif text-2xl sm:text-3xl font-normal uppercase tracking-widest m-0 drop-shadow-[0_0_10px_rgba(204,255,144,0.3)]"
+      >
+        Arcana Cards
+      </h1>
+      <p
+        class="text-[0.7rem] sm:text-xs text-[#8da693] font-sans mt-0.5 tracking-wide leading-snug"
+      >
+        The Arcana of the Altar of Ashes, shown in their in-game positions.
+        <span class="lg:hidden">Tap a card to see its details.</span>
+      </p>
+    </header>
+
+    <div class="grid grid-cols-5 gap-1.5 sm:gap-2">
+      {#each cards as [card, details] (card)}
+        {@const isSelected = selected === card}
+        <button
+          type="button"
+          onclick={() => toggleCard(card)}
+          class="flex flex-col gap-1.5 bg-linear-to-b from-[#0a140d] to-[#0d1c13] border rounded-md p-1 sm:p-1.5 lg:p-2 shadow-[0_2px_10px_rgba(0,0,0,0.5)] relative overflow-hidden cursor-pointer text-left transition-all group {isSelected
+            ? 'border-[#46f08f] shadow-[0_0_0_2px_rgba(70,240,143,0.5),0_0_18px_rgba(70,240,143,0.3)] z-10'
+            : 'border-[#1c3623] hover:border-[#46f08f]/50 hover:shadow-[0_2px_14px_rgba(70,240,143,0.1)]'}"
+        >
+          <div class="relative w-full">
+            <img
+              src={cardImages[`/src/lib/assets/cards/${details.image_file}`]}
+              alt={card}
+              class="w-full h-auto rounded shadow-sm"
+              loading="lazy"
+              decoding="async"
+            />
+            <div
+              class="absolute top-1 left-1 z-10 flex items-center gap-1 bg-black/85 backdrop-blur-sm pl-1.5 pr-1 py-1 rounded-md border border-[#46f08f]/60 shadow-[0_0_10px_rgba(70,240,143,0.35)]"
+              title="Grasp cost"
+            >
+              <span
+                class="text-sm sm:text-base font-bold text-[#ccff90] font-mono leading-none drop-shadow-[0_0_6px_rgba(204,255,144,0.5)]"
+              >
+                {details.graspCost}
+              </span>
+              <img
+                src={miscImages[`/src/lib/assets/misc/grasp.webp`]}
+                alt="Grasp"
+                class="w-6 h-6 sm:w-7 sm:h-7 object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+
+          <div class="hidden lg:flex flex-col gap-1.5 flex-1 w-full">
+            {@render cardInfo(card, details)}
+          </div>
+        </button>
+      {/each}
+    </div>
+
+    {#if selected}
+      {@const details = cardsData[selected as keyof typeof cardsData] as CardDetails}
+      <div
+        class="lg:hidden sticky bottom-2 z-30 mt-3 flex flex-col gap-1.5 bg-linear-to-r from-[#0a140d] to-[#0d1c13] border border-[#46f08f] border-l-4 rounded-lg p-3 shadow-[0_0_20px_rgba(70,240,143,0.25),0_4px_15px_rgba(0,0,0,0.8)]"
+        style="border-left-color: #46f08f;"
+      >
+        <button
+          type="button"
+          onclick={() => (selected = null)}
+          class="absolute top-1.5 right-1.5 w-6 h-6 flex items-center justify-center rounded text-[#8da693] hover:text-[#ccff90] hover:bg-white/5 transition-colors cursor-pointer"
+          aria-label="Close card details"
+        >
+          ✕
+        </button>
+        {@render cardInfo(selected, details)}
       </div>
-    {/each}
+    {/if}
   </div>
 </Container>

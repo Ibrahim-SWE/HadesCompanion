@@ -50,7 +50,7 @@
 </script>
 
 <Container>
-  <div class="max-w-300 mx-auto text-[#e5f4e7] p-4 font-serif">
+  <div class="max-w-300 mx-auto text-[#e5f4e7] p-2 sm:p-4 font-serif">
     <a
       href={resolve('/hades2/gods')}
       class="inline-flex items-center text-sm font-sans uppercase tracking-widest text-[#8da693] hover:text-[#46f08f] transition-colors mb-6 group"

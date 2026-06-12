@@ -71,7 +71,7 @@
     class="siteHeader sticky top-0 z-50 w-full bg-[#0a140d]/95 backdrop-blur-md border-b border-[#1c3623] shadow-[0_4px_20px_rgba(0,0,0,0.4)]"
   >
     <div
-      class="headerTop flex items-center justify-between gap-3 px-4 py-2 max-w-350 mx-auto w-full"
+      class="headerTop flex items-center justify-between gap-3 px-4 py-2 max-w-300 mx-auto w-full"
     >
       <a
         href={resolve("/")}
@@ -165,7 +165,7 @@
     </div>
 
     <nav
-      class="desktopNav hidden md:flex items-center justify-center gap-1.5 px-3 py-2 border-t border-[#1c3623] max-w-350 mx-auto w-full overflow-x-auto"
+      class="desktopNav hidden md:flex items-center justify-center gap-1.5 px-3 py-2 border-t border-[#1c3623] max-w-300 mx-auto w-full overflow-x-auto"
       aria-label="Main navigation"
     >
       {#each navLinks as link (link.href)}
@@ -215,7 +215,7 @@
   <footer
     class="mt-auto w-full border-t border-[#1c3623] bg-[#0a140d]/80 py-6 text-center text-[0.7rem] text-[#8da693] font-sans"
   >
-    <div class="max-w-350 mx-auto px-4 flex flex-col gap-2">
+    <div class="max-w-300 mx-auto px-4 flex flex-col gap-2">
       <p class="m-0">
         Built by <a
           href="https://github.com/Ibrahim-SWE/HadesCompanion"

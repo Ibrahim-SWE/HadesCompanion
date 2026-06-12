@@ -96,7 +96,7 @@
 </script>
 
 <Container>
-  <div class="max-w-300 mx-auto text-[#e5f4e7] p-4 font-serif">
+  <div class="max-w-300 mx-auto text-[#e5f4e7] p-2 sm:p-4 font-serif">
     <header
       class="flex justify-between items-center pb-3 border-b border-[#58ffa5]/25 mb-4"
     >

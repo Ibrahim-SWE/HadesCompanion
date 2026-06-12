@@ -156,6 +156,7 @@
 </script>
 
 <Container>
+  <div class="max-w-300 mx-auto w-full p-2 sm:p-4">
   <div
     class="filtersContainer mb-1 flex flex-row items-center gap-2 text-xs sm:text-sm"
   >
@@ -374,5 +375,6 @@
     {#each filteredBoons as [boonId, boon] (boonId)}
       <Boon {boon} />
     {/each}
+  </div>
   </div>
 </Container>

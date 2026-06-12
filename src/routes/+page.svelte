@@ -45,7 +45,7 @@
 </script>
 
 <div
-  class="max-w-350 mx-auto text-[#e5f4e7] pt-12 pb-24 px-6 flex flex-col items-center gap-14 font-serif min-h-screen"
+  class="max-w-300 mx-auto text-[#e5f4e7] pt-12 pb-24 px-6 flex flex-col items-center gap-14 font-serif min-h-screen"
 >
   <header class="flex flex-col items-center gap-5 text-center mt-8">
     <div
@@ -67,7 +67,7 @@
   </header>
 
   <div
-    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 w-full max-w-7xl"
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 w-full"
   >
     {#each features as f (f.title)}
       <a
