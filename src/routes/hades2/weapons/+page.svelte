@@ -70,6 +70,15 @@
     "text-[#ffb454]",
     "text-[#46f08f]",
   ];
+
+  const rankLabels = [
+    "Rank I",
+    "Rank II",
+    "Rank III",
+    "Rank IV",
+    "Rank V",
+    "Rank VI",
+  ];
 </script>
 
 {#snippet richText(parts: RichTextNode[])}
@@ -237,7 +246,7 @@
                       <tr
                         class="border-b border-white/5 text-[#8da693] text-[0.65rem] uppercase tracking-wider"
                       >
-                        <th class="py-1 font-normal w-12">Rank</th>
+                        <th class="py-1 font-normal w-16">Rank</th>
                         <th class="py-1 font-normal w-18">Value</th>
                         <th class="py-1 font-normal">Cost</th>
                       </tr>
@@ -245,7 +254,9 @@
                     <tbody>
                       {#each aspect.effect_ranks as rank, rankIdx (rankIdx)}
                         <tr class="border-b border-white/5 last:border-0">
-                          <td class="py-1 text-[#8da693]">{rankIdx + 1}</td>
+                          <td class="py-1 text-[#8da693] text-[0.65rem] uppercase tracking-wide">
+                            {rankLabels[rankIdx] ?? `Rank ${rankIdx + 1}`}
+                          </td>
                           <td
                             class="py-1 font-bold font-mono {rankColors[
                               rankIdx
