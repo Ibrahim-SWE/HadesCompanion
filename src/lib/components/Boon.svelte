@@ -83,6 +83,8 @@
             src={miscImages[`/src/lib/assets/misc/${part.img_path}`]}
             alt={part.name}
             class="inline-block h-[1.4em] w-auto object-contain align-middle"
+            loading="lazy"
+            decoding="async"
           />{/if}
       {/each}
     </p>

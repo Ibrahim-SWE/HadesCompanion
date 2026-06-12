@@ -49,6 +49,8 @@
       src={imageUrl}
       alt="{boon.name} Boon Image"
       class="w-16 h-16 sm:w-20 sm:h-20 object-cover"
+      loading="lazy"
+      decoding="async"
     />
     {#if icon}
       <img

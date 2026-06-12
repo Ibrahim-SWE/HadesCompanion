@@ -27,63 +27,89 @@
 </script>
 
 <Container>
-  <div
-    class="godsContainer grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 p-1"
-  >
-    {#each sortedGodsArray as [god, godData] (god)}
-      {@const imageUrl = godImageUrl(god)}
-      <article
-        class="godContainer group relative overflow-hidden rounded-xl border border-white/20 aspect-[3/4] min-h-48 shadow-lg shadow-black/40"
+  <div class="max-w-300 mx-auto text-[#e5f4e7] p-4 font-serif">
+    <header
+      class="flex justify-between items-center pb-3 border-b border-[#58ffa5]/25 mb-6"
+    >
+      <h1
+        class="text-[#ccff90] font-serif text-3xl font-normal uppercase tracking-widest m-0 drop-shadow-[0_0_10px_rgba(204,255,144,0.3)]"
       >
-        {#if imageUrl}
-          <img
-            src={imageUrl}
-            alt={god}
-            class="absolute inset-0 h-full w-full object-cover object-center scale-105 transition-transform duration-300 group-hover:scale-110"
-          />
-        {:else}
-          <div
-            class="absolute inset-0 bg-linear-to-br from-emerald-950 to-[#1a1c18]"
-          ></div>
-        {/if}
+        Olympian Gods
+      </h1>
+    </header>
 
-        <div
-          class="absolute inset-0 bg-linear-to-t from-black/95 via-black/50 to-black/10"
-        ></div>
-
-        <div
-          class="relative flex h-full flex-col justify-end gap-1.5 p-3 sm:p-4"
+    <div
+      class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
+    >
+      {#each sortedGodsArray as [god, godData] (god)}
+        {@const imageUrl = godImageUrl(god)}
+        <a
+          href="{resolve('/hades2/gods')}/{god}"
+          class="group relative overflow-hidden rounded-xl border border-[#1a3a25] aspect-[3/4] shadow-[0_4px_15px_rgba(0,0,0,0.5)] hover:shadow-[0_0_15px_rgba(70,240,143,0.15)] hover:border-[#46f08f]/50 transition-all duration-300 hover:-translate-y-1 block"
         >
-          <a
-            href={resolve(`/hades2/gods/${god}`)}
-            class="godName text-xl sm:text-2xl font-bold text-[#eff7e8] leading-tight hover:text-textDark transition-colors w-fit"
-          >
-            {god}
-          </a>
-          <p class="godTitle text-sm text-textLight/90 leading-snug">
-            {godData.title}
-          </p>
-
-          {#if godData.hades_2}
+          {#if imageUrl}
+            <img
+              src={imageUrl}
+              alt={god}
+              class="absolute inset-0 h-full w-full object-cover object-center scale-105 transition-transform duration-500 group-hover:scale-110"
+              loading="lazy"
+              decoding="async"
+            />
+          {:else}
             <div
-              class="mt-1 flex flex-col gap-1 border-t border-white/15 pt-2 text-xs sm:text-sm"
-            >
-              {#if godData.hades_2.keepsake}
-                <p class="text-textLight/80">
-                  <span class="text-textDark font-medium">Keepsake:</span>
-                  {godData.hades_2.keepsake}
-                </p>
-              {/if}
-              {#if godData.hades_2.curses.length > 0}
-                <p class="text-textLight/80">
-                  <span class="text-textDark font-medium">Curses:</span>
-                  {godData.hades_2.curses.join(", ")}
-                </p>
-              {/if}
-            </div>
+              class="absolute inset-0 bg-linear-to-b from-[#0a140d] to-[#0d1c13]"
+            ></div>
           {/if}
-        </div>
-      </article>
-    {/each}
+
+          <!-- Dark gradient overlay for text readability -->
+          <div
+            class="absolute inset-0 bg-linear-to-t from-black/95 via-black/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"
+          ></div>
+
+          <!-- Subtle accent line on hover -->
+          <div
+            class="absolute left-0 top-0 bottom-0 w-1 bg-linear-to-b from-[#46f08f]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+          ></div>
+
+          <div
+            class="relative z-10 flex h-full flex-col justify-end p-3 sm:p-4"
+          >
+            <h2
+              class="text-xl sm:text-2xl font-serif text-[#ccff90] uppercase tracking-wider m-0 group-hover:text-[#46f08f] transition-colors duration-300 drop-shadow-sm"
+            >
+              {god}
+            </h2>
+            <p class="text-[0.8rem] sm:text-sm text-[#8da693] font-sans leading-snug mt-1">
+              {godData.title}
+            </p>
+
+            {#if godData.hades_2}
+              <div
+                class="mt-3 flex flex-col gap-1 border-t border-[#1c3623] pt-2 text-xs font-sans"
+              >
+                {#if godData.hades_2.keepsake}
+                  <p class="text-[#a4bea9]">
+                    <span
+                      class="text-[#8da693] uppercase text-[0.65rem] tracking-wider block mb-0.5"
+                      >Keepsake</span
+                    >
+                    {godData.hades_2.keepsake}
+                  </p>
+                {/if}
+                {#if godData.hades_2.curses.length > 0}
+                  <p class="text-[#a4bea9] mt-1">
+                    <span
+                      class="text-[#8da693] uppercase text-[0.65rem] tracking-wider block mb-0.5"
+                      >Curses</span
+                    >
+                    {godData.hades_2.curses.join(", ")}
+                  </p>
+                {/if}
+              </div>
+            {/if}
+          </div>
+        </a>
+      {/each}
+    </div>
   </div>
 </Container>
