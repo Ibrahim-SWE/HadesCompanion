@@ -82,7 +82,7 @@
       ></div>
 
       <div
-        class="relative overflow-hidden rounded-lg border border-[#1a3a25] aspect-[3/4] w-48 sm:w-56 md:w-64 shrink-0 mx-auto md:mx-0 shadow-[0_0_20px_rgba(0,0,0,0.8)]"
+        class="relative overflow-hidden rounded-lg border border-[#1a3a25] aspect-3/4 w-48 sm:w-56 md:w-64 shrink-0 mx-auto md:mx-0 shadow-[0_0_20px_rgba(0,0,0,0.8)]"
       >
         {#if imageUrl}
           <img
@@ -130,7 +130,9 @@
                   >Keepsake</span
                 >
                 <a
-                  href={resolve(`/hades2/keepsakes#keepsake-${godData.hades_2.keepsake}` as `/hades2/keepsakes#${string}`)}
+                  href={resolve(
+                    `/hades2/keepsakes#keepsake-${encodeURIComponent(godData.hades_2.keepsake)}` as `/hades2/keepsakes#${string}`,
+                  )}
                   class="text-[#e5f4e7] hover:text-[#46f08f] transition-colors font-medium flex items-center justify-center md:justify-start gap-2 group"
                 >
                   {godData.hades_2.keepsake}
