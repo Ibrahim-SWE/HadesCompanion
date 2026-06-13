@@ -36,7 +36,7 @@
     heroic: "text-[#d0102b]",
     duo: "text-[#46f08f]",
     legendary: "text-[#e8b84a]",
-    infusion: "text-[#1dbf11]",
+    infusion: "text-[#c071ff]",
   };
 
   let effectsValues = $derived(
@@ -132,6 +132,17 @@
     typeBadgeStyles[normalizedType] ??
       "border-[#2a2a2a] text-white bg-[#0f0f0f]",
   );
+
+  let isRegularBoon = $derived(
+    normalizedType !== "duo" &&
+      normalizedType !== "legendary" &&
+      normalizedType !== "infusion",
+  );
+
+  function effectValueColor(rarity: string): string {
+    if (!isRegularBoon) return "text-white";
+    return rarityColors[rarity] ?? "text-[#c071ff]";
+  }
 </script>
 
 <article
@@ -231,9 +242,9 @@
           {#each effectsValues as [rarity, value], i (rarity)}
             {#if i > 0}<span class="{effectDividerColor}">/</span>{/if}
             <span
-              class="bg-black px-1 py-px rounded font-mono text-[0.7rem] font-bold leading-tight {rarityColors[
-                rarity
-              ] ?? 'text-[#1dbf11]'}">{value}</span
+              class="bg-black px-1 py-px rounded font-mono text-[0.7rem] font-bold leading-tight {effectValueColor(
+                rarity,
+              )}">{value}</span
             >
           {/each}
         </div>
