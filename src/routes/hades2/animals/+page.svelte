@@ -97,14 +97,19 @@
 
 <Container>
   <div class="max-w-300 mx-auto text-[#e5f4e7] p-2 sm:p-3 font-serif">
-    <header
-      class="flex justify-between items-center pb-1.5 border-b border-[#58ffa5]/25 mb-2"
-    >
+    <header class="flex flex-col pb-1.5 border-b border-[#58ffa5]/25 mb-2">
       <h1
         class="text-[#ccff90] font-serif text-2xl sm:text-3xl font-normal uppercase tracking-widest m-0 drop-shadow-[0_0_10px_rgba(204,255,144,0.3)]"
       >
         Animal Familiars
       </h1>
+      <p
+        class="text-[0.7rem] sm:text-xs text-[#8da693] font-sans mt-0.5 tracking-wide leading-snug"
+      >
+        Pets that join you on runs. Unlock and upgrade them with Witch's
+        Delight. Each familiar grants bonuses across three bond ranks. Only one
+        can be equipped at a time.
+      </p>
     </header>
 
     <nav class="flex gap-1.5 mb-2 flex-wrap" aria-label="Filter familiars">
