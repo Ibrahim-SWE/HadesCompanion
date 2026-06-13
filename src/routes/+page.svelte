@@ -48,11 +48,6 @@
   class="max-w-300 mx-auto text-[#e5f4e7] pt-12 pb-24 px-6 flex flex-col items-center gap-14 font-serif min-h-screen"
 >
   <header class="flex flex-col items-center gap-5 text-center mt-8">
-    <div
-      class="inline-flex items-center justify-center px-4 py-1.5 border border-[#1c3623] rounded-full bg-[#0a140d]/80 text-[#46f08f] text-xs font-mono uppercase tracking-widest shadow-[0_0_10px_rgba(70,240,143,0.1)] mb-2"
-    >
-      Database & Guide
-    </div>
     <h1
       class="text-4xl sm:text-5xl md:text-6xl font-normal uppercase tracking-widest text-[#ccff90] m-0 drop-shadow-[0_0_15px_rgba(204,255,144,0.3)]"
     >
@@ -61,8 +56,7 @@
     <p
       class="text-base sm:text-lg text-[#8da693] max-w-2xl font-sans tracking-wide leading-relaxed"
     >
-      Everything you need to plan and optimize your runs in the Underworld and
-      beyond. Discover boons, weapons, arcana cards, and more.
+      Everything you need to plan and optimize your runs. Discover boons, weapons, arcana cards, and more.
     </p>
   </header>
 
