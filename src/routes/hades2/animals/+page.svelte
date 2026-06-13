@@ -1,26 +1,16 @@
 <script lang="ts">
   import Container from "$lib/components/Container.svelte";
   import petsData from "$lib/data/hades2/pets.json";
+  import { miscImageUrl } from "$lib/assets/miscImages";
 
-  const allWebpImages = import.meta.glob("$lib/assets/**/*.webp", {
+  const petImages = import.meta.glob("$lib/assets/pets/**/*.webp", {
     eager: true,
     import: "default",
   }) as Record<string, string>;
 
-  function getImagePath(imageFile: string) {
+  function getPetImagePath(imageFile: string) {
     if (!imageFile) return "";
-    const lowercaseFile = imageFile.toLowerCase();
-
-    const petPath = `/src/lib/assets/pets/${imageFile}`;
-    if (allWebpImages[petPath]) {
-      return allWebpImages[petPath];
-    }
-
-    const foundKey = Object.keys(allWebpImages).find((key) => {
-      return key.toLowerCase().endsWith(`/${lowercaseFile}`);
-    });
-
-    return foundKey ? allWebpImages[foundKey] : "";
+    return petImages[`/src/lib/assets/pets/${imageFile}`] ?? "";
   }
 
   type DescriptionRich =
@@ -143,8 +133,7 @@
       {#each pets as [petKey, pet] (petKey)}
         {#if activeTab === "all" || activeTab === petKey}
           {@const theme = petThemes[petKey] || petThemes.Frinos}
-          {@const petPortrait =
-            getImagePath(`${petKey}.webp`) || getImagePath(`${pet.name}.webp`)}
+          {@const petPortrait = getPetImagePath(`${petKey.toLowerCase()}.webp`)}
 
           <article
             class="flex flex-col xl:flex-row gap-3 bg-linear-to-r from-[#0a140d] to-[#0d1c13] border border-[#1c3623] border-l-4 rounded-lg p-2.5 sm:p-3 shadow-[0_4px_10px_rgba(0,0,0,0.5)] relative overflow-hidden"
@@ -189,7 +178,7 @@
               aria-label={`${pet.name} bonds`}
             >
               {#each petBonds(pet) as bond (bond.bondName)}
-                {@const bondImage = getImagePath(bond.imageFile)}
+                {@const bondImage = getPetImagePath(bond.imageFile)}
 
                 <div
                   class="flex-1 bg-black/20 border border-white/5 rounded-lg p-2.5 flex flex-col items-center text-center min-w-0"
@@ -242,7 +231,7 @@
                           {/each}
                         </span>
                       {:else if part.type === "image"}
-                        {@const iconPath = getImagePath(part.image_file)}
+                        {@const iconPath = miscImageUrl(part.image_file)}
                         {#if iconPath}
                           <img
                             src={iconPath}
