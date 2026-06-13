@@ -1,5 +1,6 @@
 <script lang="ts">
   import Container from "$lib/components/Container.svelte";
+  import toolsData from "$lib/data/hades2/tools.json";
 
   const toolImages = import.meta.glob("/src/lib/assets/tools/*.webp", {
     eager: true,
@@ -10,52 +11,6 @@
     eager: true,
     import: "default",
   }) as Record<string, string>;
-
-  const toolsData = [
-    {
-      name: "Crescent Pick",
-      unlockRequirement: [{ item: "Ashes", amount: 1 }],
-      upgradeRequirement: [
-        { item: "Glassrock", amount: 4 },
-        { item: "Iron", amount: 4 },
-      ],
-      description:
-        "Mines ore from rocks to help unlock and upgrade your weapons.",
-    },
-    {
-      name: "Tablet of Peace",
-      unlockRequirement: [{ item: "Silver", amount: 4 }],
-      upgradeRequirement: [
-        { item: "Psyche", amount: 30 },
-        { item: "Marble", amount: 3 },
-      ],
-      description:
-        "Collects Psyche from lingering Shades to increase your Arcana Card capacity.",
-    },
-    {
-      name: "Silver Spade",
-      unlockRequirement: [{ item: "Silver", amount: 8 }],
-      upgradeRequirement: [
-        { item: "Olive", amount: 4 },
-        { item: "Bronze", amount: 2 },
-      ],
-      description:
-        "Digs up seeds that you can plant at The Crossroads to use in Incantations.",
-    },
-    {
-      name: "Rod of Fishing",
-      unlockRequirement: [
-        { item: "Fate Fabric", amount: 2 },
-        { item: "Bronze", amount: 1 },
-      ],
-      upgradeRequirement: [
-        { item: "Driftwood", amount: 4 },
-        { item: "Serpent Scales", amount: 2 },
-      ],
-      description:
-        "Catches fish from water pools so you can trade them to the Broker.",
-    },
-  ];
 
   function toSnakeCase(str: string) {
     return str.toLowerCase().replace(/\s+/g, "_");
