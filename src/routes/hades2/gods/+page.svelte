@@ -2,14 +2,7 @@
   import Container from "$lib/components/Container.svelte";
   import godsData from "$lib/data/gods.json";
   import { resolve } from "$app/paths";
-
-  type godsKeepsakeAndCurses = { keepsake: string; curses: string[] };
-
-  type GodDetails = {
-    title: string;
-    hades_1: godsKeepsakeAndCurses | null;
-    hades_2: godsKeepsakeAndCurses | null;
-  };
+  import type { GodDetails } from "$lib/types/hades2";
 
   const gods: Record<string, GodDetails> = godsData;
   const sortedGodsArray: [string, GodDetails][] = Object.entries(gods).sort(

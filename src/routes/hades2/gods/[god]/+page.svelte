@@ -5,32 +5,9 @@
   import godsData from "$lib/data/gods.json";
   import { resolve } from "$app/paths";
   import type { PageData } from "./$types";
+  import type { BoonData, GodDetails } from "$lib/types/hades2";
 
   let { data }: { data: PageData } = $props();
-
-  type godsKeepsakeAndCurses = { keepsake: string; curses: string[] };
-
-  type GodDetails = { title: string; hades_2: godsKeepsakeAndCurses | null };
-
-  type DescriptionPart =
-    | { type: "text_normal"; value: string }
-    | { type: "text_bold"; value: string }
-    | { type: "image"; name: string; img_path: string };
-
-  type BoonData = {
-    gods: string[];
-    name: string;
-    description: string;
-    description_rich: DescriptionPart[];
-    effect: string;
-    image_path: string;
-    element: string | null;
-    type: string | null;
-    is_core: boolean;
-    rarities_effect: Record<string, string | null>;
-    deals_olympian_damage: boolean;
-    prerequisites: object | null;
-  };
 
   const godName = $derived(data.godName);
   const godData = $derived((godsData as Record<string, GodDetails>)[godName]);

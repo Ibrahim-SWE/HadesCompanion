@@ -1,25 +1,7 @@
 <script lang="ts">
   import BoonImgElemIcon from "./BoonImg_ElemIcon.svelte";
   import { miscImageUrl } from "$lib/assets/miscImages";
-
-  type DescriptionPart =
-    | { type: "text_normal"; value: string }
-    | { type: "text_bold"; value: string }
-    | { type: "image"; name: string; img_path: string };
-
-  type BoonData = {
-    gods: string[];
-    name: string;
-    description_rich: DescriptionPart[];
-    effect: string;
-    image_path: string;
-    element: string | null;
-    type: string | null;
-    is_core: boolean;
-    rarities_effect: Record<string, string | null>;
-    deals_olympian_damage: boolean;
-    prerequisites: object | null;
-  };
+  import type { BoonData } from "$lib/types/hades2";
 
   let {
     boon,

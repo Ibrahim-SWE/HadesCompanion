@@ -4,26 +4,7 @@
   import FilterCheckbox from "$lib/components/FilterCheckbox.svelte";
   import boonsData from "$lib/data/hades2/boons.json";
   import { page } from "$app/state";
-
-  type DescriptionPart =
-    | { type: "text_normal"; value: string }
-    | { type: "text_bold"; value: string }
-    | { type: "image"; name: string; img_path: string };
-
-  type BoonData = {
-    gods: string[];
-    name: string;
-    description: string;
-    description_rich: DescriptionPart[];
-    effect: string;
-    image_path: string;
-    element: string | null;
-    type: string | null;
-    is_core: boolean;
-    rarities_effect: Record<string, string | null>;
-    deals_olympian_damage: boolean;
-    prerequisites: object | null;
-  };
+  import type { BoonData } from "$lib/types/hades2";
 
   type BoonIndexEntry = {
     id: string;

@@ -5,15 +5,9 @@
   import fireIcon from "$lib/assets/misc/fire_element_icon.webp";
   import aetherIcon from "$lib/assets/misc/aether_element_icon.webp";
   import { loadBoonImage, resolveBoonImagePath } from "$lib/assets/boonImages";
+  import type { BoonData } from "$lib/types/hades2";
 
-  type BoonData = {
-    gods: string[];
-    name: string;
-    image_path: string;
-    element: string | null;
-  };
-
-  let { boon }: { boon: BoonData } = $props();
+  let { boon }: { boon: Pick<BoonData, "gods" | "name" | "image_path" | "element"> } = $props();
 
   const elementIcons: Record<string, string> = {
     air: airIcon,
