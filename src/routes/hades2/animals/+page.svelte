@@ -51,7 +51,7 @@
   };
 
   const pets = Object.entries(petsData) as [string, PetDetails][];
-  let activeTab = "all";
+  let activeTab = $state("all");
 
   const petThemes: Record<string, PetTheme> = {
     Frinos: {

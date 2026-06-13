@@ -62,7 +62,7 @@
 
   $effect(() => {
     const query = page.url.searchParams.get("search");
-    if (query) searchQuery = query;
+    searchQuery = query ?? "";
   });
 
   function clickOutside(node: HTMLElement, handler: () => void) {
