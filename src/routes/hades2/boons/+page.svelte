@@ -1,61 +1,9 @@
 <script lang="ts">
   import Boon from "$lib/components/Boon.svelte";
   import Container from "$lib/components/Container.svelte";
+  import FilterCheckbox from "$lib/components/FilterCheckbox.svelte";
   import boonsData from "$lib/data/hades2/boons.json";
-  import godsData from "$lib/data/gods.json";
   import { page } from "$app/state";
-
-  type godsKeepsakeAndCurses = { keepsake: string; curses: string[] };
-
-  type GodDetails = {
-    title: string;
-    hades_1: godsKeepsakeAndCurses | null;
-    hades_2: godsKeepsakeAndCurses | null;
-  };
-  const gods: Record<string, GodDetails> = godsData;
-  const sortedGodNames: string[] = Object.keys(gods).sort();
-
-  let isBoonTypeOpen: boolean = $state(false);
-  let isGodsMenuOpen: boolean = $state(false);
-  let isElementMenuOpen: boolean = $state(false);
-
-  let selectedGods: string[] = $state([]);
-  let selectedTypes: string[] = $state([]);
-  let selectedElements: string[] = $state([]);
-
-  const boonTypes = [
-    "Attack",
-    "Special",
-    "Cast",
-    "Sprint",
-    "Magick",
-    "Infusion",
-    "Duo",
-    "Legendary",
-  ];
-  const boonElements = ["Earth", "Water", "Air", "Fire", "Aether", "None"];
-
-  const toggleDropdown = (title: string) => {
-    if (title == "Gods") isGodsMenuOpen = !isGodsMenuOpen;
-    if (title == "Type") isBoonTypeOpen = !isBoonTypeOpen;
-    if (title == "Elements") isElementMenuOpen = !isElementMenuOpen;
-  };
-
-  function clickOutside(node: HTMLElement, handler: () => void) {
-    const handleClick = (event: MouseEvent) => {
-      if (node && !node.contains(event.target as Node)) {
-        handler();
-      }
-    };
-
-    document.addEventListener("click", handleClick, true);
-
-    return {
-      destroy() {
-        document.removeEventListener("click", handleClick, true);
-      },
-    };
-  }
 
   type DescriptionPart =
     | { type: "text_normal"; value: string }
@@ -77,304 +25,342 @@
     prerequisites: object | null;
   };
 
-  const boonEntries = Object.entries(boonsData) as [string, BoonData][];
-
-  let coreFilter: boolean | null = $state(null);
-  let coreStyle = $state("");
-  let olympDmgFilter: boolean | null = $state(null);
-
-  const cycleState = (currentState: boolean | null): boolean | null => {
-    if (currentState === null) return true;
-    if (currentState === true) return false;
-    return null;
-  };
-  const getFilterStyles = (state: boolean | null): string => {
-    if (state === true) return "bg-emerald-700 text-white"; // Core Only
-    if (state === false) return "bg-red-900/30 text-white/30 line-through"; // Exclude Core
-    return "bg-emerald-950/50 "; // Neutral / Any
+  type BoonIndexEntry = {
+    id: string;
+    boon: BoonData;
+    searchText: string;
   };
 
-  let searchQuery: string = $state(page.url.searchParams.get("search") ?? "");
-
-  $effect(() => {
-    const query = page.url.searchParams.get("search");
-    if (query) {
-      searchQuery = query;
-    }
-  });
-
-  let filteredBoons = $derived(
-    boonEntries.filter(([boonId, boonDetails]) => {
-      // selected gods filter
-      const matchesGod =
-        selectedGods.length === 0 ||
-        boonDetails.gods.some((god) => selectedGods.includes(god));
-
-      const searchLower = searchQuery.toLowerCase().trim();
-      const searchWords = searchLower.split(/\s+/);
-      const combinedText =
-        `${boonDetails.name} ${boonDetails.description} ${boonDetails.effect}`.toLowerCase();
-
-      // search filter (searches boon title, descreption, and effect)
-      const matchesSearch =
-        searchLower === "" ||
-        searchWords.every((word) => combinedText.includes(word));
-
-      // is boon Core? filter
-      const matchesCore =
-        coreFilter === null || boonDetails.is_core === coreFilter;
-
-      // olymp DMG filter
-      const matchesOlympDmgFilter =
-        olympDmgFilter === null ||
-        olympDmgFilter === boonDetails.deals_olympian_damage;
-      // types filter
-      const matchesTypes =
-        selectedTypes.length === 0 ||
-        selectedTypes.includes(boonDetails.type as string);
-
-      // boon element filter
-
-      const matchesElements =
-        selectedElements.length === 0 ||
-        selectedElements.includes(boonDetails.element as string);
-
-      return (
-        matchesGod &&
-        matchesSearch &&
-        matchesCore &&
-        matchesTypes &&
-        matchesOlympDmgFilter &&
-        matchesElements
-      );
+  const boonIndex: BoonIndexEntry[] = Object.entries(boonsData).map(
+    ([id, boon]) => ({
+      id,
+      boon: boon as BoonData,
+      searchText: `${boon.name} ${boon.description} ${boon.effect}`.toLowerCase(),
     }),
   );
 
-  const filterStyle =
-    "border border-white/25 p-2 rounded-xl text-textLight flex items-center pl-3 pr-3";
-  //  bg-emerald-950/30
+  const sortedGodNames = [
+    ...new Set(boonIndex.flatMap((entry) => entry.boon.gods)),
+  ].sort();
+
+  const boonTypes = [
+    "Attack",
+    "Special",
+    "Cast",
+    "Sprint",
+    "Magick",
+    "Infusion",
+    "Duo",
+    "Legendary",
+  ];
+  const boonElements = ["Earth", "Water", "Air", "Fire", "Aether", "None"];
+
+  let isBoonTypeOpen = $state(false);
+  let isGodsMenuOpen = $state(false);
+  let isElementMenuOpen = $state(false);
+
+  let selectedGods: string[] = $state([]);
+  let selectedTypes: string[] = $state([]);
+  let selectedElements: string[] = $state([]);
+  let coreFilter: boolean | null = $state(null);
+  let olympDmgFilter: boolean | null = $state(null);
+  let searchQuery = $state(page.url.searchParams.get("search") ?? "");
+
+  $effect(() => {
+    const query = page.url.searchParams.get("search");
+    if (query) searchQuery = query;
+  });
+
+  function clickOutside(node: HTMLElement, handler: () => void) {
+    const handleClick = (event: MouseEvent) => {
+      if (!node.contains(event.target as Node)) handler();
+    };
+
+    document.addEventListener("click", handleClick, true);
+    return {
+      destroy() {
+        document.removeEventListener("click", handleClick, true);
+      },
+    };
+  }
+
+  function closeAllDropdowns() {
+    isGodsMenuOpen = false;
+    isBoonTypeOpen = false;
+    isElementMenuOpen = false;
+  }
+
+  function toggleDropdown(menu: "gods" | "type" | "elements") {
+    const wasOpen =
+      menu === "gods"
+        ? isGodsMenuOpen
+        : menu === "type"
+          ? isBoonTypeOpen
+          : isElementMenuOpen;
+
+    closeAllDropdowns();
+
+    if (menu === "gods") isGodsMenuOpen = !wasOpen;
+    if (menu === "type") isBoonTypeOpen = !wasOpen;
+    if (menu === "elements") isElementMenuOpen = !wasOpen;
+  }
+
+  function cycleState(currentState: boolean | null): boolean | null {
+    if (currentState === null) return true;
+    if (currentState === true) return false;
+    return null;
+  }
+
+  function getToggleStyles(state: boolean | null): string {
+    if (state === true)
+      return "bg-[#153320] border-[#46f08f]/70 text-[#ccff90] shadow-[inset_0_1px_0_rgba(70,240,143,0.15)]";
+    if (state === false)
+      return "bg-[#1a0d0d] border-[#5a2d2d] text-[#8da693] line-through opacity-70";
+    return "bg-[#0d1c13] border-[#2d5a3c] text-[#b3c2b7] hover:border-[#46f08f]/40";
+  }
+
+  const filterChip =
+    "inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1.5 text-xs sm:text-sm font-sans transition-all";
+
+  let filteredBoons = $derived.by(() => {
+    const godsSet = selectedGods.length > 0 ? new Set(selectedGods) : null;
+    const typesSet = selectedTypes.length > 0 ? new Set(selectedTypes) : null;
+    const elementsSet =
+      selectedElements.length > 0 ? new Set(selectedElements) : null;
+
+    const searchLower = searchQuery.toLowerCase().trim();
+    const searchWords =
+      searchLower.length > 0 ? searchLower.split(/\s+/) : null;
+
+    return boonIndex.filter(({ boon, searchText }) => {
+      if (godsSet && !boon.gods.some((god) => godsSet.has(god))) return false;
+      if (typesSet && !typesSet.has(boon.type as string)) return false;
+      if (elementsSet && !elementsSet.has(boon.element as string)) return false;
+      if (coreFilter !== null && boon.is_core !== coreFilter) return false;
+      if (
+        olympDmgFilter !== null &&
+        boon.deals_olympian_damage !== olympDmgFilter
+      )
+        return false;
+      if (
+        searchWords &&
+        !searchWords.every((word) => searchText.includes(word))
+      )
+        return false;
+      return true;
+    });
+  });
+
+  let hasActiveFilters = $derived(
+    selectedGods.length > 0 ||
+      selectedTypes.length > 0 ||
+      selectedElements.length > 0 ||
+      coreFilter !== null ||
+      olympDmgFilter !== null ||
+      searchQuery.trim().length > 0,
+  );
+
+  function clearFilters() {
+    selectedGods = [];
+    selectedTypes = [];
+    selectedElements = [];
+    coreFilter = null;
+    olympDmgFilter = null;
+    searchQuery = "";
+    closeAllDropdowns();
+  }
 </script>
 
 <Container>
-  <div class="max-w-300 mx-auto w-full p-2 sm:p-4">
-  <div
-    class="filtersContainer mb-1 flex flex-row items-center gap-2 text-xs sm:text-sm"
-  >
-    <div
-      class="godsFilterContainer relative inline-block justify-center items-center"
-      use:clickOutside={() => (isGodsMenuOpen = false)}
-    >
-      <button
-        type="button"
-        title="Gods"
-        onclick={(e) => toggleDropdown(e.currentTarget.title)}
-        class="{filterStyle} bg-emerald-950/50"
+  <div class="w-full max-w-300 mx-auto text-[#e5f4e7] p-2 sm:p-3 font-serif">
+    <header class="flex flex-col pb-1.5 border-b border-[#58ffa5]/25 mb-2">
+      <h1
+        class="text-[#ccff90] font-serif text-2xl sm:text-3xl font-normal uppercase tracking-widest m-0 drop-shadow-[0_0_10px_rgba(204,255,144,0.3)]"
       >
-        Gods {#if selectedGods.length > 0}({selectedGods.length}){/if}
-        <span class="arrow text-xs ml-1">{isGodsMenuOpen ? "▲" : "▼"}</span>
-      </button>
+        Boons
+      </h1>
+      <p
+        class="text-[0.7rem] sm:text-xs text-[#8da693] font-sans mt-0.5 tracking-wide leading-snug"
+      >
+        Browse and filter all boons in Hades II. Use search or filters to narrow
+        results.
+      </p>
+    </header>
 
-      {#if isGodsMenuOpen}
+    <div class="mb-2 flex justify-center">
+      <div
+        class="inline-flex max-w-full flex-wrap items-center justify-center gap-1.5 rounded-md border border-[#1c3623] border-l-[3px] bg-linear-to-r from-[#0a140d] to-[#0d1c13] p-2 shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
+        style="border-left-color: #46f08f;"
+      >
         <div
-          class="dropdownMenuGods mx-1 absolute flex flex-col z-10 left-1/2 -translate-x-1/2 w-max bg-emerald-950 border border-white/20 text-white/90 p-2 rounded-xl mt-1"
+          class="relative"
+          use:clickOutside={() => (isGodsMenuOpen = false)}
         >
-          {#each sortedGodNames as god (god)}
-            <label
-              class="flex items-center gap-3 p-2 cursor-pointer hover:bg-white/10 rounded-lg transition-colors select-none group"
+          <button
+            type="button"
+            onclick={() => toggleDropdown("gods")}
+            class="{filterChip} {selectedGods.length > 0
+              ? 'bg-[#153320] border-[#46f08f]/60 text-[#ccff90]'
+              : 'bg-[#0d1c13] border-[#2d5a3c] text-[#b3c2b7] hover:border-[#46f08f]/40'}"
+          >
+            <span class="text-[0.65rem] uppercase tracking-widest text-[#46f08f]"
+              >Gods</span
             >
-              <input
-                class="sr-only peer"
-                type="checkbox"
-                value={god}
-                bind:group={selectedGods}
-              />
+            {#if selectedGods.length > 0}
+              <span class="text-[#ccff90]">({selectedGods.length})</span>
+            {/if}
+            <span class="text-[0.55rem] opacity-60">{isGodsMenuOpen ? "▲" : "▼"}</span>
+          </button>
 
-              <div
-                class="w-5 h-5 flex items-center justify-center border-2 border-white/30 rounded-md bg-emerald-950/50
-                      transition-all duration-200
-                      peer-checked:bg-emerald-500 peer-checked:border-emerald-400
-                      group-hover:border-white/60
-                      peer-focus-visible:ring-2 peer-focus-visible:ring-emerald-400"
-              >
-                <svg
-                  class="w-3.5 h-3.5 text-emerald-950 scale-0 transition-transform duration-200 peer-checked:scale-100"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-              </div>
-
-              <span
-                class="godName tracking-wide text-white/80 group-hover:text-white transition-colors"
-              >
-                {god}
-              </span>
-            </label>
-          {/each}
+          {#if isGodsMenuOpen}
+            <div
+              class="absolute left-1/2 z-30 mt-1.5 flex max-h-56 w-44 -translate-x-1/2 flex-col overflow-y-auto rounded-md border border-[#2d5a3c] bg-[#0a140d] p-1.5 shadow-[0_4px_24px_rgba(0,0,0,0.7)]"
+            >
+              {#each sortedGodNames as god (god)}
+                <FilterCheckbox label={god} value={god} bind:group={selectedGods} />
+              {/each}
+            </div>
+          {/if}
         </div>
-      {/if}
-    </div>
-    <div class="searchboxContainer bg-emerald-950/50 {filterStyle}">
-      <input
-        class="focus:outline-none focus:ring-0"
-        type="text"
-        name=""
-        bind:value={searchQuery}
-        title="Search Boons"
-        placeholder="Search..."
-        id=""
-      />
-    </div>
-    <div
-      class="boonTypeContainer relative inline-block justify-center items-center"
-      use:clickOutside={() => (isBoonTypeOpen = false)}
-    >
-      <button
-        type="button"
-        title="Type"
-        onclick={(e) => toggleDropdown(e.currentTarget.title)}
-        class="{filterStyle} bg-emerald-950/50"
-      >
-        Type {#if selectedTypes.length > 0}({selectedTypes.length}){/if}
-        <span class="arrow text-xs ml-1">{isBoonTypeOpen ? "▲" : "▼"}</span>
-      </button>
 
-      {#if isBoonTypeOpen}
+        <label
+          class="inline-flex min-w-28 items-center gap-2 rounded-md border border-[#2d5a3c] bg-[#153320] px-2.5 py-1.5 shadow-[inset_0_1px_0_rgba(70,240,143,0.08)] sm:min-w-40"
+        >
+          <span class="text-[#46f08f] text-xs" aria-hidden="true">⌕</span>
+          <input
+            class="min-w-0 w-full bg-transparent text-sm text-[#e5f4e7] placeholder:text-[#8da693] focus:outline-none font-sans"
+            type="search"
+            bind:value={searchQuery}
+            placeholder="Search boons..."
+          />
+        </label>
+
         <div
-          class="dropdownMenuTypes mx-1 absolute flex flex-col z-10 left-1/2 -translate-x-1/2 w-max bg-emerald-950 border border-white/20 text-white/90 p-2 rounded-xl mt-1"
+          class="relative"
+          use:clickOutside={() => (isBoonTypeOpen = false)}
         >
-          {#each boonTypes as type (type)}
-            <label
-              class="flex items-center gap-3 p-2 cursor-pointer hover:bg-white/10 rounded-lg transition-colors select-none group"
+          <button
+            type="button"
+            onclick={() => toggleDropdown("type")}
+            class="{filterChip} {selectedTypes.length > 0
+              ? 'bg-[#153320] border-[#46f08f]/60 text-[#ccff90]'
+              : 'bg-[#0d1c13] border-[#2d5a3c] text-[#b3c2b7] hover:border-[#46f08f]/40'}"
+          >
+            <span class="text-[0.65rem] uppercase tracking-widest text-[#46f08f]"
+              >Type</span
             >
-              <input
-                class="sr-only peer"
-                type="checkbox"
-                value={type}
-                bind:group={selectedTypes}
-              />
+            {#if selectedTypes.length > 0}
+              <span class="text-[#ccff90]">({selectedTypes.length})</span>
+            {/if}
+            <span class="text-[0.55rem] opacity-60">{isBoonTypeOpen ? "▲" : "▼"}</span>
+          </button>
 
-              <div
-                class="w-5 h-5 flex items-center justify-center border-2 border-white/30 rounded-md bg-emerald-950/50
-                      transition-all duration-200
-                      peer-checked:bg-emerald-500 peer-checked:border-emerald-400
-                      group-hover:border-white/60
-                      peer-focus-visible:ring-2 peer-focus-visible:ring-emerald-400"
-              >
-                <svg
-                  class="w-3.5 h-3.5 text-emerald-950 scale-0 transition-transform duration-200 peer-checked:scale-100"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-              </div>
-
-              <span
-                class="typeName tracking-wide text-white/80 group-hover:text-white transition-colors"
-              >
-                {type}
-              </span>
-            </label>
-          {/each}
+          {#if isBoonTypeOpen}
+            <div
+              class="absolute left-1/2 z-30 mt-1.5 flex w-40 -translate-x-1/2 flex-col rounded-md border border-[#2d5a3c] bg-[#0a140d] p-1.5 shadow-[0_4px_24px_rgba(0,0,0,0.7)]"
+            >
+              {#each boonTypes as type (type)}
+                <FilterCheckbox label={type} value={type} bind:group={selectedTypes} />
+              {/each}
+            </div>
+          {/if}
         </div>
-      {/if}
-    </div>
-    <div
-      class="elementFilterContainer relative inline-block justify-center items-center"
-      use:clickOutside={() => (isElementMenuOpen = false)}
-    >
-      <button
-        type="button"
-        title="Elements"
-        onclick={(e) => toggleDropdown(e.currentTarget.title)}
-        class="{filterStyle} bg-emerald-950/50"
-      >
-        Element {#if selectedElements.length > 0}({selectedElements.length}){/if}
-        <span class="arrow text-xs ml-1">{isElementMenuOpen ? "▲" : "▼"}</span>
-      </button>
 
-      {#if isElementMenuOpen}
         <div
-          class="dropdownMenuTypes mx-1 absolute flex flex-col z-10 left-1/2 -translate-x-1/2 w-max bg-emerald-950 border border-white/20 text-white/90 p-2 rounded-xl mt-1"
+          class="relative"
+          use:clickOutside={() => (isElementMenuOpen = false)}
         >
-          {#each boonElements as element (element)}
-            <label
-              class="flex items-center gap-3 p-2 cursor-pointer hover:bg-white/10 rounded-lg transition-colors select-none group"
+          <button
+            type="button"
+            onclick={() => toggleDropdown("elements")}
+            class="{filterChip} {selectedElements.length > 0
+              ? 'bg-[#153320] border-[#46f08f]/60 text-[#ccff90]'
+              : 'bg-[#0d1c13] border-[#2d5a3c] text-[#b3c2b7] hover:border-[#46f08f]/40'}"
+          >
+            <span class="text-[0.65rem] uppercase tracking-widest text-[#46f08f]"
+              >Element</span
             >
-              <input
-                class="sr-only peer"
-                type="checkbox"
-                value={element === "None" ? null : element}
-                bind:group={selectedElements}
-              />
+            {#if selectedElements.length > 0}
+              <span class="text-[#ccff90]">({selectedElements.length})</span>
+            {/if}
+            <span class="text-[0.55rem] opacity-60"
+              >{isElementMenuOpen ? "▲" : "▼"}</span
+            >
+          </button>
 
-              <div
-                class="w-5 h-5 flex items-center justify-center border-2 border-white/30 rounded-md bg-emerald-950/50
-                      transition-all duration-200
-                      peer-checked:bg-emerald-500 peer-checked:border-emerald-400
-                      group-hover:border-white/60
-                      peer-focus-visible:ring-2 peer-focus-visible:ring-emerald-400"
-              >
-                <svg
-                  class="w-3.5 h-3.5 text-emerald-950 scale-0 transition-transform duration-200 peer-checked:scale-100"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-              </div>
-
-              <span
-                class="typeName tracking-wide text-white/80 group-hover:text-white transition-colors"
-              >
-                {element}
-              </span>
-            </label>
-          {/each}
+          {#if isElementMenuOpen}
+            <div
+              class="absolute left-1/2 z-30 mt-1.5 flex w-36 -translate-x-1/2 flex-col rounded-md border border-[#2d5a3c] bg-[#0a140d] p-1.5 shadow-[0_4px_24px_rgba(0,0,0,0.7)]"
+            >
+              {#each boonElements as element (element)}
+                <FilterCheckbox
+                  label={element}
+                  value={element === "None" ? null : element}
+                  bind:group={selectedElements}
+                />
+              {/each}
+            </div>
+          {/if}
         </div>
-      {/if}
+
+        <button
+          type="button"
+          class="{filterChip} {getToggleStyles(coreFilter)}"
+          onclick={() => (coreFilter = cycleState(coreFilter))}
+        >
+          <span class="text-[0.65rem] uppercase tracking-widest">Core</span>
+        </button>
+
+        <button
+          type="button"
+          class="{filterChip} {getToggleStyles(olympDmgFilter)}"
+          onclick={() => (olympDmgFilter = cycleState(olympDmgFilter))}
+        >
+          <span class="text-[0.65rem] uppercase tracking-widest"
+            >Olympian DMG</span
+          >
+        </button>
+
+        {#if hasActiveFilters}
+          <button
+            type="button"
+            class="{filterChip} border-[#2d5a3c] bg-transparent text-[#46f08f] hover:bg-[#153320] hover:border-[#46f08f]/50"
+            onclick={clearFilters}
+          >
+            <span class="text-[0.65rem] uppercase tracking-widest">Clear</span>
+          </button>
+        {/if}
+      </div>
     </div>
-    <div class="isCoreContainer">
-      <button
-        class="{coreStyle} {filterStyle} {getFilterStyles(coreFilter)}"
-        name="Core"
-        title="Core"
-        onclick={() => (coreFilter = cycleState(coreFilter))}>Core</button
+
+    <p
+      class="mb-2 text-center text-[0.65rem] uppercase tracking-widest text-[#8da693] font-sans"
+    >
+      Showing {filteredBoons.length} of {boonIndex.length}
+    </p>
+
+    {#if filteredBoons.length === 0}
+      <div
+        class="rounded-md border border-[#1c3623] border-l-[3px] bg-linear-to-r from-[#0a140d] to-[#0d1c13] px-4 py-10 text-center shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
+        style="border-left-color: #46f08f;"
       >
-    </div>
-    <div class="isOlympDmgContainer">
-      <button
-        class="{coreStyle} {filterStyle} {getFilterStyles(olympDmgFilter)}"
-        name="Olympian DMG"
-        title="Olympian DMG"
-        onclick={() => (olympDmgFilter = cycleState(olympDmgFilter))}
-        >Olympian DMG</button
+        <p
+          class="text-[#ccff90] font-serif text-lg uppercase tracking-wide m-0"
+        >
+          No boons match
+        </p>
+        <p class="mt-1.5 text-sm text-[#8da693] font-sans">
+          Try adjusting your search or filters.
+        </p>
+      </div>
+    {:else}
+      <div
+        class="grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-1.5 items-stretch"
       >
-    </div>
-  </div>
-  <div
-    class="boonsGridContainer grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-1"
-  >
-    {#each filteredBoons as [boonId, boon] (boonId)}
-      <Boon {boon} />
-    {/each}
-  </div>
+        {#each filteredBoons as { id, boon } (id)}
+          <Boon {boon} />
+        {/each}
+      </div>
+    {/if}
   </div>
 </Container>

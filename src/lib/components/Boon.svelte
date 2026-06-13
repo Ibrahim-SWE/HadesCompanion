@@ -1,5 +1,6 @@
 <script lang="ts">
   import BoonImgElemIcon from "./BoonImg_ElemIcon.svelte";
+  import { miscImageUrl } from "$lib/assets/miscImages";
 
   type DescriptionPart =
     | { type: "text_normal"; value: string }
@@ -22,122 +23,188 @@
 
   let { boon }: { boon: BoonData } = $props();
 
-  let boonName = $derived(boon.name);
-  let desc = $derived(boon.description_rich);
-
-  let isCore = $derived(boon.is_core);
-
   const rarityColors: Record<string, string> = {
-    common: "text-common",
-    rare: "text-rare",
-    epic: "text-epic",
-    heroic: "text-heroic",
+    common: "text-[#d6d1c2]",
+    rare: "text-[#3f35ec]",
+    epic: "text-[#9c37a6]",
+    heroic: "text-[#d0102b]",
+    duo: "text-[#46f08f]",
+    legendary: "text-[#e8b84a]",
+    infusion: "text-[#1dbf11]",
   };
 
-  // Filter out null rarities and keep [key, value] pairs
   let effectsValues = $derived(
-    Object.entries(
-      boon.rarities_effect as Record<string, string | null>,
-    ).filter(([, v]) => v !== null) as [string, string][],
+    Object.entries(boon.rarities_effect).filter(
+      (entry): entry is [string, string] => entry[1] !== null,
+    ),
   );
-  let isOlympDamage = $derived(boon.deals_olympian_damage);
 
-  // card style varies by boon type
-  const typeStyles: Record<string, string> = {
-    duo: "bg-linear-to-b from-[#0c1f0e] to-[#06110a] border border-[#3e9e57] shadow-2xl shadow-green-900/50",
-    legendary:
-      "bg-linear-to-b from-[#1e1606] to-[#100d03] border border-[#c8911f] shadow-2xl shadow-amber-900/50",
+  const typeAccents: Record<string, string> = {
+    duo: "#3e9e57",
+    legendary: "#c8911f",
+    infusion: "#1dbf11",
   };
+
+  const typeCardStyles: Record<string, string> = {
+    duo: "bg-linear-to-r from-[#0c1f0e] to-[#06110a] border-[#3e9e57]/60 hover:border-[#3e9e57]",
+    legendary:
+      "bg-linear-to-r from-[#1e1606] to-[#100d03] border-[#c8911f]/60 hover:border-[#c8911f]",
+    infusion:
+      "bg-linear-to-r from-[#081408] to-[#0a1a0c] border-[#1a4a22]/70 hover:border-[#1dbf11]/60",
+  };
+
+  const effectContainerStyles: Record<string, string> = {
+    duo: "bg-[#0f2414] border-[#2d5a3c] shadow-[inset_0_1px_0_rgba(70,240,143,0.12)]",
+    legendary:
+      "bg-[#1a1408] border-[#5a4518] shadow-[inset_0_1px_0_rgba(200,145,31,0.12)]",
+    infusion:
+      "bg-[#081408] border-[#1a4a22] shadow-[inset_0_1px_0_rgba(29,191,17,0.12)]",
+  };
+
+  const effectLabelColors: Record<string, string> = {
+    duo: "text-[#46f08f]",
+    legendary: "text-[#e8b84a]",
+    infusion: "text-[#1dbf11]",
+  };
+
+  const effectDividerColors: Record<string, string> = {
+    duo: "text-[#2d5a3c]",
+    legendary: "text-[#5a4518]",
+    infusion: "text-[#1a4a22]",
+  };
+
   let normalizedType = $derived((boon.type ?? "").trim().toLowerCase());
-  let boonStyle = $derived(
-    typeStyles[normalizedType] ??
-      "border border-[#53564f] shadow-2xl shadow-black/60 bg-[#1a1c18]",
+  let accentColor = $derived(typeAccents[normalizedType] ?? "#3a3a3a");
+  let cardStyle = $derived(
+    typeCardStyles[normalizedType] ??
+      "bg-[#080808] border-[#252525] hover:border-[#383838]",
+  );
+  let effectContainerStyle = $derived(
+    effectContainerStyles[normalizedType] ??
+      "bg-[#0f0f0f] border-[#2a2a2a] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]",
+  );
+  let effectLabelColor = $derived(
+    effectLabelColors[normalizedType] ?? "text-[#8da693]",
+  );
+  let effectDividerColor = $derived(
+    effectDividerColors[normalizedType] ?? "text-[#333333]",
+  );
+  let hoverShadow = $derived(
+    normalizedType === "duo"
+      ? "hover:shadow-[0_2px_14px_rgba(62,158,87,0.15)]"
+      : normalizedType === "legendary"
+        ? "hover:shadow-[0_2px_14px_rgba(200,145,31,0.15)]"
+        : normalizedType === "infusion"
+          ? "hover:shadow-[0_2px_14px_rgba(29,191,17,0.12)]"
+          : "hover:shadow-[0_2px_12px_rgba(0,0,0,0.6)]",
+  );
+  let hoverAccent = $derived(
+    normalizedType === "duo"
+      ? "from-[#46f08f]/80"
+      : normalizedType === "legendary"
+        ? "from-[#c8911f]/80"
+        : normalizedType === "infusion"
+          ? "from-[#1dbf11]/80"
+          : "from-white/20",
   );
 
-  const miscImages = import.meta.glob("/src/lib/assets/misc/*.webp", {
-    eager: true,
-    import: "default",
-  }) as Record<string, string>;
+  let godLabel = $derived(
+    boon.gods.length > 1 ? boon.gods.join(" · ") : boon.gods[0],
+  );
 </script>
 
-<div
-  class="boonContainer grid grid-cols-[1fr_1.8fr] w-full sm:max-w-xs text-white text-xs rounded-2xl overflow-hidden {boonStyle}"
+<article
+  class="flex h-full flex-col gap-2 {cardStyle} border border-l-[3px] rounded-md p-2.5 shadow-[0_2px_10px_rgba(0,0,0,0.5)] relative overflow-hidden transition-all {hoverShadow} group"
+  style="border-left-color: {accentColor};"
 >
-  <!-- top-left: boon image + element icon -->
-  <BoonImgElemIcon {boon} />
-
-  <!-- top-right: name + description -->
   <div
-    class="infoContainer col-start-2 row-start-1 flex flex-col justify-center gap-1 p-2 min-w-0 self-start border-l border-white/20 rounded-xl"
-  >
-    <h2 class="text-base sm:text-lg font-bold leading-tight text-[#eff7e8]">
-      {boonName}
-    </h2>
-    <p class=" text-[#a8b59f] leading-snug">
-      {#each desc as part, i (`${part.type}-${i}`)}
-        {#if part.type === "text_normal"}<span>{part.value}</span>
-        {:else if part.type === "text_bold"}<strong
-            class="text-white font-semibold">{part.value}</strong
-          >
-        {:else if part.type === "image"}<img
-            src={miscImages[`/src/lib/assets/misc/${part.img_path}`]}
-            alt={part.name}
-            class="inline-block h-[1.4em] w-auto object-contain align-middle"
-            loading="lazy"
-            decoding="async"
-          />{/if}
-      {/each}
-    </p>
-  </div>
+    class="absolute left-0 top-0 bottom-0 w-0.5 bg-linear-to-b {hoverAccent} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+  ></div>
 
-  <!-- bottom-left: type / core / olympian damage badges -->
-  <div
-    class="detailsContainer col-start-1 row-start-2 flex flex-col gap-0.5 p-1.5"
-  >
-    {#if boon.type}
+  <div class="flex flex-1 items-start gap-2.5 z-10 relative min-w-0">
+    <BoonImgElemIcon {boon} />
+
+    <div class="flex-1 min-w-0">
       <span
-        class="text-center py-0.5 rounded-sm border border-[#4c5a44] text-[#d4dec8] bg-[#182118]"
+        class="text-[0.65rem] uppercase tracking-widest text-[#46f08f] block leading-tight mb-0.5 truncate"
       >
-        {boon.type}
+        {godLabel}
       </span>
-    {/if}
-
-    {#if isCore}
-      <span
-        class="text-center py-0.5 rounded-sm border border-[#4c5a44] bg-[#182118] text-[#e3ead8]"
+      <h2
+        class="text-sm sm:text-base font-serif text-[#ccff90] uppercase tracking-wide m-0 drop-shadow-sm leading-tight"
       >
-        Core
-      </span>
-    {/if}
-
-    {#if isOlympDamage}
-      <span
-        class="text-center py-0.5 rounded-sm border border-[#4c5a44] bg-[#182118] text-[#e3ead8] truncate"
-        title="Olympian Damage"
-      >
-        Olympian DMG
-      </span>
-    {/if}
-  </div>
-
-  <!-- bottom-right: effect label + rarity values -->
-  {#if effectsValues.length > 0}
-    <div
-      class="effectsContainer col-start-2 row-start-2 flex flex-col justify-center text-xs gap-y-0.5 self-start"
-    >
-      <div class="flex items-center gap-1">
-        <span class="text-[#8aa377]">▶</span>
-        <span class="text-[#d7e6cf]">{boon.effect}</span>
-      </div>
-      <div class="ml-3.5 flex flex-wrap items-center gap-x-1 gap-y-0.5">
-        {#each effectsValues as [rarity, value], i (rarity)}
-          {#if i > 0}<span class="text-[#4f5d47]">/</span>{/if}
-          <span
-            class="effectText font-extrabold {rarityColors[rarity] ??
-              'text-otherRarities'}">{value}</span
-          >
+        {boon.name}
+      </h2>
+      <p class="text-xs text-[#b3c2b7] font-sans leading-snug mt-1">
+        {#each boon.description_rich as part, i (`${part.type}-${i}`)}
+          {#if part.type === "text_normal"}<span>{part.value}</span>
+          {:else if part.type === "text_bold"}<strong class="text-[#e5f4e7] font-semibold"
+              >{part.value}</strong
+            >
+          {:else if part.type === "image"}<img
+              src={miscImageUrl(part.img_path)}
+              alt={part.name}
+              class="inline-block h-[1.4em] w-auto object-contain align-middle"
+              loading="lazy"
+              decoding="async"
+            />{/if}
         {/each}
-      </div>
+      </p>
     </div>
+  </div>
+
+  {#if boon.type || boon.is_core || boon.deals_olympian_damage || effectsValues.length > 0}
+    <div class="flex shrink-0 flex-col gap-1.5 z-10 relative">
+    {#if boon.type || boon.is_core || boon.deals_olympian_damage}
+      <div class="flex flex-wrap gap-1">
+        {#if boon.type}
+          <span
+            class="text-[0.6rem] uppercase tracking-widest py-0.5 px-1.5 rounded-sm border border-[#2d5a3c] text-[#ccff90] bg-[#153320]"
+          >
+            {boon.type}
+          </span>
+        {/if}
+        {#if boon.is_core}
+          <span
+            class="text-[0.6rem] uppercase tracking-widest py-0.5 px-1.5 rounded-sm border border-[#2d5a3c] text-[#ccff90] bg-[#153320]"
+          >
+            Core
+          </span>
+        {/if}
+        {#if boon.deals_olympian_damage}
+          <span
+            class="text-[0.6rem] uppercase tracking-widest py-0.5 px-1.5 rounded-sm border border-[#2d5a3c] text-[#ccff90] bg-[#153320]"
+            title="Olympian Damage"
+          >
+            Olympian DMG
+          </span>
+        {/if}
+      </div>
+    {/if}
+
+    {#if effectsValues.length > 0}
+      <div
+        class="border rounded-md px-2 py-1.5 {effectContainerStyle}"
+      >
+        <div class="flex items-center gap-1.5">
+          <span class="{effectLabelColor} text-[0.65rem]">▶</span>
+          <span
+            class="text-[0.65rem] uppercase tracking-widest font-sans font-semibold shrink-0 {effectLabelColor}"
+            >{boon.effect}</span
+          >
+        </div>
+        <div class="mt-1 flex flex-wrap items-center gap-x-1 gap-y-0.5 pl-3.5">
+          {#each effectsValues as [rarity, value], i (rarity)}
+            {#if i > 0}<span class="{effectDividerColor}">/</span>{/if}
+            <span
+              class="bg-black px-1 py-px rounded font-mono text-[0.7rem] font-bold leading-tight {rarityColors[
+                rarity
+              ] ?? 'text-[#1dbf11]'}">{value}</span
+            >
+          {/each}
+        </div>
+      </div>
+    {/if}
+  </div>
   {/if}
-</div>
+</article>
