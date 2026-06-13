@@ -126,14 +126,16 @@
 {/snippet}
 
 <Container>
-  <div class="max-w-300 mx-auto text-[#e5f4e7] p-2 sm:p-4 font-serif">
-    <header class="flex flex-col pb-2 border-b border-[#58ffa5]/25 mb-4">
+  <div class="max-w-300 mx-auto text-[#e5f4e7] p-2 sm:p-3 font-serif">
+    <header class="flex flex-col pb-1.5 border-b border-[#58ffa5]/25 mb-2">
       <h1
         class="text-[#ccff90] font-serif text-2xl sm:text-3xl font-normal uppercase tracking-widest m-0 drop-shadow-[0_0_10px_rgba(204,255,144,0.3)]"
       >
         Nocturnal Arms
       </h1>
-      <p class="text-xs sm:text-sm text-[#8da693] font-sans mt-1 tracking-wide">
+      <p
+        class="text-[0.7rem] sm:text-xs text-[#8da693] font-sans mt-0.5 tracking-wide leading-snug"
+      >
         The weapons of Melinoë, their Aspects, and Daedalus Hammer upgrades.
       </p>
     </header>
