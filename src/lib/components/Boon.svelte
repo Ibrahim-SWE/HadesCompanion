@@ -84,10 +84,10 @@
       "bg-[#0f0f0f] border-[#2a2a2a] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]",
   );
   let effectLabelColor = $derived(
-    effectLabelColors[normalizedType] ?? "text-[#8da693]",
+    effectLabelColors[normalizedType] ?? "text-white",
   );
   let effectDividerColor = $derived(
-    effectDividerColors[normalizedType] ?? "text-[#333333]",
+    effectDividerColors[normalizedType] ?? "text-[#555555]",
   );
   let hoverShadow = $derived(
     normalizedType === "duo"
@@ -113,14 +113,14 @@
   );
 
   const typeBadgeStyles: Record<string, string> = {
-    duo: "border-[#2d5a3c] text-[#ccff90] bg-[#153320]",
+    duo: "border-[#2d5a3c] text-[#46f08f] bg-[#0f2414]",
     legendary: "border-[#5a4518] text-[#e8b84a] bg-[#1a1408]",
     infusion: "border-[#4a2458] text-[#c071ff] bg-[#120818]",
   };
 
-  let typeBadgeStyle = $derived(
+  let badgeStyle = $derived(
     typeBadgeStyles[normalizedType] ??
-      "border-[#2d5a3c] text-[#ccff90] bg-[#153320]",
+      "border-[#2a2a2a] text-white bg-[#0f0f0f]",
   );
 </script>
 
@@ -170,21 +170,21 @@
       <div class="flex flex-wrap gap-1">
         {#if boon.type}
           <span
-            class="text-[0.6rem] uppercase tracking-widest py-0.5 px-1.5 rounded-sm border {typeBadgeStyle}"
+            class="text-[0.6rem] uppercase tracking-widest py-0.5 px-1.5 rounded-sm border {badgeStyle}"
           >
             {boon.type}
           </span>
         {/if}
         {#if boon.is_core}
           <span
-            class="text-[0.6rem] uppercase tracking-widest py-0.5 px-1.5 rounded-sm border border-[#2d5a3c] text-[#ccff90] bg-[#153320]"
+            class="text-[0.6rem] uppercase tracking-widest py-0.5 px-1.5 rounded-sm border {badgeStyle}"
           >
             Core
           </span>
         {/if}
         {#if boon.deals_olympian_damage}
           <span
-            class="text-[0.6rem] uppercase tracking-widest py-0.5 px-1.5 rounded-sm border border-[#2d5a3c] text-[#ccff90] bg-[#153320]"
+            class="text-[0.6rem] uppercase tracking-widest py-0.5 px-1.5 rounded-sm border {badgeStyle}"
             title="Olympian Damage"
           >
             Olympian DMG

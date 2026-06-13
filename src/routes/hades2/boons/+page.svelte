@@ -43,16 +43,7 @@
     ...new Set(boonIndex.flatMap((entry) => entry.boon.gods)),
   ].sort();
 
-  const boonTypes = [
-    "Attack",
-    "Special",
-    "Cast",
-    "Sprint",
-    "Magick",
-    "Infusion",
-    "Duo",
-    "Legendary",
-  ];
+  const boonTypes = ["Attack", "Special", "Cast", "Sprint", "Magick"];
   const boonElements = ["Earth", "Water", "Air", "Fire", "Aether", "None"];
 
   let isBoonTypeOpen = $state(false);
@@ -64,6 +55,9 @@
   let selectedElements: string[] = $state([]);
   let coreFilter: boolean | null = $state(null);
   let olympDmgFilter: boolean | null = $state(null);
+  let duoFilter: boolean | null = $state(null);
+  let legendaryFilter: boolean | null = $state(null);
+  let infusionFilter: boolean | null = $state(null);
   let searchQuery = $state(page.url.searchParams.get("search") ?? "");
 
   $effect(() => {
@@ -142,6 +136,18 @@
         boon.deals_olympian_damage !== olympDmgFilter
       )
         return false;
+      if (duoFilter !== null && (boon.type === "Duo") !== duoFilter)
+        return false;
+      if (
+        legendaryFilter !== null &&
+        (boon.type === "Legendary") !== legendaryFilter
+      )
+        return false;
+      if (
+        infusionFilter !== null &&
+        (boon.type === "Infusion") !== infusionFilter
+      )
+        return false;
       if (
         searchWords &&
         !searchWords.every((word) => searchText.includes(word))
@@ -157,6 +163,9 @@
       selectedElements.length > 0 ||
       coreFilter !== null ||
       olympDmgFilter !== null ||
+      duoFilter !== null ||
+      legendaryFilter !== null ||
+      infusionFilter !== null ||
       searchQuery.trim().length > 0,
   );
 
@@ -166,6 +175,9 @@
     selectedElements = [];
     coreFilter = null;
     olympDmgFilter = null;
+    duoFilter = null;
+    legendaryFilter = null;
+    infusionFilter = null;
     searchQuery = "";
     closeAllDropdowns();
   }
@@ -305,6 +317,30 @@
 
         <button
           type="button"
+          class="{filterChip} {getToggleStyles(duoFilter)}"
+          onclick={() => (duoFilter = cycleState(duoFilter))}
+        >
+          <span class="text-[0.65rem] uppercase tracking-widest">Duo</span>
+        </button>
+
+        <button
+          type="button"
+          class="{filterChip} {getToggleStyles(legendaryFilter)}"
+          onclick={() => (legendaryFilter = cycleState(legendaryFilter))}
+        >
+          <span class="text-[0.65rem] uppercase tracking-widest">Legendary</span>
+        </button>
+
+        <button
+          type="button"
+          class="{filterChip} {getToggleStyles(infusionFilter)}"
+          onclick={() => (infusionFilter = cycleState(infusionFilter))}
+        >
+          <span class="text-[0.65rem] uppercase tracking-widest">Infusion</span>
+        </button>
+
+        <button
+          type="button"
           class="{filterChip} {getToggleStyles(coreFilter)}"
           onclick={() => (coreFilter = cycleState(coreFilter))}
         >
@@ -321,15 +357,16 @@
           >
         </button>
 
-        {#if hasActiveFilters}
-          <button
-            type="button"
-            class="{filterChip} border-[#2d5a3c] bg-transparent text-[#46f08f] hover:bg-[#153320] hover:border-[#46f08f]/50"
-            onclick={clearFilters}
-          >
-            <span class="text-[0.65rem] uppercase tracking-widest">Clear</span>
-          </button>
-        {/if}
+        <button
+          type="button"
+          class="{filterChip} {hasActiveFilters
+            ? 'border-[#2d5a3c] bg-transparent text-[#46f08f] hover:bg-[#153320] hover:border-[#46f08f]/50'
+            : 'border-[#1c3623] bg-transparent text-[#4a5a4e] opacity-50 cursor-default'}"
+          disabled={!hasActiveFilters}
+          onclick={clearFilters}
+        >
+          <span class="text-[0.65rem] uppercase tracking-widest">Clear</span>
+        </button>
       </div>
     </div>
 
