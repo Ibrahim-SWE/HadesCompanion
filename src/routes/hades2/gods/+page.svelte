@@ -139,7 +139,9 @@
                     <div class="flex flex-wrap gap-1.5">
                       {#each h2.curses as curse (curse)}
                         <a
-                          href={`${resolve("/hades2/boons")}?search=${encodeURIComponent(curse)}`}
+                          href={resolve(
+                            `/hades2/curses#curse-${encodeURIComponent(curse)}` as `/hades2/curses#${string}`,
+                          )}
                           class="text-xs text-[#ccff90] bg-black/40 border border-[#1c3623] rounded px-2 py-0.5 font-sans hover:border-[#46f08f]/50 hover:text-white transition-colors relative z-20"
                         >
                           {curse}

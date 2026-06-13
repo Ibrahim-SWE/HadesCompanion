@@ -165,7 +165,9 @@
                 >
                   {#each godData.hades_2.curses as curse (curse)}
                     <a
-                      href={resolve('/hades2/curses')}
+                      href={resolve(
+                        `/hades2/curses#curse-${encodeURIComponent(curse)}` as `/hades2/curses#${string}`,
+                      )}
                       class="rounded bg-[#153320] border border-[#1c3623] hover:border-[#46f08f]/50 px-2.5 py-1 text-xs text-[#ccff90] hover:shadow-[0_0_8px_rgba(70,240,143,0.15)] transition-all"
                     >
                       {curse}
