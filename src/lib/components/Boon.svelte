@@ -42,7 +42,7 @@
   const typeAccents: Record<string, string> = {
     duo: "#3e9e57",
     legendary: "#c8911f",
-    infusion: "#1dbf11",
+    infusion: "#9c37a6",
   };
 
   const typeCardStyles: Record<string, string> = {
@@ -50,7 +50,7 @@
     legendary:
       "bg-linear-to-r from-[#1e1606] to-[#100d03] border-[#c8911f]/60 hover:border-[#c8911f]",
     infusion:
-      "bg-linear-to-r from-[#081408] to-[#0a1a0c] border-[#1a4a22]/70 hover:border-[#1dbf11]/60",
+      "bg-linear-to-r from-[#14081a] to-[#0a0510] border-[#6b2d7a]/60 hover:border-[#9c37a6]",
   };
 
   const effectContainerStyles: Record<string, string> = {
@@ -58,19 +58,19 @@
     legendary:
       "bg-[#1a1408] border-[#5a4518] shadow-[inset_0_1px_0_rgba(200,145,31,0.12)]",
     infusion:
-      "bg-[#081408] border-[#1a4a22] shadow-[inset_0_1px_0_rgba(29,191,17,0.12)]",
+      "bg-[#120818] border-[#4a2458] shadow-[inset_0_1px_0_rgba(156,55,166,0.12)]",
   };
 
   const effectLabelColors: Record<string, string> = {
     duo: "text-[#46f08f]",
     legendary: "text-[#e8b84a]",
-    infusion: "text-[#1dbf11]",
+    infusion: "text-[#c071ff]",
   };
 
   const effectDividerColors: Record<string, string> = {
     duo: "text-[#2d5a3c]",
     legendary: "text-[#5a4518]",
-    infusion: "text-[#1a4a22]",
+    infusion: "text-[#4a2458]",
   };
 
   let normalizedType = $derived((boon.type ?? "").trim().toLowerCase());
@@ -95,7 +95,7 @@
       : normalizedType === "legendary"
         ? "hover:shadow-[0_2px_14px_rgba(200,145,31,0.15)]"
         : normalizedType === "infusion"
-          ? "hover:shadow-[0_2px_14px_rgba(29,191,17,0.12)]"
+          ? "hover:shadow-[0_2px_14px_rgba(156,55,166,0.15)]"
           : "hover:shadow-[0_2px_12px_rgba(0,0,0,0.6)]",
   );
   let hoverAccent = $derived(
@@ -104,12 +104,23 @@
       : normalizedType === "legendary"
         ? "from-[#c8911f]/80"
         : normalizedType === "infusion"
-          ? "from-[#1dbf11]/80"
+          ? "from-[#c071ff]/80"
           : "from-white/20",
   );
 
   let godLabel = $derived(
     boon.gods.length > 1 ? boon.gods.join(" · ") : boon.gods[0],
+  );
+
+  const typeBadgeStyles: Record<string, string> = {
+    duo: "border-[#2d5a3c] text-[#ccff90] bg-[#153320]",
+    legendary: "border-[#5a4518] text-[#e8b84a] bg-[#1a1408]",
+    infusion: "border-[#4a2458] text-[#c071ff] bg-[#120818]",
+  };
+
+  let typeBadgeStyle = $derived(
+    typeBadgeStyles[normalizedType] ??
+      "border-[#2d5a3c] text-[#ccff90] bg-[#153320]",
   );
 </script>
 
@@ -159,7 +170,7 @@
       <div class="flex flex-wrap gap-1">
         {#if boon.type}
           <span
-            class="text-[0.6rem] uppercase tracking-widest py-0.5 px-1.5 rounded-sm border border-[#2d5a3c] text-[#ccff90] bg-[#153320]"
+            class="text-[0.6rem] uppercase tracking-widest py-0.5 px-1.5 rounded-sm border {typeBadgeStyle}"
           >
             {boon.type}
           </span>
