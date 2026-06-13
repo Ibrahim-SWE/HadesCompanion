@@ -21,7 +21,13 @@
     prerequisites: object | null;
   };
 
-  let { boon }: { boon: BoonData } = $props();
+  let {
+    boon,
+    onGodFilter,
+  }: {
+    boon: BoonData;
+    onGodFilter?: (god: string) => void;
+  } = $props();
 
   const rarityColors: Record<string, string> = {
     common: "text-[#d6d1c2]",
@@ -112,6 +118,10 @@
     boon.gods.length > 1 ? boon.gods.join(" · ") : boon.gods[0],
   );
 
+  function handleGodFilter(god: string) {
+    onGodFilter?.(god);
+  }
+
   const typeBadgeStyles: Record<string, string> = {
     duo: "border-[#2d5a3c] text-[#46f08f] bg-[#0f2414]",
     legendary: "border-[#5a4518] text-[#e8b84a] bg-[#1a1408]",
@@ -139,7 +149,20 @@
       <span
         class="text-[0.65rem] uppercase tracking-widest text-[#46f08f] block leading-tight mb-0.5 truncate"
       >
-        {godLabel}
+        {#if onGodFilter}
+          {#each boon.gods as god, i (god)}
+            {#if i > 0}<span class="opacity-60"> · </span>{/if}
+            <button
+              type="button"
+              class="hover:text-[#ccff90] transition-colors hover:underline underline-offset-2"
+              onclick={() => handleGodFilter(god)}
+            >
+              {god}
+            </button>
+          {/each}
+        {:else}
+          {godLabel}
+        {/if}
       </span>
       <h2
         class="text-sm sm:text-base font-serif text-[#ccff90] uppercase tracking-wide m-0 drop-shadow-sm leading-tight"

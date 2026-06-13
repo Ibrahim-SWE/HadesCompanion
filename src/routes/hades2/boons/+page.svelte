@@ -52,7 +52,7 @@
 
   let selectedGods: string[] = $state([]);
   let selectedTypes: string[] = $state([]);
-  let selectedElements: string[] = $state([]);
+  let selectedElements: (string | null)[] = $state([]);
   let coreFilter: boolean | null = $state(null);
   let olympDmgFilter: boolean | null = $state(null);
   let duoFilter: boolean | null = $state(null);
@@ -181,6 +181,30 @@
     searchQuery = "";
     closeAllDropdowns();
   }
+
+  function addGodFilter(god: string) {
+    if (!selectedGods.includes(god)) {
+      selectedGods = [...selectedGods, god];
+    }
+  }
+
+  function toggleGodFilter(god: string) {
+    selectedGods = selectedGods.includes(god)
+      ? selectedGods.filter((g) => g !== god)
+      : [...selectedGods, god];
+  }
+
+  function toggleTypeFilter(type: string) {
+    selectedTypes = selectedTypes.includes(type)
+      ? selectedTypes.filter((t) => t !== type)
+      : [...selectedTypes, type];
+  }
+
+  function toggleElementFilter(element: string | null) {
+    selectedElements = selectedElements.includes(element)
+      ? selectedElements.filter((e) => e !== element)
+      : [...selectedElements, element];
+  }
 </script>
 
 <Container>
@@ -229,7 +253,11 @@
               class="absolute left-1/2 z-30 mt-1.5 flex max-h-56 w-44 -translate-x-1/2 flex-col overflow-y-auto rounded-md border border-[#2d5a3c] bg-[#0a140d] p-1.5 shadow-[0_4px_24px_rgba(0,0,0,0.7)]"
             >
               {#each sortedGodNames as god (god)}
-                <FilterCheckbox label={god} value={god} bind:group={selectedGods} />
+                <FilterCheckbox
+                  label={god}
+                  checked={selectedGods.includes(god)}
+                  onToggle={() => toggleGodFilter(god)}
+                />
               {/each}
             </div>
           {/if}
@@ -272,7 +300,11 @@
               class="absolute left-1/2 z-30 mt-1.5 flex w-40 -translate-x-1/2 flex-col rounded-md border border-[#2d5a3c] bg-[#0a140d] p-1.5 shadow-[0_4px_24px_rgba(0,0,0,0.7)]"
             >
               {#each boonTypes as type (type)}
-                <FilterCheckbox label={type} value={type} bind:group={selectedTypes} />
+                <FilterCheckbox
+                  label={type}
+                  checked={selectedTypes.includes(type)}
+                  onToggle={() => toggleTypeFilter(type)}
+                />
               {/each}
             </div>
           {/if}
@@ -305,10 +337,11 @@
               class="absolute left-1/2 z-30 mt-1.5 flex w-36 -translate-x-1/2 flex-col rounded-md border border-[#2d5a3c] bg-[#0a140d] p-1.5 shadow-[0_4px_24px_rgba(0,0,0,0.7)]"
             >
               {#each boonElements as element (element)}
+                {@const elementValue = element === "None" ? null : element}
                 <FilterCheckbox
                   label={element}
-                  value={element === "None" ? null : element}
-                  bind:group={selectedElements}
+                  checked={selectedElements.includes(elementValue)}
+                  onToggle={() => toggleElementFilter(elementValue)}
                 />
               {/each}
             </div>
@@ -395,7 +428,7 @@
         class="grid grid-cols-1 min-[450px]:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-1.5 items-stretch"
       >
         {#each filteredBoons as { id, boon } (id)}
-          <Boon {boon} />
+          <Boon {boon} onGodFilter={addGodFilter} />
         {/each}
       </div>
     {/if}

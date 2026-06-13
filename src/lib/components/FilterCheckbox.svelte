@@ -1,19 +1,24 @@
 <script lang="ts">
   let {
     label,
-    value,
-    group = $bindable<string[]>(),
+    checked = false,
+    onToggle,
   }: {
     label: string;
-    value: string | null;
-    group?: string[];
+    checked?: boolean;
+    onToggle?: () => void;
   } = $props();
 </script>
 
 <label
   class="flex cursor-pointer items-center gap-2.5 rounded-md px-2 py-1.5 select-none hover:bg-[#153320] transition-colors group"
 >
-  <input class="sr-only peer" type="checkbox" {value} bind:group />
+  <input
+    class="sr-only peer"
+    type="checkbox"
+    {checked}
+    onchange={() => onToggle?.()}
+  />
   <div
     class="w-4 h-4 flex items-center justify-center border-2 border-[#2d5a3c] rounded-sm bg-[#0d1c13] transition-all duration-200 peer-checked:bg-[#46f08f] peer-checked:border-[#46f08f] group-hover:border-[#46f08f]/60"
   >
