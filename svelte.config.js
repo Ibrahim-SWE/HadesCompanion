@@ -11,7 +11,7 @@ const config = {
         environment: undefined,
         persist: undefined,
       },
-      fallback: "plaintext",
+      fallback: "spa",
       routes: { include: ["/*"], exclude: ["<all>"] },
     }),
   },

@@ -9,7 +9,7 @@ export const load: PageLoad = ({ params }) => {
   const godName = params.god;
 
   if (!(godName in godsData)) {
-    error(404, "God not found");
+    error(404, "Lost in the Underworld");
   }
 
   return { godName };
