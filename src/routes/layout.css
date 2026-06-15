@@ -35,57 +35,9 @@ picture:has(> img) {
   background-attachment: fixed;
 }
 
-.navLink,
-.mobileNavLink {
-  color: var(--color-textLight);
-  text-decoration: none;
-  white-space: nowrap;
-  transition:
-    color 0.2s ease,
-    background-color 0.2s ease;
-}
-
-.navLink {
-  padding: 3px 8px;
-  border-radius: 6px;
-  font-size: 0.75rem;
-  line-height: 1.25rem;
-}
-
-.mobileNavLink {
-  display: block;
-  padding: 6px 8px;
-  border-radius: 6px;
-  font-size: 0.75rem;
-  line-height: 1.1rem;
-}
-
-.navLink:hover,
-.mobileNavLink:hover {
-  color: #eff7e8;
-  background-color: rgba(147, 177, 120, 0.12);
-}
-
-.navLinkActive {
-  color: #eff7e8;
-  background-color: rgba(74, 110, 68, 0.35);
-  font-weight: 500;
-}
-
 .desktopNav {
   scrollbar-width: none;
 }
 .desktopNav::-webkit-scrollbar {
   display: none;
-}
-
-.regularBoon {
-  background-color: rgba(21, 29, 20, 0.8);
-  border: 1px solid rgba(66, 81, 58, 0 0.8);
-}
-
-.detailsContainer > span {
-  background-color: #313430cc;
-  /* padding: 2px 6px; */
-  border: solid 1px #4d5449;
 }

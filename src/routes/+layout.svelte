@@ -55,9 +55,7 @@
   }
 
   $effect(() => {
-    if (page.url.pathname) {
-      mobileMenuOpen = false;
-    }
+    page.url.pathname;
     mobileMenuOpen = false;
   });
 </script>
