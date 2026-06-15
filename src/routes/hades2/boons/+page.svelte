@@ -3,6 +3,7 @@
   import Container from "$lib/components/Container.svelte";
   import FilterCheckbox from "$lib/components/FilterCheckbox.svelte";
   import boonsData from "$lib/data/hades2/boons.json";
+  import { browser } from "$app/environment";
   import { page } from "$app/state";
   import type { BoonData } from "$lib/types/hades2";
 
@@ -39,9 +40,11 @@
   let duoFilter: boolean | null = $state(null);
   let legendaryFilter: boolean | null = $state(null);
   let infusionFilter: boolean | null = $state(null);
-  let searchQuery = $state(page.url.searchParams.get("search") ?? "");
+  let searchQuery = $state("");
 
   $effect(() => {
+    if (!browser) return;
+
     const query = page.url.searchParams.get("search");
     searchQuery = query ?? "";
   });
