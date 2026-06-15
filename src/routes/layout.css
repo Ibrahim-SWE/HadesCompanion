@@ -32,7 +32,13 @@ picture:has(> img) {
     url("../lib/images/background_image.webp");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: scroll;
+}
+
+@media (min-width: 1024px) {
+  .mainContainer {
+    background-attachment: fixed;
+  }
 }
 
 .desktopNav {

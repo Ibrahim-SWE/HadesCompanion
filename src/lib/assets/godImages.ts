@@ -1,7 +1,7 @@
 import type { Picture } from "@sveltejs/enhanced-img";
 import { loadCachedPicture } from "./imageLoadUtils";
 
-const loaders = import.meta.glob<Picture>("/src/lib/assets/misc/*.webp", {
+const loaders = import.meta.glob<Picture>("/src/lib/assets/gods/*.webp", {
   import: "default",
   query: { enhanced: true, format: "avif;webp" },
 });
@@ -9,15 +9,15 @@ const loaders = import.meta.glob<Picture>("/src/lib/assets/misc/*.webp", {
 const cache = new Map<string, Picture>();
 const inFlight = new Map<string, Promise<Picture | null>>();
 
-export function resolveMiscImagePath(imgPath: string): string {
-  return `/src/lib/assets/misc/${imgPath}`;
+export function resolveGodImagePath(godName: string): string {
+  return `/src/lib/assets/gods/${godName}.webp`;
 }
 
-export async function loadMiscImage(imgPath: string): Promise<Picture | null> {
+export async function loadGodImage(godName: string): Promise<Picture | null> {
   return loadCachedPicture(
     loaders,
     cache,
     inFlight,
-    resolveMiscImagePath(imgPath),
+    resolveGodImagePath(godName),
   );
 }

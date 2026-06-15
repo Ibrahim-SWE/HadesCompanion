@@ -1,10 +1,11 @@
 <script lang="ts">
   import Boon from "$lib/components/Boon.svelte";
   import Container from "$lib/components/Container.svelte";
+  import LazyEnhancedImg from "$lib/components/LazyEnhancedImg.svelte";
+  import { loadGodImage } from "$lib/assets/godImages";
   import boonsData from "$lib/data/hades2/boons.json";
   import godsData from "$lib/data/gods.json";
   import { resolve } from "$app/paths";
-  import type { Picture } from "@sveltejs/enhanced-img";
   import type { PageData } from "./$types";
   import type { BoonData, GodDetails } from "$lib/types/hades2";
 
@@ -12,14 +13,6 @@
 
   const godName = $derived(data.godName);
   const godData = $derived((godsData as Record<string, GodDetails>)[godName]);
-
-  const godImages = import.meta.glob<Picture>("$lib/assets/gods/*.webp", {
-    eager: true,
-    import: "default",
-    query: { enhanced: true, format: 'avif;webp' },
-  }) as Record<string, Picture>;
-
-  const imageUrl = $derived(godImages[`/src/lib/assets/gods/${godName}.webp`]);
 
   const godBoons = $derived(
     (Object.values(boonsData) as BoonData[])
@@ -63,19 +56,14 @@
       <div
         class="relative overflow-hidden rounded-lg border border-[#1a3a25] aspect-3/4 w-48 sm:w-56 md:w-64 shrink-0 mx-auto md:mx-0 shadow-[0_0_20px_rgba(0,0,0,0.8)]"
       >
-        {#if imageUrl}
-          <enhanced:img
-            src={imageUrl}
-            alt={godName}
-            class="h-full w-full object-cover object-center scale-105"
-            loading="lazy"
-            decoding="async"
-          />
-        {:else}
-          <div
-            class="h-full w-full bg-linear-to-b from-[#0a140d] to-[#0d1c13]"
-          ></div>
-        {/if}
+        <LazyEnhancedImg
+          load={() => loadGodImage(godName)}
+          alt={godName}
+          class="h-full w-full object-cover object-center scale-105"
+          placeholderClass="h-full w-full bg-linear-to-b from-[#0a140d] to-[#0d1c13]"
+          sizes="256px"
+          eager
+        />
         <!-- inner shadow overlay -->
         <div
           class="absolute inset-0 shadow-[inset_0_0_20px_rgba(0,0,0,0.8)] pointer-events-none"

@@ -1,21 +1,9 @@
 <script lang="ts">
   import Container from "$lib/components/Container.svelte";
+  import LazyEnhancedImg from "$lib/components/LazyEnhancedImg.svelte";
+  import LazyMiscImg from "$lib/components/LazyMiscImg.svelte";
+  import { loadWeaponImage } from "$lib/assets/weaponImages";
   import weaponsData from "$lib/data/hades2/weapons.json";
-  import type { Picture } from "@sveltejs/enhanced-img";
-  const weaponImages = import.meta.glob<Picture>(
-    "/src/lib/assets/weapons/**/*.webp",
-    {
-      eager: true,
-      import: "default",
-      query: { enhanced: true, format: 'avif;webp' },
-    },
-  ) as Record<string, Picture>;
-
-  const miscImages = import.meta.glob<Picture>("/src/lib/assets/misc/*.webp", {
-    eager: true,
-    import: "default",
-    query: { enhanced: true, format: 'avif;webp' },
-  }) as Record<string, Picture>;
 
   type RichTextNode = {
     type: "text_normal" | "text_bold" | "image";
@@ -58,14 +46,6 @@
     weapons.find(([key]) => key === activeTab)?.[1] ?? weapons[0][1],
   );
 
-  function weaponImage(path: string): Picture | undefined {
-    return weaponImages[`/src/lib/assets/weapons/${path}`];
-  }
-
-  function miscImage(file: string): Picture | undefined {
-    return miscImages[`/src/lib/assets/misc/${file}`];
-  }
-
   function toSnakeCase(str: string) {
     return str.toLowerCase().replace(/\s+/g, "_");
   }
@@ -97,14 +77,11 @@
     {:else if part.type === "text_bold"}
       <span class="font-semibold text-[#e5f4e7]">{part.value}</span>
     {:else if part.type === "image"}
-      {@const iconImg = part.img_path ? miscImage(part.img_path) : undefined}
-      {#if iconImg}
-        <enhanced:img
-          src={iconImg}
-          alt={part.name}
+      {#if part.img_path}
+        <LazyMiscImg
+          file={part.img_path}
+          alt={part.name ?? part.img_path}
           class="inline h-[1.2em] object-contain align-text-bottom mx-0.5"
-          loading="lazy"
-          decoding="async"
         />
       {/if}
     {/if}
@@ -124,16 +101,11 @@
           <span class="text-xs font-bold text-[#ccff90] font-mono leading-none">
             {amt}
           </span>
-          {#if miscImage(`${toSnakeCase(resName)}.webp`)}
-            {@const resImg = miscImage(`${toSnakeCase(resName)}.webp`)!}
-            <enhanced:img
-              src={resImg}
-              alt={resName}
-              class="w-4 h-4 object-contain"
-              loading="lazy"
-              decoding="async"
-            />
-          {/if}
+          <LazyMiscImg
+            file="{toSnakeCase(resName)}.webp"
+            alt={resName}
+            class="w-4 h-4 object-contain"
+          />
         </div>
       {/each}
     </div>
@@ -165,16 +137,13 @@
             : 'border-[#1a3a25] text-[#8da693] hover:bg-[#153320] hover:text-[#ccff90] hover:border-[#46f08f]'}"
           onclick={() => (activeTab = weaponKey)}
         >
-          {#if weaponImage(weapon.image_path)}
-            {@const navImg = weaponImage(weapon.image_path)!}
-            <enhanced:img
-              src={navImg}
-              alt=""
-              class="w-5 h-5 object-contain"
-              loading="lazy"
-              decoding="async"
-            />
-          {/if}
+          <LazyEnhancedImg
+            load={() => loadWeaponImage(weapon.image_path)}
+            alt=""
+            class="w-5 h-5 object-contain"
+            sizes="20px"
+            eager={activeTab === weaponKey}
+          />
           {weapon.name}
         </button>
       {/each}
@@ -189,14 +158,14 @@
           <div
             class="relative w-16 h-16 sm:w-20 sm:h-20 shrink-0 bg-black rounded-lg border border-[#1a3a25] flex items-center justify-center p-2 shadow-[0_0_15px_rgba(0,0,0,0.8)]"
           >
-            {#if weaponImage(activeWeapon.image_path)}
-              {@const mainImg = weaponImage(activeWeapon.image_path)!}
-              <enhanced:img
-                src={mainImg}
-                alt={activeWeapon.name}
-                class="w-full h-full object-contain drop-shadow-lg"
-              />
-            {/if}
+            <LazyEnhancedImg
+              load={() => loadWeaponImage(activeWeapon.image_path)}
+              alt={activeWeapon.name}
+              class="w-full h-full object-contain drop-shadow-lg"
+              placeholderClass="w-full h-full"
+              sizes="80px"
+              eager
+            />
             <div
               class="absolute inset-0 shadow-[inset_0_0_10px_rgba(0,0,0,0.8)] pointer-events-none rounded-lg"
             ></div>
@@ -234,16 +203,13 @@
                   <div
                     class="w-12 h-12 sm:w-14 sm:h-14 shrink-0 bg-black rounded-lg border border-[#2a4030] flex items-center justify-center p-1.5 shadow-inner"
                   >
-                    {#if weaponImage(aspect.image_path)}
-                      {@const aspectImg = weaponImage(aspect.image_path)!}
-                      <enhanced:img
-                        src={aspectImg}
-                        alt={aspect.name}
-                        class="w-full h-full object-contain drop-shadow-lg"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    {/if}
+                    <LazyEnhancedImg
+                      load={() => loadWeaponImage(aspect.image_path)}
+                      alt={aspect.name}
+                      class="w-full h-full object-contain drop-shadow-lg"
+                      placeholderClass="w-full h-full"
+                      sizes="56px"
+                    />
                   </div>
                   <div class="min-w-0">
                     <h4
@@ -307,16 +273,11 @@
           <h3
             class="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-[#ccff90] border-b border-[#1c3623] pb-1.5 mb-3"
           >
-            {#if miscImage("daedalus_hammer.webp")}
-              {@const hammerImg = miscImage("daedalus_hammer.webp")!}
-              <enhanced:img
-                src={hammerImg}
-                alt=""
-                class="w-5 h-5 object-contain"
-                loading="lazy"
-                decoding="async"
-              />
-            {/if}
+            <LazyMiscImg
+              file="daedalus_hammer.webp"
+              alt=""
+              class="w-5 h-5 object-contain"
+            />
             Daedalus Upgrades
           </h3>
           <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2.5">
@@ -327,16 +288,13 @@
                 <div
                   class="w-10 h-10 shrink-0 bg-black rounded border border-[#2a4030] flex items-center justify-center p-1 shadow-inner"
                 >
-                  {#if weaponImage(upgrade.image_path)}
-                    {@const upgradeImg = weaponImage(upgrade.image_path)!}
-                    <enhanced:img
-                      src={upgradeImg}
-                      alt={upgrade.name}
-                      class="w-full h-full object-contain"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  {/if}
+                  <LazyEnhancedImg
+                    load={() => loadWeaponImage(upgrade.image_path)}
+                    alt={upgrade.name}
+                    class="w-full h-full object-contain"
+                    placeholderClass="w-full h-full"
+                    sizes="40px"
+                  />
                 </div>
                 <div class="min-w-0">
                   <h4

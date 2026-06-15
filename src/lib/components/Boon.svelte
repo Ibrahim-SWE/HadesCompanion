@@ -1,6 +1,6 @@
 <script lang="ts">
   import BoonImgElemIcon from "./BoonImg_ElemIcon.svelte";
-  import { miscImage } from "$lib/assets/miscImages";
+  import LazyMiscImg from "./LazyMiscImg.svelte";
   import type { BoonData } from "$lib/types/hades2";
 
   let {
@@ -168,15 +168,13 @@
           {:else if part.type === "text_bold"}<strong class="text-[#e5f4e7] font-semibold"
               >{part.value}</strong
             >
-          {:else if part.type === "image"}{@const partImg = miscImage(
-              part.img_path,
-            )}{#if partImg}<enhanced:img
-                src={partImg}
-                alt={part.name}
-                class="inline-block h-[1.4em] w-auto object-contain align-middle"
-                loading="lazy"
-                decoding="async"
-              />{/if}{/if}
+          {:else if part.type === "image"}
+            <LazyMiscImg
+              file={part.img_path}
+              alt={part.name}
+              class="inline-block h-[1.4em] w-auto object-contain align-middle"
+            />
+          {/if}
         {/each}
       </p>
     </div>

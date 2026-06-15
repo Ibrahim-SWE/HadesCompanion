@@ -1,26 +1,9 @@
 <script lang="ts">
   import Container from "$lib/components/Container.svelte";
+  import LazyEnhancedImg from "$lib/components/LazyEnhancedImg.svelte";
+  import LazyMiscImg from "$lib/components/LazyMiscImg.svelte";
+  import { loadCardImage } from "$lib/assets/cardImages";
   import cardsData from "$lib/data/hades2/arcana_cards.json";
-  import type { Picture } from "@sveltejs/enhanced-img";
-  const cardImages = import.meta.glob<Picture>("$lib/assets/cards/*.webp", {
-    eager: true,
-    import: "default",
-    query: { enhanced: true, format: 'avif;webp' },
-  }) as Record<string, Picture>;
-
-  const miscImages = import.meta.glob<Picture>("/src/lib/assets/misc/*.webp", {
-    eager: true,
-    import: "default",
-    query: { enhanced: true, format: 'avif;webp' },
-  }) as Record<string, Picture>;
-
-  function cardImage(file: string): Picture | undefined {
-    return cardImages[`/src/lib/assets/cards/${file}`];
-  }
-
-  function miscImage(file: string): Picture | undefined {
-    return miscImages[`/src/lib/assets/misc/${file}`];
-  }
 
   type UpgradeCostItems = { [resourceName: string]: number };
   type DescriptionRich =
@@ -75,16 +58,11 @@
       {:else if part.type === "text_bold"}
         <span class="font-semibold text-[#e5f4e7]">{part.value}</span>
       {:else if part.type === "image"}
-        {@const iconImg = miscImage(part.image_file)}
-        {#if iconImg}
-          <enhanced:img
-            class="inline-block h-[1.5em] w-auto object-contain align-middle mx-0.5"
-            src={iconImg}
-            alt={part.image_file.replace("_icon.webp", "").replace(/_/g, " ")}
-            loading="lazy"
-            decoding="async"
-          />
-        {/if}
+        <LazyMiscImg
+          file={part.image_file}
+          alt={part.image_file.replace("_icon.webp", "").replace(/_/g, " ")}
+          class="inline-block h-[1.5em] w-auto object-contain align-middle mx-0.5"
+        />
       {/if}
     {/each}
   </p>
@@ -136,16 +114,11 @@
                   >
                     {amount}
                   </span>
-                  {#if miscImage(`${toSnakeCase(item)}.webp`)}
-                    {@const costImg = miscImage(`${toSnakeCase(item)}.webp`)!}
-                    <enhanced:img
-                      src={costImg}
-                      alt={item}
-                      class="w-5 h-5 object-contain"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  {/if}
+                  <LazyMiscImg
+                    file="{toSnakeCase(item)}.webp"
+                    alt={item}
+                    class="w-5 h-5 object-contain"
+                  />
                 </span>
               {/each}
             {/each}
@@ -191,16 +164,12 @@
             : 'border-[#1c3623] hover:border-[#46f08f]/50 hover:shadow-[0_2px_14px_rgba(70,240,143,0.1)]'}"
         >
           <div class="relative w-full">
-            {#if cardImage(details.image_file)}
-              {@const cardImg = cardImage(details.image_file)!}
-              <enhanced:img
-                src={cardImg}
-                alt={card}
-                class="w-full h-auto rounded shadow-sm"
-                loading="lazy"
-                decoding="async"
-              />
-            {/if}
+            <LazyEnhancedImg
+              load={() => loadCardImage(details.image_file)}
+              alt={card}
+              class="w-full h-auto rounded shadow-sm"
+              sizes="(max-width: 640px) 20vw, 120px"
+            />
             <div
               class="absolute top-0.5 left-0.5 sm:top-1 sm:left-1 z-10 flex items-center gap-0.5 sm:gap-1 bg-black/85 backdrop-blur-sm px-0.5 py-px sm:px-1 sm:py-0.5 md:pl-1.5 md:pr-1 md:py-1 rounded-sm sm:rounded-md border border-[#46f08f]/60 shadow-[0_0_10px_rgba(70,240,143,0.35)]"
               title="Grasp cost"
@@ -210,16 +179,11 @@
               >
                 {details.graspCost}
               </span>
-              {#if miscImage("grasp.webp")}
-                {@const graspImg = miscImage("grasp.webp")!}
-                <enhanced:img
-                  src={graspImg}
-                  alt="Grasp"
-                  class="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 object-contain shrink-0"
-                  loading="lazy"
-                  decoding="async"
-                />
-              {/if}
+              <LazyMiscImg
+                file="grasp.webp"
+                alt="Grasp"
+                class="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 object-contain shrink-0"
+              />
             </div>
           </div>
 

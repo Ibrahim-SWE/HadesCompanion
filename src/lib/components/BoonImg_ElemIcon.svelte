@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { miscImage } from "$lib/assets/miscImages";
+  import { loadMiscImage } from "$lib/assets/miscImages";
   import { loadBoonImage, resolveBoonImagePath } from "$lib/assets/boonImages";
   import type { Picture } from "@sveltejs/enhanced-img";
   import type { BoonData } from "$lib/types/hades2";
@@ -24,14 +24,25 @@
   let fullImagePath = $derived(
     resolveBoonImagePath(godFolder, boon.image_path),
   );
-  let icon = $derived(
-    boon.element
-      ? (miscImage(elementIconFiles[boon.element.toLowerCase()] ?? "") ?? null)
-      : null,
-  );
+  let icon = $state<Picture | null>(null);
+
+  function isInViewport(node: HTMLElement): boolean {
+    const rect = node.getBoundingClientRect();
+    return (
+      rect.bottom >= 0 &&
+      rect.top <= window.innerHeight &&
+      rect.right >= 0 &&
+      rect.left <= window.innerWidth
+    );
+  }
 
   $effect(() => {
     if (!container) return;
+
+    if (isInViewport(container)) {
+      shouldLoad = true;
+      return;
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -51,11 +62,30 @@
     if (!shouldLoad) return;
 
     const path = fullImagePath;
+    const iconFile = boon.element
+      ? (elementIconFiles[boon.element.toLowerCase()] ?? "")
+      : "";
     let cancelled = false;
 
-    loadBoonImage(path).then((picture) => {
-      if (!cancelled) image = picture;
-    });
+    loadBoonImage(path)
+      .then((picture) => {
+        if (!cancelled) image = picture;
+      })
+      .catch(() => {
+        if (!cancelled) image = null;
+      });
+
+    if (iconFile) {
+      loadMiscImage(iconFile)
+        .then((picture) => {
+          if (!cancelled) icon = picture;
+        })
+        .catch(() => {
+          if (!cancelled) icon = null;
+        });
+    } else {
+      icon = null;
+    }
 
     return () => {
       cancelled = true;
@@ -76,7 +106,8 @@
           src={image}
           alt="{boon.name} Boon Image"
           class="w-full h-full object-cover object-top"
-          loading="lazy"
+          sizes="64px"
+          loading="eager"
           decoding="async"
         />
       {:else}
@@ -94,6 +125,9 @@
         class="absolute -top-1.5 -right-1.5 w-5 h-5 object-contain drop-shadow-md z-10"
         src={icon}
         alt="{boon.element} Element Icon"
+        sizes="20px"
+        loading="eager"
+        decoding="async"
       />
     {/if}
   </div>

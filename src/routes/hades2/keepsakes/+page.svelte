@@ -1,10 +1,12 @@
 <script lang="ts">
   import Container from "$lib/components/Container.svelte";
+  import LazyEnhancedImg from "$lib/components/LazyEnhancedImg.svelte";
+  import LazyMiscImg from "$lib/components/LazyMiscImg.svelte";
+  import { loadKeepsakeImage } from "$lib/assets/keepsakeImages";
   import keepsakesData from "$lib/data/hades2/keepsakes.json";
   import godsData from "$lib/data/gods.json";
   import { resolve } from "$app/paths";
   import { page } from "$app/state";
-  import type { Picture } from "@sveltejs/enhanced-img";
   let activeKeepsake = $derived(
     decodeURIComponent(page.url.hash).replace("#keepsake-", ""),
   );
@@ -19,25 +21,6 @@
       }
     }
   });
-
-  const keepsakeImages = import.meta.glob<Picture>(
-    "$lib/assets/keepsakes/*.webp",
-    {
-      eager: true,
-      import: "default",
-      query: { enhanced: true, format: 'avif;webp' },
-    },
-  ) as Record<string, Picture>;
-
-  const miscImages = import.meta.glob<Picture>("/src/lib/assets/misc/*.webp", {
-    eager: true,
-    import: "default",
-    query: { enhanced: true, format: 'avif;webp' },
-  }) as Record<string, Picture>;
-
-  function miscImage(imageFile: string): Picture | undefined {
-    return miscImages[`/src/lib/assets/misc/${imageFile}`];
-  }
 
   type DescriptionRich =
     | { type: "text_normal"; value: string }
@@ -69,10 +52,6 @@
   function isGodProvider(provider: string): boolean {
     return gods.includes(provider);
   }
-
-  function keepsakeImage(imageFile: string): Picture | undefined {
-    return keepsakeImages[`/src/lib/assets/keepsakes/${imageFile}`];
-  }
 </script>
 
 {#snippet descriptionRich(
@@ -100,16 +79,11 @@
         {/each}
       </span>
     {:else if part.type === "image"}
-      {@const iconImg = miscImage(part.image_file)}
-      {#if iconImg}
-        <enhanced:img
-          src={iconImg}
-          alt={part.image_file.replace("_icon.webp", "").replace(/_/g, " ")}
-          class="inline-block h-[1.65em] w-auto object-contain align-middle mx-0.5"
-          loading="lazy"
-          decoding="async"
-        />
-      {/if}
+      <LazyMiscImg
+        file={part.image_file}
+        alt={part.image_file.replace("_icon.webp", "").replace(/_/g, " ")}
+        class="inline-block h-[1.65em] w-auto object-contain align-middle mx-0.5"
+      />
     {/if}
   {/each}
 {/snippet}
@@ -132,7 +106,6 @@
 
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1.5">
       {#each keepsakes as [, details] (details.name)}
-        {@const imageUrl = keepsakeImage(details.image_file)}
         {@const highlighted = details.name === activeKeepsake}
 
         <article
@@ -154,21 +127,13 @@
               ? 'border-[#46f08f] shadow-[0_0_14px_rgba(70,240,143,0.55)]'
               : 'border-[#1a3a25] shadow-[0_0_8px_rgba(0,0,0,0.8)]'}"
           >
-            {#if imageUrl}
-              <enhanced:img
-                src={imageUrl}
-                alt={details.name}
-                class="w-full h-full object-contain drop-shadow-lg"
-                loading="lazy"
-                decoding="async"
-              />
-            {:else}
-              <span
-                class="text-center text-[0.55rem] text-[#8da693] font-sans leading-tight"
-              >
-                {details.name}
-              </span>
-            {/if}
+            <LazyEnhancedImg
+              load={() => loadKeepsakeImage(details.image_file)}
+              alt={details.name}
+              class="w-full h-full object-contain drop-shadow-lg"
+              placeholderClass="w-full h-full"
+              sizes="56px"
+            />
             <div
               class="absolute inset-0 shadow-[inset_0_0_6px_rgba(0,0,0,0.8)] pointer-events-none rounded"
             ></div>

@@ -1,18 +1,9 @@
 <script lang="ts">
   import Container from "$lib/components/Container.svelte";
+  import LazyEnhancedImg from "$lib/components/LazyEnhancedImg.svelte";
+  import LazyMiscImg from "$lib/components/LazyMiscImg.svelte";
+  import { loadPetImage } from "$lib/assets/petImages";
   import petsData from "$lib/data/hades2/pets.json";
-  import { miscImage } from "$lib/assets/miscImages";
-  import type { Picture } from "@sveltejs/enhanced-img";
-  const petImages = import.meta.glob<Picture>("$lib/assets/pets/**/*.webp", {
-    eager: true,
-    import: "default",
-    query: { enhanced: true, format: 'avif;webp' },
-  }) as Record<string, Picture>;
-
-  function getPetImage(imageFile: string): Picture | undefined {
-    if (!imageFile) return undefined;
-    return petImages[`/src/lib/assets/pets/${imageFile}`];
-  }
 
   type DescriptionRich =
     | { type: "text_normal"; value: string }
@@ -134,7 +125,6 @@
       {#each pets as [petKey, pet] (petKey)}
         {#if activeTab === "all" || activeTab === petKey}
           {@const theme = petThemes[petKey] || petThemes.Frinos}
-          {@const petPortrait = getPetImage(`${petKey.toLowerCase()}.webp`)}
 
           <article
             class="flex flex-col xl:flex-row gap-3 bg-linear-to-r from-[#0a140d] to-[#0d1c13] border border-[#1c3623] border-l-4 rounded-lg p-2.5 sm:p-3 shadow-[0_4px_10px_rgba(0,0,0,0.5)] relative overflow-hidden"
@@ -148,17 +138,14 @@
                 class="w-24 h-24 sm:w-28 sm:h-28 bg-black rounded-full border-2 flex items-center justify-center xl:mb-1.5 overflow-hidden shadow-[0_0_15px_var(--accent-dim)] shrink-0"
                 style="border-color: var(--accent);"
               >
-                {#if petPortrait}
-                  <enhanced:img
-                    src={petPortrait}
-                    alt={pet.name}
-                    class="w-full h-full object-contain scale-110"
-                  />
-                {:else}
-                  <span class="font-black text-2xl text-(--accent)"
-                    >{pet.name.slice(0, 2)}</span
-                  >
-                {/if}
+                <LazyEnhancedImg
+                  load={() => loadPetImage(`${petKey.toLowerCase()}.webp`)}
+                  alt={pet.name}
+                  class="w-full h-full object-contain scale-110"
+                  placeholderClass="w-full h-full"
+                  sizes="112px"
+                  eager
+                />
               </div>
 
               <div class="min-w-0 flex flex-col justify-center xl:items-center">
@@ -179,7 +166,6 @@
               aria-label={`${pet.name} bonds`}
             >
               {#each petBonds(pet) as bond (bond.bondName)}
-                {@const bondImage = getPetImage(bond.imageFile)}
 
                 <div
                   class="flex-1 bg-black/20 border border-white/5 rounded-lg p-2.5 flex flex-col items-center text-center min-w-0"
@@ -190,13 +176,13 @@
                     <div
                       class="w-20 h-20 sm:w-24 sm:h-24 bg-black rounded-lg border border-[#2a4030] shrink-0 flex items-center justify-center p-2 shadow-inner"
                     >
-                      {#if bondImage}
-                        <enhanced:img
-                          src={bondImage}
-                          alt={bond.bondName}
-                          class="w-full h-full object-contain drop-shadow-lg"
-                        />
-                      {/if}
+                      <LazyEnhancedImg
+                        load={() => loadPetImage(bond.imageFile)}
+                        alt={bond.bondName}
+                        class="w-full h-full object-contain drop-shadow-lg"
+                        placeholderClass="w-full h-full"
+                        sizes="96px"
+                      />
                     </div>
                     <h3
                       class="text-sm sm:text-base m-0 text-[#e5f4e7] font-medium leading-tight"
@@ -232,20 +218,13 @@
                           {/each}
                         </span>
                       {:else if part.type === "image"}
-                        {@const iconImg = miscImage(part.image_file)}
-                        {#if iconImg}
-                          <enhanced:img
-                            src={iconImg}
-                            alt={part.image_file
-                              .replace("_icon.webp", "")
-                              .replace("_", " ")}
-                            class="inline-block w-4 h-4 object-contain align-middle mx-0.5"
-                          />
-                        {:else}
-                          <span class="text-[#82917f] text-[0.68rem]">
-                            {part.image_file.replace("_icon.webp", "")}
-                          </span>
-                        {/if}
+                        <LazyMiscImg
+                          file={part.image_file}
+                          alt={part.image_file
+                            .replace("_icon.webp", "")
+                            .replace("_", " ")}
+                          class="inline-block w-4 h-4 object-contain align-middle mx-0.5"
+                        />
                       {/if}
                     {/each}
                   </p>

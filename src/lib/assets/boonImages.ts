@@ -1,11 +1,13 @@
 import type { Picture } from "@sveltejs/enhanced-img";
+import { loadCachedPicture } from "./imageLoadUtils";
 
 const loaders = import.meta.glob<Picture>("/src/lib/assets/boons/**/*.webp", {
   import: "default",
-  query: { enhanced: true, format: 'avif;webp' },
+  query: { enhanced: true, format: "avif;webp" },
 });
 
 const cache = new Map<string, Picture>();
+const inFlight = new Map<string, Promise<Picture | null>>();
 
 export function resolveBoonImagePath(
   godFolder: string,
@@ -17,13 +19,5 @@ export function resolveBoonImagePath(
 }
 
 export async function loadBoonImage(fullPath: string): Promise<Picture | null> {
-  const cached = cache.get(fullPath);
-  if (cached) return cached;
-
-  const loader = loaders[fullPath];
-  if (!loader) return null;
-
-  const picture = await loader();
-  cache.set(fullPath, picture);
-  return picture;
+  return loadCachedPicture(loaders, cache, inFlight, fullPath);
 }

@@ -1,24 +1,15 @@
 <script lang="ts">
   import Container from "$lib/components/Container.svelte";
+  import LazyEnhancedImg from "$lib/components/LazyEnhancedImg.svelte";
+  import { loadGodImage } from "$lib/assets/godImages";
   import godsData from "$lib/data/gods.json";
   import { resolve } from "$app/paths";
-  import type { Picture } from "@sveltejs/enhanced-img";
   import type { GodDetails } from "$lib/types/hades2";
 
   const gods: Record<string, GodDetails> = godsData;
   const sortedGodsArray: [string, GodDetails][] = Object.entries(gods).sort(
     (a, b) => a[0].localeCompare(b[0]),
   );
-
-  const godImages = import.meta.glob<Picture>("$lib/assets/gods/*.webp", {
-    eager: true,
-    import: "default",
-    query: { enhanced: true, format: 'avif;webp' },
-  }) as Record<string, Picture>;
-
-  function godImage(godName: string): Picture | undefined {
-    return godImages[`/src/lib/assets/gods/${godName}.webp`];
-  }
 </script>
 
 <Container>
@@ -41,7 +32,6 @@
       class="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2"
     >
       {#each sortedGodsArray as [god, godData] (god)}
-        {@const imageUrl = godImage(god)}
         {@const h2 = godData.hades_2}
 
         <article
@@ -61,21 +51,13 @@
           <div
             class="relative w-full shrink-0 aspect-3/4 bg-black rounded-lg border border-[#1a3a25] overflow-hidden shadow-[0_0_15px_rgba(0,0,0,0.8)] z-10 pointer-events-none"
           >
-            {#if imageUrl}
-              <enhanced:img
-                src={imageUrl}
-                alt={god}
-                class="w-full h-full object-cover object-top"
-                loading="lazy"
-                decoding="async"
-              />
-            {:else}
-              <div
-                class="flex h-full items-center justify-center text-[#8da693] text-sm font-sans p-2 text-center"
-              >
-                {god}
-              </div>
-            {/if}
+            <LazyEnhancedImg
+              load={() => loadGodImage(god)}
+              alt={god}
+              class="w-full h-full object-cover object-top"
+              placeholderClass="w-full h-full bg-[#0d1c13]"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 280px"
+            />
             <div
               class="absolute inset-0 shadow-[inset_0_0_12px_rgba(0,0,0,0.8)] pointer-events-none rounded-lg"
             ></div>
