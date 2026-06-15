@@ -1,5 +1,7 @@
 <script lang="ts">
   import "./layout.css";
+  import "$lib/fonts/roboto.css";
+  import robotoLatin from "@fontsource-variable/roboto/files/roboto-latin-wght-normal.woff2?url";
   import { faviconImg } from "$lib/assets/faviconImage";
   import { resolve } from "$app/paths";
   import { page } from "$app/state";
@@ -60,7 +62,16 @@
   });
 </script>
 
-<svelte:head><link rel="icon" href={faviconImg.img.src} /></svelte:head>
+<svelte:head>
+  <link rel="icon" href={faviconImg.img.src} />
+  <link
+    rel="preload"
+    href={robotoLatin}
+    as="font"
+    type="font/woff2"
+    crossorigin="anonymous"
+  />
+</svelte:head>
 <div
   class="mainContainer bg-[#07110b] min-h-dvh flex flex-col items-center font-sans"
   class:homepage={page.url.pathname === "/"}

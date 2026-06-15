@@ -1,8 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 @plugin '@tailwindcss/typography';
 
 @theme {
+  --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Roboto", ui-sans-serif, system-ui, sans-serif;
+
   --color-textDark: #8fbb8c;
   --color-textLight: #d8e3d0;
 
@@ -14,7 +16,7 @@
 }
 
 * {
-  font-family: "Roboto";
+  font-family: "Roboto", ui-sans-serif, system-ui, sans-serif;
 }
 
 /*
