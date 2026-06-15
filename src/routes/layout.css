@@ -16,6 +16,16 @@
 * {
   font-family: "Roboto";
 }
+
+/*
+ * <enhanced:img> renders a <picture> wrapping the <img>. Make the wrapper
+ * transparent to layout so the inner <img> keeps its sizing/positioning
+ * classes (object-cover, w-full/h-full, absolute, inline icons, etc.)
+ * relative to the original container.
+ */
+picture:has(> img) {
+  display: contents;
+}
 .mainContainer {
   background-image:
     linear-gradient(rgba(6, 14, 8, 0.92), rgba(11, 20, 12, 0.94)),

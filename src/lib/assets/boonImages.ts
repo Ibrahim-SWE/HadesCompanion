@@ -1,8 +1,11 @@
-const loaders = import.meta.glob<string>("/src/lib/assets/boons/**/*.webp", {
+import type { Picture } from "@sveltejs/enhanced-img";
+
+const loaders = import.meta.glob<Picture>("/src/lib/assets/boons/**/*.webp", {
   import: "default",
+  query: { enhanced: true, format: 'avif;webp' },
 });
 
-const cache = new Map<string, string>();
+const cache = new Map<string, Picture>();
 
 export function resolveBoonImagePath(
   godFolder: string,
@@ -13,14 +16,14 @@ export function resolveBoonImagePath(
     : `/src/lib/assets/boons/${godFolder}/${imagePath}`;
 }
 
-export async function loadBoonImage(fullPath: string): Promise<string> {
+export async function loadBoonImage(fullPath: string): Promise<Picture | null> {
   const cached = cache.get(fullPath);
   if (cached) return cached;
 
   const loader = loaders[fullPath];
-  if (!loader) return "";
+  if (!loader) return null;
 
-  const url = await loader();
-  cache.set(fullPath, url);
-  return url;
+  const picture = await loader();
+  cache.set(fullPath, picture);
+  return picture;
 }

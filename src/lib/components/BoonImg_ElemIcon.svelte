@@ -1,23 +1,20 @@
 <script lang="ts">
-  import airIcon from "$lib/assets/misc/air_element_icon.webp";
-  import earthIcon from "$lib/assets/misc/earth_element_icon.webp";
-  import waterIcon from "$lib/assets/misc/water_element_icon.webp";
-  import fireIcon from "$lib/assets/misc/fire_element_icon.webp";
-  import aetherIcon from "$lib/assets/misc/aether_element_icon.webp";
+  import { miscImage } from "$lib/assets/miscImages";
   import { loadBoonImage, resolveBoonImagePath } from "$lib/assets/boonImages";
+  import type { Picture } from "@sveltejs/enhanced-img";
   import type { BoonData } from "$lib/types/hades2";
 
   let { boon }: { boon: Pick<BoonData, "gods" | "name" | "image_path" | "element"> } = $props();
 
-  const elementIcons: Record<string, string> = {
-    air: airIcon,
-    earth: earthIcon,
-    water: waterIcon,
-    fire: fireIcon,
-    aether: aetherIcon,
+  const elementIconFiles: Record<string, string> = {
+    air: "air_element_icon.webp",
+    earth: "earth_element_icon.webp",
+    water: "water_element_icon.webp",
+    fire: "fire_element_icon.webp",
+    aether: "aether_element_icon.webp",
   };
 
-  let imageUrl = $state("");
+  let image = $state<Picture | null>(null);
   let shouldLoad = $state(false);
   let container: HTMLDivElement | undefined = $state();
 
@@ -28,7 +25,9 @@
     resolveBoonImagePath(godFolder, boon.image_path),
   );
   let icon = $derived(
-    boon.element ? (elementIcons[boon.element.toLowerCase()] ?? null) : null,
+    boon.element
+      ? (miscImage(elementIconFiles[boon.element.toLowerCase()] ?? "") ?? null)
+      : null,
   );
 
   $effect(() => {
@@ -54,8 +53,8 @@
     const path = fullImagePath;
     let cancelled = false;
 
-    loadBoonImage(path).then((url) => {
-      if (!cancelled) imageUrl = url;
+    loadBoonImage(path).then((picture) => {
+      if (!cancelled) image = picture;
     });
 
     return () => {
@@ -72,9 +71,9 @@
     <div
       class="absolute inset-0 bg-black rounded-lg overflow-hidden shadow-[0_0_15px_rgba(0,0,0,0.8)]"
     >
-      {#if imageUrl}
-        <img
-          src={imageUrl}
+      {#if image}
+        <enhanced:img
+          src={image}
           alt="{boon.name} Boon Image"
           class="w-full h-full object-cover object-top"
           loading="lazy"
@@ -91,7 +90,7 @@
       ></div>
     </div>
     {#if icon}
-      <img
+      <enhanced:img
         class="absolute -top-1.5 -right-1.5 w-5 h-5 object-contain drop-shadow-md z-10"
         src={icon}
         alt="{boon.element} Element Icon"

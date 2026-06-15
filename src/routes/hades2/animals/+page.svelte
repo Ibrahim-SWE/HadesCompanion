@@ -1,16 +1,17 @@
 <script lang="ts">
   import Container from "$lib/components/Container.svelte";
   import petsData from "$lib/data/hades2/pets.json";
-  import { miscImageUrl } from "$lib/assets/miscImages";
-
-  const petImages = import.meta.glob("$lib/assets/pets/**/*.webp", {
+  import { miscImage } from "$lib/assets/miscImages";
+  import type { Picture } from "@sveltejs/enhanced-img";
+  const petImages = import.meta.glob<Picture>("$lib/assets/pets/**/*.webp", {
     eager: true,
     import: "default",
-  }) as Record<string, string>;
+    query: { enhanced: true, format: 'avif;webp' },
+  }) as Record<string, Picture>;
 
-  function getPetImagePath(imageFile: string) {
-    if (!imageFile) return "";
-    return petImages[`/src/lib/assets/pets/${imageFile}`] ?? "";
+  function getPetImage(imageFile: string): Picture | undefined {
+    if (!imageFile) return undefined;
+    return petImages[`/src/lib/assets/pets/${imageFile}`];
   }
 
   type DescriptionRich =
@@ -133,7 +134,7 @@
       {#each pets as [petKey, pet] (petKey)}
         {#if activeTab === "all" || activeTab === petKey}
           {@const theme = petThemes[petKey] || petThemes.Frinos}
-          {@const petPortrait = getPetImagePath(`${petKey.toLowerCase()}.webp`)}
+          {@const petPortrait = getPetImage(`${petKey.toLowerCase()}.webp`)}
 
           <article
             class="flex flex-col xl:flex-row gap-3 bg-linear-to-r from-[#0a140d] to-[#0d1c13] border border-[#1c3623] border-l-4 rounded-lg p-2.5 sm:p-3 shadow-[0_4px_10px_rgba(0,0,0,0.5)] relative overflow-hidden"
@@ -148,7 +149,7 @@
                 style="border-color: var(--accent);"
               >
                 {#if petPortrait}
-                  <img
+                  <enhanced:img
                     src={petPortrait}
                     alt={pet.name}
                     class="w-full h-full object-contain scale-110"
@@ -178,7 +179,7 @@
               aria-label={`${pet.name} bonds`}
             >
               {#each petBonds(pet) as bond (bond.bondName)}
-                {@const bondImage = getPetImagePath(bond.imageFile)}
+                {@const bondImage = getPetImage(bond.imageFile)}
 
                 <div
                   class="flex-1 bg-black/20 border border-white/5 rounded-lg p-2.5 flex flex-col items-center text-center min-w-0"
@@ -190,7 +191,7 @@
                       class="w-20 h-20 sm:w-24 sm:h-24 bg-black rounded-lg border border-[#2a4030] shrink-0 flex items-center justify-center p-2 shadow-inner"
                     >
                       {#if bondImage}
-                        <img
+                        <enhanced:img
                           src={bondImage}
                           alt={bond.bondName}
                           class="w-full h-full object-contain drop-shadow-lg"
@@ -231,10 +232,10 @@
                           {/each}
                         </span>
                       {:else if part.type === "image"}
-                        {@const iconPath = miscImageUrl(part.image_file)}
-                        {#if iconPath}
-                          <img
-                            src={iconPath}
+                        {@const iconImg = miscImage(part.image_file)}
+                        {#if iconImg}
+                          <enhanced:img
+                            src={iconImg}
                             alt={part.image_file
                               .replace("_icon.webp", "")
                               .replace("_", " ")}

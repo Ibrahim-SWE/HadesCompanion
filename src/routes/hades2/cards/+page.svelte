@@ -1,16 +1,26 @@
 <script lang="ts">
   import Container from "$lib/components/Container.svelte";
   import cardsData from "$lib/data/hades2/arcana_cards.json";
-
-  const cardImages = import.meta.glob("$lib/assets/cards/*.webp", {
+  import type { Picture } from "@sveltejs/enhanced-img";
+  const cardImages = import.meta.glob<Picture>("$lib/assets/cards/*.webp", {
     eager: true,
     import: "default",
-  }) as Record<string, string>;
+    query: { enhanced: true, format: 'avif;webp' },
+  }) as Record<string, Picture>;
 
-  const miscImages = import.meta.glob("/src/lib/assets/misc/*.webp", {
+  const miscImages = import.meta.glob<Picture>("/src/lib/assets/misc/*.webp", {
     eager: true,
     import: "default",
-  }) as Record<string, string>;
+    query: { enhanced: true, format: 'avif;webp' },
+  }) as Record<string, Picture>;
+
+  function cardImage(file: string): Picture | undefined {
+    return cardImages[`/src/lib/assets/cards/${file}`];
+  }
+
+  function miscImage(file: string): Picture | undefined {
+    return miscImages[`/src/lib/assets/misc/${file}`];
+  }
 
   type UpgradeCostItems = { [resourceName: string]: number };
   type DescriptionRich =
@@ -65,13 +75,16 @@
       {:else if part.type === "text_bold"}
         <span class="font-semibold text-[#e5f4e7]">{part.value}</span>
       {:else if part.type === "image"}
-        <img
-          class="inline-block h-[1.5em] w-auto object-contain align-middle mx-0.5"
-          src={miscImages[`/src/lib/assets/misc/${part.image_file}`]}
-          alt={part.image_file.replace("_icon.webp", "").replace(/_/g, " ")}
-          loading="lazy"
-          decoding="async"
-        />
+        {@const iconImg = miscImage(part.image_file)}
+        {#if iconImg}
+          <enhanced:img
+            class="inline-block h-[1.5em] w-auto object-contain align-middle mx-0.5"
+            src={iconImg}
+            alt={part.image_file.replace("_icon.webp", "").replace(/_/g, " ")}
+            loading="lazy"
+            decoding="async"
+          />
+        {/if}
       {/if}
     {/each}
   </p>
@@ -123,15 +136,16 @@
                   >
                     {amount}
                   </span>
-                  <img
-                    src={miscImages[
-                      `/src/lib/assets/misc/${toSnakeCase(item)}.webp`
-                    ]}
-                    alt={item}
-                    class="w-5 h-5 object-contain"
-                    loading="lazy"
-                    decoding="async"
-                  />
+                  {#if miscImage(`${toSnakeCase(item)}.webp`)}
+                    {@const costImg = miscImage(`${toSnakeCase(item)}.webp`)!}
+                    <enhanced:img
+                      src={costImg}
+                      alt={item}
+                      class="w-5 h-5 object-contain"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  {/if}
                 </span>
               {/each}
             {/each}
@@ -177,13 +191,16 @@
             : 'border-[#1c3623] hover:border-[#46f08f]/50 hover:shadow-[0_2px_14px_rgba(70,240,143,0.1)]'}"
         >
           <div class="relative w-full">
-            <img
-              src={cardImages[`/src/lib/assets/cards/${details.image_file}`]}
-              alt={card}
-              class="w-full h-auto rounded shadow-sm"
-              loading="lazy"
-              decoding="async"
-            />
+            {#if cardImage(details.image_file)}
+              {@const cardImg = cardImage(details.image_file)!}
+              <enhanced:img
+                src={cardImg}
+                alt={card}
+                class="w-full h-auto rounded shadow-sm"
+                loading="lazy"
+                decoding="async"
+              />
+            {/if}
             <div
               class="absolute top-1 left-1 z-10 flex items-center gap-1 bg-black/85 backdrop-blur-sm pl-1.5 pr-1 py-1 rounded-md border border-[#46f08f]/60 shadow-[0_0_10px_rgba(70,240,143,0.35)]"
               title="Grasp cost"
@@ -193,13 +210,16 @@
               >
                 {details.graspCost}
               </span>
-              <img
-                src={miscImages[`/src/lib/assets/misc/grasp.webp`]}
-                alt="Grasp"
-                class="w-6 h-6 sm:w-7 sm:h-7 object-contain"
-                loading="lazy"
-                decoding="async"
-              />
+              {#if miscImage("grasp.webp")}
+                {@const graspImg = miscImage("grasp.webp")!}
+                <enhanced:img
+                  src={graspImg}
+                  alt="Grasp"
+                  class="w-6 h-6 sm:w-7 sm:h-7 object-contain"
+                  loading="lazy"
+                  decoding="async"
+                />
+              {/if}
             </div>
           </div>
 

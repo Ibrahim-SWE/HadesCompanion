@@ -2,6 +2,7 @@
   import Container from "$lib/components/Container.svelte";
   import godsData from "$lib/data/gods.json";
   import { resolve } from "$app/paths";
+  import type { Picture } from "@sveltejs/enhanced-img";
   import type { GodDetails } from "$lib/types/hades2";
 
   const gods: Record<string, GodDetails> = godsData;
@@ -9,12 +10,13 @@
     (a, b) => a[0].localeCompare(b[0]),
   );
 
-  const godImages = import.meta.glob("$lib/assets/gods/*.webp", {
+  const godImages = import.meta.glob<Picture>("$lib/assets/gods/*.webp", {
     eager: true,
     import: "default",
-  }) as Record<string, string>;
+    query: { enhanced: true, format: 'avif;webp' },
+  }) as Record<string, Picture>;
 
-  function godImageUrl(godName: string): string | undefined {
+  function godImage(godName: string): Picture | undefined {
     return godImages[`/src/lib/assets/gods/${godName}.webp`];
   }
 </script>
@@ -39,7 +41,7 @@
       class="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2"
     >
       {#each sortedGodsArray as [god, godData] (god)}
-        {@const imageUrl = godImageUrl(god)}
+        {@const imageUrl = godImage(god)}
         {@const h2 = godData.hades_2}
 
         <article
@@ -60,7 +62,7 @@
             class="relative w-full shrink-0 aspect-3/4 bg-black rounded-lg border border-[#1a3a25] overflow-hidden shadow-[0_0_15px_rgba(0,0,0,0.8)] z-10 pointer-events-none"
           >
             {#if imageUrl}
-              <img
+              <enhanced:img
                 src={imageUrl}
                 alt={god}
                 class="w-full h-full object-cover object-top"

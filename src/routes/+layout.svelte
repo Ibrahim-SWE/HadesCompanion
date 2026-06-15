@@ -1,6 +1,6 @@
 <script lang="ts">
   import "./layout.css";
-  import favicon from "$lib/assets/favicon.webp";
+  import { faviconImg } from "$lib/assets/faviconImage";
   import { resolve } from "$app/paths";
   import { page } from "$app/state";
   import type { Snippet } from "svelte";
@@ -62,7 +62,7 @@
   });
 </script>
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
+<svelte:head><link rel="icon" href={faviconImg.img.src} /></svelte:head>
 <div
   class="mainContainer bg-[#07110b] min-h-dvh flex flex-col items-center font-sans"
   class:homepage={page.url.pathname === "/"}
@@ -81,7 +81,11 @@
           <div
             class="absolute inset-0 bg-[#46f08f] rounded-full blur-sm opacity-0 group-hover:opacity-40 transition-opacity"
           ></div>
-          <img src={favicon} alt="" class="w-full h-full relative z-10" />
+          <enhanced:img
+            src={faviconImg}
+            alt=""
+            class="w-full h-full relative z-10"
+          />
         </div>
         <span
           class="text-[#ccff90] font-serif tracking-widest uppercase text-sm md:text-base truncate max-w-37.5 sm:max-w-none shadow-black drop-shadow-md"

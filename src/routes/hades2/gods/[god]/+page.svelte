@@ -4,6 +4,7 @@
   import boonsData from "$lib/data/hades2/boons.json";
   import godsData from "$lib/data/gods.json";
   import { resolve } from "$app/paths";
+  import type { Picture } from "@sveltejs/enhanced-img";
   import type { PageData } from "./$types";
   import type { BoonData, GodDetails } from "$lib/types/hades2";
 
@@ -12,10 +13,11 @@
   const godName = $derived(data.godName);
   const godData = $derived((godsData as Record<string, GodDetails>)[godName]);
 
-  const godImages = import.meta.glob("$lib/assets/gods/*.webp", {
+  const godImages = import.meta.glob<Picture>("$lib/assets/gods/*.webp", {
     eager: true,
     import: "default",
-  }) as Record<string, string>;
+    query: { enhanced: true, format: 'avif;webp' },
+  }) as Record<string, Picture>;
 
   const imageUrl = $derived(godImages[`/src/lib/assets/gods/${godName}.webp`]);
 
@@ -62,7 +64,7 @@
         class="relative overflow-hidden rounded-lg border border-[#1a3a25] aspect-3/4 w-48 sm:w-56 md:w-64 shrink-0 mx-auto md:mx-0 shadow-[0_0_20px_rgba(0,0,0,0.8)]"
       >
         {#if imageUrl}
-          <img
+          <enhanced:img
             src={imageUrl}
             alt={godName}
             class="h-full w-full object-cover object-center scale-105"

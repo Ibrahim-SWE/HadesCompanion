@@ -4,7 +4,7 @@
   import godsData from "$lib/data/gods.json";
   import { resolve } from "$app/paths";
   import { page } from "$app/state";
-
+  import type { Picture } from "@sveltejs/enhanced-img";
   let activeKeepsake = $derived(
     decodeURIComponent(page.url.hash).replace("#keepsake-", ""),
   );
@@ -20,15 +20,24 @@
     }
   });
 
-  const keepsakeImages = import.meta.glob("$lib/assets/keepsakes/*.webp", {
-    eager: true,
-    import: "default",
-  }) as Record<string, string>;
+  const keepsakeImages = import.meta.glob<Picture>(
+    "$lib/assets/keepsakes/*.webp",
+    {
+      eager: true,
+      import: "default",
+      query: { enhanced: true, format: 'avif;webp' },
+    },
+  ) as Record<string, Picture>;
 
-  const miscImages = import.meta.glob("/src/lib/assets/misc/*.webp", {
+  const miscImages = import.meta.glob<Picture>("/src/lib/assets/misc/*.webp", {
     eager: true,
     import: "default",
-  }) as Record<string, string>;
+    query: { enhanced: true, format: 'avif;webp' },
+  }) as Record<string, Picture>;
+
+  function miscImage(imageFile: string): Picture | undefined {
+    return miscImages[`/src/lib/assets/misc/${imageFile}`];
+  }
 
   type DescriptionRich =
     | { type: "text_normal"; value: string }
@@ -61,8 +70,8 @@
     return gods.includes(provider);
   }
 
-  function keepsakeImageUrl(imageFile: string): string {
-    return keepsakeImages[`/src/lib/assets/keepsakes/${imageFile}`] ?? "";
+  function keepsakeImage(imageFile: string): Picture | undefined {
+    return keepsakeImages[`/src/lib/assets/keepsakes/${imageFile}`];
   }
 </script>
 
@@ -91,13 +100,16 @@
         {/each}
       </span>
     {:else if part.type === "image"}
-      <img
-        src={miscImages[`/src/lib/assets/misc/${part.image_file}`]}
-        alt={part.image_file.replace("_icon.webp", "").replace(/_/g, " ")}
-        class="inline-block h-[1.65em] w-auto object-contain align-middle mx-0.5"
-        loading="lazy"
-        decoding="async"
-      />
+      {@const iconImg = miscImage(part.image_file)}
+      {#if iconImg}
+        <enhanced:img
+          src={iconImg}
+          alt={part.image_file.replace("_icon.webp", "").replace(/_/g, " ")}
+          class="inline-block h-[1.65em] w-auto object-contain align-middle mx-0.5"
+          loading="lazy"
+          decoding="async"
+        />
+      {/if}
     {/if}
   {/each}
 {/snippet}
@@ -120,7 +132,7 @@
 
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1.5">
       {#each keepsakes as [, details] (details.name)}
-        {@const imageUrl = keepsakeImageUrl(details.image_file)}
+        {@const imageUrl = keepsakeImage(details.image_file)}
         {@const highlighted = details.name === activeKeepsake}
 
         <article
@@ -143,7 +155,7 @@
               : 'border-[#1a3a25] shadow-[0_0_8px_rgba(0,0,0,0.8)]'}"
           >
             {#if imageUrl}
-              <img
+              <enhanced:img
                 src={imageUrl}
                 alt={details.name}
                 class="w-full h-full object-contain drop-shadow-lg"

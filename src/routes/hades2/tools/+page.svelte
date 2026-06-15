@@ -1,19 +1,30 @@
 <script lang="ts">
   import Container from "$lib/components/Container.svelte";
   import toolsData from "$lib/data/hades2/tools.json";
+  import type { Picture } from "@sveltejs/enhanced-img";
 
-  const toolImages = import.meta.glob("/src/lib/assets/tools/*.webp", {
+  const toolImages = import.meta.glob<Picture>("/src/lib/assets/tools/*.webp", {
     eager: true,
     import: "default",
-  }) as Record<string, string>;
+    query: { enhanced: true, format: 'avif;webp' },
+  }) as Record<string, Picture>;
 
-  const miscImages = import.meta.glob("/src/lib/assets/misc/*.webp", {
+  const miscImages = import.meta.glob<Picture>("/src/lib/assets/misc/*.webp", {
     eager: true,
     import: "default",
-  }) as Record<string, string>;
+    query: { enhanced: true, format: 'avif;webp' },
+  }) as Record<string, Picture>;
 
   function toSnakeCase(str: string) {
     return str.toLowerCase().replace(/\s+/g, "_");
+  }
+
+  function toolImage(name: string): Picture | undefined {
+    return toolImages[`/src/lib/assets/tools/${toSnakeCase(name)}.webp`];
+  }
+
+  function miscImage(item: string): Picture | undefined {
+    return miscImages[`/src/lib/assets/misc/${toSnakeCase(item)}.webp`];
   }
 </script>
 
@@ -47,15 +58,16 @@
             <div
               class="relative w-14 h-14 sm:w-16 sm:h-16 shrink-0 bg-black rounded-lg border border-[#1a3a25] flex items-center justify-center p-2 shadow-[0_0_15px_rgba(0,0,0,0.8)]"
             >
-              <img
-                src={toolImages[
-                  `/src/lib/assets/tools/${toSnakeCase(tool.name)}.webp`
-                ]}
-                alt={tool.name}
-                class="w-full h-full object-contain drop-shadow-lg"
-                loading="lazy"
-                decoding="async"
-              />
+              {#if toolImage(tool.name)}
+                {@const toolImg = toolImage(tool.name)!}
+                <enhanced:img
+                  src={toolImg}
+                  alt={tool.name}
+                  class="w-full h-full object-contain drop-shadow-lg"
+                  loading="lazy"
+                  decoding="async"
+                />
+              {/if}
               <div
                 class="absolute inset-0 shadow-[inset_0_0_10px_rgba(0,0,0,0.8)] pointer-events-none rounded-lg"
               ></div>
@@ -100,15 +112,16 @@
                     >
                       {req.amount}
                     </span>
-                    <img
-                      src={miscImages[
-                        `/src/lib/assets/misc/${toSnakeCase(req.item)}.webp`
-                      ]}
-                      alt={req.item}
-                      class="w-6 h-6 object-contain"
-                      loading="lazy"
-                      decoding="async"
-                    />
+                    {#if miscImage(req.item)}
+                      {@const reqImg = miscImage(req.item)!}
+                      <enhanced:img
+                        src={reqImg}
+                        alt={req.item}
+                        class="w-6 h-6 object-contain"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    {/if}
                   </div>
                 {/each}
               </div>
@@ -133,15 +146,16 @@
                     >
                       {req.amount}
                     </span>
-                    <img
-                      src={miscImages[
-                        `/src/lib/assets/misc/${toSnakeCase(req.item)}.webp`
-                      ]}
-                      alt={req.item}
-                      class="w-6 h-6 object-contain"
-                      loading="lazy"
-                      decoding="async"
-                    />
+                    {#if miscImage(req.item)}
+                      {@const reqImg = miscImage(req.item)!}
+                      <enhanced:img
+                        src={reqImg}
+                        alt={req.item}
+                        class="w-6 h-6 object-contain"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    {/if}
                   </div>
                 {/each}
               </div>
