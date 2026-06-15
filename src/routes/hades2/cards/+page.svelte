@@ -202,11 +202,11 @@
               />
             {/if}
             <div
-              class="absolute top-1 left-1 z-10 flex items-center gap-1 bg-black/85 backdrop-blur-sm pl-1.5 pr-1 py-1 rounded-md border border-[#46f08f]/60 shadow-[0_0_10px_rgba(70,240,143,0.35)]"
+              class="absolute top-0.5 left-0.5 sm:top-1 sm:left-1 z-10 flex items-center gap-0.5 sm:gap-1 bg-black/85 backdrop-blur-sm px-0.5 py-px sm:px-1 sm:py-0.5 md:pl-1.5 md:pr-1 md:py-1 rounded-sm sm:rounded-md border border-[#46f08f]/60 shadow-[0_0_10px_rgba(70,240,143,0.35)]"
               title="Grasp cost"
             >
               <span
-                class="text-sm sm:text-base font-bold text-[#ccff90] font-mono leading-none drop-shadow-[0_0_6px_rgba(204,255,144,0.5)]"
+                class="text-[0.6rem] sm:text-xs md:text-sm font-bold text-[#ccff90] font-mono leading-none drop-shadow-[0_0_6px_rgba(204,255,144,0.5)]"
               >
                 {details.graspCost}
               </span>
@@ -215,7 +215,7 @@
                 <enhanced:img
                   src={graspImg}
                   alt="Grasp"
-                  class="w-6 h-6 sm:w-7 sm:h-7 object-contain"
+                  class="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 object-contain shrink-0"
                   loading="lazy"
                   decoding="async"
                 />
