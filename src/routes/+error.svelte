@@ -1,9 +1,14 @@
 <script lang="ts">
+  import SeoHead from "$lib/components/SeoHead.svelte";
   import { resolve } from "$app/paths";
   import { page } from "$app/state";
+  import { PAGE_SEO } from "$lib/seo";
 
   let isNotFound = $derived(page.status === 404);
+  let seo = $derived(isNotFound ? PAGE_SEO.notFound : PAGE_SEO.error);
 </script>
+
+<SeoHead {...seo} />
 
 <section
   class="flex flex-1 w-full items-center justify-center px-6 py-16 text-center"

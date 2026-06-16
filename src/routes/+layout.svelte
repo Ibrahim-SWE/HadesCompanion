@@ -3,11 +3,14 @@
   import "$lib/fonts/roboto.css";
   import robotoLatin from "@fontsource-variable/roboto/files/roboto-latin-wght-normal.woff2?url";
   import { faviconImg } from "$lib/assets/faviconImage";
+  import SeoHead from "$lib/components/SeoHead.svelte";
   import { resolve } from "$app/paths";
   import { page } from "$app/state";
   import type { Snippet } from "svelte";
 
   let { children }: { children: Snippet } = $props();
+
+  let seo = $derived(page.data.seo);
 
   type NavLink = {
     href:
@@ -62,6 +65,10 @@
   });
 </script>
 
+{#if seo}
+  <SeoHead {...seo} />
+{/if}
+
 <svelte:head>
   <link rel="icon" href={faviconImg.img.src} />
   <link
@@ -103,42 +110,7 @@
         </span>
       </a>
 
-      <div class="flex items-center gap-2.5 shrink-0">
-        <div
-          class="hidden sm:flex items-center bg-[#050a06] border border-[#1a3a25] rounded-full p-0.5 text-[10px] cursor-not-allowed select-none shadow-inner"
-          title="Hades 1 support coming soon"
-        >
-          <span
-            class="px-2 py-0.5 rounded-full text-[#5a6e56] font-mono tracking-wider uppercase"
-            >Hades 1</span
-          >
-          <span
-            class="px-2 py-0.5 rounded-full bg-[#153320] text-[#ccff90] font-medium font-mono tracking-wider uppercase shadow-[0_0_8px_rgba(70,240,143,0.1)]"
-            >Hades 2</span
-          >
-        </div>
-
-        <div
-          class="flex items-center bg-[#050a06] border border-[#1a3a25] rounded-full p-0.5 text-[10px] cursor-not-allowed select-none shadow-inner"
-          title="Light theme coming soon"
-        >
-          <span
-            class="px-2 py-0.5 rounded-full bg-[#153320] text-[#ccff90] font-medium font-mono tracking-wider uppercase shadow-[0_0_8px_rgba(70,240,143,0.1)]"
-            >Dark</span
-          >
-          <span
-            class="px-2 py-0.5 rounded-full text-[#5a6e56] font-mono tracking-wider uppercase"
-            >Light</span
-          >
-        </div>
-
-        <span
-          class="sm:hidden px-2 py-0.5 rounded-full bg-[#153320] text-[#ccff90] text-[10px] font-medium font-mono tracking-wider uppercase border border-[#1a3a25]"
-          title="Hades 2"
-        >
-          H2
-        </span>
-
+      <div class="flex items-center shrink-0">
         <button
           type="button"
           class="md:hidden flex items-center justify-center w-8 h-8 rounded-md border border-[#1c3623] bg-[#0a140d] text-[#8da693] hover:bg-[#153320] hover:text-[#ccff90] hover:border-[#46f08f] transition-all"

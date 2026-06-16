@@ -1,0 +1,123 @@
+import godsData from "$lib/data/gods.json";
+
+export const SITE_ORIGIN = "https://hadescompanion.com";
+export const SITE_NAME = "Hades II Companion";
+
+export type SeoMeta = {
+  title: string;
+  description: string;
+  canonicalPath: string;
+  ogImage?: string;
+  noindex?: boolean;
+};
+
+export function absoluteUrl(path: string): string {
+  if (path.startsWith("http://") || path.startsWith("https://")) {
+    return path;
+  }
+  return `${SITE_ORIGIN}${path.startsWith("/") ? path : `/${path}`}`;
+}
+
+export function seoTitle(...parts: string[]): string {
+  const filtered = parts.filter(Boolean);
+  if (filtered.length === 0) return SITE_NAME;
+  return [...filtered, SITE_NAME].join(" | ");
+}
+
+export const PAGE_SEO = {
+  home: {
+    title: SITE_NAME,
+    description:
+      "Everything you need to plan and optimize your Hades II runs. Discover boons, weapons, arcana cards, keepsakes, and more.",
+    canonicalPath: "/",
+  },
+  gods: {
+    title: seoTitle("Olympian Gods"),
+    description:
+      "The gods who grant boons in Hades II. Browse every Olympian god, their keepsakes, curses, and boons.",
+    canonicalPath: "/hades2/gods",
+  },
+  boons: {
+    title: seoTitle("Boons"),
+    description:
+      "Browse and filter all boons in Hades II. Use search or filters to narrow results by god, type, element, and rarity.",
+    canonicalPath: "/hades2/boons",
+  },
+  weapons: {
+    title: seoTitle("Weapons"),
+    description:
+      "The weapons of Melinoë, their Aspects, and Daedalus Hammer upgrades in Hades II.",
+    canonicalPath: "/hades2/weapons",
+  },
+  cards: {
+    title: seoTitle("Arcana Cards"),
+    description:
+      "View all Arcana Cards from the Altar of Ashes in Hades II, their effects, and upgrade requirements.",
+    canonicalPath: "/hades2/cards",
+  },
+  keepsakes: {
+    title: seoTitle("Keepsakes"),
+    description:
+      "Gifts from allies in Hades II that grow stronger as you complete runs. Find every keepsake and who gifts it.",
+    canonicalPath: "/hades2/keepsakes",
+  },
+  curses: {
+    title: seoTitle("Curses"),
+    description:
+      "A list of all curses and status effects in Hades II. Find boons that apply each curse.",
+    canonicalPath: "/hades2/curses",
+  },
+  animals: {
+    title: seoTitle("Animal Familiars"),
+    description:
+      "Animal familiars in Hades II. See how to unlock and upgrade each pet and the bonuses they grant.",
+    canonicalPath: "/hades2/animals",
+  },
+  tools: {
+    title: seoTitle("Gathering Tools"),
+    description:
+      "Unlock and upgrade gathering tools in Hades II to collect resources from the Underworld and Surface.",
+    canonicalPath: "/hades2/tools",
+  },
+  notFound: {
+    title: seoTitle("Page Not Found"),
+    description:
+      "This path leads nowhere in the Underworld. Return to Hades II Companion.",
+    canonicalPath: "/",
+    noindex: true,
+  },
+  error: {
+    title: seoTitle("Error"),
+    description: "Something went wrong. Return to Hades II Companion.",
+    canonicalPath: "/",
+    noindex: true,
+  },
+} satisfies Record<string, SeoMeta>;
+
+export function godPageSeo(
+  godName: string,
+  subtitle: string,
+  ogImage?: string,
+): SeoMeta {
+  return {
+    title: seoTitle(godName, "Gods"),
+    description: `${godName}, ${subtitle}. View boons, keepsakes, and curses for this Olympian god in Hades II.`,
+    canonicalPath: `/hades2/gods/${encodeURIComponent(godName)}`,
+    ogImage,
+  };
+}
+
+export const SITEMAP_PATHS = [
+  "/",
+  "/hades2/gods",
+  ...Object.keys(godsData).map(
+    (god) => `/hades2/gods/${encodeURIComponent(god)}`,
+  ),
+  "/hades2/boons",
+  "/hades2/weapons",
+  "/hades2/cards",
+  "/hades2/keepsakes",
+  "/hades2/curses",
+  "/hades2/animals",
+  "/hades2/tools",
+] as const;
