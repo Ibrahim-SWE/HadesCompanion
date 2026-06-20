@@ -5,8 +5,9 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "npm run generate:sitemap && vite build",
+		"build": "npm run generate:sitemap && npm run sort:boons && vite build",
 		"generate:sitemap": "node --experimental-strip-types scripts/generate-sitemap.ts",
+		"sort:boons": "node --experimental-strip-types scripts/sort-boons-json.ts",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
