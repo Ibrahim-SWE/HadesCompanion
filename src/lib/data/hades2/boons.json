@@ -614,6 +614,54 @@
     },
     "notes": null
   },
+  "black_night_banishment": {
+    "gods": [
+      "Circe"
+    ],
+    "name": "Black Night Banishment",
+    "description": "Randomly draw 1 of your active Vows, and remove its effect this night.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Randomly draw "
+      },
+      {
+        "type": "text_bold",
+        "value": "1"
+      },
+      {
+        "type": "text_normal",
+        "value": " of your active "
+      },
+      {
+        "type": "text_bold",
+        "value": "Vows"
+      },
+      {
+        "type": "text_normal",
+        "value": ", and remove its effect this night."
+      }
+    ],
+    "effect": null,
+    "image_path": "black_night_banishment.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": {
+      "condition": "Have at least 1 active Vow other than Vow of Rivals"
+    },
+    "notes": null
+  },
   "blinding_rush": {
     "gods": [
       "Apollo"
@@ -720,6 +768,60 @@
       "rare": "2",
       "epic": "3",
       "heroic": "4",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "boon_boon_boon": {
+    "gods": [
+      "Echo"
+    ],
+    "name": "Boon Boon Boon",
+    "description": "Choose 1 out of 3 random Boons from the previous night.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Choose "
+      },
+      {
+        "type": "text_bold",
+        "value": "1"
+      },
+      {
+        "type": "text_normal",
+        "value": " out of "
+      },
+      {
+        "type": "text_bold",
+        "value": "3"
+      },
+      {
+        "type": "text_normal",
+        "value": " random "
+      },
+      {
+        "type": "text_bold",
+        "value": "Boons"
+      },
+      {
+        "type": "text_normal",
+        "value": " from the previous night."
+      }
+    ],
+    "effect": null,
+    "image_path": "boon_boon_boon.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
       "duo": null,
       "legendary": null,
       "infusion": null
@@ -1694,6 +1796,60 @@
     "prerequisites": null,
     "notes": null
   },
+  "corrosion_on_sight": {
+    "gods": [
+      "Medea"
+    ],
+    "name": "Corrosion on Sight",
+    "description": "After a foe joins the Encounter, it loses 50% of any Armor it has.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "After a foe joins the "
+      },
+      {
+        "type": "text_bold",
+        "value": "Encounter"
+      },
+      {
+        "type": "text_normal",
+        "value": ", it loses "
+      },
+      {
+        "type": "text_bold",
+        "value": "50%"
+      },
+      {
+        "type": "text_normal",
+        "value": " of any "
+      },
+      {
+        "type": "text_bold",
+        "value": "Armor"
+      },
+      {
+        "type": "text_normal",
+        "value": " it has."
+      }
+    ],
+    "effect": null,
+    "image_path": "corrosion_on_sight.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "crimson_dress": {
     "gods": [
       "Arachne"
@@ -2568,6 +2724,44 @@
     "prerequisites": null,
     "notes": null
   },
+  "enfeeblement_of_cowards": {
+    "gods": [
+      "Medea"
+    ],
+    "name": "Enfeeblement of Cowards",
+    "description": "Foes' ranged shots have -40% travel speed.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Foes' ranged shots have "
+      },
+      {
+        "type": "text_bold",
+        "value": "-40%"
+      },
+      {
+        "type": "text_normal",
+        "value": " travel speed."
+      }
+    ],
+    "effect": null,
+    "image_path": "enfeeblement_of_cowards.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "engagement_ring": {
     "gods": [
       "Hera"
@@ -2611,6 +2805,60 @@
       "infusion": null
     },
     "deals_olympian_damage": true,
+    "prerequisites": null,
+    "notes": null
+  },
+  "evade_evade_evade": {
+    "gods": [
+      "Echo"
+    ],
+    "name": "Evade Evade Evade",
+    "description": "Gain +50%Dodge chance, but lose 2% of this each time you Dodge.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Gain "
+      },
+      {
+        "type": "text_bold",
+        "value": "+50% Dodge"
+      },
+      {
+        "type": "text_normal",
+        "value": " chance, but lose "
+      },
+      {
+        "type": "text_bold",
+        "value": "2%"
+      },
+      {
+        "type": "text_normal",
+        "value": " of this each time you "
+      },
+      {
+        "type": "text_bold",
+        "value": "Dodge"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "evade_evade_evade.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
     "prerequisites": null,
     "notes": null
   },
@@ -2837,6 +3085,74 @@
     "prerequisites": {
       "condition": "Equip The Enchantress and/or The Champions Arcana Cards"
     },
+    "notes": null
+  },
+  "fight_fight_fight": {
+    "gods": [
+      "Echo"
+    ],
+    "name": "Fight Fight Fight",
+    "description": "Gain +60% Max_Health_Icon and Max_Magick_Icon based on their limits, but lose 5% of this after each Location.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Gain "
+      },
+      {
+        "type": "text_bold",
+        "value": "+60%"
+      },
+      {
+        "type": "image",
+        "name": "Max_Health_Icon",
+        "img_path": "max_health_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " and "
+      },
+      {
+        "type": "image",
+        "name": "Max_Magick_Icon",
+        "img_path": "max_magick_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " based on their limits, but lose "
+      },
+      {
+        "type": "text_bold",
+        "value": "5%"
+      },
+      {
+        "type": "text_normal",
+        "value": " of this after each "
+      },
+      {
+        "type": "text_bold",
+        "value": "Location"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "fight_fight_fight.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
     "notes": null
   },
   "fine_line": {
@@ -3607,6 +3923,48 @@
     },
     "notes": null
   },
+  "gift_gift_gift": {
+    "gods": [
+      "Echo"
+    ],
+    "name": "Gift Gift Gift",
+    "description": "After you switch Keepsakes, also gain the basic effect of your last keepsake",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "After you switch "
+      },
+      {
+        "type": "text_bold",
+        "value": "Keepsakes"
+      },
+      {
+        "type": "text_normal",
+        "value": ", also gain the basic effect of: "
+      },
+      {
+        "type": "text_bold",
+        "value": "your last keepsake"
+      }
+    ],
+    "effect": null,
+    "image_path": "gift_gift_gift.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "gigaros_dash": {
     "gods": [
       "Hades"
@@ -3866,6 +4224,44 @@
       "infusion": null
     },
     "deals_olympian_damage": true,
+    "prerequisites": null,
+    "notes": null
+  },
+  "gold_gold_gold": {
+    "gods": [
+      "Echo"
+    ],
+    "name": "Gold Gold Gold",
+    "description": "After your next purchase from Charon, gain another at no extra charge (in most cases).",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "After your next purchase from "
+      },
+      {
+        "type": "text_bold",
+        "value": "Charon"
+      },
+      {
+        "type": "text_normal",
+        "value": ", gain another at no extra charge (in most cases)."
+      }
+    ],
+    "effect": null,
+    "image_path": "gold_gold_gold.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
     "prerequisites": null,
     "notes": null
   },
@@ -4170,6 +4566,56 @@
       "rare": "-40%",
       "epic": "-50%",
       "heroic": "-60%",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "harm_for_the_afflicted": {
+    "gods": [
+      "Medea"
+    ],
+    "name": "Harm for the Afflicted",
+    "description": "Inflicting a Curse deals 50 damage if the foe is not afflicted by it, up to 1 Sec.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Inflicting a "
+      },
+      {
+        "type": "text_bold",
+        "value": "Curse"
+      },
+      {
+        "type": "text_normal",
+        "value": " deals "
+      },
+      {
+        "type": "text_bold",
+        "value": "50"
+      },
+      {
+        "type": "text_normal",
+        "value": " damage if the foe is not afflicted by it, up to "
+      },
+      {
+        "type": "text_bold",
+        "value": "1 Sec."
+      }
+    ],
+    "effect": null,
+    "image_path": "harm_for_the_afflicted.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
       "duo": null,
       "legendary": null,
       "infusion": null
@@ -5123,6 +5569,52 @@
     "prerequisites": null,
     "notes": null
   },
+  "hymn_to_the_eye_of_night": {
+    "gods": [
+      "Circe"
+    ],
+    "name": "Hymn to the Eye of Night",
+    "description": "Your Hex deals +30% damage.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Your "
+      },
+      {
+        "type": "text_bold",
+        "value": "Hex"
+      },
+      {
+        "type": "text_normal",
+        "value": " deals "
+      },
+      {
+        "type": "text_bold",
+        "value": "+30%"
+      },
+      {
+        "type": "text_normal",
+        "value": " damage."
+      }
+    ],
+    "effect": null,
+    "image_path": "hymn_to_the_eye_of_night.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "ice_flourish": {
     "gods": [
       "Demeter"
@@ -5688,6 +6180,52 @@
     },
     "notes": null
   },
+  "lapis_lazuli_insight": {
+    "gods": [
+      "Circe"
+    ],
+    "name": "Lapis Lazuli Insight",
+    "description": "Randomly draw 2 of your active Arcana, and upgrade it this night.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Randomly draw "
+      },
+      {
+        "type": "text_bold",
+        "value": "2"
+      },
+      {
+        "type": "text_normal",
+        "value": " of your active "
+      },
+      {
+        "type": "text_bold",
+        "value": "Arcana"
+      },
+      {
+        "type": "text_normal",
+        "value": ", and upgrade it this night."
+      }
+    ],
+    "effect": null,
+    "image_path": "lapis_lazuli_insight.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "last_gasp": {
     "gods": [
       "Hades"
@@ -5833,6 +6371,73 @@
       "rare": "+13%",
       "epic": "+16%",
       "heroic": "+19%",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "life_from_the_dead": {
+    "gods": [
+      "Medea"
+    ],
+    "name": "Life from the Dead",
+    "description": "After a foe is slain, it has 5% chance to drop +10 Health_Restore_Icon, limit 1 per Encounter.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "After a foe is slain, it has "
+      },
+      {
+        "type": "text_bold",
+        "value": "5%"
+      },
+      {
+        "type": "text_normal",
+        "value": " chance to drop "
+      },
+      {
+        "type": "text_bold",
+        "value": "+10"
+      },
+      {
+        "type": "image",
+        "name": "Health_Restore_Icon",
+        "img_path": "health_restore_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": ", limit "
+      },
+      {
+        "type": "text_bold",
+        "value": "1"
+      },
+      {
+        "type": "text_normal",
+        "value": " per "
+      },
+      {
+        "type": "text_bold",
+        "value": "Encounter"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "life_from_the_dead.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
       "duo": null,
       "legendary": null,
       "infusion": null
@@ -6168,6 +6773,62 @@
       "rare": "60",
       "epic": "80",
       "heroic": "100",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "malice_in_kind": {
+    "gods": [
+      "Medea"
+    ],
+    "name": "Malice in Kind",
+    "description": "Whenever a foe makes you use Death_Defiance_Icon Death Defiance, it loses 15% Health_Icon.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "When a foe makes you use "
+      },
+      {
+        "type": "image",
+        "name": "Death_Defiance_Icon",
+        "img_path": "death_defiance_icon.webp"
+      },
+      {
+        "type": "text_bold",
+        "value": "Death Defiance"
+      },
+      {
+        "type": "text_normal",
+        "value": ", it loses "
+      },
+      {
+        "type": "text_bold",
+        "value": "15%"
+      },
+      {
+        "type": "image",
+        "name": "Health_Icon",
+        "img_path": "health_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "malice_in_kind.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
       "duo": null,
       "legendary": null,
       "infusion": null
@@ -7156,6 +7817,70 @@
     "prerequisites": null,
     "notes": null
   },
+  "old_herbal_remedy": {
+    "gods": [
+      "Circe"
+    ],
+    "name": "Old Herbal Remedy",
+    "description": "Restore 50% of your Max_Health_Icon now. Any Health_Restore_Icon effects are 25% stronger this night.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Restore "
+      },
+      {
+        "type": "text_bold",
+        "value": "50%"
+      },
+      {
+        "type": "text_normal",
+        "value": " of your "
+      },
+      {
+        "type": "image",
+        "name": "Max_Health_Icon",
+        "img_path": "max_health_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " now. Any "
+      },
+      {
+        "type": "image",
+        "name": "Health_Restore_Icon",
+        "img_path": "health_restore_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " effects are "
+      },
+      {
+        "type": "text_bold",
+        "value": "25%"
+      },
+      {
+        "type": "text_normal",
+        "value": " stronger this night."
+      }
+    ],
+    "effect": null,
+    "image_path": "old_herbal_remedy.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "onyx_dress": {
     "gods": [
       "Arachne"
@@ -7514,6 +8239,70 @@
     "prerequisites": null,
     "notes": null
   },
+  "pom_pom_pom": {
+    "gods": [
+      "Echo"
+    ],
+    "name": "Pom Pom Pom",
+    "description": "Double the Arrow_Up_Icon Lv. of a random one of your Boons whose Arrow_Up_Icon Lv. is higher than the rest.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Double the "
+      },
+      {
+        "type": "image",
+        "name": "Arrow_Up_Icon",
+        "img_path": "arrow_up_icon.webp"
+      },
+      {
+        "type": "text_bold",
+        "value": "Lv."
+      },
+      {
+        "type": "text_normal",
+        "value": " of a random one of your "
+      },
+      {
+        "type": "text_bold",
+        "value": "Boons"
+      },
+      {
+        "type": "text_normal",
+        "value": " whose "
+      },
+      {
+        "type": "image",
+        "name": "Arrow_Up_Icon",
+        "img_path": "arrow_up_icon.webp"
+      },
+      {
+        "type": "text_bold",
+        "value": "Lv."
+      },
+      {
+        "type": "text_normal",
+        "value": " is higher than the rest."
+      }
+    ],
+    "effect": null,
+    "image_path": "pom_pom_pom.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "power_surge": {
     "gods": [
       "Zeus"
@@ -7704,6 +8493,44 @@
       "rare": "+4%",
       "epic": "+5%",
       "heroic": "+6%",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "primal_psychic_connection": {
+    "gods": [
+      "Circe"
+    ],
+    "name": "Primal Psychic Connection",
+    "description": "The spiritual benefit your Animal Familiar provides is stronger this night.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "The spiritual benefit your "
+      },
+      {
+        "type": "text_bold",
+        "value": "Animal Familiar"
+      },
+      {
+        "type": "text_normal",
+        "value": " provides is stronger this night."
+      }
+    ],
+    "effect": null,
+    "image_path": "primal_psychic_connection.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
       "duo": null,
       "legendary": null,
       "infusion": null
@@ -8300,6 +9127,52 @@
     },
     "notes": null
   },
+  "red_citrine_divination": {
+    "gods": [
+      "Circe"
+    ],
+    "name": "Red Citrine Divination",
+    "description": "Randomly draw 1 of your inactive Arcana, and activate it this night.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Randomly draw "
+      },
+      {
+        "type": "text_bold",
+        "value": "1"
+      },
+      {
+        "type": "text_normal",
+        "value": " of your inactive "
+      },
+      {
+        "type": "text_bold",
+        "value": "Arcana"
+      },
+      {
+        "type": "text_normal",
+        "value": ", and activate it this night."
+      }
+    ],
+    "effect": null,
+    "image_path": "red_citrine_divination.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "renewed_faith": {
     "gods": [
       "Athena"
@@ -8335,6 +9208,40 @@
       "rare": "+15%",
       "epic": "+20%",
       "heroic": "+25%",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "reward_reward_reward": {
+    "gods": [
+      "Echo"
+    ],
+    "name": "Reward Reward Reward",
+    "description": "Manifest a copy of your most recently claimed Reward",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Manifest a copy of your most recently claimed reward"
+      },
+      {
+        "type": "text_bold",
+        "value": ""
+      }
+    ],
+    "effect": null,
+    "image_path": "reward_reward_reward.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
       "duo": null,
       "legendary": null,
       "infusion": null
@@ -10044,6 +10951,60 @@
     },
     "notes": null
   },
+  "suffering_on_sight": {
+    "gods": [
+      "Medea"
+    ],
+    "name": "Suffering on Sight",
+    "description": "After a foe joins the Encounter, it randomly takes 1 to 999 damage.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "After a foe joins the "
+      },
+      {
+        "type": "text_bold",
+        "value": "Encounter"
+      },
+      {
+        "type": "text_normal",
+        "value": ", it randomly takes "
+      },
+      {
+        "type": "text_bold",
+        "value": "1"
+      },
+      {
+        "type": "text_normal",
+        "value": " to "
+      },
+      {
+        "type": "text_bold",
+        "value": "999"
+      },
+      {
+        "type": "text_normal",
+        "value": " damage."
+      }
+    ],
+    "effect": null,
+    "image_path": "suffering_on_sight.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "sun_worshiper": {
     "gods": [
       "Apollo",
@@ -10229,6 +11190,67 @@
       "infusion": null
     },
     "deals_olympian_damage": true,
+    "prerequisites": null,
+    "notes": null
+  },
+  "survive_survive_survive": {
+    "gods": [
+      "Echo"
+    ],
+    "name": "Survive Survive Survive",
+    "description": "Replace all spent uses of Death_Defiance_Icon with ones that restore 50% Health_Icon and Magick_Icon, then less and less.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Replace all spent uses of "
+      },
+      {
+        "type": "image",
+        "name": "Death_Defiance_Icon",
+        "img_path": "death_defiance_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " with ones that restore "
+      },
+      {
+        "type": "text_bold",
+        "value": "50%"
+      },
+      {
+        "type": "image",
+        "name": "Health_Icon",
+        "img_path": "health_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " and "
+      },
+      {
+        "type": "image",
+        "name": "Magick_Icon",
+        "img_path": "magick_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": ", then less and less."
+      }
+    ],
+    "effect": null,
+    "image_path": "survive_survive_survive.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
     "prerequisites": null,
     "notes": null
   },
@@ -10781,6 +11803,57 @@
     "prerequisites": null,
     "notes": null
   },
+  "traces_of_spirit": {
+    "gods": [
+      "Medea"
+    ],
+    "name": "Traces of Spirit",
+    "description": "After each Encounter, gain +5 Max_Magick_Icon.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "After each "
+      },
+      {
+        "type": "text_bold",
+        "value": "Encounter"
+      },
+      {
+        "type": "text_normal",
+        "value": ", gain "
+      },
+      {
+        "type": "text_bold",
+        "value": "+5"
+      },
+      {
+        "type": "image",
+        "name": "Max_Magick_Icon",
+        "img_path": "max_magick_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "traces_of_spirit.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "tranquil_gain": {
     "gods": [
       "Demeter"
@@ -10998,6 +12071,75 @@
     },
     "deals_olympian_damage": false,
     "prerequisites": null,
+    "notes": null
+  },
+  "turning_to_a_simple_form": {
+    "gods": [
+      "Circe"
+    ],
+    "name": "Turning to a Simple Form",
+    "description": "Your Omega_Icon Moves have 15% chance to inflict Morph on a susceptible foe, 10 Sec. apart.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Your "
+      },
+      {
+        "type": "image",
+        "name": "Omega_Icon",
+        "img_path": "omega_icon.webp"
+      },
+      {
+        "type": "text_bold",
+        "value": "Moves"
+      },
+      {
+        "type": "text_normal",
+        "value": " have "
+      },
+      {
+        "type": "text_bold",
+        "value": "15%"
+      },
+      {
+        "type": "text_normal",
+        "value": " chance to inflict "
+      },
+      {
+        "type": "text_bold",
+        "value": "Morph"
+      },
+      {
+        "type": "text_normal",
+        "value": " on a susceptible foe, "
+      },
+      {
+        "type": "text_bold",
+        "value": "10 Sec."
+      },
+      {
+        "type": "text_normal",
+        "value": " apart."
+      }
+    ],
+    "effect": null,
+    "image_path": "turning_to_a_simple_form.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": {
+      "condition": "Reach 4th affinity rank with Circe"
+    },
     "notes": null
   },
   "uncanny_fortitude": {
@@ -11750,6 +12892,73 @@
     "prerequisites": null,
     "notes": null
   },
+  "wealth_from_the_dead": {
+    "gods": [
+      "Medea"
+    ],
+    "name": "Wealth from the Dead",
+    "description": "After a foe is slain, it has 10% chance to drop +20 Gold_Coins_Icon, limit 2 per Encounter.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "After a foe is slain, it has "
+      },
+      {
+        "type": "text_bold",
+        "value": "10%"
+      },
+      {
+        "type": "text_normal",
+        "value": " chance to drop "
+      },
+      {
+        "type": "text_bold",
+        "value": "+20"
+      },
+      {
+        "type": "image",
+        "name": "Gold_Coins_Icon",
+        "img_path": "gold_coins_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": ", limit "
+      },
+      {
+        "type": "text_bold",
+        "value": "2"
+      },
+      {
+        "type": "text_normal",
+        "value": " per "
+      },
+      {
+        "type": "text_bold",
+        "value": "Encounter"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "wealth_from_the_dead.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "weed_killer": {
     "gods": [
       "Demeter"
@@ -12032,6 +13241,119 @@
     },
     "notes": null
   },
+  "word_of_greater_girth": {
+    "gods": [
+      "Circe"
+    ],
+    "name": "Word of Greater Girth",
+    "description": "Grow in size so that you have +15% Max_Health_Icon and deal +15% with your Weapon.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Grow in size so that you have "
+      },
+      {
+        "type": "text_bold",
+        "value": "+15%"
+      },
+      {
+        "type": "image",
+        "name": "Max_Health_Icon",
+        "img_path": "max_health_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " and deal "
+      },
+      {
+        "type": "text_bold",
+        "value": "+15%"
+      },
+      {
+        "type": "text_normal",
+        "value": " with your "
+      },
+      {
+        "type": "text_bold",
+        "value": "Weapon"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "word_of_greater_girth.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "word_of_smaller_stature": {
+    "gods": [
+      "Circe"
+    ],
+    "name": "Word of Smaller Stature",
+    "description": "Shrink in size, so that you move 10% faster and have +10% chance to Dodge.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Shrink in size, so that you move "
+      },
+      {
+        "type": "text_bold",
+        "value": "10%"
+      },
+      {
+        "type": "text_normal",
+        "value": " faster and have "
+      },
+      {
+        "type": "text_bold",
+        "value": "+10%"
+      },
+      {
+        "type": "text_normal",
+        "value": " chance to "
+      },
+      {
+        "type": "text_bold",
+        "value": "Dodge"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "word_of_smaller_stature.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "worry_free": {
     "gods": [
       "Dionysus"
@@ -12063,858 +13385,6 @@
       "rare": "+70 ~ 100",
       "epic": "+90 ~ 120",
       "heroic": "+110 ~ 140",
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "boon_boon_boon": {
-    "gods": [
-      "Echo"
-    ],
-    "name": "Boon Boon Boon",
-    "description": "Choose 1 out of 3 random Boons from the previous night.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Choose "
-      },
-      {
-        "type": "text_bold",
-        "value": "1"
-      },
-      {
-        "type": "text_normal",
-        "value": " out of "
-      },
-      {
-        "type": "text_bold",
-        "value": "3"
-      },
-      {
-        "type": "text_normal",
-        "value": " random "
-      },
-      {
-        "type": "text_bold",
-        "value": "Boons"
-      },
-      {
-        "type": "text_normal",
-        "value": " from the previous night."
-      }
-    ],
-    "effect": null,
-    "image_path": "boon_boon_boon.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "evade_evade_evade": {
-    "gods": [
-      "Echo"
-    ],
-    "name": "Evade Evade Evade",
-    "description": "Gain +50%Dodge chance, but lose 2% of this each time you Dodge.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Gain "
-      },
-      {
-        "type": "text_bold",
-        "value": "+50% Dodge"
-      },
-      {
-        "type": "text_normal",
-        "value": " chance, but lose "
-      },
-      {
-        "type": "text_bold",
-        "value": "2%"
-      },
-      {
-        "type": "text_normal",
-        "value": " of this each time you "
-      },
-      {
-        "type": "text_bold",
-        "value": "Dodge"
-      },
-      {
-        "type": "text_normal",
-        "value": "."
-      }
-    ],
-    "effect": null,
-    "image_path": "evade_evade_evade.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "fight_fight_fight": {
-    "gods": [
-      "Echo"
-    ],
-    "name": "Fight Fight Fight",
-    "description": "Gain +60% Max_Health_Icon and Max_Magick_Icon based on their limits, but lose 5% of this after each Location.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Gain "
-      },
-      {
-        "type": "text_bold",
-        "value": "+60%"
-      },
-      {
-        "type": "image",
-        "name": "Max_Health_Icon",
-        "img_path": "max_health_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": " and "
-      },
-      {
-        "type": "image",
-        "name": "Max_Magick_Icon",
-        "img_path": "max_magick_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": " based on their limits, but lose "
-      },
-      {
-        "type": "text_bold",
-        "value": "5%"
-      },
-      {
-        "type": "text_normal",
-        "value": " of this after each "
-      },
-      {
-        "type": "text_bold",
-        "value": "Location"
-      },
-      {
-        "type": "text_normal",
-        "value": "."
-      }
-    ],
-    "effect": null,
-    "image_path": "fight_fight_fight.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "gift_gift_gift": {
-    "gods": [
-      "Echo"
-    ],
-    "name": "Gift Gift Gift",
-    "description": "After you switch Keepsakes, also gain the basic effect of your last keepsake",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "After you switch "
-      },
-      {
-        "type": "text_bold",
-        "value": "Keepsakes"
-      },
-      {
-        "type": "text_normal",
-        "value": ", also gain the basic effect of: "
-      },
-      {
-        "type": "text_bold",
-        "value": "your last keepsake"
-      }
-    ],
-    "effect": null,
-    "image_path": "gift_gift_gift.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "gold_gold_gold": {
-    "gods": [
-      "Echo"
-    ],
-    "name": "Gold Gold Gold",
-    "description": "After your next purchase from Charon, gain another at no extra charge (in most cases).",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "After your next purchase from "
-      },
-      {
-        "type": "text_bold",
-        "value": "Charon"
-      },
-      {
-        "type": "text_normal",
-        "value": ", gain another at no extra charge (in most cases)."
-      }
-    ],
-    "effect": null,
-    "image_path": "gold_gold_gold.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "pom_pom_pom": {
-    "gods": [
-      "Echo"
-    ],
-    "name": "Pom Pom Pom",
-    "description": "Double the Arrow_Up_Icon Lv. of a random one of your Boons whose Arrow_Up_Icon Lv. is higher than the rest.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Double the "
-      },
-      {
-        "type": "image",
-        "name": "Arrow_Up_Icon",
-        "img_path": "arrow_up_icon.webp"
-      },
-      {
-        "type": "text_bold",
-        "value": "Lv."
-      },
-      {
-        "type": "text_normal",
-        "value": " of a random one of your "
-      },
-      {
-        "type": "text_bold",
-        "value": "Boons"
-      },
-      {
-        "type": "text_normal",
-        "value": " whose "
-      },
-      {
-        "type": "image",
-        "name": "Arrow_Up_Icon",
-        "img_path": "arrow_up_icon.webp"
-      },
-      {
-        "type": "text_bold",
-        "value": "Lv."
-      },
-      {
-        "type": "text_normal",
-        "value": " is higher than the rest."
-      }
-    ],
-    "effect": null,
-    "image_path": "pom_pom_pom.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "reward_reward_reward": {
-    "gods": [
-      "Echo"
-    ],
-    "name": "Reward Reward Reward",
-    "description": "Manifest a copy of your most recently claimed Reward",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Manifest a copy of your most recently claimed reward"
-      },
-      {
-        "type": "text_bold",
-        "value": ""
-      }
-    ],
-    "effect": null,
-    "image_path": "reward_reward_reward.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "survive_survive_survive": {
-    "gods": [
-      "Echo"
-    ],
-    "name": "Survive Survive Survive",
-    "description": "Replace all spent uses of Death_Defiance_Icon with ones that restore 50% Health_Icon and Magick_Icon, then less and less.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Replace all spent uses of "
-      },
-      {
-        "type": "image",
-        "name": "Death_Defiance_Icon",
-        "img_path": "death_defiance_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": " with ones that restore "
-      },
-      {
-        "type": "text_bold",
-        "value": "50%"
-      },
-      {
-        "type": "image",
-        "name": "Health_Icon",
-        "img_path": "health_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": " and "
-      },
-      {
-        "type": "image",
-        "name": "Magick_Icon",
-        "img_path": "magick_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": ", then less and less."
-      }
-    ],
-    "effect": null,
-    "image_path": "survive_survive_survive.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "corrosion_on_sight": {
-    "gods": [
-      "Medea"
-    ],
-    "name": "Corrosion on Sight",
-    "description": "After a foe joins the Encounter, it loses 50% of any Armor it has.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "After a foe joins the "
-      },
-      {
-        "type": "text_bold",
-        "value": "Encounter"
-      },
-      {
-        "type": "text_normal",
-        "value": ", it loses "
-      },
-      {
-        "type": "text_bold",
-        "value": "50%"
-      },
-      {
-        "type": "text_normal",
-        "value": " of any "
-      },
-      {
-        "type": "text_bold",
-        "value": "Armor"
-      },
-      {
-        "type": "text_normal",
-        "value": " it has."
-      }
-    ],
-    "effect": null,
-    "image_path": "corrosion_on_sight.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "enfeeblement_of_cowards": {
-    "gods": [
-      "Medea"
-    ],
-    "name": "Enfeeblement of Cowards",
-    "description": "Foes' ranged shots have -40% travel speed.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Foes' ranged shots have "
-      },
-      {
-        "type": "text_bold",
-        "value": "-40%"
-      },
-      {
-        "type": "text_normal",
-        "value": " travel speed."
-      }
-    ],
-    "effect": null,
-    "image_path": "enfeeblement_of_cowards.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "harm_for_the_afflicted": {
-    "gods": [
-      "Medea"
-    ],
-    "name": "Harm for the Afflicted",
-    "description": "Inflicting a Curse deals 50 damage if the foe is not afflicted by it, up to 1 Sec.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Inflicting a "
-      },
-      {
-        "type": "text_bold",
-        "value": "Curse"
-      },
-      {
-        "type": "text_normal",
-        "value": " deals "
-      },
-      {
-        "type": "text_bold",
-        "value": "50"
-      },
-      {
-        "type": "text_normal",
-        "value": " damage if the foe is not afflicted by it, up to "
-      },
-      {
-        "type": "text_bold",
-        "value": "1 Sec."
-      }
-    ],
-    "effect": null,
-    "image_path": "harm_for_the_afflicted.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "life_from_the_dead": {
-    "gods": [
-      "Medea"
-    ],
-    "name": "Life from the Dead",
-    "description": "After a foe is slain, it has 5% chance to drop +10 Health_Restore_Icon, limit 1 per Encounter.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "After a foe is slain, it has "
-      },
-      {
-        "type": "text_bold",
-        "value": "5%"
-      },
-      {
-        "type": "text_normal",
-        "value": " chance to drop "
-      },
-      {
-        "type": "text_bold",
-        "value": "+10"
-      },
-      {
-        "type": "image",
-        "name": "Health_Restore_Icon",
-        "img_path": "health_restore_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": ", limit "
-      },
-      {
-        "type": "text_bold",
-        "value": "1"
-      },
-      {
-        "type": "text_normal",
-        "value": " per "
-      },
-      {
-        "type": "text_bold",
-        "value": "Encounter"
-      },
-      {
-        "type": "text_normal",
-        "value": "."
-      }
-    ],
-    "effect": null,
-    "image_path": "life_from_the_dead.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "malice_in_kind": {
-    "gods": [
-      "Medea"
-    ],
-    "name": "Malice in Kind",
-    "description": "Whenever a foe makes you use Death_Defiance_Icon Death Defiance, it loses 15% Health_Icon.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "When a foe makes you use "
-      },
-      {
-        "type": "image",
-        "name": "Death_Defiance_Icon",
-        "img_path": "death_defiance_icon.webp"
-      },
-      {
-        "type": "text_bold",
-        "value": "Death Defiance"
-      },
-      {
-        "type": "text_normal",
-        "value": ", it loses "
-      },
-      {
-        "type": "text_bold",
-        "value": "15%"
-      },
-      {
-        "type": "image",
-        "name": "Health_Icon",
-        "img_path": "health_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": "."
-      }
-    ],
-    "effect": null,
-    "image_path": "malice_in_kind.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "suffering_on_sight": {
-    "gods": [
-      "Medea"
-    ],
-    "name": "Suffering on Sight",
-    "description": "After a foe joins the Encounter, it randomly takes 1 to 999 damage.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "After a foe joins the "
-      },
-      {
-        "type": "text_bold",
-        "value": "Encounter"
-      },
-      {
-        "type": "text_normal",
-        "value": ", it randomly takes "
-      },
-      {
-        "type": "text_bold",
-        "value": "1"
-      },
-      {
-        "type": "text_normal",
-        "value": " to "
-      },
-      {
-        "type": "text_bold",
-        "value": "999"
-      },
-      {
-        "type": "text_normal",
-        "value": " damage."
-      }
-    ],
-    "effect": null,
-    "image_path": "suffering_on_sight.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "traces_of_spirit": {
-    "gods": [
-      "Medea"
-    ],
-    "name": "Traces of Spirit",
-    "description": "After each Encounter, gain +5 Max_Magick_Icon.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "After each "
-      },
-      {
-        "type": "text_bold",
-        "value": "Encounter"
-      },
-      {
-        "type": "text_normal",
-        "value": ", gain "
-      },
-      {
-        "type": "text_bold",
-        "value": "+5"
-      },
-      {
-        "type": "image",
-        "name": "Max_Magick_Icon",
-        "img_path": "max_magick_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": "."
-      }
-    ],
-    "effect": null,
-    "image_path": "traces_of_spirit.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "wealth_from_the_dead": {
-    "gods": [
-      "Medea"
-    ],
-    "name": "Wealth from the Dead",
-    "description": "After a foe is slain, it has 10% chance to drop +20 Gold_Coins_Icon, limit 2 per Encounter.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "After a foe is slain, it has "
-      },
-      {
-        "type": "text_bold",
-        "value": "10%"
-      },
-      {
-        "type": "text_normal",
-        "value": " chance to drop "
-      },
-      {
-        "type": "text_bold",
-        "value": "+20"
-      },
-      {
-        "type": "image",
-        "name": "Gold_Coins_Icon",
-        "img_path": "gold_coins_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": ", limit "
-      },
-      {
-        "type": "text_bold",
-        "value": "2"
-      },
-      {
-        "type": "text_normal",
-        "value": " per "
-      },
-      {
-        "type": "text_bold",
-        "value": "Encounter"
-      },
-      {
-        "type": "text_normal",
-        "value": "."
-      }
-    ],
-    "effect": null,
-    "image_path": "wealth_from_the_dead.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
       "duo": null,
       "legendary": null,
       "infusion": null
