@@ -200,7 +200,7 @@ export function buildShareSummary(
   const countText =
     resultCount !== undefined ? ` · ${resultCount} results` : "";
 
-  return `Hades II Boons — ${filterText}${countText}`;
+  return `Hades 2 Boons — ${filterText}${countText}`;
 }
 
 export function boonFilterStatesEqual(

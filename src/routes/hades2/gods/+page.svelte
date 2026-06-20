@@ -23,7 +23,7 @@
       <p
         class="text-[0.7rem] sm:text-xs text-[#8da693] font-sans mt-0.5 tracking-wide leading-snug"
       >
-        The gods who grant boons in Hades II. Click a god for full details, or
+        The gods who grant boons in Hades 2. Click a god for full details, or
         jump to a keepsake or curse below.
       </p>
     </header>

@@ -51,7 +51,7 @@
     <h1
       class="text-4xl sm:text-5xl md:text-6xl font-normal uppercase tracking-widest text-[#ccff90] m-0 drop-shadow-[0_0_15px_rgba(204,255,144,0.3)]"
     >
-      Hades <span class="text-[#46f08f]">II</span> Companion
+      Hades <span class="text-[#46f08f]">2</span> Companion
     </h1>
     <p
       class="text-base sm:text-lg text-[#8da693] max-w-2xl font-sans tracking-wide leading-relaxed"

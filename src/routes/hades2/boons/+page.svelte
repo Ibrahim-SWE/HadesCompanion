@@ -382,7 +382,7 @@
       <p
         class="text-[0.7rem] sm:text-xs text-[#8da693] font-sans mt-0.5 tracking-wide leading-snug"
       >
-        Browse and filter all boons in Hades II. Use search or filters to narrow
+        Browse and filter all boons in Hades 2. Use search or filters to narrow
         results.
       </p>
     </header>

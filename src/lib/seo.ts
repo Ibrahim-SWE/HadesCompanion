@@ -1,5 +1,5 @@
 export const SITE_ORIGIN = "https://hadescompanion.com";
-export const SITE_NAME = "Hades II Companion";
+export const SITE_NAME = "Hades 2 Companion";
 
 export type SeoMeta = {
   title: string;
@@ -26,67 +26,67 @@ export const PAGE_SEO = {
   home: {
     title: SITE_NAME,
     description:
-      "Everything you need to plan and optimize your Hades II runs. Discover boons, weapons, arcana cards, keepsakes, and more.",
+      "Everything you need to plan and optimize your Hades 2 runs. Discover boons, weapons, arcana cards, keepsakes, and more.",
     canonicalPath: "/",
   },
   gods: {
     title: seoTitle("Olympian Gods"),
     description:
-      "The gods who grant boons in Hades II. Browse every Olympian god, their keepsakes, curses, and boons.",
+      "The gods who grant boons in Hades 2. Browse every Olympian god, their keepsakes, curses, and boons.",
     canonicalPath: "/hades2/gods",
   },
   boons: {
     title: seoTitle("Boons"),
     description:
-      "Browse and filter all boons in Hades II. Use search or filters to narrow results by god, type, element, and rarity.",
+      "Browse and filter all boons in Hades 2. Use search or filters to narrow results by god, type, element, and rarity.",
     canonicalPath: "/hades2/boons",
   },
   weapons: {
     title: seoTitle("Weapons"),
     description:
-      "The weapons of Melinoë, their Aspects, and Daedalus Hammer upgrades in Hades II.",
+      "The weapons of Melinoë, their Aspects, and Daedalus Hammer upgrades in Hades 2.",
     canonicalPath: "/hades2/weapons",
   },
   cards: {
     title: seoTitle("Arcana Cards"),
     description:
-      "View all Arcana Cards from the Altar of Ashes in Hades II, their effects, and upgrade requirements.",
+      "View all Arcana Cards from the Altar of Ashes in Hades 2, their effects, and upgrade requirements.",
     canonicalPath: "/hades2/cards",
   },
   keepsakes: {
     title: seoTitle("Keepsakes"),
     description:
-      "Gifts from allies in Hades II that grow stronger as you complete runs. Find every keepsake and who gifts it.",
+      "Gifts from allies in Hades 2 that grow stronger as you complete runs. Find every keepsake and who gifts it.",
     canonicalPath: "/hades2/keepsakes",
   },
   curses: {
     title: seoTitle("Curses"),
     description:
-      "A list of all curses and status effects in Hades II. Find boons that apply each curse.",
+      "A list of all curses and status effects in Hades 2. Find boons that apply each curse.",
     canonicalPath: "/hades2/curses",
   },
   animals: {
     title: seoTitle("Animal Familiars"),
     description:
-      "Animal familiars in Hades II. See how to unlock and upgrade each pet and the bonuses they grant.",
+      "Animal familiars in Hades 2. See how to unlock and upgrade each pet and the bonuses they grant.",
     canonicalPath: "/hades2/animals",
   },
   tools: {
     title: seoTitle("Gathering Tools"),
     description:
-      "Unlock and upgrade gathering tools in Hades II to collect resources from the Underworld and Surface.",
+      "Unlock and upgrade gathering tools in Hades 2 to collect resources from the Underworld and Surface.",
     canonicalPath: "/hades2/tools",
   },
   notFound: {
     title: seoTitle("Page Not Found"),
     description:
-      "This path leads nowhere in the Underworld. Return to Hades II Companion.",
+      "This path leads nowhere in the Underworld. Return to Hades 2 Companion.",
     canonicalPath: "/",
     noindex: true,
   },
   error: {
     title: seoTitle("Error"),
-    description: "Something went wrong. Return to Hades II Companion.",
+    description: "Something went wrong. Return to Hades 2 Companion.",
     canonicalPath: "/",
     noindex: true,
   },
@@ -99,7 +99,7 @@ export function godPageSeo(
 ): SeoMeta {
   return {
     title: seoTitle(godName, "Gods"),
-    description: `${godName}, ${subtitle}. View boons, keepsakes, and curses for this Olympian god in Hades II.`,
+    description: `${godName}, ${subtitle}. View boons, keepsakes, and curses for this Olympian god in Hades 2.`,
     canonicalPath: `/hades2/gods/${encodeURIComponent(godName)}`,
     ogImage,
   };

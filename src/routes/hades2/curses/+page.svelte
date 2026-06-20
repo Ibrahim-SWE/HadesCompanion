@@ -35,7 +35,7 @@
       <p
         class="text-[0.7rem] sm:text-xs text-[#8da693] font-sans mt-0.5 tracking-wide leading-snug"
       >
-        A list of all curses and status effects in Hades II. Click a curse to
+        A list of all curses and status effects in Hades 2. Click a curse to
         find its boons.
       </p>
     </header>
