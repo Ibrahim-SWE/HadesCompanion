@@ -3,6 +3,15 @@ export type DescriptionPart =
   | { type: "text_bold"; value: string }
   | { type: "image"; name: string; img_path: string };
 
+export type ElementRequirement = { element: string; amount: number };
+
+export type BoonPrerequisites =
+  | { condition: string }
+  | { boons: string[][] }
+  | { satisfy_one: ElementRequirement[] }
+  | { satisfy_all: ElementRequirement[] }
+  | null;
+
 export type BoonData = {
   gods: string[];
   name: string;
@@ -15,7 +24,7 @@ export type BoonData = {
   is_core: boolean;
   rarities_effect: Record<string, string | null>;
   deals_olympian_damage: boolean;
-  prerequisites: object | null;
+  prerequisites: BoonPrerequisites;
 };
 
 export type GodKeepsakeAndCurses = {

@@ -1,5 +1,6 @@
 <script lang="ts">
   import BoonImgElemIcon from "./BoonImg_ElemIcon.svelte";
+  import BoonPrerequisites from "./BoonPrerequisites.svelte";
   import LazyMiscImg from "./LazyMiscImg.svelte";
   import type { BoonData } from "$lib/types/hades2";
 
@@ -180,7 +181,7 @@
     </div>
   </div>
 
-  {#if boon.type || boon.is_core || boon.deals_olympian_damage || effectsValues.length > 0}
+  {#if boon.type || boon.is_core || boon.deals_olympian_damage || effectsValues.length > 0 || boon.prerequisites}
     <div class="flex shrink-0 flex-col gap-1.5 z-10 relative">
     {#if boon.type || boon.is_core || boon.deals_olympian_damage}
       <div class="flex flex-wrap gap-1">
@@ -231,6 +232,14 @@
           {/each}
         </div>
       </div>
+    {/if}
+
+    {#if boon.prerequisites}
+      <BoonPrerequisites
+        prerequisites={boon.prerequisites}
+        containerClass={effectContainerStyle}
+        labelClass={effectLabelColor}
+      />
     {/if}
   </div>
   {/if}

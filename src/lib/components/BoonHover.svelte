@@ -1,0 +1,123 @@
+<script lang="ts">
+  import { browser } from "$app/environment";
+  import { portal } from "$lib/actions/portal";
+  import { getBoonByName } from "$lib/boon-lookup";
+  import BoonImgElemIcon from "./BoonImg_ElemIcon.svelte";
+  import LazyMiscImg from "./LazyMiscImg.svelte";
+  import type { BoonData } from "$lib/types/hades2";
+  import type { Snippet } from "svelte";
+
+  let {
+    boon: boonProp,
+    name,
+    class: className = "",
+    children,
+  }: {
+    boon?: BoonData;
+    name?: string;
+    class?: string;
+    children: Snippet;
+  } = $props();
+
+  let trigger: HTMLButtonElement | undefined = $state();
+  let showPreview = $state(false);
+  let previewTop = $state(0);
+  let previewLeft = $state(0);
+
+  let resolvedBoon = $derived(boonProp ?? (name ? getBoonByName(name) : undefined));
+
+  let godLabel = $derived(
+    resolvedBoon
+      ? resolvedBoon.gods.length > 1
+        ? resolvedBoon.gods.join(" · ")
+        : resolvedBoon.gods[0]
+      : "",
+  );
+
+  function updatePreviewPosition() {
+    if (!trigger || !browser) return;
+
+    const rect = trigger.getBoundingClientRect();
+    const previewWidth = 260;
+    const previewHeight = 160;
+    const gap = 6;
+
+    let top = rect.bottom + gap;
+    if (top + previewHeight > window.innerHeight - 8) {
+      top = rect.top - previewHeight - gap;
+    }
+
+    let left = rect.left;
+    if (left + previewWidth > window.innerWidth - 8) {
+      left = window.innerWidth - previewWidth - 8;
+    }
+    left = Math.max(8, left);
+
+    previewTop = top;
+    previewLeft = left;
+  }
+
+  function handleMouseEnter() {
+    if (!resolvedBoon) return;
+    updatePreviewPosition();
+    showPreview = true;
+  }
+
+  function handleMouseLeave() {
+    showPreview = false;
+  }
+</script>
+
+{#if resolvedBoon}
+  <button
+    type="button"
+    bind:this={trigger}
+    class="inline cursor-help border-0 bg-transparent p-0 font-inherit text-inherit underline decoration-dotted decoration-[#46f08f]/50 underline-offset-2 {className}"
+    onmouseenter={handleMouseEnter}
+    onmouseleave={handleMouseLeave}
+  >
+    {@render children()}
+  </button>
+
+  {#if showPreview && browser}
+    <div
+      use:portal
+      class="pointer-events-none fixed z-9999 w-[260px] rounded-md border border-[#2a2a2a] bg-[#080808] p-2.5 shadow-[0_4px_20px_rgba(0,0,0,0.8)]"
+      style="top: {previewTop}px; left: {previewLeft}px;"
+      role="tooltip"
+    >
+      <div class="flex items-start gap-2">
+        <BoonImgElemIcon boon={resolvedBoon} />
+        <div class="min-w-0 flex-1">
+          <span
+            class="mb-0.5 block truncate text-[0.6rem] uppercase tracking-widest text-[#46f08f]"
+          >
+            {godLabel}
+          </span>
+          <p
+            class="m-0 font-serif text-xs uppercase tracking-wide text-[#ccff90] leading-tight"
+          >
+            {resolvedBoon.name}
+          </p>
+          <p class="mt-1 font-sans text-[0.65rem] leading-snug text-[#b3c2b7]">
+            {#each resolvedBoon.description_rich as part, i (`${part.type}-${i}`)}
+              {#if part.type === "text_normal"}<span>{part.value}</span>
+              {:else if part.type === "text_bold"}<strong
+                  class="font-semibold text-[#e5f4e7]">{part.value}</strong
+                >
+              {:else if part.type === "image"}
+                <LazyMiscImg
+                  file={part.img_path}
+                  alt={part.name}
+                  class="inline-block h-[1.2em] w-auto align-middle object-contain"
+                />
+              {/if}
+            {/each}
+          </p>
+        </div>
+      </div>
+    </div>
+  {/if}
+{:else}
+  <span class={className}>{@render children()}</span>
+{/if}
