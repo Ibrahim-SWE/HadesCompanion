@@ -10298,6 +10298,8 @@
     ],
     "effect": "Soul Urn Damage:",
     "image_path": "cinerary_circle.webp",
+    "type": null,
+    "is_core": false,
     "rarities_effect": {
       "common": "200",
       "rare": null,
@@ -10306,7 +10308,10 @@
       "duo": null,
       "legendary": null,
       "infusion": null
-    }
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
   },
   "deep_dissent": {
     "gods": [
@@ -10338,6 +10343,8 @@
     ],
     "effect": "Chronos/Typhon Foes Summoned:",
     "image_path": "deep_dissent.webp",
+    "type": null,
+    "is_core": false,
     "rarities_effect": {
       "common": "-50%",
       "rare": null,
@@ -10346,7 +10353,10 @@
       "duo": null,
       "legendary": null,
       "infusion": null
-    }
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
   },
   "gigaros_dash": {
     "gods": [
@@ -10378,6 +10388,8 @@
     ],
     "effect": "Sweep Damage:",
     "image_path": "gigaros_dash.webp",
+    "type": null,
+    "is_core": false,
     "rarities_effect": {
       "common": "50",
       "rare": null,
@@ -10386,7 +10398,10 @@
       "duo": null,
       "legendary": null,
       "infusion": null
-    }
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
   },
   "howling_soul": {
     "gods": [
@@ -10410,6 +10425,8 @@
     ],
     "effect": "Direct-Hit Damage:",
     "image_path": "howling_soul.webp",
+    "type": null,
+    "is_core": false,
     "rarities_effect": {
       "common": "200",
       "rare": null,
@@ -10418,7 +10435,10 @@
       "duo": null,
       "legendary": null,
       "infusion": null
-    }
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
   },
   "last_gasp": {
     "gods": [
@@ -10447,6 +10467,8 @@
     ],
     "effect": "Damage per Used:",
     "image_path": "last_gasp.webp",
+    "type": null,
+    "is_core": false,
     "rarities_effect": {
       "common": "+10%",
       "rare": null,
@@ -10456,9 +10478,11 @@
       "legendary": null,
       "infusion": null
     },
+    "deals_olympian_damage": false,
     "prerequisites": {
       "condition": "Have at least 1 Death Defiance (Doesn't matter if it's used or not)"
-    }
+    },
+    "notes": null
   },
   "life_tax": {
     "gods": [
@@ -10491,6 +10515,8 @@
     ],
     "effect": "Max Total Life Restored:",
     "image_path": "life_tax.webp",
+    "type": null,
+    "is_core": false,
     "rarities_effect": {
       "common": "150",
       "rare": null,
@@ -10499,7 +10525,10 @@
       "duo": null,
       "legendary": null,
       "infusion": null
-    }
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
   },
   "old_grudge": {
     "gods": [
@@ -10535,6 +10564,8 @@
     ],
     "effect": "Chronos/Typhon Life Reduced:",
     "image_path": "old_grudge.webp",
+    "type": null,
+    "is_core": false,
     "rarities_effect": {
       "common": "-20%",
       "rare": null,
@@ -10543,7 +10574,10 @@
       "duo": null,
       "legendary": null,
       "infusion": null
-    }
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
   },
   "unseen_ire": {
     "gods": [
@@ -10567,6 +10601,8 @@
     ],
     "effect": "Damage While Dark:",
     "image_path": "unseen_ire.webp",
+    "type": null,
+    "is_core": false,
     "rarities_effect": {
       "common": "+70%",
       "rare": null,
@@ -10575,6 +10611,411 @@
       "duo": null,
       "legendary": null,
       "infusion": null
-    }
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "bottomless_drink": {
+    "gods": [
+      "Dionysus"
+    ],
+    "name": "Bottomless Drink",
+    "description": "In each Encounter, Grape Juice appears, in the area and grants Power when used.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "In each "
+      },
+      {
+        "type": "text_bold",
+        "value": "Encounter"
+      },
+      {
+        "type": "text_normal",
+        "value": ", "
+      },
+      {
+        "type": "text_bold",
+        "value": "Grape Juice"
+      },
+      {
+        "type": "text_normal",
+        "value": " appears, in the area and grants "
+      },
+      {
+        "type": "text_bold",
+        "value": "Power"
+      },
+      {
+        "type": "text_normal",
+        "value": " when used."
+      }
+    ],
+    "effect": "Reappearance Time:",
+    "image_path": "bottomless_drink.webp",
+    "element": "Water",
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": "10 Sec.",
+      "rare": "9 Sec.",
+      "epic": "8 Sec.",
+      "heroic": "7 Sec.",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "bounce_back": {
+    "gods": [
+      "Dionysus"
+    ],
+    "name": "Bounce Back",
+    "description": "After each Encounter, restore some Health_Icon if you took any damage in that Encounter.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "After each "
+      },
+      {
+        "type": "text_bold",
+        "value": "Encounter"
+      },
+      {
+        "type": "text_normal",
+        "value": ", restore some "
+      },
+      {
+        "type": "image",
+        "name": "Health_Icon",
+        "img_path": "health_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " if you took any damage in that "
+      },
+      {
+        "type": "text_bold",
+        "value": "Encounter"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": "Lost Life Restored:",
+    "image_path": "bounce_back.webp",
+    "element": "Water",
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": "50%",
+      "rare": "60%",
+      "epic": "70%",
+      "heroic": "80%",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "drunken_stupor": {
+    "gods": [
+      "Dionysus"
+    ],
+    "name": "Drunken Stupor",
+    "description": "Your Omega_Icon Moves inflict Hangover the first time they strike foes.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Your "
+      },
+      {
+        "type": "image",
+        "name": "Omega_Icon",
+        "img_path": "omega_icon.webp"
+      },
+      {
+        "type": "text_bold",
+        "value": "Moves"
+      },
+      {
+        "type": "text_normal",
+        "value": " inflict "
+      },
+      {
+        "type": "text_bold",
+        "value": "Hangover"
+      },
+      {
+        "type": "text_normal",
+        "value": " the first time they strike foes."
+      }
+    ],
+    "effect": "Hangover Damage ( every 0.5 Sec. ):",
+    "image_path": "drunken_stupor.webp",
+    "element": "Water",
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": "50",
+      "rare": "75",
+      "epic": "100",
+      "heroic": "125",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "happy_haze": {
+    "gods": [
+      "Dionysus"
+    ],
+    "name": "Happy Haze",
+    "description": "Every 8 Sec. in each Encounter, Festive Fog appears, making you stronger while in it.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Every "
+      },
+      {
+        "type": "text_bold",
+        "value": "8 Sec."
+      },
+      {
+        "type": "text_normal",
+        "value": " in each "
+      },
+      {
+        "type": "text_bold",
+        "value": "Encounter"
+      },
+      {
+        "type": "text_normal",
+        "value": ", "
+      },
+      {
+        "type": "text_bold",
+        "value": "Festive Fog"
+      },
+      {
+        "type": "text_normal",
+        "value": " appears, making you stronger while in it."
+      }
+    ],
+    "effect": "In-Fog Bonus Damage:",
+    "image_path": "happy_haze.webp",
+    "element": "Water",
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": "+30%",
+      "rare": "+40%",
+      "epic": "+50%",
+      "heroic": "+60%",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "personal_loan": {
+    "gods": [
+      "Dionysus"
+    ],
+    "name": "Personal Loan",
+    "description": "Give up all your Gold_Coins_Icon now. After vanquishing the next Guardian, gain that much and more.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Give up all your "
+      },
+      {
+        "type": "image",
+        "name": "Gold_Coins_Icon",
+        "img_path": "gold_coins_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " now. After vanquishing the next "
+      },
+      {
+        "type": "text_bold",
+        "value": "Guardian"
+      },
+      {
+        "type": "text_normal",
+        "value": ", gain that much and more."
+      }
+    ],
+    "effect": "Bonus Gold Earned, Soon:",
+    "image_path": "personal_loan.webp",
+    "element": "Water",
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": "+300",
+      "rare": "+400",
+      "epic": "+500",
+      "heroic": "+600",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "reckless_abandon": {
+    "gods": [
+      "Dionysus"
+    ],
+    "name": "Reckless Abandon",
+    "description": "Your Attacks randomly deal exactly 5, 55, or 555 damage whenever they hit.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Your "
+      },
+      {
+        "type": "text_bold",
+        "value": "Attacks"
+      },
+      {
+        "type": "text_normal",
+        "value": " randomly deal exactly"
+      },
+      {
+        "type": "text_bold",
+        "value": "5"
+      },
+      {
+        "type": "text_normal",
+        "value": ", "
+      },
+      {
+        "type": "text_bold",
+        "value": "55"
+      },
+      {
+        "type": "text_normal",
+        "value": ", or"
+      },
+      {
+        "type": "text_bold",
+        "value": "555"
+      },
+      {
+        "type": "text_normal",
+        "value": " damage whenever they hit."
+      }
+    ],
+    "effect": "Bonus Chance for Max Damage:",
+    "image_path": "reckless_abandon.webp",
+    "element": "Water",
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": "5%",
+      "rare": "7%",
+      "epic": "9%",
+      "heroic": "11%",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": {
+      "condition": "Reach the 4th affinity rank with Dionysus."
+    },
+    "notes": null
+  },
+  "tipsy_shot": {
+    "gods": [
+      "Dionysus"
+    ],
+    "name": "Tipsy Shot",
+    "description": "Hold Cast to lob a large explosion. The binding circle forms there.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Hold "
+      },
+      {
+        "type": "text_bold",
+        "value": "Cast"
+      },
+      {
+        "type": "text_normal",
+        "value": " to lob a large explosion. The binding circle forms there."
+      }
+    ],
+    "effect": "Blast Damage:",
+    "image_path": "tipsy_shot.webp",
+    "element": "Water",
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": "300",
+      "rare": "450",
+      "epic": "600",
+      "heroic": "750",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": true,
+    "prerequisites": null,
+    "notes": null
+  },
+  "worry_free": {
+    "gods": [
+      "Dionysus"
+    ],
+    "name": "Worry Free",
+    "description": "Gain a random amount of Max_Health_Icon, but how much you have becomes a mystery.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Gain a random amount of "
+      },
+      {
+        "type": "image",
+        "name": "Max_Health_Icon",
+        "img_path": "max_health_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": ", but how much you have becomes a mystery."
+      }
+    ],
+    "effect": "Max Life:",
+    "image_path": "worry_free.webp",
+    "element": "Water",
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": "+50 ~ 80",
+      "rare": "+70 ~ 100",
+      "epic": "+90 ~ 120",
+      "heroic": "+110 ~ 140",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
   }
 }
