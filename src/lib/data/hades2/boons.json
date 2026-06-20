@@ -11017,5 +11017,518 @@
     "deals_olympian_damage": false,
     "prerequisites": null,
     "notes": null
-  }
+  },
+
+  "azure_dress": {
+    "gods": [
+        "Arachne"
+    ],
+    "name": "Azure Dress",
+    "description": "Don a +40 Armor_Icon Outfit that makes you restore 5 Magick_Icon every 1 Sec.",
+    "description_rich": [
+        {
+            "type": "text_normal",
+            "value": "Don a "
+        },
+        {
+            "type": "text_bold",
+            "value": "+40"
+        },
+        {
+            "type": "image",
+            "name": "Armor_Icon",
+            "img_path": "armor_icon.webp"
+        },
+        {
+            "type": "text_bold",
+            "value": "Outfit"
+        },
+        {
+            "type": "text_normal",
+            "value": " that makes you restore "
+        },
+        {
+            "type": "text_bold",
+            "value": "5"
+        },
+        {
+            "type": "image",
+            "name": "Magick_Icon",
+            "img_path": "magick_icon.webp"
+        },
+        {
+            "type": "text_normal",
+            "value": " every "
+        },
+        {
+            "type": "text_bold",
+            "value": "1 Sec."
+        }
+    ],
+    "effect": null,
+    "image_path": "azure_dress.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+        "common": null,
+        "rare": null,
+        "epic": null,
+        "heroic": null,
+        "duo": null,
+        "legendary": null,
+        "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+},
+"crimson_dress": {
+    "gods": [
+        "Arachne"
+    ],
+    "name": "Crimson Dress",
+    "description": "Don a +5 Armor_Icon Outfit that makes you deal more damage and +3% after each Encounter.",
+    "description_rich": [
+        {
+            "type": "text_normal",
+            "value": "Don a "
+        },
+        {
+            "type": "text_bold",
+            "value": "+5"
+        },
+        {
+            "type": "image",
+            "name": "Armor_Icon",
+            "img_path": "armor_icon.webp"
+        },
+        {
+            "type": "text_bold",
+            "value": "Outfit"
+        },
+        {
+            "type": "text_normal",
+            "value": " that makes you deal more damage and "
+        },
+        {
+            "type": "text_bold",
+            "value": "+3%"
+        },
+        {
+            "type": "text_normal",
+            "value": " after each "
+        },
+        {
+            "type": "text_bold",
+            "value": "Encounter"
+        },
+        {
+            "type": "text_normal",
+            "value": "."
+        }
+    ],
+    "effect": null,
+    "image_path": "crimson_dress.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+        "common": null,
+        "rare": null,
+        "epic": null,
+        "heroic": null,
+        "duo": null,
+        "legendary": null,
+        "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": {
+        "condition": "Reach the 6th affinity rank with Arachne."
+    },
+    "notes": null
+},
+"emerald_dress": {
+    "gods": [
+        "Arachne"
+    ],
+    "name": "Emerald Dress",
+    "description": "Don a +50 Armor_Icon Outfit that makes you restore 2 Health_Icon whenever you exit a Location.",
+    "description_rich": [
+        {
+            "type": "text_normal",
+            "value": "Don a "
+        },
+        {
+            "type": "text_bold",
+            "value": "+50"
+        },
+        {
+            "type": "image",
+            "name": "Armor_Icon",
+            "img_path": "armor_icon.webp"
+        },
+        {
+            "type": "text_bold",
+            "value": "Outfit"
+        },
+        {
+            "type": "text_normal",
+            "value": " that makes you restore "
+        },
+        {
+            "type": "text_bold",
+            "value": "2"
+        },
+        {
+            "type": "image",
+            "name": "Health_Icon",
+            "img_path": "health_icon.webp"
+        },
+        {
+            "type": "text_normal",
+            "value": " whenever you exit a "
+        },
+        {
+            "type": "text_bold",
+            "value": "Location"
+        },
+        {
+            "type": "text_normal",
+            "value": "."
+        }
+    ],
+    "effect": null,
+    "image_path": "emerald_dress.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+        "common": null,
+        "rare": null,
+        "epic": null,
+        "heroic": null,
+        "duo": null,
+        "legendary": null,
+        "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+},
+"fuchsia_dress": {
+    "gods": [
+        "Arachne"
+    ],
+    "name": "Fuchsia Dress",
+    "description": "Don a +20 Armor_Icon Outfit that makes your Casts deal +100% damage.",
+    "description_rich": [
+        {
+            "type": "text_normal",
+            "value": "Don a "
+        },
+        {
+            "type": "text_bold",
+            "value": "+20"
+        },
+        {
+            "type": "image",
+            "name": "Armor_Icon",
+            "img_path": "armor_icon.webp"
+        },
+        {
+            "type": "text_bold",
+            "value": "Outfit"
+        },
+        {
+            "type": "text_normal",
+            "value": " that makes your "
+        },
+        {
+            "type": "text_bold",
+            "value": "Casts"
+        },
+        {
+            "type": "text_normal",
+            "value": " deal "
+        },
+        {
+            "type": "text_bold",
+            "value": "+100%"
+        },
+        {
+            "type": "text_normal",
+            "value": " damage."
+        }
+    ],
+    "effect": null,
+    "image_path": "fuchsia_dress.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+        "common": null,
+        "rare": null,
+        "epic": null,
+        "heroic": null,
+        "duo": null,
+        "legendary": null,
+        "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+},
+"gilded_dress": {
+    "gods": [
+        "Arachne"
+    ],
+    "name": "Gilded Dress",
+    "description": "Don a +10 Armor_Icon Outfit that grants +5 Gold_Coins_Icon whenever you exit a Location.",
+    "description_rich": [
+        {
+            "type": "text_normal",
+            "value": "Don a "
+        },
+        {
+            "type": "text_bold",
+            "value": "+10"
+        },
+        {
+            "type": "image",
+            "name": "Armor_Icon",
+            "img_path": "armor_icon.webp"
+        },
+        {
+            "type": "text_bold",
+            "value": "Outfit"
+        },
+        {
+            "type": "text_normal",
+            "value": " that grants "
+        },
+        {
+            "type": "text_bold",
+            "value": "+5"
+        },
+        {
+            "type": "image",
+            "name": "Gold_Coins_Icon",
+            "img_path": "gold_coins_icon.webp"
+        },
+        {
+            "type": "text_normal",
+            "value": " whenever you exit a "
+        },
+        {
+            "type": "text_bold",
+            "value": "Location"
+        },
+        {
+            "type": "text_normal",
+            "value": "."
+        }
+    ],
+    "effect": null,
+    "image_path": "gilded_dress.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+        "common": null,
+        "rare": null,
+        "epic": null,
+        "heroic": null,
+        "duo": null,
+        "legendary": null,
+        "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+},
+"lavender_dress": {
+    "gods": [
+        "Arachne"
+    ],
+    "name": "Lavender Dress",
+    "description": "Don a +30 Armor_Icon Outfit that makes you Channel40% faster.",
+    "description_rich": [
+        {
+            "type": "text_normal",
+            "value": "Don a "
+        },
+        {
+            "type": "text_bold",
+            "value": "+30"
+        },
+        {
+            "type": "image",
+            "name": "Armor_Icon",
+            "img_path": "armor_icon.webp"
+        },
+        {
+            "type": "text_bold",
+            "value": "Outfit"
+        },
+        {
+            "type": "text_normal",
+            "value": " that makes you "
+        },
+        {
+            "type": "text_bold",
+            "value": "Channel40%"
+        },
+        {
+            "type": "text_normal",
+            "value": " faster."
+        }
+    ],
+    "effect": null,
+    "image_path": "lavender_dress.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+        "common": null,
+        "rare": null,
+        "epic": null,
+        "heroic": null,
+        "duo": null,
+        "legendary": null,
+        "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+},
+"moonlight_dress": {
+    "gods": [
+        "Arachne"
+    ],
+    "name": "Moonlight Dress",
+    "description": "Don a +55 Armor_Icon Outfit that makes you use 30% Magick_Icon less than before to recharge your Hex.",
+    "description_rich": [
+        {
+            "type": "text_normal",
+            "value": "Don a "
+        },
+        {
+            "type": "text_bold",
+            "value": "+55"
+        },
+        {
+            "type": "image",
+            "name": "Armor_Icon",
+            "img_path": "armor_icon.webp"
+        },
+        {
+            "type": "text_bold",
+            "value": "Outfit"
+        },
+        {
+            "type": "text_normal",
+            "value": " that makes you use "
+        },
+        {
+            "type": "text_bold",
+            "value": "30%"
+        },
+        {
+            "type": "image",
+            "name": "Magick_Icon",
+            "img_path": "magick_icon.webp"
+        },
+        {
+            "type": "text_normal",
+            "value": " less than before to recharge your "
+        },
+        {
+            "type": "text_bold",
+            "value": "Hex"
+        },
+        {
+            "type": "text_normal",
+            "value": "."
+        }
+    ],
+    "effect": null,
+    "image_path": "moonlight_dress.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+        "common": null,
+        "rare": null,
+        "epic": null,
+        "heroic": null,
+        "duo": null,
+        "legendary": null,
+        "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+},
+"onyx_dress": {
+    "gods": [
+        "Arachne"
+    ],
+    "name": "Onyx Dress",
+    "description": "Don a +60 Armor_Icon Outfit that creates +1 Fate Fabric.png now.",
+    "description_rich": [
+        {
+            "type": "text_normal",
+            "value": "Don a "
+        },
+        {
+            "type": "text_bold",
+            "value": "+60"
+        },
+        {
+            "type": "image",
+            "name": "Armor_Icon",
+            "img_path": "armor_icon.webp"
+        },
+        {
+            "type": "text_bold",
+            "value": "Outfit"
+        },
+        {
+            "type": "text_normal",
+            "value": " that creates "
+        },
+        {
+            "type": "text_bold",
+            "value": "+1"
+        },
+        {
+            "type": "image",
+            "name": "Fate_Fabric_Icon",
+            "img_path": "fate_fabric.webp"
+        },
+        {
+            "type": "text_normal",
+            "value": " now."
+        }
+    ],
+    "effect": null,
+    "image_path": "onyx_dress.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+        "common": null,
+        "rare": null,
+        "epic": null,
+        "heroic": null,
+        "duo": null,
+        "legendary": null,
+        "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+}
+
 }
