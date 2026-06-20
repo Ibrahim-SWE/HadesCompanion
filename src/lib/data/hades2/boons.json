@@ -10262,5 +10262,319 @@
       ]
     },
     "notes": null
+  },
+  "cinerary_circle": {
+    "gods": [
+      "Hades"
+    ],
+    "name": "Cinerary Circle",
+    "description": "Whenever you use 60 Magick_Icon, summon 3 Soul Urns around you.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Whenever you use "
+      },
+      {
+        "type": "text_bold",
+        "value": "60"
+      },
+      {
+        "type": "image",
+        "name": "Magick_Icon",
+        "img_path": "magick_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": ", summon "
+      },
+      {
+        "type": "text_bold",
+        "value": "3 Soul Urns"
+      },
+      {
+        "type": "text_normal",
+        "value": " around you."
+      }
+    ],
+    "effect": "Soul Urn Damage:",
+    "image_path": "cinerary_circle.webp",
+    "rarities_effect": {
+      "common": "200",
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    }
+  },
+  "deep_dissent": {
+    "gods": [
+      "Hades"
+    ],
+    "name": "Deep Dissent",
+    "description": "In your confrontation, Chronos / Typhon summons fewer reinforcements.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "In your confrontation, "
+      },
+      {
+        "type": "text_bold",
+        "value": "Chronos"
+      },
+      {
+        "type": "text_normal",
+        "value": "/"
+      },
+      {
+        "type": "text_bold",
+        "value": "Typhon"
+      },
+      {
+        "type": "text_normal",
+        "value": " summons fewer reinforcements."
+      }
+    ],
+    "effect": "Chronos/Typhon Foes Summoned:",
+    "image_path": "deep_dissent.webp",
+    "rarities_effect": {
+      "common": "-50%",
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    }
+  },
+  "gigaros_dash": {
+    "gods": [
+      "Hades"
+    ],
+    "name": "Gigaros Dash",
+    "description": "Your Dash strikes surrounding foes with a punishing sweep that inflicts Scorn.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Your "
+      },
+      {
+        "type": "text_bold",
+        "value": "Dash"
+      },
+      {
+        "type": "text_normal",
+        "value": " strikes surrounding foes with a punishing sweep that inflicts "
+      },
+      {
+        "type": "text_bold",
+        "value": "Scorn"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": "Sweep Damage:",
+    "image_path": "gigaros_dash.webp",
+    "rarities_effect": {
+      "common": "50",
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    }
+  },
+  "howling_soul": {
+    "gods": [
+      "Hades"
+    ],
+    "name": "Howling Soul",
+    "description": "Your Casts launch a projectile that seeks foes. The binding circle forms where it hits.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Your "
+      },
+      {
+        "type": "text_bold",
+        "value": "Casts"
+      },
+      {
+        "type": "text_normal",
+        "value": " launch a projectile that seeks foes. The binding circle forms where it hits."
+      }
+    ],
+    "effect": "Direct-Hit Damage:",
+    "image_path": "howling_soul.webp",
+    "rarities_effect": {
+      "common": "200",
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    }
+  },
+  "last_gasp": {
+    "gods": [
+      "Hades"
+    ],
+    "name": "Last Gasp",
+    "description": "Deal more damage based on how many times you used Death_Defiance_Icon Death Defiance this night.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Deal more damage based on how many times you used "
+      },
+      {
+        "type": "image",
+        "name": "Death_Defiance_Icon",
+        "img_path": "death_defiance_icon.webp"
+      },
+      {
+        "type": "text_bold",
+        "value": "Death Defiance"
+      },
+      {
+        "type": "text_normal",
+        "value": " this night."
+      }
+    ],
+    "effect": "Damage per Used:",
+    "image_path": "last_gasp.webp",
+    "rarities_effect": {
+      "common": "+10%",
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "prerequisites": {
+      "condition": "Have at least 1 Death Defiance (Doesn't matter if it's used or not)"
+    }
+  },
+  "life_tax": {
+    "gods": [
+      "Hades"
+    ],
+    "name": "Life Tax",
+    "description": "Restore Health_Icon for 1% of damage you deal, until you reach the limit.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Restore "
+      },
+      {
+        "type": "image",
+        "name": "Health_Icon",
+        "img_path": "health_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " for "
+      },
+      {
+        "type": "text_bold",
+        "value": "1%"
+      },
+      {
+        "type": "text_normal",
+        "value": " of damage you deal, until you reach the limit."
+      }
+    ],
+    "effect": "Max Total Life Restored:",
+    "image_path": "life_tax.webp",
+    "rarities_effect": {
+      "common": "150",
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    }
+  },
+  "old_grudge": {
+    "gods": [
+      "Hades"
+    ],
+    "name": "Old Grudge",
+    "description": "In your confrontation, Chronos / Typhon takes a burst of damage after the first 3 Sec.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "In your confrontation, "
+      },
+      {
+        "type": "text_bold",
+        "value": "Chronos"
+      },
+      {
+        "type": "text_normal",
+        "value": "/"
+      },
+      {
+        "type": "text_bold",
+        "value": "Typhon"
+      },
+      {
+        "type": "text_normal",
+        "value": " takes a burst of damage after the first "
+      },
+      {
+        "type": "text_bold",
+        "value": "3 Sec."
+      }
+    ],
+    "effect": "Chronos/Typhon Life Reduced:",
+    "image_path": "old_grudge.webp",
+    "rarities_effect": {
+      "common": "-20%",
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    }
+  },
+  "unseen_ire": {
+    "gods": [
+      "Hades"
+    ],
+    "name": "Unseen Ire",
+    "description": "After you take damage, go Dark and deal more damage for the duration.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "After you take damage, go "
+      },
+      {
+        "type": "text_bold",
+        "value": "Dark"
+      },
+      {
+        "type": "text_normal",
+        "value": " and deal more damage for the duration."
+      }
+    ],
+    "effect": "Damage While Dark:",
+    "image_path": "unseen_ire.webp",
+    "rarities_effect": {
+      "common": "+70%",
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    }
   }
 }
