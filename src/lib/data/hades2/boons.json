@@ -554,7 +554,7 @@
     },
     "deals_olympian_damage": false,
     "prerequisites": {
-      "condition": "Have at least one Boon that is not the Heroic rarity. (Excludes Hermes, Chaos, Artemis, Athena, and Dionysus Boons.)"
+      "condition": "Have at least one Boon that is not Heroic. (Excludes Hermes, Chaos, Artemis, Athena, and Dionysus Boons)."
     },
     "notes": null
   },
@@ -1511,7 +1511,7 @@
       "infusion": null
     },
     "deals_olympian_damage": false,
-    "prerequisites": { "condition": "Any Strike Boon." },
+    "prerequisites": { "condition": "Any Strike Boon" },
     "notes": null
   },
   "fine_line": {
@@ -1964,7 +1964,7 @@
       "infusion": null
     },
     "deals_olympian_damage": false,
-    "prerequisites": { "condition": "Any Ring Boon." },
+    "prerequisites": { "condition": "Have any Ring Cast Boon." },
     "notes": null
   },
   "glamour_gain": {
@@ -2072,7 +2072,7 @@
       "infusion": null
     },
     "deals_olympian_damage": true,
-    "prerequisites": { "condition": "" },
+    "prerequisites": null,
     "notes": null
   },
   "grand_caldera": {
@@ -3209,7 +3209,7 @@
       "infusion": null
     },
     "deals_olympian_damage": true,
-    "prerequisites": { "condition": "Any Ring Boon." },
+    "prerequisites": { "condition": "Any Ring Cast Boon." },
     "notes": null
   },
   "local_climate": {
@@ -3240,7 +3240,7 @@
       "infusion": null
     },
     "deals_olympian_damage": false,
-    "prerequisites": { "condition": "Any Ring Boon (except Tidal Ring)" },
+    "prerequisites": { "condition": "Any Ring Cast Boon (except Tidal Ring)" },
     "notes": null
   },
   "love_handles": {
@@ -4190,7 +4190,7 @@
       "infusion": null
     },
     "deals_olympian_damage": true,
-    "prerequisites": { "condition": "Any Ring Boon." },
+    "prerequisites": { "condition": "Any Ring Cast Boon." },
     "notes": null
   },
   "proper_upbringing": {
@@ -5081,7 +5081,7 @@
       "infusion": null
     },
     "deals_olympian_damage": false,
-    "prerequisites": { "condition": "Exhaust all of Apollo's boon selection." },
+    "prerequisites": { "condition": "Exhaust all of a god's boon selection." },
     "notes": null
   },
   "shocking_loss": {
@@ -5311,7 +5311,7 @@
       "infusion": null
     },
     "deals_olympian_damage": false,
-    "prerequisites": { "condition": "" },
+    "prerequisites": null,
     "notes": null
   },
   "solar_ring": {
@@ -5521,7 +5521,7 @@
     },
     "deals_olympian_damage": false,
     "prerequisites": {
-      "condition": "Have at least one Boon that is not the Heroic rarity."
+      "condition": "Have at least one Boon that is not of Heroic rarity."
     },
     "notes": null
   },
@@ -6729,7 +6729,7 @@
       "infusion": null
     },
     "deals_olympian_damage": false,
-    "prerequisites": { "condition": "Any Strike Boon." },
+    "prerequisites": { "condition": "Any Strike Boon" },
     "notes": null
   },
   "whispered_prayer": {
@@ -6759,7 +6759,7 @@
     },
     "deals_olympian_damage": false,
     "prerequisites": {
-      "condition": "Reach the 5th affinity rank with Artemis. Have an offensive Hex from Selene ."
+      "condition": "Reach 5th affinity rank with Artemis. Have an offensive Hex from Selene."
     },
     "notes": null
   },
