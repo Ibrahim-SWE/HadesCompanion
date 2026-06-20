@@ -12070,5 +12070,420 @@
     "deals_olympian_damage": false,
     "prerequisites": null,
     "notes": null
+  },
+  "boon_boon_boon": {
+    "gods": [
+      "Echo"
+    ],
+    "name": "Boon Boon Boon",
+    "description": "Choose 1 out of 3 random Boons from the previous night.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Choose "
+      },
+      {
+        "type": "text_bold",
+        "value": "1"
+      },
+      {
+        "type": "text_normal",
+        "value": " out of "
+      },
+      {
+        "type": "text_bold",
+        "value": "3"
+      },
+      {
+        "type": "text_normal",
+        "value": " random "
+      },
+      {
+        "type": "text_bold",
+        "value": "Boons"
+      },
+      {
+        "type": "text_normal",
+        "value": " from the previous night."
+      }
+    ],
+    "effect": null,
+    "image_path": "boon_boon_boon.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "evade_evade_evade": {
+    "gods": [
+      "Echo"
+    ],
+    "name": "Evade Evade Evade",
+    "description": "Gain +50%Dodge chance, but lose 2% of this each time you Dodge.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Gain "
+      },
+      {
+        "type": "text_bold",
+        "value": "+50% Dodge"
+      },
+      {
+        "type": "text_normal",
+        "value": " chance, but lose "
+      },
+      {
+        "type": "text_bold",
+        "value": "2%"
+      },
+      {
+        "type": "text_normal",
+        "value": " of this each time you "
+      },
+      {
+        "type": "text_bold",
+        "value": "Dodge"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "evade_evade_evade.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "fight_fight_fight": {
+    "gods": [
+      "Echo"
+    ],
+    "name": "Fight Fight Fight",
+    "description": "Gain +60% Max_Health_Icon and Max_Magick_Icon based on their limits, but lose 5% of this after each Location.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Gain "
+      },
+      {
+        "type": "text_bold",
+        "value": "+60%"
+      },
+      {
+        "type": "image",
+        "name": "Max_Health_Icon",
+        "img_path": "max_health_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " and "
+      },
+      {
+        "type": "image",
+        "name": "Max_Magick_Icon",
+        "img_path": "max_magick_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " based on their limits, but lose "
+      },
+      {
+        "type": "text_bold",
+        "value": "5%"
+      },
+      {
+        "type": "text_normal",
+        "value": " of this after each "
+      },
+      {
+        "type": "text_bold",
+        "value": "Location"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "fight_fight_fight.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "gift_gift_gift": {
+    "gods": [
+      "Echo"
+    ],
+    "name": "Gift Gift Gift",
+    "description": "After you switch Keepsakes, also gain the basic effect of your last keepsake",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "After you switch "
+      },
+      {
+        "type": "text_bold",
+        "value": "Keepsakes"
+      },
+      {
+        "type": "text_normal",
+        "value": ", also gain the basic effect of: "
+      },
+      {
+        "type": "text_bold",
+        "value": "your last keepsake"
+      }
+    ],
+    "effect": null,
+    "image_path": "gift_gift_gift.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "gold_gold_gold": {
+    "gods": [
+      "Echo"
+    ],
+    "name": "Gold Gold Gold",
+    "description": "After your next purchase from Charon, gain another at no extra charge (in most cases).",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "After your next purchase from "
+      },
+      {
+        "type": "text_bold",
+        "value": "Charon"
+      },
+      {
+        "type": "text_normal",
+        "value": ", gain another at no extra charge (in most cases)."
+      }
+    ],
+    "effect": null,
+    "image_path": "gold_gold_gold.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "pom_pom_pom": {
+    "gods": [
+      "Echo"
+    ],
+    "name": "Pom Pom Pom",
+    "description": "Double the Arrow_Up_Icon Lv. of a random one of your Boons whose Arrow_Up_Icon Lv. is higher than the rest.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Double the "
+      },
+      {
+        "type": "image",
+        "name": "Arrow_Up_Icon",
+        "img_path": "arrow_up_icon.webp"
+      },
+      {
+        "type": "text_bold",
+        "value": "Lv."
+      },
+      {
+        "type": "text_normal",
+        "value": " of a random one of your "
+      },
+      {
+        "type": "text_bold",
+        "value": "Boons"
+      },
+      {
+        "type": "text_normal",
+        "value": " whose "
+      },
+      {
+        "type": "image",
+        "name": "Arrow_Up_Icon",
+        "img_path": "arrow_up_icon.webp"
+      },
+      {
+        "type": "text_bold",
+        "value": "Lv."
+      },
+      {
+        "type": "text_normal",
+        "value": " is higher than the rest."
+      }
+    ],
+    "effect": null,
+    "image_path": "pom_pom_pom.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "reward_reward_reward": {
+    "gods": [
+      "Echo"
+    ],
+    "name": "Reward Reward Reward",
+    "description": "Manifest a copy of your most recently claimed Reward",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Manifest a copy of your most recently claimed reward"
+      },
+      {
+        "type": "text_bold",
+        "value": ""
+      }
+    ],
+    "effect": null,
+    "image_path": "reward_reward_reward.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "survive_survive_survive": {
+    "gods": [
+      "Echo"
+    ],
+    "name": "Survive Survive Survive",
+    "description": "Replace all spent uses of Death_Defiance_Icon with ones that restore 50% Health_Icon and Magick_Icon, then less and less.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Replace all spent uses of "
+      },
+      {
+        "type": "image",
+        "name": "Death_Defiance_Icon",
+        "img_path": "death_defiance_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " with ones that restore "
+      },
+      {
+        "type": "text_bold",
+        "value": "50%"
+      },
+      {
+        "type": "image",
+        "name": "Health_Icon",
+        "img_path": "health_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " and "
+      },
+      {
+        "type": "image",
+        "name": "Magick_Icon",
+        "img_path": "magick_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": ", then less and less."
+      }
+    ],
+    "effect": null,
+    "image_path": "survive_survive_survive.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
   }
 }
