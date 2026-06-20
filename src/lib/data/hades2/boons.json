@@ -13392,5 +13392,512 @@
     "deals_olympian_damage": false,
     "prerequisites": null,
     "notes": null
+  },
+  "explosive_intent": {
+    "gods": [
+      "Icarus"
+    ],
+    "name": "Explosive Intent",
+    "description": "Your Omega_Icon Moves also deal 50 damage in an area around foes they hit, but use +10 Magick_Icon.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Your "
+      },
+      {
+        "type": "image",
+        "name": "Omega_Icon",
+        "img_path": "omega_icon.webp"
+      },
+      {
+        "type": "text_bold",
+        "value": "Moves"
+      },
+      {
+        "type": "text_normal",
+        "value": " also deal "
+      },
+      {
+        "type": "text_bold",
+        "value": "50"
+      },
+      {
+        "type": "text_normal",
+        "value": " damage in an area around foes they hit, but use "
+      },
+      {
+        "type": "text_bold",
+        "value": "+10"
+      },
+      {
+        "type": "image",
+        "name": "Magick_Icon",
+        "img_path": "magick_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "explosive_intent.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "hazard_boom": {
+    "gods": [
+      "Icarus"
+    ],
+    "name": "Hazard Boom",
+    "description": "Your Casts also blast the area after 4 Sec., dealing 500 damage to foes, but 20 to you.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Your "
+      },
+      {
+        "type": "text_bold",
+        "value": "Casts"
+      },
+      {
+        "type": "text_normal",
+        "value": " also blast the area after "
+      },
+      {
+        "type": "text_bold",
+        "value": "4 Sec."
+      },
+      {
+        "type": "text_normal",
+        "value": ", dealing "
+      },
+      {
+        "type": "text_bold",
+        "value": "500"
+      },
+      {
+        "type": "text_normal",
+        "value": " damage to foes, but "
+      },
+      {
+        "type": "text_bold",
+        "value": "20"
+      },
+      {
+        "type": "text_normal",
+        "value": " to you."
+      }
+    ],
+    "effect": null,
+    "image_path": "hazard_boom.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "ingenious_flourish": {
+    "gods": [
+      "Icarus"
+    ],
+    "name": "Ingenious Flourish",
+    "description": "Your Special Boon gains +3 Arrow_Up_Icon Lv., but you Prime35 Magick_Icon.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Your "
+      },
+      {
+        "type": "text_bold",
+        "value": "Special Boon"
+      },
+      {
+        "type": "text_normal",
+        "value": " gains "
+      },
+      {
+        "type": "text_bold",
+        "value": "+3"
+      },
+      {
+        "type": "image",
+        "name": "Arrow_Up_Icon",
+        "img_path": "arrow_up_icon.webp"
+      },
+      {
+        "type": "text_bold",
+        "value": "Lv."
+      },
+      {
+        "type": "text_normal",
+        "value": ", but you "
+      },
+      {
+        "type": "text_bold",
+        "value": "Prime35"
+      },
+      {
+        "type": "image",
+        "name": "Magick_Icon",
+        "img_path": "magick_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "ingenious_flourish.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "ingenious_strike": {
+    "gods": [
+      "Icarus"
+    ],
+    "name": "Ingenious Strike",
+    "description": "Your Attack Boon gains +3 Arrow_Up_Icon Lv., but you Prime35 Magick_Icon.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Your "
+      },
+      {
+        "type": "text_bold",
+        "value": "Attack Boon"
+      },
+      {
+        "type": "text_normal",
+        "value": " gains "
+      },
+      {
+        "type": "text_bold",
+        "value": "+3"
+      },
+      {
+        "type": "image",
+        "name": "Arrow_Up_Icon",
+        "img_path": "arrow_up_icon.webp"
+      },
+      {
+        "type": "text_bold",
+        "value": "Lv."
+      },
+      {
+        "type": "text_normal",
+        "value": ", but you "
+      },
+      {
+        "type": "text_bold",
+        "value": "Prime35"
+      },
+      {
+        "type": "image",
+        "name": "Magick_Icon",
+        "img_path": "magick_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "ingenious_strike.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "latest_model": {
+    "gods": [
+      "Icarus"
+    ],
+    "name": "Latest Model",
+    "description": "Icarus chooses 1 Daedalus_Hammer of yours to upgrade to Rank II this night, improving its effects.",
+    "description_rich": [
+      {
+        "type": "text_bold",
+        "value": "Icarus"
+      },
+      {
+        "type": "text_normal",
+        "value": " chooses "
+      },
+      {
+        "type": "text_bold",
+        "value": "1"
+      },
+      {
+        "type": "image",
+        "name": "Daedalus_Hammer",
+        "img_path": "daedalus_hammer.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " of yours to upgrade to "
+      },
+      {
+        "type": "text_bold",
+        "value": "Rank II"
+      },
+      {
+        "type": "text_normal",
+        "value": " this night, improving its effects. "
+      }
+    ],
+    "effect": null,
+    "image_path": "latest_model.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": {
+      "condition": "Reach the 6th affinity rank with Icarus"
+    },
+    "notes": null
+  },
+  "protective_coating": {
+    "gods": [
+      "Icarus"
+    ],
+    "name": "Protective Coating",
+    "description": "Gain +100 Armor_Icon. The next time you lose all your Armor_Icon, become Impervious for 8 Sec.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Gain "
+      },
+      {
+        "type": "text_bold",
+        "value": "+100"
+      },
+      {
+        "type": "image",
+        "name": "Armor_Icon",
+        "img_path": "armor_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": ". The next time you lose all your "
+      },
+      {
+        "type": "image",
+        "name": "Armor_Icon",
+        "img_path": "armor_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": ", become "
+      },
+      {
+        "type": "text_bold",
+        "value": "Impervious"
+      },
+      {
+        "type": "text_normal",
+        "value": " for "
+      },
+      {
+        "type": "text_bold",
+        "value": "8 Sec."
+      }
+    ],
+    "effect": null,
+    "image_path": "protective_coating.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "supply_chain": {
+    "gods": [
+      "Icarus"
+    ],
+    "name": "Supply Chain",
+    "description": "Each time you clear 7 Encounters, receive +10 Health_Restore_Icon and 2 Pom Slice.png.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Each time you clear "
+      },
+      {
+        "type": "text_bold",
+        "value": "7 Encounters"
+      },
+      {
+        "type": "text_normal",
+        "value": ", receive "
+      },
+      {
+        "type": "text_bold",
+        "value": "+10"
+      },
+      {
+        "type": "image",
+        "name": "Health_Restore_Icon",
+        "img_path": "health_restore_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " and "
+      },
+      {
+        "type": "text_bold",
+        "value": "2"
+      },
+      {
+        "type": "image",
+        "name": "Pom Slice.png",
+        "img_path": "pom_slice_png.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "supply_chain.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "volatile_coating": {
+    "gods": [
+      "Icarus"
+    ],
+    "name": "Volatile Coating",
+    "description": "Gain +50 Armor_Icon. The next time you lose all your Armor_Icon, deal 4000 damage to surrounding foes.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Gain "
+      },
+      {
+        "type": "text_bold",
+        "value": "+50"
+      },
+      {
+        "type": "image",
+        "name": "Armor_Icon",
+        "img_path": "armor_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": ". The next time you lose all your "
+      },
+      {
+        "type": "image",
+        "name": "Armor_Icon",
+        "img_path": "armor_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": ", deal "
+      },
+      {
+        "type": "text_bold",
+        "value": "4000"
+      },
+      {
+        "type": "text_normal",
+        "value": " damage to surrounding foes."
+      }
+    ],
+    "effect": null,
+    "image_path": "volatile_coating.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
   }
 }
