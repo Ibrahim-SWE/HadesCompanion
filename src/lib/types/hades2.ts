@@ -1,7 +1,13 @@
 export type DescriptionPart =
   | { type: "text_normal"; value: string }
   | { type: "text_bold"; value: string }
-  | { type: "image"; name: string; img_path: string };
+  | { type: "image"; name: string; img_path: string }
+  | {
+      type: "range";
+      value: string;
+      rangeStart: number;
+      rangeEnd: number;
+    };
 
 export type ElementRequirement = { element: string; amount: number };
 
@@ -17,7 +23,7 @@ export type BoonData = {
   name: string;
   description: string;
   description_rich: DescriptionPart[];
-  effect: string;
+  effect: string | null;
   image_path: string;
   element: string | null;
   type: string | null;

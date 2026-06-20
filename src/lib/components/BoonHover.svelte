@@ -2,9 +2,10 @@
   import { browser } from "$app/environment";
   import { portal } from "$lib/actions/portal";
   import { getBoonByName } from "$lib/boon-lookup";
+  import BoonDescriptionRich from "./BoonDescriptionRich.svelte";
   import BoonImgElemIcon from "./BoonImg_ElemIcon.svelte";
-  import LazyMiscImg from "./LazyMiscImg.svelte";
   import type { BoonData } from "$lib/types/hades2";
+  import type { Attachment } from "svelte/attachments";
   import type { Snippet } from "svelte";
 
   let {
@@ -66,12 +67,21 @@
   function handleMouseLeave() {
     showPreview = false;
   }
+
+  function captureTrigger(): Attachment<HTMLButtonElement> {
+    return (element) => {
+      trigger = element;
+      return () => {
+        trigger = undefined;
+      };
+    };
+  }
 </script>
 
 {#if resolvedBoon}
   <button
     type="button"
-    bind:this={trigger}
+    {@attach captureTrigger()}
     class="inline cursor-help border-0 bg-transparent p-0 font-inherit text-inherit underline decoration-dotted decoration-[#46f08f]/50 underline-offset-2 {className}"
     onmouseenter={handleMouseEnter}
     onmouseleave={handleMouseLeave}
@@ -100,19 +110,11 @@
             {resolvedBoon.name}
           </p>
           <p class="mt-1 font-sans text-[0.65rem] leading-snug text-[#b3c2b7]">
-            {#each resolvedBoon.description_rich as part, i (`${part.type}-${i}`)}
-              {#if part.type === "text_normal"}<span>{part.value}</span>
-              {:else if part.type === "text_bold"}<strong
-                  class="font-semibold text-[#e5f4e7]">{part.value}</strong
-                >
-              {:else if part.type === "image"}
-                <LazyMiscImg
-                  file={part.img_path}
-                  alt={part.name}
-                  class="inline-block h-[1.2em] w-auto align-middle object-contain"
-                />
-              {/if}
-            {/each}
+            <BoonDescriptionRich
+              parts={resolvedBoon.description_rich}
+              imageClass="inline-block h-[1.2em] w-auto align-middle object-contain"
+              rangeClass="font-mono text-[0.95em] font-semibold text-[#e5f4e7] tabular-nums"
+            />
           </p>
         </div>
       </div>

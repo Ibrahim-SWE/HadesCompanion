@@ -1,7 +1,12 @@
 <script lang="ts">
   import BoonImgElemIcon from "./BoonImg_ElemIcon.svelte";
+  import BoonDescriptionRich from "./BoonDescriptionRich.svelte";
   import BoonPrerequisites from "./BoonPrerequisites.svelte";
-  import LazyMiscImg from "./LazyMiscImg.svelte";
+  import {
+    compactRarityValue,
+    getOrderedRarityEffects,
+    isChaosBlessing,
+  } from "$lib/boon-display";
   import type { BoonData } from "$lib/types/hades2";
 
   let {
@@ -22,16 +27,21 @@
     infusion: "text-[#c071ff]",
   };
 
+  let chaosBlessing = $derived(isChaosBlessing(boon));
   let effectsValues = $derived(
-    Object.entries(boon.rarities_effect).filter(
-      (entry): entry is [string, string] => entry[1] !== null,
-    ),
+    chaosBlessing
+      ? getOrderedRarityEffects(boon)
+      : Object.entries(boon.rarities_effect).filter(
+          (entry): entry is [string, string] => entry[1] !== null,
+        ),
   );
 
   const typeAccents: Record<string, string> = {
     duo: "#3e9e57",
     legendary: "#c8911f",
     infusion: "#9c37a6",
+    blessing: "#d8e4da",
+    curse: "#8b2d5c",
   };
 
   const typeCardStyles: Record<string, string> = {
@@ -40,6 +50,10 @@
       "bg-linear-to-r from-[#1e1606] to-[#100d03] border-[#c8911f]/60 hover:border-[#c8911f]",
     infusion:
       "bg-linear-to-r from-[#14081a] to-[#0a0510] border-[#6b2d7a]/60 hover:border-[#9c37a6]",
+    blessing:
+      "bg-linear-to-r from-[#3d4842] to-[#343d38] border-[#e5f4e7]/40 hover:border-[#e5f4e7]/60",
+    curse:
+      "bg-linear-to-r from-[#1a0812] to-[#100509] border-[#5c1838]/70 hover:border-[#7a2248]",
   };
 
   const effectContainerStyles: Record<string, string> = {
@@ -48,18 +62,26 @@
       "bg-[#1a1408] border-[#5a4518] shadow-[inset_0_1px_0_rgba(200,145,31,0.12)]",
     infusion:
       "bg-[#120818] border-[#4a2458] shadow-[inset_0_1px_0_rgba(156,55,166,0.12)]",
+    blessing:
+      "bg-[#2a332e] border-[#6a756c] shadow-[inset_0_1px_0_rgba(255,255,255,0.15)]",
+    curse:
+      "bg-[#14060e] border-[#3d1028] shadow-[inset_0_1px_0_rgba(139,45,92,0.15)]",
   };
 
   const effectLabelColors: Record<string, string> = {
     duo: "text-[#46f08f]",
     legendary: "text-[#e8b84a]",
     infusion: "text-[#c071ff]",
+    blessing: "text-[#e5f4e7]",
+    curse: "text-[#b84a78]",
   };
 
   const effectDividerColors: Record<string, string> = {
     duo: "text-[#2d5a3c]",
     legendary: "text-[#5a4518]",
     infusion: "text-[#4a2458]",
+    blessing: "text-[#6a756c]",
+    curse: "text-[#3d1028]",
   };
 
   let normalizedType = $derived((boon.type ?? "").trim().toLowerCase());
@@ -85,7 +107,11 @@
         ? "hover:shadow-[0_2px_14px_rgba(200,145,31,0.15)]"
         : normalizedType === "infusion"
           ? "hover:shadow-[0_2px_14px_rgba(156,55,166,0.15)]"
-          : "hover:shadow-[0_2px_12px_rgba(0,0,0,0.6)]",
+          : normalizedType === "blessing"
+            ? "hover:shadow-[0_2px_14px_rgba(229,244,231,0.12)]"
+            : normalizedType === "curse"
+              ? "hover:shadow-[0_2px_14px_rgba(92,24,56,0.35)]"
+            : "hover:shadow-[0_2px_12px_rgba(0,0,0,0.6)]",
   );
   let hoverAccent = $derived(
     normalizedType === "duo"
@@ -94,7 +120,11 @@
         ? "from-[#c8911f]/80"
         : normalizedType === "infusion"
           ? "from-[#c071ff]/80"
-          : "from-white/20",
+          : normalizedType === "blessing"
+            ? "from-[#e5f4e7]/50"
+            : normalizedType === "curse"
+              ? "from-[#8b2d5c]/70"
+            : "from-white/20",
   );
 
   let godLabel = $derived(
@@ -109,6 +139,8 @@
     duo: "border-[#2d5a3c] text-[#46f08f] bg-[#0f2414]",
     legendary: "border-[#5a4518] text-[#e8b84a] bg-[#1a1408]",
     infusion: "border-[#4a2458] text-[#c071ff] bg-[#120818]",
+    blessing: "border-[#7a857c] text-[#e5f4e7] bg-[#2a332e]",
+    curse: "border-[#4a1430] text-[#c45a82] bg-[#14060e]",
   };
 
   let badgeStyle = $derived(
@@ -116,14 +148,7 @@
       "border-[#2a2a2a] text-white bg-[#0f0f0f]",
   );
 
-  let isRegularBoon = $derived(
-    normalizedType !== "duo" &&
-      normalizedType !== "legendary" &&
-      normalizedType !== "infusion",
-  );
-
   function effectValueColor(rarity: string): string {
-    if (!isRegularBoon) return "text-white";
     return rarityColors[rarity] ?? "text-[#c071ff]";
   }
 </script>
@@ -164,19 +189,7 @@
         {boon.name}
       </h2>
       <p class="text-xs text-[#b3c2b7] font-sans leading-snug mt-1">
-        {#each boon.description_rich as part, i (`${part.type}-${i}`)}
-          {#if part.type === "text_normal"}<span>{part.value}</span>
-          {:else if part.type === "text_bold"}<strong class="text-[#e5f4e7] font-semibold"
-              >{part.value}</strong
-            >
-          {:else if part.type === "image"}
-            <LazyMiscImg
-              file={part.img_path}
-              alt={part.name}
-              class="inline-block h-[1.4em] w-auto object-contain align-middle"
-            />
-          {/if}
-        {/each}
+        <BoonDescriptionRich parts={boon.description_rich} />
       </p>
     </div>
   </div>
@@ -211,23 +224,29 @@
     {/if}
 
     {#if effectsValues.length > 0}
-      <div
-        class="border rounded-md px-2 py-1.5 {effectContainerStyle}"
-      >
-        <div class="flex items-center gap-1.5">
-          <span class="{effectLabelColor} text-[0.65rem]">▶</span>
-          <span
-            class="text-[0.65rem] uppercase tracking-widest font-sans font-semibold shrink-0 {effectLabelColor}"
-            >{boon.effect}</span
-          >
-        </div>
-        <div class="mt-1 flex flex-wrap items-center gap-x-1 gap-y-0.5 pl-3.5">
+      <div class="border rounded-md px-2 py-1.5 {effectContainerStyle}">
+        {#if boon.effect}
+          <div class="flex items-center gap-1.5">
+            <span class="{effectLabelColor} text-[0.65rem]">▶</span>
+            <span
+              class="text-[0.65rem] uppercase tracking-widest font-sans font-semibold shrink-0 {effectLabelColor}"
+              >{boon.effect}</span
+            >
+          </div>
+        {/if}
+        <div
+          class="flex flex-wrap items-center gap-x-1 gap-y-0.5 {boon.effect
+            ? 'mt-1 pl-3.5'
+            : ''}"
+        >
           {#each effectsValues as [rarity, value], i (rarity)}
             {#if i > 0}<span class="{effectDividerColor}">/</span>{/if}
             <span
               class="bg-black px-1 py-px rounded font-mono text-[0.7rem] font-bold leading-tight {effectValueColor(
                 rarity,
-              )}">{value}</span
+              )}"
+              title={value}
+              >{chaosBlessing ? compactRarityValue(value) : value}</span
             >
           {/each}
         </div>
