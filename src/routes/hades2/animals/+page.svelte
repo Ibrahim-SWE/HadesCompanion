@@ -4,6 +4,16 @@
   import LazyMiscImg from "$lib/components/LazyMiscImg.svelte";
   import { loadPetImage } from "$lib/assets/petImages";
   import petsData from "$lib/data/hades2/pets.json";
+  import {
+    ALL_PETS_KEY,
+    buildPetReplaceHref,
+    parsePetFromSearchParams,
+    petUrlMatchesState,
+  } from "$lib/animals-url";
+  import { browser } from "$app/environment";
+  import { replaceState } from "$app/navigation";
+  import { page } from "$app/state";
+  import { onMount } from "svelte";
 
   type DescriptionRich =
     | { type: "text_normal"; value: string }
@@ -33,7 +43,75 @@
   };
 
   const pets = Object.entries(petsData) as [string, PetDetails][];
-  let activeTab = $state("all");
+  const petKeys = [ALL_PETS_KEY, ...pets.map(([key]) => key)];
+  const defaultPetKey = ALL_PETS_KEY;
+
+  let activeTab = $state(defaultPetKey);
+  let syncingFromUrl = false;
+  let syncingToUrl = false;
+
+  function isAnimalsPath(pathname: string): boolean {
+    return pathname === "/hades2/animals" || pathname.endsWith("/hades2/animals");
+  }
+
+  function hydrateFromPageUrl() {
+    if (!browser || syncingToUrl) return;
+
+    const location = new URL(window.location.href);
+    if (!isAnimalsPath(location.pathname)) return;
+
+    syncingFromUrl = true;
+    activeTab = parsePetFromSearchParams(
+      location.searchParams,
+      petKeys,
+      defaultPetKey,
+    );
+    syncingFromUrl = false;
+  }
+
+  $effect(() => {
+    if (!browser || syncingToUrl) return;
+    page.url.pathname;
+    page.url.search;
+    hydrateFromPageUrl();
+  });
+
+  onMount(() => {
+    hydrateFromPageUrl();
+
+    const onPopState = () => {
+      queueMicrotask(() => {
+        if (isAnimalsPath(window.location.pathname)) {
+          hydrateFromPageUrl();
+        }
+      });
+    };
+
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  });
+
+  function pushPetToUrl() {
+    if (!browser || syncingFromUrl || syncingToUrl) return;
+
+    const location = new URL(window.location.href);
+    if (!isAnimalsPath(location.pathname)) return;
+    if (petUrlMatchesState(activeTab, location, petKeys, defaultPetKey)) {
+      return;
+    }
+
+    syncingToUrl = true;
+    replaceState(
+      buildPetReplaceHref(activeTab, location.pathname, defaultPetKey),
+      {},
+    );
+    syncingToUrl = false;
+  }
+
+  function selectPet(petKey: string) {
+    activeTab = petKey;
+    pushPetToUrl();
+  }
 
   const petThemes: Record<string, PetTheme> = {
     Frinos: {
@@ -98,10 +176,10 @@
       <button
         type="button"
         class="bg-[#0d1a12] border px-2.5 py-1 rounded text-xs uppercase tracking-wider cursor-pointer transition-all duration-200 {activeTab ===
-        'all'
+        ALL_PETS_KEY
           ? 'border-[#46f08f] text-[#ccff90] shadow-[0_0_8px_rgba(77,252,142,0.2)] bg-[#153320]'
           : 'border-[#1a3a25] text-[#8da693] hover:bg-[#153320] hover:text-[#ccff90] hover:border-[#46f08f]'}"
-        onclick={() => (activeTab = "all")}
+        onclick={() => selectPet(ALL_PETS_KEY)}
       >
         All
       </button>
@@ -114,7 +192,7 @@
             ? 'bg-[#153320] text-[#ccff90] shadow-[0_0_8px_var(--accent-dim)] border-(--accent)'
             : 'border-[#1a3a25] text-[#8da693] hover:bg-[#153320] hover:text-[#ccff90] hover:border-(--accent) hover:shadow-[0_0_8px_var(--accent-dim)]'}"
           style={themeStyle(theme)}
-          onclick={() => (activeTab = petKey)}
+          onclick={() => selectPet(petKey)}
         >
           {pet.name}
         </button>
@@ -123,7 +201,7 @@
 
     <div class="flex flex-col gap-2">
       {#each pets as [petKey, pet] (petKey)}
-        {#if activeTab === "all" || activeTab === petKey}
+        {#if activeTab === ALL_PETS_KEY || activeTab === petKey}
           {@const theme = petThemes[petKey] || petThemes.Frinos}
 
           <article
