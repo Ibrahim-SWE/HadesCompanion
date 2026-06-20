@@ -2,10 +2,21 @@
   import Boon from "$lib/components/Boon.svelte";
   import Container from "$lib/components/Container.svelte";
   import FilterCheckbox from "$lib/components/FilterCheckbox.svelte";
+  import {
+    boonFilterUrlMatchesState,
+    buildBoonFilterReplaceHref,
+    buildShareSummary,
+    buildShareUrl,
+    parseBoonFiltersFromSearchParams,
+    type BoonFilterState,
+  } from "$lib/boons-filter-url";
   import boonsData from "$lib/data/hades2/boons.json";
+  import { SITE_ORIGIN } from "$lib/seo";
   import { browser } from "$app/environment";
+  import { replaceState } from "$app/navigation";
   import { page } from "$app/state";
   import type { BoonData } from "$lib/types/hades2";
+  import { onMount } from "svelte";
 
   type BoonIndexEntry = {
     id: string;
@@ -31,6 +42,8 @@
   let isBoonTypeOpen = $state(false);
   let isGodsMenuOpen = $state(false);
   let isElementMenuOpen = $state(false);
+  let isShareMenuOpen = $state(false);
+  let linkCopied = $state(false);
 
   let selectedGods: string[] = $state([]);
   let selectedTypes: string[] = $state([]);
@@ -41,12 +54,118 @@
   let legendaryFilter: boolean | null = $state(null);
   let infusionFilter: boolean | null = $state(null);
   let searchQuery = $state("");
+  let urlSyncSearchQuery = $state("");
+  let syncingFromUrl = false;
+  let syncingToUrl = false;
+  let searchDebounceTimer: ReturnType<typeof setTimeout> | undefined;
+
+  function getFilterState(search = urlSyncSearchQuery): BoonFilterState {
+    return {
+      selectedGods,
+      selectedTypes,
+      selectedElements,
+      coreFilter,
+      olympDmgFilter,
+      duoFilter,
+      legendaryFilter,
+      infusionFilter,
+      searchQuery: search,
+    };
+  }
+
+  function applyFilterState(state: BoonFilterState) {
+    selectedGods = state.selectedGods;
+    selectedTypes = state.selectedTypes;
+    selectedElements = state.selectedElements;
+    coreFilter = state.coreFilter;
+    olympDmgFilter = state.olympDmgFilter;
+    duoFilter = state.duoFilter;
+    legendaryFilter = state.legendaryFilter;
+    infusionFilter = state.infusionFilter;
+    searchQuery = state.searchQuery;
+    urlSyncSearchQuery = state.searchQuery;
+  }
+
+  function isBoonsPath(pathname: string): boolean {
+    return pathname === "/hades2/boons" || pathname.endsWith("/hades2/boons");
+  }
+
+  function hydrateFromPageUrl() {
+    if (!browser || syncingToUrl) return;
+
+    const location = new URL(window.location.href);
+    if (!isBoonsPath(location.pathname)) return;
+
+    if (searchDebounceTimer) {
+      clearTimeout(searchDebounceTimer);
+      searchDebounceTimer = undefined;
+    }
+
+    syncingFromUrl = true;
+    applyFilterState(parseBoonFiltersFromSearchParams(location.searchParams));
+    syncingFromUrl = false;
+  }
+
+  $effect(() => {
+    if (!browser || syncingToUrl) return;
+    page.url.pathname;
+    page.url.search;
+    hydrateFromPageUrl();
+  });
+
+  onMount(() => {
+    hydrateFromPageUrl();
+
+    const onPopState = () => {
+      queueMicrotask(() => {
+        if (isBoonsPath(window.location.pathname)) {
+          hydrateFromPageUrl();
+        }
+      });
+    };
+
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  });
+
+  function pushFiltersToUrl() {
+    if (!browser || syncingFromUrl || syncingToUrl) return;
+
+    const state = getFilterState();
+    const location = new URL(window.location.href);
+    if (!isBoonsPath(location.pathname)) return;
+    if (boonFilterUrlMatchesState(state, location)) return;
+
+    syncingToUrl = true;
+    replaceState(buildBoonFilterReplaceHref(state, location.pathname), {});
+    syncingToUrl = false;
+  }
+
+  function syncSearchNow() {
+    if (searchDebounceTimer) {
+      clearTimeout(searchDebounceTimer);
+      searchDebounceTimer = undefined;
+    }
+    urlSyncSearchQuery = searchQuery;
+  }
 
   $effect(() => {
     if (!browser) return;
 
-    const query = page.url.searchParams.get("search");
-    searchQuery = query ?? "";
+    const query = searchQuery;
+    if (searchDebounceTimer) clearTimeout(searchDebounceTimer);
+    searchDebounceTimer = setTimeout(() => {
+      urlSyncSearchQuery = query;
+      searchDebounceTimer = undefined;
+      if (!syncingFromUrl) pushFiltersToUrl();
+    }, 300);
+
+    return () => {
+      if (searchDebounceTimer) {
+        clearTimeout(searchDebounceTimer);
+        searchDebounceTimer = undefined;
+      }
+    };
   });
 
   function clickOutside(node: HTMLElement, handler: () => void) {
@@ -66,21 +185,63 @@
     isGodsMenuOpen = false;
     isBoonTypeOpen = false;
     isElementMenuOpen = false;
+    isShareMenuOpen = false;
   }
 
-  function toggleDropdown(menu: "gods" | "type" | "elements") {
+  function toggleDropdown(menu: "gods" | "type" | "elements" | "share") {
     const wasOpen =
       menu === "gods"
         ? isGodsMenuOpen
         : menu === "type"
           ? isBoonTypeOpen
-          : isElementMenuOpen;
+          : menu === "elements"
+            ? isElementMenuOpen
+            : isShareMenuOpen;
 
     closeAllDropdowns();
 
     if (menu === "gods") isGodsMenuOpen = !wasOpen;
     if (menu === "type") isBoonTypeOpen = !wasOpen;
     if (menu === "elements") isElementMenuOpen = !wasOpen;
+    if (menu === "share") isShareMenuOpen = !wasOpen;
+  }
+
+  function getLiveShareState(): BoonFilterState {
+    return getFilterState(searchQuery);
+  }
+
+  async function copyShareLink() {
+    const url = buildShareUrl(getLiveShareState(), SITE_ORIGIN);
+    await navigator.clipboard.writeText(url);
+    linkCopied = true;
+    closeAllDropdowns();
+    setTimeout(() => {
+      linkCopied = false;
+    }, 2000);
+  }
+
+  function shareOnReddit() {
+    const state = getLiveShareState();
+    const url = buildShareUrl(state, SITE_ORIGIN);
+    const title = buildShareSummary(state, filteredBoons.length);
+    window.open(
+      `https://www.reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
+    closeAllDropdowns();
+  }
+
+  function shareOnX() {
+    const state = getLiveShareState();
+    const url = buildShareUrl(state, SITE_ORIGIN);
+    const text = buildShareSummary(state, filteredBoons.length);
+    window.open(
+      `https://twitter.com/intent/tweet?text=${encodeURIComponent(`${text} ${url}`)}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
+    closeAllDropdowns();
   }
 
   function cycleState(currentState: boolean | null): boolean | null {
@@ -153,6 +314,15 @@
       searchQuery.trim().length > 0,
   );
 
+  function cycleTriState(
+    current: boolean | null,
+    set: (value: boolean | null) => void,
+  ) {
+    syncSearchNow();
+    set(cycleState(current));
+    pushFiltersToUrl();
+  }
+
   function clearFilters() {
     selectedGods = [];
     selectedTypes = [];
@@ -163,31 +333,41 @@
     legendaryFilter = null;
     infusionFilter = null;
     searchQuery = "";
+    syncSearchNow();
+    pushFiltersToUrl();
     closeAllDropdowns();
   }
 
   function addGodFilter(god: string) {
+    syncSearchNow();
     if (!selectedGods.includes(god)) {
       selectedGods = [...selectedGods, god];
+      pushFiltersToUrl();
     }
   }
 
   function toggleGodFilter(god: string) {
+    syncSearchNow();
     selectedGods = selectedGods.includes(god)
       ? selectedGods.filter((g) => g !== god)
       : [...selectedGods, god];
+    pushFiltersToUrl();
   }
 
   function toggleTypeFilter(type: string) {
+    syncSearchNow();
     selectedTypes = selectedTypes.includes(type)
       ? selectedTypes.filter((t) => t !== type)
       : [...selectedTypes, type];
+    pushFiltersToUrl();
   }
 
   function toggleElementFilter(element: string | null) {
+    syncSearchNow();
     selectedElements = selectedElements.includes(element)
       ? selectedElements.filter((e) => e !== element)
       : [...selectedElements, element];
+    pushFiltersToUrl();
   }
 </script>
 
@@ -335,7 +515,7 @@
         <button
           type="button"
           class="{filterChip} {getToggleStyles(duoFilter)}"
-          onclick={() => (duoFilter = cycleState(duoFilter))}
+          onclick={() => cycleTriState(duoFilter, (v) => (duoFilter = v))}
         >
           <span class="text-[0.65rem] uppercase tracking-widest">Duo</span>
         </button>
@@ -343,7 +523,8 @@
         <button
           type="button"
           class="{filterChip} {getToggleStyles(legendaryFilter)}"
-          onclick={() => (legendaryFilter = cycleState(legendaryFilter))}
+          onclick={() =>
+            cycleTriState(legendaryFilter, (v) => (legendaryFilter = v))}
         >
           <span class="text-[0.65rem] uppercase tracking-widest">Legendary</span>
         </button>
@@ -351,7 +532,8 @@
         <button
           type="button"
           class="{filterChip} {getToggleStyles(infusionFilter)}"
-          onclick={() => (infusionFilter = cycleState(infusionFilter))}
+          onclick={() =>
+            cycleTriState(infusionFilter, (v) => (infusionFilter = v))}
         >
           <span class="text-[0.65rem] uppercase tracking-widest">Infusion</span>
         </button>
@@ -359,7 +541,7 @@
         <button
           type="button"
           class="{filterChip} {getToggleStyles(coreFilter)}"
-          onclick={() => (coreFilter = cycleState(coreFilter))}
+          onclick={() => cycleTriState(coreFilter, (v) => (coreFilter = v))}
         >
           <span class="text-[0.65rem] uppercase tracking-widest">Core</span>
         </button>
@@ -367,7 +549,8 @@
         <button
           type="button"
           class="{filterChip} {getToggleStyles(olympDmgFilter)}"
-          onclick={() => (olympDmgFilter = cycleState(olympDmgFilter))}
+          onclick={() =>
+            cycleTriState(olympDmgFilter, (v) => (olympDmgFilter = v))}
         >
           <span class="text-[0.65rem] uppercase tracking-widest"
             >Olympian DMG</span
@@ -384,6 +567,52 @@
         >
           <span class="text-[0.65rem] uppercase tracking-widest">Clear</span>
         </button>
+
+        <div
+          class="relative"
+          use:clickOutside={() => (isShareMenuOpen = false)}
+        >
+          <button
+            type="button"
+            onclick={() => toggleDropdown("share")}
+            class="{filterChip} bg-[#0d1c13] border-[#2d5a3c] text-[#b3c2b7] hover:border-[#46f08f]/40"
+          >
+            <span class="text-[0.65rem] uppercase tracking-widest text-[#46f08f]"
+              >{linkCopied ? "Copied!" : "Share"}</span
+            >
+            <span class="text-[0.55rem] opacity-60"
+              >{isShareMenuOpen ? "▲" : "▼"}</span
+            >
+          </button>
+
+          {#if isShareMenuOpen}
+            <div
+              class="absolute right-0 z-30 mt-1.5 flex w-44 flex-col rounded-md border border-[#2d5a3c] bg-[#0a140d] p-1.5 shadow-[0_4px_24px_rgba(0,0,0,0.7)]"
+            >
+              <button
+                type="button"
+                class="rounded-md px-2 py-1.5 text-left text-sm text-[#b3c2b7] transition-colors hover:bg-[#153320] hover:text-[#e5f4e7]"
+                onclick={copyShareLink}
+              >
+                Copy link
+              </button>
+              <button
+                type="button"
+                class="rounded-md px-2 py-1.5 text-left text-sm text-[#b3c2b7] transition-colors hover:bg-[#153320] hover:text-[#e5f4e7]"
+                onclick={shareOnReddit}
+              >
+                Share on Reddit
+              </button>
+              <button
+                type="button"
+                class="rounded-md px-2 py-1.5 text-left text-sm text-[#b3c2b7] transition-colors hover:bg-[#153320] hover:text-[#e5f4e7]"
+                onclick={shareOnX}
+              >
+                Share on X
+              </button>
+            </div>
+          {/if}
+        </div>
       </div>
     </div>
 
