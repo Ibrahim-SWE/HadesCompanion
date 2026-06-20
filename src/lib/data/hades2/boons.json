@@ -12485,5 +12485,442 @@
     "deals_olympian_damage": false,
     "prerequisites": null,
     "notes": null
+  },
+  "corrosion_on_sight": {
+    "gods": [
+      "Medea"
+    ],
+    "name": "Corrosion on Sight",
+    "description": "After a foe joins the Encounter, it loses 50% of any Armor it has.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "After a foe joins the "
+      },
+      {
+        "type": "text_bold",
+        "value": "Encounter"
+      },
+      {
+        "type": "text_normal",
+        "value": ", it loses "
+      },
+      {
+        "type": "text_bold",
+        "value": "50%"
+      },
+      {
+        "type": "text_normal",
+        "value": " of any "
+      },
+      {
+        "type": "text_bold",
+        "value": "Armor"
+      },
+      {
+        "type": "text_normal",
+        "value": " it has."
+      }
+    ],
+    "effect": null,
+    "image_path": "corrosion_on_sight.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "enfeeblement_of_cowards": {
+    "gods": [
+      "Medea"
+    ],
+    "name": "Enfeeblement of Cowards",
+    "description": "Foes' ranged shots have -40% travel speed.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Foes' ranged shots have "
+      },
+      {
+        "type": "text_bold",
+        "value": "-40%"
+      },
+      {
+        "type": "text_normal",
+        "value": " travel speed."
+      }
+    ],
+    "effect": null,
+    "image_path": "enfeeblement_of_cowards.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "harm_for_the_afflicted": {
+    "gods": [
+      "Medea"
+    ],
+    "name": "Harm for the Afflicted",
+    "description": "Inflicting a Curse deals 50 damage if the foe is not afflicted by it, up to 1 Sec.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Inflicting a "
+      },
+      {
+        "type": "text_bold",
+        "value": "Curse"
+      },
+      {
+        "type": "text_normal",
+        "value": " deals "
+      },
+      {
+        "type": "text_bold",
+        "value": "50"
+      },
+      {
+        "type": "text_normal",
+        "value": " damage if the foe is not afflicted by it, up to "
+      },
+      {
+        "type": "text_bold",
+        "value": "1 Sec."
+      }
+    ],
+    "effect": null,
+    "image_path": "harm_for_the_afflicted.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "life_from_the_dead": {
+    "gods": [
+      "Medea"
+    ],
+    "name": "Life from the Dead",
+    "description": "After a foe is slain, it has 5% chance to drop +10 Health_Restore_Icon, limit 1 per Encounter.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "After a foe is slain, it has "
+      },
+      {
+        "type": "text_bold",
+        "value": "5%"
+      },
+      {
+        "type": "text_normal",
+        "value": " chance to drop "
+      },
+      {
+        "type": "text_bold",
+        "value": "+10"
+      },
+      {
+        "type": "image",
+        "name": "Health_Restore_Icon",
+        "img_path": "health_restore_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": ", limit "
+      },
+      {
+        "type": "text_bold",
+        "value": "1"
+      },
+      {
+        "type": "text_normal",
+        "value": " per "
+      },
+      {
+        "type": "text_bold",
+        "value": "Encounter"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "life_from_the_dead.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "malice_in_kind": {
+    "gods": [
+      "Medea"
+    ],
+    "name": "Malice in Kind",
+    "description": "Whenever a foe makes you use Death_Defiance_Icon Death Defiance, it loses 15% Health_Icon.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "When a foe makes you use "
+      },
+      {
+        "type": "image",
+        "name": "Death_Defiance_Icon",
+        "img_path": "death_defiance_icon.webp"
+      },
+      {
+        "type": "text_bold",
+        "value": "Death Defiance"
+      },
+      {
+        "type": "text_normal",
+        "value": ", it loses "
+      },
+      {
+        "type": "text_bold",
+        "value": "15%"
+      },
+      {
+        "type": "image",
+        "name": "Health_Icon",
+        "img_path": "health_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "malice_in_kind.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "suffering_on_sight": {
+    "gods": [
+      "Medea"
+    ],
+    "name": "Suffering on Sight",
+    "description": "After a foe joins the Encounter, it randomly takes 1 to 999 damage.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "After a foe joins the "
+      },
+      {
+        "type": "text_bold",
+        "value": "Encounter"
+      },
+      {
+        "type": "text_normal",
+        "value": ", it randomly takes "
+      },
+      {
+        "type": "text_bold",
+        "value": "1"
+      },
+      {
+        "type": "text_normal",
+        "value": " to "
+      },
+      {
+        "type": "text_bold",
+        "value": "999"
+      },
+      {
+        "type": "text_normal",
+        "value": " damage."
+      }
+    ],
+    "effect": null,
+    "image_path": "suffering_on_sight.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "traces_of_spirit": {
+    "gods": [
+      "Medea"
+    ],
+    "name": "Traces of Spirit",
+    "description": "After each Encounter, gain +5 Max_Magick_Icon.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "After each "
+      },
+      {
+        "type": "text_bold",
+        "value": "Encounter"
+      },
+      {
+        "type": "text_normal",
+        "value": ", gain "
+      },
+      {
+        "type": "text_bold",
+        "value": "+5"
+      },
+      {
+        "type": "image",
+        "name": "Max_Magick_Icon",
+        "img_path": "max_magick_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "traces_of_spirit.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "wealth_from_the_dead": {
+    "gods": [
+      "Medea"
+    ],
+    "name": "Wealth from the Dead",
+    "description": "After a foe is slain, it has 10% chance to drop +20 Gold_Coins_Icon, limit 2 per Encounter.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "After a foe is slain, it has "
+      },
+      {
+        "type": "text_bold",
+        "value": "10%"
+      },
+      {
+        "type": "text_normal",
+        "value": " chance to drop "
+      },
+      {
+        "type": "text_bold",
+        "value": "+20"
+      },
+      {
+        "type": "image",
+        "name": "Gold_Coins_Icon",
+        "img_path": "gold_coins_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": ", limit "
+      },
+      {
+        "type": "text_bold",
+        "value": "2"
+      },
+      {
+        "type": "text_normal",
+        "value": " per "
+      },
+      {
+        "type": "text_bold",
+        "value": "Encounter"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "wealth_from_the_dead.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
   }
 }
