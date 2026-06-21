@@ -13,7 +13,9 @@ export function resolveToolImagePath(imageFile: string): string {
   return `/src/lib/assets/tools/${imageFile}`;
 }
 
-export async function loadToolImage(imageFile: string): Promise<Picture | null> {
+export async function loadToolImage(
+  imageFile: string,
+): Promise<Picture | null> {
   return loadCachedPicture(
     loaders,
     cache,

@@ -194,8 +194,7 @@ export function buildShareSummary(
   const search = state.searchQuery.trim();
   if (search) parts.push(`search: ${search}`);
 
-  const filterText =
-    parts.length > 0 ? parts.join(" · ") : "filtered list";
+  const filterText = parts.length > 0 ? parts.join(" · ") : "filtered list";
 
   const countText =
     resultCount !== undefined ? ` · ${resultCount} results` : "";

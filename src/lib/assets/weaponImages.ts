@@ -13,7 +13,9 @@ export function resolveWeaponImagePath(imagePath: string): string {
   return `/src/lib/assets/weapons/${imagePath}`;
 }
 
-export async function loadWeaponImage(imagePath: string): Promise<Picture | null> {
+export async function loadWeaponImage(
+  imagePath: string,
+): Promise<Picture | null> {
   return loadCachedPicture(
     loaders,
     cache,

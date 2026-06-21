@@ -4,63 +4,47 @@
     "hades_1": null,
     "hades_2": {
       "keepsake": "Harmonic Photon",
-      "curses": [
-        "Daze"
-      ]
+      "curses": ["Daze"]
     }
   },
   "Aphrodite": {
     "title": "Goddess of Love",
     "hades_1": {
       "keepsake": "Eternal Rose",
-      "curses": [
-        "Weak"
-      ]
+      "curses": ["Weak"]
     },
     "hades_2": {
       "keepsake": "Beautiful Mirror",
-      "curses": [
-        "Weak"
-      ]
+      "curses": ["Weak"]
     }
   },
   "Ares": {
     "title": "God of War",
     "hades_1": {
       "keepsake": "Blood-Filled Vial",
-      "curses": [
-        "Doom"
-      ]
+      "curses": ["Doom"]
     },
     "hades_2": {
       "keepsake": "Sword Hilt",
-      "curses": [
-        "Wounds"
-      ]
+      "curses": ["Wounds"]
     }
   },
   "Artemis": {
     "title": "Goddess of the Hunt",
     "hades_1": {
       "keepsake": "Adamant Arrowhead",
-      "curses": [
-        "Marked"
-      ]
+      "curses": ["Marked"]
     },
     "hades_2": {
       "keepsake": "White Antler",
-      "curses": [
-        "Marked"
-      ]
+      "curses": ["Marked"]
     }
   },
   "Athena": {
     "title": "Goddess of Wisdom",
     "hades_1": {
       "keepsake": "Owl Pendant",
-      "curses": [
-        "Exposed"
-      ]
+      "curses": ["Exposed"]
     },
     "hades_2": {
       "keepsake": "Gorgon Amulet",
@@ -71,16 +55,11 @@
     "title": "Goddess of Seasons",
     "hades_1": {
       "keepsake": "Frostbitten Horn",
-      "curses": [
-        "Chill"
-      ]
+      "curses": ["Chill"]
     },
     "hades_2": {
       "keepsake": "Barley Sheaf",
-      "curses": [
-        "Freeze",
-        "Gust"
-      ]
+      "curses": ["Freeze", "Gust"]
     }
   },
   "Hephaestus": {
@@ -88,9 +67,7 @@
     "hades_1": null,
     "hades_2": {
       "keepsake": "Adamant Shard",
-      "curses": [
-        "Glow"
-      ]
+      "curses": ["Glow"]
     }
   },
   "Hera": {
@@ -98,9 +75,7 @@
     "hades_1": null,
     "hades_2": {
       "keepsake": "Iridescent Fan",
-      "curses": [
-        "Hitch"
-      ]
+      "curses": ["Hitch"]
     }
   },
   "Hermes": {
@@ -119,39 +94,29 @@
     "hades_1": null,
     "hades_2": {
       "keepsake": "Everlasting Ember",
-      "curses": [
-        "Scorch"
-      ]
+      "curses": ["Scorch"]
     }
   },
   "Poseidon": {
     "title": "God of the Sea",
     "hades_1": {
       "keepsake": "Conch Shell",
-      "curses": [
-        "Ruptured"
-      ]
+      "curses": ["Ruptured"]
     },
     "hades_2": {
       "keepsake": "Vivid Sea",
-      "curses": [
-        "Froth"
-      ]
+      "curses": ["Froth"]
     }
   },
   "Zeus": {
     "title": "King of the Olympians",
     "hades_1": {
       "keepsake": "Thunder Signet",
-      "curses": [
-        "Jolted"
-      ]
+      "curses": ["Jolted"]
     },
     "hades_2": {
       "keepsake": "Cloud Bangle",
-      "curses": [
-        "Blitz"
-      ]
+      "curses": ["Blitz"]
     }
   },
   "Dionysus": {
@@ -160,9 +125,7 @@
     "hades_1": null,
     "hades_2": {
       "keepsake": "Fig Leaf",
-      "curses": [
-        "Hangover"
-      ]
+      "curses": ["Hangover"]
     }
   },
   "Chaos": {

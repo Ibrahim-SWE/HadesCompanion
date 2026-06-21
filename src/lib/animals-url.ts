@@ -25,12 +25,7 @@ export function buildPetReplaceHref(
   pathname: string,
   defaultKey: string = ALL_PETS_KEY,
 ): string {
-  return buildSelectionReplaceHref(
-    petKey,
-    PET_URL_PARAM,
-    pathname,
-    defaultKey,
-  );
+  return buildSelectionReplaceHref(petKey, PET_URL_PARAM, pathname, defaultKey);
 }
 
 export function petUrlMatchesState(

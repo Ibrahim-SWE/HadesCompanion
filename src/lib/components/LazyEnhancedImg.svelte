@@ -27,7 +27,7 @@
   let shouldLoad = $derived(eager || observed);
   let container: HTMLElement | undefined = $state();
 
-  let imgFetchPriority = $derived(
+  let imgFetchPriority: HTMLImgAttributes["fetchpriority"] = $derived(
     fetchPriority !== "auto"
       ? fetchPriority
       : eager
@@ -92,7 +92,7 @@
     {alt}
     {sizes}
     class={className}
-    loading="eager"
+    loading={eager ? "eager" : "lazy"}
     decoding="async"
     fetchpriority={imgFetchPriority}
   />

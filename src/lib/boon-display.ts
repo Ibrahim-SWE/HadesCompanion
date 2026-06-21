@@ -1,19 +1,12 @@
 import type { BoonData } from "$lib/types/hades2";
 
-export const BOON_RARITY_ORDER = [
-  "common",
-  "rare",
-  "epic",
-  "heroic",
-] as const;
+export const BOON_RARITY_ORDER = ["common", "rare", "epic", "heroic"] as const;
 
 export function isChaosBlessing(boon: BoonData): boolean {
   return (boon.type ?? "").toLowerCase() === "blessing";
 }
 
-export function getOrderedRarityEffects(
-  boon: BoonData,
-): [string, string][] {
+export function getOrderedRarityEffects(boon: BoonData): [string, string][] {
   return BOON_RARITY_ORDER.flatMap((rarity) => {
     const value = boon.rarities_effect[rarity];
     return value ? [[rarity, value] as [string, string]] : [];

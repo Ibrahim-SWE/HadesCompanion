@@ -13,7 +13,9 @@ export function resolveCardImagePath(imageFile: string): string {
   return `/src/lib/assets/cards/${imageFile}`;
 }
 
-export async function loadCardImage(imageFile: string): Promise<Picture | null> {
+export async function loadCardImage(
+  imageFile: string,
+): Promise<Picture | null> {
   return loadCachedPicture(
     loaders,
     cache,
