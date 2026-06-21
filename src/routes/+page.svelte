@@ -2,9 +2,9 @@
   import { resolve } from "$app/paths";
   const features = [
     {
-      title: "Gods",
+      title: "Gods & Characters",
       route: "/hades2/gods",
-      desc: "Browse every Olympian god and their offerings. See who they are and what they grant.",
+      desc: "Browse every god and character who grant boons and offerings.",
     },
     {
       title: "Boons",

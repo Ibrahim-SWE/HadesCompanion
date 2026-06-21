@@ -404,7 +404,7 @@
               : 'bg-[#0d1c13] border-[#2d5a3c] text-[#b3c2b7] hover:border-[#46f08f]/40'}"
           >
             <span class="text-[0.65rem] uppercase tracking-widest text-[#46f08f]"
-              >Gods</span
+              >Gods & Characters</span
             >
             {#if selectedGods.length > 0}
               <span class="text-[#ccff90]">({selectedGods.length})</span>

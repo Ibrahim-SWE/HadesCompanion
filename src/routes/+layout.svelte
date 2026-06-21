@@ -29,7 +29,7 @@
 
   const navLinks: NavLink[] = [
     { href: "/", label: "Home" },
-    { href: "/hades2/gods", label: "Gods" },
+    { href: "/hades2/gods", label: "Gods & Characters", shortLabel: "Gods & Chars" },
     { href: "/hades2/boons", label: "Boons" },
     { href: "/hades2/weapons", label: "Weapons" },
     { href: "/hades2/cards", label: "Arcana Cards", shortLabel: "Cards" },

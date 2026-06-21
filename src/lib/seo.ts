@@ -30,9 +30,9 @@ export const PAGE_SEO = {
     canonicalPath: "/",
   },
   gods: {
-    title: seoTitle("Olympian Gods"),
+    title: seoTitle("Gods & Characters"),
     description:
-      "The gods who grant boons in Hades 2. Browse every Olympian god, their keepsakes, curses, and boons.",
+      "Gods and characters who grant boons and offerings in Hades 2. Browse keepsakes, curses, and every boon they offer.",
     canonicalPath: "/hades2/gods",
   },
   boons: {
@@ -98,8 +98,8 @@ export function godPageSeo(
   ogImage?: string,
 ): SeoMeta {
   return {
-    title: seoTitle(godName, "Gods"),
-    description: `${godName}, ${subtitle}. View boons, keepsakes, and curses for this Olympian god in Hades 2.`,
+    title: seoTitle(godName, "Gods & Characters"),
+    description: `${godName}, ${subtitle}. View boons, offerings, keepsakes, and curses in Hades 2.`,
     canonicalPath: `/hades2/gods/${encodeURIComponent(godName)}`,
     ogImage,
   };

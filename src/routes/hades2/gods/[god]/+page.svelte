@@ -42,7 +42,7 @@
           d="M10 19l-7-7m0 0l7-7m-7 7h18"
         />
       </svg>
-      All Gods
+      All Gods & Characters
     </a>
 
     <header
@@ -179,7 +179,7 @@
         <div
           class="bg-black/20 border border-white/5 rounded-lg p-8 text-center text-[#8da693] font-sans"
         >
-          No boons found for this god.
+          No boons found for this god or character.
         </div>
       {/if}
     </section>

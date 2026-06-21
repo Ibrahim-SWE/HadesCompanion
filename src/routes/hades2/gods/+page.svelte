@@ -19,13 +19,13 @@
       <h1
         class="text-[#ccff90] font-serif text-2xl sm:text-3xl font-normal uppercase tracking-widest m-0 drop-shadow-[0_0_10px_rgba(204,255,144,0.3)]"
       >
-        Olympian Gods
+        Gods & Characters
       </h1>
       <p
         class="text-[0.7rem] sm:text-xs text-[#8da693] font-sans mt-0.5 tracking-wide leading-snug"
       >
-        The gods who grant boons in Hades 2. Click a god for full details, or
-        jump to a keepsake or curse below.
+        Gods and characters who grant boons and offerings in Hades 2. Click for
+        full details, or jump to a keepsake or curse below.
       </p>
     </header>
 
