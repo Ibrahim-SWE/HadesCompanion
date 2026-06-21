@@ -212,6 +212,7 @@
         Built by <a
           href="https://github.com/Ibrahim-SWE/HadesCompanion"
           target="_blank"
+          rel="noopener noreferrer"
           class="text-[#46f08f] hover:text-[#ccff90] transition-colors underline decoration-[#1c3623] underline-offset-4 hover:decoration-[#46f08f]"
           >Ibrahim</a
         >
