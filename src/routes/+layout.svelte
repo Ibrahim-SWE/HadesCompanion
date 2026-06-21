@@ -83,6 +83,13 @@
   class="mainContainer bg-[#07110b] min-h-dvh flex flex-col items-center font-sans"
   class:homepage={page.url.pathname === "/"}
 >
+  <a
+    href="#main-content"
+    class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-100 focus:rounded-md focus:border focus:border-[#46f08f]/50 focus:bg-[#153320] focus:px-4 focus:py-2 focus:font-mono focus:text-xs focus:uppercase focus:tracking-widest focus:text-[#ccff90] focus:shadow-[0_4px_20px_rgba(0,0,0,0.6)] focus:outline-none"
+  >
+    Skip to content
+  </a>
+
   <header
     class="siteHeader sticky top-0 z-50 w-full bg-[#0a140d]/95 backdrop-blur-md border-b border-[#1c3623] shadow-[0_4px_20px_rgba(0,0,0,0.4)]"
   >
@@ -193,9 +200,9 @@
     {/if}
   </header>
 
-  <div class="flex flex-1 w-full flex-col items-center">
+  <main id="main-content" class="flex flex-1 w-full flex-col items-center">
     {@render children()}
-  </div>
+  </main>
 
   <footer
     class="mt-auto w-full border-t border-[#1c3623] bg-[#0a140d]/80 py-6 text-center text-[0.7rem] text-[#8da693] font-sans"

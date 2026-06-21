@@ -1,3 +1,7 @@
+<script module lang="ts">
+  let tooltipSeq = 0;
+</script>
+
 <script lang="ts">
   import { browser } from "$app/environment";
   import { portal } from "$lib/actions/portal";
@@ -7,6 +11,8 @@
   import type { BoonData } from "$lib/types/hades2";
   import type { Attachment } from "svelte/attachments";
   import type { Snippet } from "svelte";
+
+  const tooltipId = `boon-tooltip-${++tooltipSeq}`;
 
   let {
     boon: boonProp,
@@ -58,14 +64,21 @@
     previewLeft = left;
   }
 
-  function handleMouseEnter() {
+  function openPreview() {
     if (!resolvedBoon) return;
     updatePreviewPosition();
     showPreview = true;
   }
 
-  function handleMouseLeave() {
+  function closePreview() {
     showPreview = false;
+  }
+
+  function handleKeydown(event: KeyboardEvent) {
+    if (event.key === "Escape") {
+      closePreview();
+      trigger?.blur();
+    }
   }
 
   function captureTrigger(): Attachment<HTMLButtonElement> {
@@ -83,8 +96,12 @@
     type="button"
     {@attach captureTrigger()}
     class="inline cursor-help border-0 bg-transparent p-0 font-inherit text-inherit underline decoration-dotted decoration-[#46f08f]/50 underline-offset-2 {className}"
-    onmouseenter={handleMouseEnter}
-    onmouseleave={handleMouseLeave}
+    aria-describedby={showPreview ? tooltipId : undefined}
+    onmouseenter={openPreview}
+    onmouseleave={closePreview}
+    onfocus={openPreview}
+    onblur={closePreview}
+    onkeydown={handleKeydown}
   >
     {@render children()}
   </button>
@@ -92,6 +109,7 @@
   {#if showPreview && browser}
     <div
       use:portal
+      id={tooltipId}
       class="pointer-events-none fixed z-9999 w-[260px] rounded-md border border-[#2a2a2a] bg-[#080808] p-2.5 shadow-[0_4px_20px_rgba(0,0,0,0.8)]"
       style="top: {previewTop}px; left: {previewLeft}px;"
       role="tooltip"
