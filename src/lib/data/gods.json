@@ -2,61 +2,220 @@
   "Apollo": {
     "title": "God of Light",
     "hades_1": null,
-    "hades_2": { "keepsake": "Harmonic Photon", "curses": ["Daze"] }
+    "hades_2": {
+      "keepsake": "Harmonic Photon",
+      "curses": [
+        "Daze"
+      ]
+    }
   },
   "Aphrodite": {
     "title": "Goddess of Love",
-    "hades_1": { "keepsake": "Eternal Rose", "curses": ["Weak"] },
-    "hades_2": { "keepsake": "Beautiful Mirror", "curses": ["Weak"] }
+    "hades_1": {
+      "keepsake": "Eternal Rose",
+      "curses": [
+        "Weak"
+      ]
+    },
+    "hades_2": {
+      "keepsake": "Beautiful Mirror",
+      "curses": [
+        "Weak"
+      ]
+    }
   },
   "Ares": {
     "title": "God of War",
-    "hades_1": { "keepsake": "Blood-Filled Vial", "curses": ["Doom"] },
-    "hades_2": { "keepsake": "Sword Hilt", "curses": ["Wounds"] }
+    "hades_1": {
+      "keepsake": "Blood-Filled Vial",
+      "curses": [
+        "Doom"
+      ]
+    },
+    "hades_2": {
+      "keepsake": "Sword Hilt",
+      "curses": [
+        "Wounds"
+      ]
+    }
   },
   "Artemis": {
     "title": "Goddess of the Hunt",
-    "hades_1": { "keepsake": "Adamant Arrowhead", "curses": ["Marked"] },
-    "hades_2": { "keepsake": "White Antler", "curses": ["Marked"] }
+    "hades_1": {
+      "keepsake": "Adamant Arrowhead",
+      "curses": [
+        "Marked"
+      ]
+    },
+    "hades_2": {
+      "keepsake": "White Antler",
+      "curses": [
+        "Marked"
+      ]
+    }
   },
   "Athena": {
     "title": "Goddess of Wisdom",
-    "hades_1": { "keepsake": "Owl Pendant", "curses": ["Exposed"] },
-    "hades_2": { "keepsake": "Gorgon Amulet", "curses": [] }
+    "hades_1": {
+      "keepsake": "Owl Pendant",
+      "curses": [
+        "Exposed"
+      ]
+    },
+    "hades_2": {
+      "keepsake": "Gorgon Amulet",
+      "curses": []
+    }
   },
   "Demeter": {
     "title": "Goddess of Seasons",
-    "hades_1": { "keepsake": "Frostbitten Horn", "curses": ["Chill"] },
-    "hades_2": { "keepsake": "Barley Sheaf", "curses": ["Freeze", "Gust"] }
+    "hades_1": {
+      "keepsake": "Frostbitten Horn",
+      "curses": [
+        "Chill"
+      ]
+    },
+    "hades_2": {
+      "keepsake": "Barley Sheaf",
+      "curses": [
+        "Freeze",
+        "Gust"
+      ]
+    }
   },
   "Hephaestus": {
     "title": "God of the Forge",
     "hades_1": null,
-    "hades_2": { "keepsake": "Adamant Shard", "curses": ["Glow"] }
+    "hades_2": {
+      "keepsake": "Adamant Shard",
+      "curses": [
+        "Glow"
+      ]
+    }
   },
   "Hera": {
     "title": "Queen of the Gods",
     "hades_1": null,
-    "hades_2": { "keepsake": "Iridescent Fan", "curses": ["Hitch"] }
+    "hades_2": {
+      "keepsake": "Iridescent Fan",
+      "curses": [
+        "Hitch"
+      ]
+    }
   },
   "Hermes": {
     "title": "God of Swiftness",
-    "hades_1": { "keepsake": "Lambent Plume", "curses": [] },
-    "hades_2": { "keepsake": "Metallic Droplet", "curses": [] }
+    "hades_1": {
+      "keepsake": "Lambent Plume",
+      "curses": []
+    },
+    "hades_2": {
+      "keepsake": "Metallic Droplet",
+      "curses": []
+    }
   },
   "Hestia": {
     "title": "Goddess of the Hearth",
     "hades_1": null,
-    "hades_2": { "keepsake": "Everlasting Ember", "curses": ["Scorch"] }
+    "hades_2": {
+      "keepsake": "Everlasting Ember",
+      "curses": [
+        "Scorch"
+      ]
+    }
   },
   "Poseidon": {
     "title": "God of the Sea",
-    "hades_1": { "keepsake": "Conch Shell", "curses": ["Ruptured"] },
-    "hades_2": { "keepsake": "Vivid Sea", "curses": ["Froth"] }
+    "hades_1": {
+      "keepsake": "Conch Shell",
+      "curses": [
+        "Ruptured"
+      ]
+    },
+    "hades_2": {
+      "keepsake": "Vivid Sea",
+      "curses": [
+        "Froth"
+      ]
+    }
   },
   "Zeus": {
     "title": "King of the Olympians",
-    "hades_1": { "keepsake": "Thunder Signet", "curses": ["Jolted"] },
-    "hades_2": { "keepsake": "Cloud Bangle", "curses": ["Blitz"] }
+    "hades_1": {
+      "keepsake": "Thunder Signet",
+      "curses": [
+        "Jolted"
+      ]
+    },
+    "hades_2": {
+      "keepsake": "Cloud Bangle",
+      "curses": [
+        "Blitz"
+      ]
+    }
+  },
+  "Dionysus": {
+    "name": "Dionysus",
+    "title": "God of Wine",
+    "type": "god",
+    "keepsake": "Fig Leaf",
+    "imageFile": "dionysus.webp",
+    "curse": "Hangover"
+  },
+  "Chaos": {
+    "name": "Chaos",
+    "title": "Primordial Originator",
+    "type": "god",
+    "keepsake": "Transcendent Embryo",
+    "imageFile": "chaos.webp"
+  },
+  "Hades": {
+    "name": "Hades",
+    "title": "Prisoner of Time",
+    "type": "god",
+    "keepsake": "Jeweled Pom",
+    "imageFile": "hades.webp"
+  },
+  "Arachne": {
+    "name": "Arachne",
+    "title": "Silk Weaver",
+    "type": "character",
+    "keepsake": "Silken Sash",
+    "imageFile": "arachne.webp"
+  },
+  "Narcissus": {
+    "name": "Narcissus",
+    "title": "Beautiful Flower",
+    "type": "character",
+    "keepsake": "Aromatic Phial",
+    "imageFile": "narcissus.webp"
+  },
+  "Echo": {
+    "name": "Echo",
+    "title": "Dispirited Nymph",
+    "type": "character",
+    "keepsake": "Concave Stone",
+    "imageFile": "echo.webp"
+  },
+  "Medea": {
+    "name": "Medea",
+    "title": "Witch of Shadows",
+    "type": "character",
+    "keepsake": "Blackened Fleece",
+    "imageFile": "medea.webp"
+  },
+  "Circe": {
+    "name": "Circe",
+    "title": "Witch of Changing",
+    "type": "character",
+    "keepsake": "Crystal Figurine",
+    "imageFile": "circe.webp"
+  },
+  "Icarus": {
+    "name": "Icarus",
+    "title": "Free Spirit",
+    "type": "character",
+    "keepsake": "Experimental Hammer",
+    "imageFile": "icarus.webp"
   }
 }
