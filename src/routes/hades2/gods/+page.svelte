@@ -86,11 +86,11 @@
             {#if h2 && (h2.keepsake || h2.curses.length > 0)}
               <div class="w-full h-px bg-white/5"></div>
 
-              <div class="flex flex-col gap-1 mt-auto pointer-events-auto">
+              <div class="flex flex-col gap-1 pointer-events-auto">
                 {#if h2.keepsake}
                   <a
                     href={`${resolve("/hades2/keepsakes")}#keepsake-${encodeURIComponent(h2.keepsake)}`}
-                    class="flex items-center justify-between gap-1.5 bg-[#153320] border border-[#2d5a3c] rounded px-2 py-1.5 shadow-[inset_0_1px_0_rgba(70,240,143,0.1)] hover:border-[#46f08f]/60 hover:bg-[#1a3f28] transition-colors relative z-20 min-w-0"
+                    class="flex items-start justify-between gap-1.5 bg-[#153320] border border-[#2d5a3c] rounded px-2 py-1.5 shadow-[inset_0_1px_0_rgba(70,240,143,0.1)] hover:border-[#46f08f]/60 hover:bg-[#1a3f28] transition-colors relative z-20 min-w-0"
                   >
                     <span
                       class="text-[0.65rem] uppercase tracking-widest text-[#46f08f] font-sans font-semibold shrink-0"
@@ -107,25 +107,28 @@
 
                 {#if h2.curses.length > 0}
                   <div
-                    class="bg-[#153320] border border-[#2d5a3c] rounded px-2 py-1.5 shadow-[inset_0_1px_0_rgba(70,240,143,0.1)]"
+                    class="flex items-start justify-between gap-1.5 bg-[#153320] border border-[#2d5a3c] rounded px-2 py-1.5 shadow-[inset_0_1px_0_rgba(70,240,143,0.1)] relative z-20 min-w-0"
                   >
                     <span
-                      class="text-[0.65rem] uppercase tracking-widest text-[#46f08f] font-sans font-semibold block leading-tight mb-1"
+                      class="text-[0.65rem] uppercase tracking-widest text-[#46f08f] font-sans font-semibold shrink-0"
                     >
                       Curses
                     </span>
-                    <div class="flex flex-wrap gap-1.5">
-                      {#each h2.curses as curse (curse)}
+                    <p
+                      class="text-sm text-[#ccff90] font-sans font-medium text-right leading-tight min-w-0 truncate"
+                    >
+                      {#each h2.curses as curse, i (curse)}
+                        {#if i > 0}<span class="text-[#b3c2b7]">, </span>{/if}
                         <a
                           href={resolve(
                             `/hades2/curses#curse-${encodeURIComponent(curse)}` as `/hades2/curses#${string}`,
                           )}
-                          class="text-sm text-[#ccff90] bg-black/40 border border-[#1c3623] rounded px-2 py-0.5 font-sans hover:border-[#46f08f]/50 hover:text-white transition-colors relative z-20"
+                          class="hover:text-white transition-colors relative z-20"
                         >
                           {curse}
                         </a>
                       {/each}
-                    </div>
+                    </p>
                   </div>
                 {/if}
               </div>
