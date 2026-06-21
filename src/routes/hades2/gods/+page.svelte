@@ -2,11 +2,12 @@
   import Container from "$lib/components/Container.svelte";
   import LazyEnhancedImg from "$lib/components/LazyEnhancedImg.svelte";
   import { loadGodImage } from "$lib/assets/godImages";
+  import { getGodTypeLabel } from "$lib/god-display";
   import godsData from "$lib/data/gods.json";
   import { resolve } from "$app/paths";
   import type { GodDetails } from "$lib/types/hades2";
 
-  const gods: Record<string, GodDetails> = godsData;
+  const gods = godsData as Record<string, GodDetails>;
   const sortedGodsArray: [string, GodDetails][] = Object.entries(gods).sort(
     (a, b) => a[0].localeCompare(b[0]),
   );
@@ -70,7 +71,7 @@
               <span
                 class="text-xs uppercase tracking-widest text-[#46f08f] block leading-tight mb-0.5"
               >
-                Olympian
+                {getGodTypeLabel(godData)}
               </span>
               <h2
                 class="text-lg sm:text-xl font-serif text-[#ccff90] uppercase tracking-wide m-0 drop-shadow-sm leading-tight"

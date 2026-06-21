@@ -3,6 +3,7 @@
   import Container from "$lib/components/Container.svelte";
   import LazyEnhancedImg from "$lib/components/LazyEnhancedImg.svelte";
   import { loadGodImage } from "$lib/assets/godImages";
+  import { getGodTypeLabel } from "$lib/god-display";
   import boonsData from "$lib/data/hades2/boons.json";
   import godsData from "$lib/data/gods.json";
   import { resolve } from "$app/paths";
@@ -74,7 +75,7 @@
         <div>
           <span
             class="text-[0.7rem] uppercase tracking-widest text-[#46f08f] block leading-tight mb-2"
-            >Olympian God</span
+            >{getGodTypeLabel(godData)}</span
           >
           <h1
             class="text-4xl sm:text-5xl font-serif text-[#ccff90] uppercase tracking-wider m-0 drop-shadow-[0_0_10px_rgba(204,255,144,0.3)]"
