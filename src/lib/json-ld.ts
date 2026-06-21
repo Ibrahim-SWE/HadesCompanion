@@ -6,12 +6,7 @@ import petsData from "$lib/data/hades2/pets.json";
 import toolsData from "$lib/data/hades2/tools.json";
 import weaponsData from "$lib/data/hades2/weapons.json";
 import godsData from "$lib/data/gods.json";
-import {
-  absoluteUrl,
-  PAGE_SEO,
-  SITE_NAME,
-  type SeoMeta,
-} from "$lib/seo";
+import { absoluteUrl, PAGE_SEO, SITE_NAME, type SeoMeta } from "$lib/seo";
 
 export type JsonLd = Record<string, unknown>;
 

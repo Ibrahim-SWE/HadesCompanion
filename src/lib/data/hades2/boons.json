@@ -1,6 +1,8 @@
 {
   "addled": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Addled",
     "description": "For the next 3-5 Encounters, each time you use Casts, you take 3-6 Health_Icon.",
     "description_rich": [
@@ -65,7 +67,9 @@
     "notes": null
   },
   "affluence": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Affluence",
     "description": "Afterward, any Gold_Coins_Icon you gain is worth +X%.",
     "description_rich": [
@@ -102,7 +106,9 @@
     "notes": null
   },
   "air_quality": {
-    "gods": ["Zeus"],
+    "gods": [
+      "Zeus"
+    ],
     "name": "Air Quality",
     "description": "While you have at least 5 Air_Element_Icon, you can never deal less damage than the limit.",
     "description_rich": [
@@ -150,7 +156,9 @@
     "notes": null
   },
   "all_together": {
-    "gods": ["Hera"],
+    "gods": [
+      "Hera"
+    ],
     "name": "All Together",
     "description": "Gain Earth_Element_Icon Water_Element_Icon Air_Element_Icon Fire_Element_Icon Elements, and 1 Infusion Boon for each.",
     "description_rich": [
@@ -212,15 +220,29 @@
     "deals_olympian_damage": false,
     "prerequisites": {
       "boons": [
-        ["Sworn Strike", "Sworn Flourish", "Engagement Ring", "Nexus Rush"],
-        ["Bridal Glow", "Uncommon Grace", "Fine Line"],
-        ["Hereditary Bane", "Rousing Reception"]
+        [
+          "Sworn Strike",
+          "Sworn Flourish",
+          "Engagement Ring",
+          "Nexus Rush"
+        ],
+        [
+          "Bridal Glow",
+          "Uncommon Grace",
+          "Fine Line"
+        ],
+        [
+          "Hereditary Bane",
+          "Rousing Reception"
+        ]
       ]
     },
     "notes": null
   },
   "ancestral_offering": {
-    "gods": ["Narcissus"],
+    "gods": [
+      "Narcissus"
+    ],
     "name": "Ancestral Offering",
     "description": "Receive a gift of +25 Max_Health_Icon and +50 Bones_Icon.",
     "description_rich": [
@@ -274,7 +296,9 @@
     "notes": null
   },
   "anvil_ring": {
-    "gods": ["Hephaestus"],
+    "gods": [
+      "Hephaestus"
+    ],
     "name": "Anvil Ring",
     "description": "Your Casts deal damage 3 times in succession to foes in the binding circle.",
     "description_rich": [
@@ -318,7 +342,9 @@
     "notes": null
   },
   "arc_flash": {
-    "gods": ["Zeus"],
+    "gods": [
+      "Zeus"
+    ],
     "name": "Arc Flash",
     "description": "Damage from Omega_Icon Moves immediately activates Blitz effects and makes them stronger.",
     "description_rich": [
@@ -363,12 +389,19 @@
     },
     "deals_olympian_damage": true,
     "prerequisites": {
-      "boons": [["Heaven Strike", "Heaven Flourish"]]
+      "boons": [
+        [
+          "Heaven Strike",
+          "Heaven Flourish"
+        ]
+      ]
     },
     "notes": null
   },
   "arctic_gale": {
-    "gods": ["Demeter"],
+    "gods": [
+      "Demeter"
+    ],
     "name": "Arctic Gale",
     "description": "Your Casts also create a Gust at the binding circle.",
     "description_rich": [
@@ -412,7 +445,9 @@
     "notes": null
   },
   "arctic_ring": {
-    "gods": ["Demeter"],
+    "gods": [
+      "Demeter"
+    ],
     "name": "Arctic Ring",
     "description": "Your Casts inflict Freeze and repeatedly deal damage to foes in the binding circle.",
     "description_rich": [
@@ -456,7 +491,10 @@
     "notes": null
   },
   "arterial_spray": {
-    "gods": ["Ares", "Poseidon"],
+    "gods": [
+      "Ares",
+      "Poseidon"
+    ],
     "name": "Arterial Spray",
     "description": "Your splash effects from Poseidon may hit 2 times (and take the color of the River Styx).",
     "description_rich": [
@@ -505,13 +543,18 @@
           "Stabbing Rush",
           "Grisly Gain"
         ],
-        ["Wave Strike", "Wave Flourish"]
+        [
+          "Wave Strike",
+          "Wave Flourish"
+        ]
       ]
     },
     "notes": null
   },
   "atrophic": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Atrophic",
     "description": "For the next 3-5 Encounters, you have -20-29 Max_Health_Icon.",
     "description_rich": [
@@ -568,7 +611,9 @@
     "notes": null
   },
   "azure_dress": {
-    "gods": ["Arachne"],
+    "gods": [
+      "Arachne"
+    ],
     "name": "Azure Dress",
     "description": "Don a +40 Armor_Icon Outfit that makes you restore 5 Magick_Icon every 1 Sec.",
     "description_rich": [
@@ -630,7 +675,9 @@
     "notes": null
   },
   "back_burner": {
-    "gods": ["Apollo"],
+    "gods": [
+      "Apollo"
+    ],
     "name": "Back Burner",
     "description": "Foes with Daze take more damage if struck from behind.",
     "description_rich": [
@@ -664,13 +711,20 @@
     "deals_olympian_damage": false,
     "prerequisites": {
       "boons": [
-        ["Solar Ring", "Blinding Rush", "Dazzling Display", "Light Smite"]
+        [
+          "Solar Ring",
+          "Blinding Rush",
+          "Dazzling Display",
+          "Light Smite"
+        ]
       ]
     },
     "notes": null
   },
   "barren": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Barren",
     "description": "For the next 3-6 Encounters, your Arcana Cards have no effect.",
     "description_rich": [
@@ -722,7 +776,10 @@
     "notes": null
   },
   "beach_ball": {
-    "gods": ["Apollo", "Poseidon"],
+    "gods": [
+      "Apollo",
+      "Poseidon"
+    ],
     "name": "Beach Ball",
     "description": "Your Sprint creates a watery globe behind you, which surges ahead once you stop.",
     "description_rich": [
@@ -756,15 +813,30 @@
     "deals_olympian_damage": true,
     "prerequisites": {
       "boons": [
-        ["Blinding Rush", "Breaker Rush"],
-        ["Nova Strike", "Nova Flourish", "Solar Ring", "Lucid Gain"],
-        ["Wave Strike", "Wave Flourish", "Tidal Ring", "Flood Gain"]
+        [
+          "Blinding Rush",
+          "Breaker Rush"
+        ],
+        [
+          "Nova Strike",
+          "Nova Flourish",
+          "Solar Ring",
+          "Lucid Gain"
+        ],
+        [
+          "Wave Strike",
+          "Wave Flourish",
+          "Tidal Ring",
+          "Flood Gain"
+        ]
       ]
     },
     "notes": null
   },
   "black_night_banishment": {
-    "gods": ["Circe"],
+    "gods": [
+      "Circe"
+    ],
     "name": "Black Night Banishment",
     "description": "Randomly draw 1 of your active Vows, and remove its effect this night.",
     "description_rich": [
@@ -810,7 +882,9 @@
     "notes": null
   },
   "blinding_rush": {
-    "gods": ["Apollo"],
+    "gods": [
+      "Apollo"
+    ],
     "name": "Blinding Rush",
     "description": "Your Sprint is faster and inflicts Daze on surrounding foes.",
     "description_rich": [
@@ -854,7 +928,9 @@
     "notes": null
   },
   "blood_spree": {
-    "gods": ["Ares"],
+    "gods": [
+      "Ares"
+    ],
     "name": "Blood Spree",
     "description": "While you have less than 40 Health_Icon, your Attacks and Specials restore Health_Icon.",
     "description_rich": [
@@ -920,7 +996,9 @@
     "notes": null
   },
   "boon_boon_boon": {
-    "gods": ["Echo"],
+    "gods": [
+      "Echo"
+    ],
     "name": "Boon Boon Boon",
     "description": "Choose 1 out of 3 random Boons from the previous night.",
     "description_rich": [
@@ -972,7 +1050,9 @@
     "notes": null
   },
   "born_gain": {
-    "gods": ["Hera"],
+    "gods": [
+      "Hera"
+    ],
     "name": "Born Gain",
     "description": "Whenever you run out of Magick_Icon, Prime until the next Location to restore all Magick_Icon.",
     "description_rich": [
@@ -1034,7 +1114,9 @@
     "notes": null
   },
   "bottomless_drink": {
-    "gods": ["Dionysus"],
+    "gods": [
+      "Dionysus"
+    ],
     "name": "Bottomless Drink",
     "description": "In each Encounter, Grape Juice appears, in the area and grants Power when used.",
     "description_rich": [
@@ -1086,7 +1168,9 @@
     "notes": null
   },
   "bounce_back": {
-    "gods": ["Dionysus"],
+    "gods": [
+      "Dionysus"
+    ],
     "name": "Bounce Back",
     "description": "After each Encounter, restore some Health_Icon if you took any damage in that Encounter.",
     "description_rich": [
@@ -1139,7 +1223,10 @@
     "notes": null
   },
   "brave_face": {
-    "gods": ["Hephaestus", "Hera"],
+    "gods": [
+      "Hephaestus",
+      "Hera"
+    ],
     "name": "Brave Face",
     "description": "Automatically use Magick_Icon to resist up to 30% of any damage.",
     "description_rich": [
@@ -1202,7 +1289,9 @@
     "notes": null
   },
   "breaker_rush": {
-    "gods": ["Poseidon"],
+    "gods": [
+      "Poseidon"
+    ],
     "name": "Breaker Rush",
     "description": "Whenever you Sprint, hit the first foe you run into with a blast that knocks foes away.",
     "description_rich": [
@@ -1238,7 +1327,9 @@
     "notes": null
   },
   "bridal_glow": {
-    "gods": ["Hera"],
+    "gods": [
+      "Hera"
+    ],
     "name": "Bridal Glow",
     "description": "Make 1 random Boon become Heroic and give it Arrow_Up_Icon Lv.",
     "description_rich": [
@@ -1301,7 +1392,9 @@
     "notes": null
   },
   "broken_resolve": {
-    "gods": ["Aphrodite"],
+    "gods": [
+      "Aphrodite"
+    ],
     "name": "Broken Resolve",
     "description": "Your Weak effects are more potent.",
     "description_rich": [
@@ -1334,12 +1427,20 @@
     },
     "deals_olympian_damage": false,
     "prerequisites": {
-      "boons": [["Rapture Ring", "Passion Rush", "Glamour Gain"]]
+      "boons": [
+        [
+          "Rapture Ring",
+          "Passion Rush",
+          "Glamour Gain"
+        ]
+      ]
     },
     "notes": null
   },
   "buried_treasure": {
-    "gods": ["Poseidon"],
+    "gods": [
+      "Poseidon"
+    ],
     "name": "Buried Treasure",
     "description": "Any Minor Finds and Gold_Single_Coin_Icon are worth more, and you receive Gold_Coins_Icon, Health_Restore_Icon, and Bones_Icon now.",
     "description_rich": [
@@ -1411,7 +1512,10 @@
     "notes": null
   },
   "burning_desire": {
-    "gods": ["Aphrodite", "Hestia"],
+    "gods": [
+      "Aphrodite",
+      "Hestia"
+    ],
     "name": "Burning Desire",
     "description": "While foes are Weak, any Scorch they have does not diminish as it deals damage.",
     "description_rich": [
@@ -1453,14 +1557,24 @@
     "deals_olympian_damage": false,
     "prerequisites": {
       "boons": [
-        ["Rapture Ring", "Passion Rush", "Glamour Gain"],
-        ["Flame Strike", "Flame Flourish", "Smolder Ring"]
+        [
+          "Rapture Ring",
+          "Passion Rush",
+          "Glamour Gain"
+        ],
+        [
+          "Flame Strike",
+          "Flame Flourish",
+          "Smolder Ring"
+        ]
       ]
     },
     "notes": null
   },
   "cardio_gain": {
-    "gods": ["Hestia"],
+    "gods": [
+      "Hestia"
+    ],
     "name": "Cardio Gain",
     "description": "Whenever your Attack or Special deal damage, restore Magick_Icon.",
     "description_rich": [
@@ -1513,7 +1627,10 @@
     "notes": null
   },
   "carnal_pleasure": {
-    "gods": ["Aphrodite", "Ares"],
+    "gods": [
+      "Aphrodite",
+      "Ares"
+    ],
     "name": "Carnal Pleasure",
     "description": "Whenever you collect a Blood_Drop_Icon, create a Heartthrob.",
     "description_rich": [
@@ -1563,13 +1680,19 @@
           "Passion Rush",
           "Glamour Gain"
         ],
-        ["Grisly Gain", "Visceral Impact", "Profuse Bleeding"]
+        [
+          "Grisly Gain",
+          "Visceral Impact",
+          "Profuse Bleeding"
+        ]
       ]
     },
     "notes": null
   },
   "caustic": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Caustic",
     "description": "For the next 3-5 Encounters, slain foes toss an Inferno-Bomb at you.",
     "description_rich": [
@@ -1619,7 +1742,9 @@
     "notes": null
   },
   "celerity": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Celerity",
     "description": "Afterward, you move and Sprint X% faster",
     "description_rich": [
@@ -1655,7 +1780,10 @@
     "notes": null
   },
   "chain_reaction": {
-    "gods": ["Hephaestus", "Hestia"],
+    "gods": [
+      "Hephaestus",
+      "Hestia"
+    ],
     "name": "Chain Reaction",
     "description": "If you use your blast effects from Hephaestus just after they recharge, they fire 2 times.",
     "description_rich": [
@@ -1697,7 +1825,10 @@
     "deals_olympian_damage": true,
     "prerequisites": {
       "boons": [
-        ["Volcanic Strike", "Volcanic Flourish"],
+        [
+          "Volcanic Strike",
+          "Volcanic Flourish"
+        ],
         [
           "Flame Strike",
           "Flame Flourish",
@@ -1710,7 +1841,9 @@
     "notes": null
   },
   "chant": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Chant",
     "description": "Afterward, your Ω Moves deal +X% damage for the more Aether_Element_Icon you have.",
     "description_rich": [
@@ -1762,7 +1895,9 @@
     "notes": null
   },
   "chasm": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Chasm",
     "description": "Afterward, your Casts deal +X% damage.",
     "description_rich": [
@@ -1798,7 +1933,10 @@
     "notes": null
   },
   "cherished_heirloom": {
-    "gods": ["Demeter", "Hera"],
+    "gods": [
+      "Demeter",
+      "Hera"
+    ],
     "name": "Cherished Heirloom",
     "description": "Your Keepsakes are stronger this night ( if possible ).",
     "description_rich": [
@@ -1859,7 +1997,9 @@
     "notes": null
   },
   "cinerary_circle": {
-    "gods": ["Hades"],
+    "gods": [
+      "Hades"
+    ],
     "name": "Cinerary Circle",
     "description": "Whenever you use 60 Magick_Icon, summon 3 Soul Urns around you.",
     "description_rich": [
@@ -1907,7 +2047,10 @@
     "notes": null
   },
   "coffin_nail": {
-    "gods": ["Ares", "Hephaestus"],
+    "gods": [
+      "Ares",
+      "Hephaestus"
+    ],
     "name": "Coffin Nail",
     "description": "Your falling blades from Ares fall immediately and deal more damage.",
     "description_rich": [
@@ -1941,7 +2084,11 @@
     "deals_olympian_damage": true,
     "prerequisites": {
       "boons": [
-        ["Sword Ring", "Stabbing Rush", "Cut Above"],
+        [
+          "Sword Ring",
+          "Stabbing Rush",
+          "Cut Above"
+        ],
         [
           "Volcanic Strike",
           "Volcanic Flourish",
@@ -1954,7 +2101,9 @@
     "notes": null
   },
   "cold_storage": {
-    "gods": ["Demeter"],
+    "gods": [
+      "Demeter"
+    ],
     "name": "Cold Storage",
     "description": "Your Freeze effects last longer.",
     "description_rich": [
@@ -1987,12 +2136,20 @@
     },
     "deals_olympian_damage": false,
     "prerequisites": {
-      "boons": [["Ice Strike", "Ice Flourish", "Arctic Ring"]]
+      "boons": [
+        [
+          "Ice Strike",
+          "Ice Flourish",
+          "Arctic Ring"
+        ]
+      ]
     },
     "notes": null
   },
   "controlled_burn": {
-    "gods": ["Hestia"],
+    "gods": [
+      "Hestia"
+    ],
     "name": "Controlled Burn",
     "description": "Your Ω Special also launches a fireball, but uses +10 Magick_Icon.",
     "description_rich": [
@@ -2041,7 +2198,9 @@
     "notes": null
   },
   "corrosion_on_sight": {
-    "gods": ["Medea"],
+    "gods": [
+      "Medea"
+    ],
     "name": "Corrosion on Sight",
     "description": "After a foe joins the Encounter, it loses 50% of any Armor it has.",
     "description_rich": [
@@ -2093,7 +2252,9 @@
     "notes": null
   },
   "creation": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Creation",
     "description": "Afterward, gain Earth_Element_Icon, Water_Element_Icon, Air_Element_Icon, Fire_Element_Icon, Aether_Element_Icon.",
     "description_rich": [
@@ -2166,7 +2327,9 @@
     "notes": null
   },
   "crimson_dress": {
-    "gods": ["Arachne"],
+    "gods": [
+      "Arachne"
+    ],
     "name": "Crimson Dress",
     "description": "Don a +5 Armor_Icon Outfit that makes you deal more damage and +3% after each Encounter.",
     "description_rich": [
@@ -2229,7 +2392,10 @@
     "notes": null
   },
   "cryo_pounder": {
-    "gods": ["Demeter", "Hephaestus"],
+    "gods": [
+      "Demeter",
+      "Hephaestus"
+    ],
     "name": "Cryo Pounder",
     "description": "Your blast effects from Hephaestus deal more damage to Freeze -afflicted foes.",
     "description_rich": [
@@ -2271,14 +2437,24 @@
     "deals_olympian_damage": true,
     "prerequisites": {
       "boons": [
-        ["Ice Strike", "Ice Flourish", "Arctic Ring"],
-        ["Volcanic Strike", "Volcanic Flourish", "Smithy Rush"]
+        [
+          "Ice Strike",
+          "Ice Flourish",
+          "Arctic Ring"
+        ],
+        [
+          "Volcanic Strike",
+          "Volcanic Flourish",
+          "Smithy Rush"
+        ]
       ]
     },
     "notes": null
   },
   "cut_above": {
-    "gods": ["Ares"],
+    "gods": [
+      "Ares"
+    ],
     "name": "Cut Above",
     "description": "Your Ω Moves also cause a falling blade to appear over each foe stroke, but use +5 Magick_Icon.",
     "description_rich": [
@@ -2327,7 +2503,10 @@
     "notes": null
   },
   "cutting_edge": {
-    "gods": ["Apollo", "Ares"],
+    "gods": [
+      "Apollo",
+      "Ares"
+    ],
     "name": "Cutting Edge",
     "description": "Your falling blades from Ares drop +1 time in succession and deal damage in a larger area.",
     "description_rich": [
@@ -2376,13 +2555,19 @@
           "Blinding Rush",
           "Lucid Gain"
         ],
-        ["Sword Ring", "Stabbing Rush", "Cut Above"]
+        [
+          "Sword Ring",
+          "Stabbing Rush",
+          "Cut Above"
+        ]
       ]
     },
     "notes": null
   },
   "dazzling_display": {
-    "gods": ["Apollo"],
+    "gods": [
+      "Apollo"
+    ],
     "name": "Dazzling Display",
     "description": "Your attacks may inflict Daze.",
     "description_rich": [
@@ -2411,12 +2596,18 @@
     },
     "deals_olympian_damage": false,
     "prerequisites": {
-      "boons": [["Nova Strike"]]
+      "boons": [
+        [
+          "Nova Strike"
+        ]
+      ]
     },
     "notes": null
   },
   "death_warrant": {
-    "gods": ["Artemis"],
+    "gods": [
+      "Artemis"
+    ],
     "name": "Death Warrant",
     "description": "A random foe occasionally becomes Marked. If it takes Critical damage, this repeats.",
     "description_rich": [
@@ -2460,7 +2651,9 @@
     "notes": null
   },
   "deep_dissent": {
-    "gods": ["Hades"],
+    "gods": [
+      "Hades"
+    ],
     "name": "Deep Dissent",
     "description": "In your confrontation, Chronos / Typhon summons fewer reinforcements.",
     "description_rich": [
@@ -2503,7 +2696,9 @@
     "notes": null
   },
   "defensive_posture": {
-    "gods": ["Athena"],
+    "gods": [
+      "Athena"
+    ],
     "name": "Defensive Posture",
     "description": "After you take damage, become Impervious for 2 Sec.",
     "description_rich": [
@@ -2543,7 +2738,9 @@
     "notes": null
   },
   "defiance": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Defiance",
     "description": "Afterward, gain +1 use of Death_Defiance_Icon Death Defiance this night.",
     "description_rich": [
@@ -2586,7 +2783,9 @@
     "notes": null
   },
   "discovery": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Discovery",
     "description": "Afterward, you have +X% chance to find +100% resources with your gathering tools.",
     "description_rich": [
@@ -2630,7 +2829,9 @@
     "notes": null
   },
   "divine_dash": {
-    "gods": ["Athena"],
+    "gods": [
+      "Athena"
+    ],
     "name": "Divine Dash",
     "description": "Your Dash deals damage to foe in your path and can momentarily Deflect.",
     "description_rich": [
@@ -2674,7 +2875,9 @@
     "notes": null
   },
   "divine_vengeance": {
-    "gods": ["Zeus"],
+    "gods": [
+      "Zeus"
+    ],
     "name": "Divine Vengeance",
     "description": "After you take damage, your foe is struck by lightning, and again 50% of the time.",
     "description_rich": [
@@ -2710,7 +2913,9 @@
     "notes": null
   },
   "doomed": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Doomed",
     "description": "If you have not cleared 2-3 Encounter(s) in 120 Sec. to clear, you take 500 damage.",
     "description_rich": [
@@ -2768,7 +2973,9 @@
     "notes": null
   },
   "double_strike": {
-    "gods": ["Zeus"],
+    "gods": [
+      "Zeus"
+    ],
     "name": "Double Strike",
     "description": "Your lightning bolt effects may strike 2 times.",
     "description_rich": [
@@ -2816,7 +3023,9 @@
     "notes": null
   },
   "drunken_stupor": {
-    "gods": ["Dionysus"],
+    "gods": [
+      "Dionysus"
+    ],
     "name": "Drunken Stupor",
     "description": "Your Omega_Icon Moves inflict Hangover the first time they strike foes.",
     "description_rich": [
@@ -2860,7 +3069,9 @@
     "notes": null
   },
   "dying_wish": {
-    "gods": ["Hera"],
+    "gods": [
+      "Hera"
+    ],
     "name": "Dying Wish",
     "description": "Whenever Hitch -afflicted foes are slain, damage all other Hitch -afflicted foes.",
     "description_rich": [
@@ -2902,13 +3113,20 @@
     "deals_olympian_damage": true,
     "prerequisites": {
       "boons": [
-        ["Sworn Strike", "Sworn Flourish", "Engagement Ring", "Nexus Rush"]
+        [
+          "Sworn Strike",
+          "Sworn Flourish",
+          "Engagement Ring",
+          "Nexus Rush"
+        ]
       ]
     },
     "notes": null
   },
   "easy_shot": {
-    "gods": ["Artemis"],
+    "gods": [
+      "Artemis"
+    ],
     "name": "Easy Shot",
     "description": "A piercing arrow fires towards any foe damaged by your Omega_Icon Cast.",
     "description_rich": [
@@ -2948,7 +3166,10 @@
     "notes": null
   },
   "ecstatic_obsession": {
-    "gods": ["Aphrodite", "Hera"],
+    "gods": [
+      "Aphrodite",
+      "Hera"
+    ],
     "name": "Ecstatic Obsession",
     "description": "As long as multiple foes are in an Encounter, automatically inflict Charm on 1 of them.",
     "description_rich": [
@@ -2998,14 +3219,25 @@
     "deals_olympian_damage": false,
     "prerequisites": {
       "boons": [
-        ["Rapture Ring", "Passion Rush", "Glamour Gain"],
-        ["Sworn Strike", "Sworn Flourish", "Engagement Ring", "Nexus Rush"]
+        [
+          "Rapture Ring",
+          "Passion Rush",
+          "Glamour Gain"
+        ],
+        [
+          "Sworn Strike",
+          "Sworn Flourish",
+          "Engagement Ring",
+          "Nexus Rush"
+        ]
       ]
     },
     "notes": null
   },
   "electric_overload": {
-    "gods": ["Zeus"],
+    "gods": [
+      "Zeus"
+    ],
     "name": "Electric Overload",
     "description": "Your chain-lightning deals more damage and bounces up to +3 times.",
     "description_rich": [
@@ -3038,12 +3270,18 @@
     },
     "deals_olympian_damage": true,
     "prerequisites": {
-      "boons": [["Static Shock"]]
+      "boons": [
+        [
+          "Static Shock"
+        ]
+      ]
     },
     "notes": null
   },
   "emerald_dress": {
-    "gods": ["Arachne"],
+    "gods": [
+      "Arachne"
+    ],
     "name": "Emerald Dress",
     "description": "Don a +50 Armor_Icon Outfit that makes you restore 2 Health_Icon whenever you exit a Location.",
     "description_rich": [
@@ -3109,7 +3347,9 @@
     "notes": null
   },
   "enfeeblement_of_cowards": {
-    "gods": ["Medea"],
+    "gods": [
+      "Medea"
+    ],
     "name": "Enfeeblement of Cowards",
     "description": "Foes' ranged shots have -40% travel speed.",
     "description_rich": [
@@ -3145,7 +3385,9 @@
     "notes": null
   },
   "engagement_ring": {
-    "gods": ["Hera"],
+    "gods": [
+      "Hera"
+    ],
     "name": "Engagement Ring",
     "description": "Your Casts inflict Hitch and immediately deal damage based on foes in the binding circle.",
     "description_rich": [
@@ -3189,7 +3431,9 @@
     "notes": null
   },
   "enshrouded": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Enshrouded",
     "description": "For the next 4-6 Encounters, Location Reward previews are hidden.",
     "description_rich": [
@@ -3239,7 +3483,9 @@
     "notes": null
   },
   "evade_evade_evade": {
-    "gods": ["Echo"],
+    "gods": [
+      "Echo"
+    ],
     "name": "Evade Evade Evade",
     "description": "Gain +50%Dodge chance, but lose 2% of this each time you Dodge.",
     "description_rich": [
@@ -3291,7 +3537,9 @@
     "notes": null
   },
   "exceptional_talent": {
-    "gods": ["Apollo"],
+    "gods": [
+      "Apollo"
+    ],
     "name": "Exceptional Talent",
     "description": "Your Ω Attack and Ω Special fire 2 times, but use more Magick_Icon.",
     "description_rich": [
@@ -3350,15 +3598,29 @@
     "deals_olympian_damage": false,
     "prerequisites": {
       "boons": [
-        ["Nova Strike", "Nova Flourish"],
-        ["Solar Ring", "Blinding Rush", "Lucid Gain"],
-        ["Extra Dose", "Super Nova", "Back Burner", "Prominence Flare"]
+        [
+          "Nova Strike",
+          "Nova Flourish"
+        ],
+        [
+          "Solar Ring",
+          "Blinding Rush",
+          "Lucid Gain"
+        ],
+        [
+          "Extra Dose",
+          "Super Nova",
+          "Back Burner",
+          "Prominence Flare"
+        ]
       ]
     },
     "notes": null
   },
   "excruciating": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Excruciating",
     "description": "For the next 3-5 Encounters, you take +20%-+50% damage.",
     "description_rich": [
@@ -3410,7 +3672,9 @@
     "notes": null
   },
   "explosive_intent": {
-    "gods": ["Icarus"],
+    "gods": [
+      "Icarus"
+    ],
     "name": "Explosive Intent",
     "description": "Your Omega_Icon Moves also deal 50 damage in an area around foes they hit, but use +10 Magick_Icon.",
     "description_rich": [
@@ -3467,7 +3731,9 @@
     "notes": null
   },
   "extended_family": {
-    "gods": ["Hera"],
+    "gods": [
+      "Hera"
+    ],
     "name": "Extended Family",
     "description": "Your damaging effects from Olympians are stronger for each Boon -giver you have.",
     "description_rich": [
@@ -3503,7 +3769,9 @@
     "notes": null
   },
   "extra_dose": {
-    "gods": ["Apollo"],
+    "gods": [
+      "Apollo"
+    ],
     "name": "Extra Dose",
     "description": "Your Attack has a chance to hit 2 times.",
     "description_rich": [
@@ -3549,7 +3817,9 @@
     "notes": null
   },
   "fates'_trimmings": {
-    "gods": ["Narcissus"],
+    "gods": [
+      "Narcissus"
+    ],
     "name": "Fates' Trimmings",
     "description": "Receive a gift of +2 Fate Fabric and +2 Dice.",
     "description_rich": [
@@ -3605,7 +3875,9 @@
     "notes": null
   },
   "favor": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Favor",
     "description": "Afterward, Boons have +X% chance to be Rare or better.",
     "description_rich": [
@@ -3641,7 +3913,9 @@
     "notes": null
   },
   "fight_fight_fight": {
-    "gods": ["Echo"],
+    "gods": [
+      "Echo"
+    ],
     "name": "Fight Fight Fight",
     "description": "Gain +60% Max_Health_Icon and Max_Magick_Icon based on their limits, but lose 5% of this after each Location.",
     "description_rich": [
@@ -3707,7 +3981,9 @@
     "notes": null
   },
   "fine_line": {
-    "gods": ["Hera"],
+    "gods": [
+      "Hera"
+    ],
     "name": "Fine Line",
     "description": "Your Omega_Icon Moves create a fissure that deals damage in a long line, but use +15 Magick_Icon.",
     "description_rich": [
@@ -3760,7 +4036,9 @@
     "notes": null
   },
   "fire_away": {
-    "gods": ["Hestia"],
+    "gods": [
+      "Hestia"
+    ],
     "name": "Fire Away",
     "description": "Your Casts destroy many foes' ranged shots, and inflict Scorch on the attacking foes.",
     "description_rich": [
@@ -3802,15 +4080,27 @@
     "deals_olympian_damage": false,
     "prerequisites": {
       "boons": [
-        ["Smolder Ring"],
-        ["Flash Fry", "Hot Pot", "Pyro Technique", "Highly Flammable"],
-        ["Glowing Coal", "Controlled Burn"]
+        [
+          "Smolder Ring"
+        ],
+        [
+          "Flash Fry",
+          "Hot Pot",
+          "Pyro Technique",
+          "Highly Flammable"
+        ],
+        [
+          "Glowing Coal",
+          "Controlled Burn"
+        ]
       ]
     },
     "notes": null
   },
   "fixated": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Fixated",
     "description": "For the next 3-5 Encounters, whenever you use Magick_Icon, Prime it until this expires.",
     "description_rich": [
@@ -3869,7 +4159,9 @@
     "notes": null
   },
   "flame_flourish": {
-    "gods": ["Hestia"],
+    "gods": [
+      "Hestia"
+    ],
     "name": "Flame Flourish",
     "description": "Your Specials inflict Scorch.",
     "description_rich": [
@@ -3913,7 +4205,9 @@
     "notes": null
   },
   "flame_strike": {
-    "gods": ["Hestia"],
+    "gods": [
+      "Hestia"
+    ],
     "name": "Flame Strike",
     "description": "Your Attacks inflict Scorch.",
     "description_rich": [
@@ -3957,7 +4251,9 @@
     "notes": null
   },
   "flash_fry": {
-    "gods": ["Hestia"],
+    "gods": [
+      "Hestia"
+    ],
     "name": "Flash Fry",
     "description": "Your foes perish in a blast that damages any surrounding foes.",
     "description_rich": [
@@ -3985,7 +4281,9 @@
     "notes": null
   },
   "flayed": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Flayed",
     "description": "For the next 4-6 Encounters, each time you use Specials, you take 3-6 Health_Icon.",
     "description_rich": [
@@ -4050,7 +4348,9 @@
     "notes": null
   },
   "flood_gain": {
-    "gods": ["Poseidon"],
+    "gods": [
+      "Poseidon"
+    ],
     "name": "Flood Gain",
     "description": "Your Ω Moves make you briefly restore any Magick_Icon you use, repeatable after 8 Sec.",
     "description_rich": [
@@ -4099,7 +4399,9 @@
     "notes": null
   },
   "flourish": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Flourish",
     "description": "Afterward, your Specials deal +X% damage.",
     "description_rich": [
@@ -4135,7 +4437,9 @@
     "notes": null
   },
   "flutter_flourish": {
-    "gods": ["Aphrodite"],
+    "gods": [
+      "Aphrodite"
+    ],
     "name": "Flutter Flourish",
     "description": "Your Specials deal more damage to nearby foes.",
     "description_rich": [
@@ -4171,7 +4475,9 @@
     "notes": null
   },
   "flutter_strike": {
-    "gods": ["Aphrodite"],
+    "gods": [
+      "Aphrodite"
+    ],
     "name": "Flutter Strike",
     "description": "Your Attacks deal more damage to nearby foes.",
     "description_rich": [
@@ -4207,7 +4513,10 @@
     "notes": null
   },
   "fourth_degree": {
-    "gods": ["Ares", "Hestia"],
+    "gods": [
+      "Ares",
+      "Hestia"
+    ],
     "name": "Fourth Degree",
     "description": "Your fireball effects from Hestia inflict Wounds with even greater Power.",
     "description_rich": [
@@ -4260,13 +4569,19 @@
           "Stabbing Rush",
           "Grisly Gain"
         ],
-        ["Controlled Burn", "Glowing Coal"]
+        [
+          "Controlled Burn",
+          "Glowing Coal"
+        ]
       ]
     },
     "notes": null
   },
   "freezer_burn": {
-    "gods": ["Demeter", "Hestia"],
+    "gods": [
+      "Demeter",
+      "Hestia"
+    ],
     "name": "Freezer Burn",
     "description": "Whenever you inflict Freeze, on a foe with Scorch, deal damage and remove Scorch.",
     "description_rich": [
@@ -4316,14 +4631,24 @@
     "deals_olympian_damage": false,
     "prerequisites": {
       "boons": [
-        ["Ice Strike", "Ice Flourish", "Arctic Ring"],
-        ["Flame Strike", "Flame Flourish", "Smolder Ring"]
+        [
+          "Ice Strike",
+          "Ice Flourish",
+          "Arctic Ring"
+        ],
+        [
+          "Flame Strike",
+          "Flame Flourish",
+          "Smolder Ring"
+        ]
       ]
     },
     "notes": null
   },
   "frigid_rush": {
-    "gods": ["Demeter"],
+    "gods": [
+      "Demeter"
+    ],
     "name": "Frigid Rush",
     "description": "Your Sprint forms a Gust around you that lingers after you stop.",
     "description_rich": [
@@ -4367,7 +4692,9 @@
     "notes": null
   },
   "frosty_veneer": {
-    "gods": ["Demeter"],
+    "gods": [
+      "Demeter"
+    ],
     "name": "Frosty Veneer",
     "description": "While you have at least 6 Water_Element_Icon, whenever you would take at least 20 damage, take less.",
     "description_rich": [
@@ -4423,7 +4750,9 @@
     "notes": null
   },
   "fuchsia_dress": {
-    "gods": ["Arachne"],
+    "gods": [
+      "Arachne"
+    ],
     "name": "Fuchsia Dress",
     "description": "Don a +20 Armor_Icon Outfit that makes your Casts deal +100% damage.",
     "description_rich": [
@@ -4484,7 +4813,9 @@
     "notes": null
   },
   "furnace_blast": {
-    "gods": ["Hephaestus"],
+    "gods": [
+      "Hephaestus"
+    ],
     "name": "Furnace Blast",
     "description": "Your blast effects from Hephaestus also inflict Glow on foes.",
     "description_rich": [
@@ -4525,12 +4856,20 @@
     },
     "deals_olympian_damage": false,
     "prerequisites": {
-      "boons": [["Volcanic Strike", "Volcanic Flourish", "Smithy Rush"]]
+      "boons": [
+        [
+          "Volcanic Strike",
+          "Volcanic Flourish",
+          "Smithy Rush"
+        ]
+      ]
     },
     "notes": null
   },
   "gagged": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Gagged",
     "description": "For the next 3-5 Encounters, each time you use Ω Moves, you take 5-8 Health_Icon.",
     "description_rich": [
@@ -4595,7 +4934,9 @@
     "notes": null
   },
   "geyser_spout": {
-    "gods": ["Poseidon"],
+    "gods": [
+      "Poseidon"
+    ],
     "name": "Geyser Spout",
     "description": "Your Ω Cast gains Power and knocks foes away.",
     "description_rich": [
@@ -4641,7 +4982,9 @@
     "notes": null
   },
   "gift_gift_gift": {
-    "gods": ["Echo"],
+    "gods": [
+      "Echo"
+    ],
     "name": "Gift Gift Gift",
     "description": "After you switch Keepsakes, also gain the basic effect of your last keepsake",
     "description_rich": [
@@ -4681,7 +5024,9 @@
     "notes": null
   },
   "gigaros_dash": {
-    "gods": ["Hades"],
+    "gods": [
+      "Hades"
+    ],
     "name": "Gigaros Dash",
     "description": "Your Dash strikes surrounding foes with a punishing sweep that inflicts Scorn.",
     "description_rich": [
@@ -4724,7 +5069,9 @@
     "notes": null
   },
   "gilded_dress": {
-    "gods": ["Arachne"],
+    "gods": [
+      "Arachne"
+    ],
     "name": "Gilded Dress",
     "description": "Don a +10 Armor_Icon Outfit that grants +5 Gold_Coins_Icon whenever you exit a Location.",
     "description_rich": [
@@ -4790,7 +5137,9 @@
     "notes": null
   },
   "glamour_gain": {
-    "gods": ["Aphrodite"],
+    "gods": [
+      "Aphrodite"
+    ],
     "name": "Glamour Gain",
     "description": "You automatically inflict Weak on nearby foes and gradually restore Magick_Icon near them.",
     "description_rich": [
@@ -4835,7 +5184,10 @@
     "notes": null
   },
   "glorious_disaster": {
-    "gods": ["Apollo", "Zeus"],
+    "gods": [
+      "Apollo",
+      "Zeus"
+    ],
     "name": "Glorious Disaster",
     "description": "You can Channel+30 Magick_Icon into your Ω Cast to repeatedly strike foes with lightning bolts.",
     "description_rich": [
@@ -4882,14 +5234,23 @@
     "deals_olympian_damage": true,
     "prerequisites": {
       "boons": [
-        ["Prominence Flare"],
-        ["Heaven Strike", "Heaven Flourish", "Storm Ring", "Thunder Rush"]
+        [
+          "Prominence Flare"
+        ],
+        [
+          "Heaven Strike",
+          "Heaven Flourish",
+          "Storm Ring",
+          "Thunder Rush"
+        ]
       ]
     },
     "notes": null
   },
   "glowing_coal": {
-    "gods": ["Hestia"],
+    "gods": [
+      "Hestia"
+    ],
     "name": "Glowing Coal",
     "description": "Hold Cast to aim a fireball that explodes on impact. The binding circle forms there.",
     "description_rich": [
@@ -4925,7 +5286,9 @@
     "notes": null
   },
   "gold_gold_gold": {
-    "gods": ["Echo"],
+    "gods": [
+      "Echo"
+    ],
     "name": "Gold Gold Gold",
     "description": "After your next purchase from Charon, gain another at no extra charge (in most cases).",
     "description_rich": [
@@ -4961,7 +5324,9 @@
     "notes": null
   },
   "grand_caldera": {
-    "gods": ["Hephaestus"],
+    "gods": [
+      "Hephaestus"
+    ],
     "name": "Grand Caldera",
     "description": "Your blast effects from Hephaestus deal more damage and are 50% larger.",
     "description_rich": [
@@ -5002,12 +5367,20 @@
     },
     "deals_olympian_damage": true,
     "prerequisites": {
-      "boons": [["Volcanic Strike", "Volcanic Flourish", "Smithy Rush"]]
+      "boons": [
+        [
+          "Volcanic Strike",
+          "Volcanic Flourish",
+          "Smithy Rush"
+        ]
+      ]
     },
     "notes": null
   },
   "grievous_blow": {
-    "gods": ["Ares"],
+    "gods": [
+      "Ares"
+    ],
     "name": "Grievous Blow",
     "description": "Foes with Wounds may suffer 200% damage when struck.",
     "description_rich": [
@@ -5048,12 +5421,19 @@
     },
     "deals_olympian_damage": false,
     "prerequisites": {
-      "boons": [["Vicious Strike", "Vicious Flourish"]]
+      "boons": [
+        [
+          "Vicious Strike",
+          "Vicious Flourish"
+        ]
+      ]
     },
     "notes": null
   },
   "grisly_gain": {
-    "gods": ["Ares"],
+    "gods": [
+      "Ares"
+    ],
     "name": "Grisly Gain",
     "description": "Striking foes with your Weapon has 20% chance to spill Blood_Drop_Icon, which also restores Magick_Icon.",
     "description_rich": [
@@ -5115,7 +5495,10 @@
     "notes": null
   },
   "hail_storm": {
-    "gods": ["Demeter", "Zeus"],
+    "gods": [
+      "Demeter",
+      "Zeus"
+    ],
     "name": "Hail Storm",
     "description": "Your Freeze effects also cause lightning bolts to repeatedly strike afflicted foes.",
     "description_rich": [
@@ -5149,7 +5532,11 @@
     "deals_olympian_damage": true,
     "prerequisites": {
       "boons": [
-        ["Ice Strike", "Ice Flourish", "Arctic Ring"],
+        [
+          "Ice Strike",
+          "Ice Flourish",
+          "Arctic Ring"
+        ],
         [
           "Heaven Strike",
           "Heaven Flourish",
@@ -5162,7 +5549,9 @@
     "notes": null
   },
   "happy_haze": {
-    "gods": ["Dionysus"],
+    "gods": [
+      "Dionysus"
+    ],
     "name": "Happy Haze",
     "description": "Every 8 Sec. in each Encounter, Festive Fog appears, making you stronger while in it.",
     "description_rich": [
@@ -5214,7 +5603,9 @@
     "notes": null
   },
   "hard_target": {
-    "gods": ["Hermes"],
+    "gods": [
+      "Hermes"
+    ],
     "name": "Hard Target",
     "description": "Most foes' ranged shots are slower.",
     "description_rich": [
@@ -5242,7 +5633,9 @@
     "notes": null
   },
   "harm_for_the_afflicted": {
-    "gods": ["Medea"],
+    "gods": [
+      "Medea"
+    ],
     "name": "Harm for the Afflicted",
     "description": "Inflicting a Curse deals 50 damage if the foe is not afflicted by it, up to 1 Sec.",
     "description_rich": [
@@ -5290,7 +5683,9 @@
     "notes": null
   },
   "hasty_retreat": {
-    "gods": ["Hermes"],
+    "gods": [
+      "Hermes"
+    ],
     "name": "Hasty Retreat",
     "description": "Gain Dodge chance and move speed that increase the more Boons you have.",
     "description_rich": [
@@ -5334,7 +5729,9 @@
     "notes": null
   },
   "hazard_boom": {
-    "gods": ["Icarus"],
+    "gods": [
+      "Icarus"
+    ],
     "name": "Hazard Boom",
     "description": "Your Casts also blast the area after 4 Sec., dealing 500 damage to foes, but 20 to you.",
     "description_rich": [
@@ -5394,7 +5791,9 @@
     "notes": null
   },
   "healthy_rebound": {
-    "gods": ["Aphrodite"],
+    "gods": [
+      "Aphrodite"
+    ],
     "name": "Healthy Rebound",
     "description": "Whenever you exit a Location, restore 100% Health_Icon if you have not lost too much.",
     "description_rich": [
@@ -5440,12 +5839,18 @@
     },
     "deals_olympian_damage": false,
     "prerequisites": {
-      "boons": [["Shameless Attitude"]]
+      "boons": [
+        [
+          "Shameless Attitude"
+        ]
+      ]
     },
     "notes": null
   },
   "heart_breaker": {
-    "gods": ["Aphrodite"],
+    "gods": [
+      "Aphrodite"
+    ],
     "name": "Heart Breaker",
     "description": "Whenever you use 40 Magick_Icon, create a Heartthrob.",
     "description_rich": [
@@ -5494,7 +5899,9 @@
     "notes": null
   },
   "heartfelt_condolences": {
-    "gods": ["Narcissus"],
+    "gods": [
+      "Narcissus"
+    ],
     "name": "Heartfelt Condolences",
     "description": "Receive a gift of +50 Health_Restore_Icon and +10 Ashes.",
     "description_rich": [
@@ -5548,7 +5955,10 @@
     "notes": null
   },
   "hearty_appetite": {
-    "gods": ["Aphrodite", "Demeter"],
+    "gods": [
+      "Aphrodite",
+      "Demeter"
+    ],
     "name": "Hearty Appetite",
     "description": "You deal more damage the more Max_Health_Icon you have.",
     "description_rich": [
@@ -5602,7 +6012,9 @@
     "notes": null
   },
   "heat_rush": {
-    "gods": ["Hestia"],
+    "gods": [
+      "Hestia"
+    ],
     "name": "Heat Rush",
     "description": "Your Sprint leaves a cinder trail, and any damage you take from burning is reduced to 1.",
     "description_rich": [
@@ -5646,7 +6058,9 @@
     "notes": null
   },
   "heaven_flourish": {
-    "gods": ["Zeus"],
+    "gods": [
+      "Zeus"
+    ],
     "name": "Heaven Flourish",
     "description": "Your Specials inflict Blitz.",
     "description_rich": [
@@ -5690,7 +6104,9 @@
     "notes": null
   },
   "heaven_strike": {
-    "gods": ["Zeus"],
+    "gods": [
+      "Zeus"
+    ],
     "name": "Heaven Strike",
     "description": "Your Attacks inflict Blitz.",
     "description_rich": [
@@ -5734,7 +6150,9 @@
     "notes": null
   },
   "heavenly_splendor": {
-    "gods": ["Narcissus"],
+    "gods": [
+      "Narcissus"
+    ],
     "name": "Heavenly Splendor",
     "description": "Receive a gift of +1 Star Dust and +2 Earth_Element_Icon Water_Element_Icon Air_Element_Icon Fire_Element_Icon.",
     "description_rich": [
@@ -5805,7 +6223,9 @@
     "notes": null
   },
   "heavy_metal": {
-    "gods": ["Hephaestus"],
+    "gods": [
+      "Hephaestus"
+    ],
     "name": "Heavy Metal",
     "description": "Your Weapon deals more damage based on 20% of your Armor_Icon, and you gain some now.",
     "description_rich": [
@@ -5858,7 +6278,10 @@
     "notes": null
   },
   "heinous_affront": {
-    "gods": ["Ares", "Zeus"],
+    "gods": [
+      "Ares",
+      "Zeus"
+    ],
     "name": "Heinous Affront",
     "description": "Inflicting Wounds, occasionally also inflicts all your 'after you take damage' effects.",
     "description_rich": [
@@ -5892,7 +6315,10 @@
     "deals_olympian_damage": true,
     "prerequisites": {
       "boons": [
-        ["Vicious Strike", "Vicious Flourish"],
+        [
+          "Vicious Strike",
+          "Vicious Flourish"
+        ],
         [
           "Heaven Strike",
           "Heaven Flourish",
@@ -5900,13 +6326,19 @@
           "Thunder Rush",
           "Ionic Gain"
         ],
-        ["Visceral Impact", "Light Smite", "Divine Vengeance"]
+        [
+          "Visceral Impact",
+          "Light Smite",
+          "Divine Vengeance"
+        ]
       ]
     },
     "notes": null
   },
   "hereditary_bane": {
-    "gods": ["Hera"],
+    "gods": [
+      "Hera"
+    ],
     "name": "Hereditary Bane",
     "description": "Your Hitch effects deal more damage and last +5 Sec.",
     "description_rich": [
@@ -5944,13 +6376,20 @@
     "deals_olympian_damage": false,
     "prerequisites": {
       "boons": [
-        ["Sworn Strike", "Sworn Flourish", "Engagement Ring", "Nexus Rush"]
+        [
+          "Sworn Strike",
+          "Sworn Flourish",
+          "Engagement Ring",
+          "Nexus Rush"
+        ]
       ]
     },
     "notes": null
   },
   "high_surf": {
-    "gods": ["Poseidon"],
+    "gods": [
+      "Poseidon"
+    ],
     "name": "High Surf",
     "description": "Hit surrounding foes with a powerful splash as they start to strike, but you Prime30 Magick_Icon.",
     "description_rich": [
@@ -5991,7 +6430,9 @@
     "notes": null
   },
   "highly_flammable": {
-    "gods": ["Hestia"],
+    "gods": [
+      "Hestia"
+    ],
     "name": "Highly Flammable",
     "description": "Whenever you inflict Scorch on a foe for the first time, inflict more.",
     "description_rich": [
@@ -6024,12 +6465,21 @@
     },
     "deals_olympian_damage": false,
     "prerequisites": {
-      "boons": [["Flame Strike", "Flame Flourish", "Smolder Ring"]]
+      "boons": [
+        [
+          "Flame Strike",
+          "Flame Flourish",
+          "Smolder Ring"
+        ]
+      ]
     },
     "notes": null
   },
   "hostile_environment": {
-    "gods": ["Ares", "Demeter"],
+    "gods": [
+      "Ares",
+      "Demeter"
+    ],
     "name": "Hostile Environment",
     "description": "Your Ω Cast is stronger and follows you, even as you start to Channel it.",
     "description_rich": [
@@ -6071,7 +6521,10 @@
     "deals_olympian_damage": false,
     "prerequisites": {
       "boons": [
-        ["Sword Ring", "Meat Grinder"],
+        [
+          "Sword Ring",
+          "Meat Grinder"
+        ],
         [
           "Ice Strike",
           "Ice Flourish",
@@ -6084,7 +6537,9 @@
     "notes": null
   },
   "hot_pot": {
-    "gods": ["Hestia"],
+    "gods": [
+      "Hestia"
+    ],
     "name": "Hot Pot",
     "description": "Gain a chance to Dodge, which is doubled against Scorch -afflicted foes.",
     "description_rich": [
@@ -6125,12 +6580,20 @@
     },
     "deals_olympian_damage": false,
     "prerequisites": {
-      "boons": [["Flame Strike", "Flame Flourish", "Smolder Ring"]]
+      "boons": [
+        [
+          "Flame Strike",
+          "Flame Flourish",
+          "Smolder Ring"
+        ]
+      ]
     },
     "notes": null
   },
   "howling_soul": {
-    "gods": ["Hades"],
+    "gods": [
+      "Hades"
+    ],
     "name": "Howling Soul",
     "description": "Your Casts launch a projectile that seeks foes. The binding circle forms where it hits.",
     "description_rich": [
@@ -6165,7 +6628,9 @@
     "notes": null
   },
   "hydraulic_might": {
-    "gods": ["Poseidon"],
+    "gods": [
+      "Poseidon"
+    ],
     "name": "Hydraulic Might",
     "description": "At the start of each Encounter, your Attacks and Specials are stronger for 10 Sec..",
     "description_rich": [
@@ -6225,7 +6690,9 @@
     "notes": null
   },
   "hymn_to_the_eye_of_night": {
-    "gods": ["Circe"],
+    "gods": [
+      "Circe"
+    ],
     "name": "Hymn to the Eye of Night",
     "description": "Your Hex deals +30% damage.",
     "description_rich": [
@@ -6269,7 +6736,9 @@
     "notes": null
   },
   "ice_flourish": {
-    "gods": ["Demeter"],
+    "gods": [
+      "Demeter"
+    ],
     "name": "Ice Flourish",
     "description": "Your Specials deal more damage and inflict Freeze.",
     "description_rich": [
@@ -6313,7 +6782,9 @@
     "notes": null
   },
   "ice_strike": {
-    "gods": ["Demeter"],
+    "gods": [
+      "Demeter"
+    ],
     "name": "Ice Strike",
     "description": "Your Attacks deal more damage and inflict Freeze.",
     "description_rich": [
@@ -6357,7 +6828,10 @@
     "notes": null
   },
   "incandescent_aura": {
-    "gods": ["Hera", "Hestia"],
+    "gods": [
+      "Hera",
+      "Hestia"
+    ],
     "name": "Incandescent Aura",
     "description": "Whenever you restore Magick_Icon during Encounters, damage all Hitch -afflicted foes.",
     "description_rich": [
@@ -6427,7 +6901,9 @@
     "notes": null
   },
   "ingenious_flourish": {
-    "gods": ["Icarus"],
+    "gods": [
+      "Icarus"
+    ],
     "name": "Ingenious Flourish",
     "description": "Your Special Boon gains +3 Arrow_Up_Icon Lv., but you Prime35 Magick_Icon.",
     "description_rich": [
@@ -6493,7 +6969,9 @@
     "notes": null
   },
   "ingenious_strike": {
-    "gods": ["Icarus"],
+    "gods": [
+      "Icarus"
+    ],
     "name": "Ingenious Strike",
     "description": "Your Attack Boon gains +3 Arrow_Up_Icon Lv., but you Prime35 Magick_Icon.",
     "description_rich": [
@@ -6559,7 +7037,9 @@
     "notes": null
   },
   "ionic_gain": {
-    "gods": ["Zeus"],
+    "gods": [
+      "Zeus"
+    ],
     "name": "Ionic Gain",
     "description": "In each Encounter, an Aether Font appears in the area and restores all Magick_Icon when used.",
     "description_rich": [
@@ -6612,7 +7092,10 @@
     "notes": null
   },
   "island_getaway": {
-    "gods": ["Aphrodite", "Poseidon"],
+    "gods": [
+      "Aphrodite",
+      "Poseidon"
+    ],
     "name": "Island Getaway",
     "description": "You take less damage from nearby foes. Boons of Aphrodite treats all foes as nearby.",
     "description_rich": [
@@ -6654,7 +7137,10 @@
     "deals_olympian_damage": false,
     "prerequisites": {
       "boons": [
-        ["Flutter Strike", "Flutter Flourish"],
+        [
+          "Flutter Strike",
+          "Flutter Flourish"
+        ],
         [
           "Wave Strike",
           "Wave Flourish",
@@ -6667,7 +7153,10 @@
     "notes": null
   },
   "killer_current": {
-    "gods": ["Poseidon", "Zeus"],
+    "gods": [
+      "Poseidon",
+      "Zeus"
+    ],
     "name": "Killer Current",
     "description": "Your lightning deals more damage to Froth -afflicted foes.",
     "description_rich": [
@@ -6701,7 +7190,10 @@
     "deals_olympian_damage": true,
     "prerequisites": {
       "boons": [
-        ["Tidal Ring", "Slippery Slope"],
+        [
+          "Tidal Ring",
+          "Slippery Slope"
+        ],
         [
           "Heaven Strike",
           "Heaven Flourish",
@@ -6715,7 +7207,9 @@
     "notes": null
   },
   "killing_stroke": {
-    "gods": ["Artemis"],
+    "gods": [
+      "Artemis"
+    ],
     "name": "Killing Stroke",
     "description": "Your Specials may deal Critical damage, but you Prime40 Magick_Icon.",
     "description_rich": [
@@ -6772,7 +7266,9 @@
     "notes": null
   },
   "king_tide": {
-    "gods": ["Poseidon"],
+    "gods": [
+      "Poseidon"
+    ],
     "name": "King Tide",
     "description": "Your splash effects from Poseidon are larger and deal bonus damage to Guardians.",
     "description_rich": [
@@ -6814,15 +7310,30 @@
     "deals_olympian_damage": true,
     "prerequisites": {
       "boons": [
-        ["Wave Strike", "Wave Flourish"],
-        ["Breaker Rush", "Flood Gain", "Geyser Spout"],
-        ["Hydraulic Might", "Ocean Swell", "Slippery Slope", "High Surf"]
+        [
+          "Wave Strike",
+          "Wave Flourish"
+        ],
+        [
+          "Breaker Rush",
+          "Flood Gain",
+          "Geyser Spout"
+        ],
+        [
+          "Hydraulic Might",
+          "Ocean Swell",
+          "Slippery Slope",
+          "High Surf"
+        ]
       ]
     },
     "notes": null
   },
   "king's_ransom": {
-    "gods": ["Zeus", "Hera"],
+    "gods": [
+      "Zeus",
+      "Hera"
+    ],
     "name": "King's Ransom",
     "description": "Give up all your Boons of Hera. For each, raise Arrow_Up_Icon Lv. for all your Boons of Zeus.",
     "description_rich": [
@@ -6916,13 +7427,19 @@
           "Thunder Rush",
           "Ionic Gain"
         ],
-        ["Engagement Ring", "Born Gain", "Nexus Rush"]
+        [
+          "Engagement Ring",
+          "Born Gain",
+          "Nexus Rush"
+        ]
       ]
     },
     "notes": null
   },
   "lapis_lazuli_insight": {
-    "gods": ["Circe"],
+    "gods": [
+      "Circe"
+    ],
     "name": "Lapis Lazuli Insight",
     "description": "Randomly draw 2 of your active Arcana, and upgrade it this night.",
     "description_rich": [
@@ -6966,7 +7483,9 @@
     "notes": null
   },
   "last_gasp": {
-    "gods": ["Hades"],
+    "gods": [
+      "Hades"
+    ],
     "name": "Last Gasp",
     "description": "Deal more damage based on how many times you used Death_Defiance_Icon Death Defiance this night.",
     "description_rich": [
@@ -7008,7 +7527,9 @@
     "notes": null
   },
   "latest_model": {
-    "gods": ["Icarus"],
+    "gods": [
+      "Icarus"
+    ],
     "name": "Latest Model",
     "description": "Icarus chooses 1 Daedalus_Hammer of yours to upgrade to Rank II this night, improving its effects.",
     "description_rich": [
@@ -7063,7 +7584,9 @@
     "notes": null
   },
   "lavender_dress": {
-    "gods": ["Arachne"],
+    "gods": [
+      "Arachne"
+    ],
     "name": "Lavender Dress",
     "description": "Don a +30 Armor_Icon Outfit that makes you Channel40% faster.",
     "description_rich": [
@@ -7116,7 +7639,9 @@
     "notes": null
   },
   "lethal_snare": {
-    "gods": ["Artemis"],
+    "gods": [
+      "Artemis"
+    ],
     "name": "Lethal Snare",
     "description": "Foes in your Casts may take Critical damage from your Attacks.",
     "description_rich": [
@@ -7168,7 +7693,9 @@
     "notes": null
   },
   "life_from_the_dead": {
-    "gods": ["Medea"],
+    "gods": [
+      "Medea"
+    ],
     "name": "Life from the Dead",
     "description": "After a foe is slain, it has 5% chance to drop +10 Health_Restore_Icon, limit 1 per Encounter.",
     "description_rich": [
@@ -7233,7 +7760,9 @@
     "notes": null
   },
   "life_savings": {
-    "gods": ["Narcissus"],
+    "gods": [
+      "Narcissus"
+    ],
     "name": "Life Savings",
     "description": "Receive a gift of +1 Death_Defiance_Icon and +1 Lotus.",
     "description_rich": [
@@ -7289,7 +7818,9 @@
     "notes": null
   },
   "life_tax": {
-    "gods": ["Hades"],
+    "gods": [
+      "Hades"
+    ],
     "name": "Life Tax",
     "description": "Restore Health_Icon for 1% of damage you deal, until you reach the limit.",
     "description_rich": [
@@ -7333,7 +7864,9 @@
     "notes": null
   },
   "light_smite": {
-    "gods": ["Apollo"],
+    "gods": [
+      "Apollo"
+    ],
     "name": "Light Smite",
     "description": "After you take damage, your foe takes damage and you inflict Daze on all foes in the vicinity.",
     "description_rich": [
@@ -7369,7 +7902,9 @@
     "notes": null
   },
   "lightning_lance": {
-    "gods": ["Zeus"],
+    "gods": [
+      "Zeus"
+    ],
     "name": "Lightning Lance",
     "description": "Hold Cast to aim where the binding circle appears. Foes within are struck by lightning.",
     "description_rich": [
@@ -7407,7 +7942,9 @@
     "notes": null
   },
   "local_climate": {
-    "gods": ["Demeter"],
+    "gods": [
+      "Demeter"
+    ],
     "name": "Local Climate",
     "description": "Your Omega_Icon Cast deals more damage. If you are in the binding circle, the bonus is doubled.",
     "description_rich": [
@@ -7449,7 +7986,10 @@
     "notes": null
   },
   "love_handles": {
-    "gods": ["Aphrodite", "Hephaestus"],
+    "gods": [
+      "Aphrodite",
+      "Hephaestus"
+    ],
     "name": "Love Handles",
     "description": "Your blast effects from Hephaestus also create a Heartthrob.",
     "description_rich": [
@@ -7498,13 +8038,19 @@
           "Passion Rush",
           "Glamour Gain"
         ],
-        ["Volcanic Strike", "Volcanic Flourish", "Smithy Rush"]
+        [
+          "Volcanic Strike",
+          "Volcanic Flourish",
+          "Smithy Rush"
+        ]
       ]
     },
     "notes": null
   },
   "lucid_gain": {
-    "gods": ["Apollo"],
+    "gods": [
+      "Apollo"
+    ],
     "name": "Lucid Gain",
     "description": "Whenever your Cast expire, restore Magick_Icon.",
     "description_rich": [
@@ -7549,7 +8095,9 @@
     "notes": null
   },
   "maimed": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Maimed",
     "description": "For the next 3-5 Encounters, each time you use Attacks, you take 3-6 Health_Icon.",
     "description_rich": [
@@ -7614,7 +8162,9 @@
     "notes": null
   },
   "malice_in_kind": {
-    "gods": ["Medea"],
+    "gods": [
+      "Medea"
+    ],
     "name": "Malice in Kind",
     "description": "Whenever a foe makes you use Death_Defiance_Icon Death Defiance, it loses 15% Health_Icon.",
     "description_rich": [
@@ -7668,7 +8218,9 @@
     "notes": null
   },
   "martial_art": {
-    "gods": ["Hephaestus"],
+    "gods": [
+      "Hephaestus"
+    ],
     "name": "Martial Art",
     "description": "Your Attack and Special deal more damage for each Earth_Element_Icon you have.",
     "description_rich": [
@@ -7728,7 +8280,10 @@
     "notes": null
   },
   "master_conductor": {
-    "gods": ["Hephaestus", "Zeus"],
+    "gods": [
+      "Hephaestus",
+      "Zeus"
+    ],
     "name": "Master Conductor",
     "description": "Your chain-lightning can bounce off of you and deals increasing damage to foes.",
     "description_rich": [
@@ -7761,13 +8316,17 @@
           "Smithy Rush",
           "Tough Gain"
         ],
-        ["Static Shock"]
+        [
+          "Static Shock"
+        ]
       ]
     },
     "notes": null
   },
   "mean_streak": {
-    "gods": ["Hermes"],
+    "gods": [
+      "Hermes"
+    ],
     "name": "Mean Streak",
     "description": "Each time you slay a foe, deal more damage for the next 45 Sec.",
     "description_rich": [
@@ -7799,7 +8358,9 @@
     "notes": null
   },
   "meat_grinder": {
-    "gods": ["Ares"],
+    "gods": [
+      "Ares"
+    ],
     "name": "Meat Grinder",
     "description": "Your Ω Cast also creates a Blade Rift in the binding circle.",
     "description_rich": [
@@ -7857,7 +8418,9 @@
     "notes": null
   },
   "mental_block": {
-    "gods": ["Athena"],
+    "gods": [
+      "Athena"
+    ],
     "name": "Mental Block",
     "description": "Your Casts also deal a burst of damage in the area and momentarily make you Deflect.",
     "description_rich": [
@@ -7901,7 +8464,9 @@
     "notes": null
   },
   "mind": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Mind",
     "description": "Afterward, gain +X Max_Magick_Icon.",
     "description_rich": [
@@ -7938,7 +8503,9 @@
     "notes": null
   },
   "mixed_blessings": {
-    "gods": ["Narcissus"],
+    "gods": [
+      "Narcissus"
+    ],
     "name": "Mixed Blessings",
     "description": "Receive a gift of +1 Random Boon and +1 Mystery_Seeds_Icon.",
     "description_rich": [
@@ -7992,7 +8559,9 @@
     "notes": null
   },
   "molten_touch": {
-    "gods": ["Hephaestus"],
+    "gods": [
+      "Hephaestus"
+    ],
     "name": "Molten Touch",
     "description": "Your Attacks and Specials deal bonus damage to Armor.",
     "description_rich": [
@@ -8044,7 +8613,9 @@
     "notes": null
   },
   "moonlight_dress": {
-    "gods": ["Arachne"],
+    "gods": [
+      "Arachne"
+    ],
     "name": "Moonlight Dress",
     "description": "Don a +55 Armor_Icon Outfit that makes you use 30% Magick_Icon less than before to recharge your Hex.",
     "description_rich": [
@@ -8110,7 +8681,9 @@
     "notes": null
   },
   "mutual_destruction": {
-    "gods": ["Ares"],
+    "gods": [
+      "Ares"
+    ],
     "name": "Mutual Destruction",
     "description": "Gain a chance to deal 200% damage that increases the less Health_Icon you have remaining.",
     "description_rich": [
@@ -8155,7 +8728,9 @@
     "notes": null
   },
   "mystic_secrets": {
-    "gods": ["Narcissus"],
+    "gods": [
+      "Narcissus"
+    ],
     "name": "Mystic Secrets",
     "description": "Receive a gift of +30 Max_Magick_Icon and +20 Psyche.",
     "description_rich": [
@@ -8209,7 +8784,10 @@
     "notes": null
   },
   "natural_selection": {
-    "gods": ["Demeter", "Poseidon"],
+    "gods": [
+      "Demeter",
+      "Poseidon"
+    ],
     "name": "Natural Selection",
     "description": "Your Boon(s) in the leftmost column gain Arrow_Up_Icon Lv. spread across however many you got.",
     "description_rich": [
@@ -8270,13 +8848,20 @@
           "Breaker Rush",
           "Flood Gain"
         ],
-        ["Buried Treasure", "Sea Star", "Steady Growth", "Plentiful Forage"]
+        [
+          "Buried Treasure",
+          "Sea Star",
+          "Steady Growth",
+          "Plentiful Forage"
+        ]
       ]
     },
     "notes": null
   },
   "nervous_wreck": {
-    "gods": ["Aphrodite"],
+    "gods": [
+      "Aphrodite"
+    ],
     "name": "Nervous Wreck",
     "description": "Whenever you inflict Weak, also randomly inflict Curses from other Olympians.",
     "description_rich": [
@@ -8324,14 +8909,23 @@
           "Shameless Attitude",
           "Secret Crush"
         ],
-        ["Rapture Ring", "Passion Rush", "Glamour Gain"],
-        ["Flutter Strike", "Flutter Flourish"]
+        [
+          "Rapture Ring",
+          "Passion Rush",
+          "Glamour Gain"
+        ],
+        [
+          "Flutter Strike",
+          "Flutter Flourish"
+        ]
       ]
     },
     "notes": null
   },
   "neurotic": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Neurotic",
     "description": "For the next 3-5 Encounters, your Dash uses 10-20 Magick_Icon if you have enough to spare.",
     "description_rich": [
@@ -8396,7 +8990,9 @@
     "notes": null
   },
   "nexus_rush": {
-    "gods": ["Hera"],
+    "gods": [
+      "Hera"
+    ],
     "name": "Nexus Rush",
     "description": "Your Sprint inflicts Hitch on surrounding foes, and deals damage when it does.",
     "description_rich": [
@@ -8440,7 +9036,9 @@
     "notes": null
   },
   "nimble_limbs": {
-    "gods": ["Hermes"],
+    "gods": [
+      "Hermes"
+    ],
     "name": "Nimble Limbs",
     "description": "Your Attack, Special, and Cast are faster.",
     "description_rich": [
@@ -8484,7 +9082,9 @@
     "notes": null
   },
   "nitro_boost": {
-    "gods": ["Hermes"],
+    "gods": [
+      "Hermes"
+    ],
     "name": "Nitro Boost",
     "description": "Your Sprint is 15% faster and gives you a barrier that ignores instances of damage.",
     "description_rich": [
@@ -8528,7 +9128,9 @@
     "notes": null
   },
   "nova_flourish": {
-    "gods": ["Apollo"],
+    "gods": [
+      "Apollo"
+    ],
     "name": "Nova Flourish",
     "description": "Your Specials deal more damage in a larger area.",
     "description_rich": [
@@ -8564,7 +9166,9 @@
     "notes": null
   },
   "nova_strike": {
-    "gods": ["Apollo"],
+    "gods": [
+      "Apollo"
+    ],
     "name": "Nova Strike",
     "description": "Your Attacks deal more damage in a larger area.",
     "description_rich": [
@@ -8600,7 +9204,9 @@
     "notes": null
   },
   "ocean_swell": {
-    "gods": ["Poseidon"],
+    "gods": [
+      "Poseidon"
+    ],
     "name": "Ocean Swell",
     "description": "Your Ω Moves also launch a wide wave ahead that knocks foes away, but use +5 Magick_Icon.",
     "description_rich": [
@@ -8649,7 +9255,9 @@
     "notes": null
   },
   "old_grudge": {
-    "gods": ["Hades"],
+    "gods": [
+      "Hades"
+    ],
     "name": "Old Grudge",
     "description": "In your confrontation, Chronos / Typhon takes a burst of damage after the first 3 Sec.",
     "description_rich": [
@@ -8696,7 +9304,9 @@
     "notes": null
   },
   "old_herbal_remedy": {
-    "gods": ["Circe"],
+    "gods": [
+      "Circe"
+    ],
     "name": "Old Herbal Remedy",
     "description": "Restore 50% of your Max_Health_Icon now. Any Health_Restore_Icon effects are 25% stronger this night.",
     "description_rich": [
@@ -8758,7 +9368,9 @@
     "notes": null
   },
   "onyx_dress": {
-    "gods": ["Arachne"],
+    "gods": [
+      "Arachne"
+    ],
     "name": "Onyx Dress",
     "description": "Don a +60 Armor_Icon Outfit that creates +1 Fate Fabric now.",
     "description_rich": [
@@ -8816,7 +9428,9 @@
     "notes": null
   },
   "ordinary": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Ordinary",
     "description": "The next 2-3 Boon(s) you find are limited to Common blessings.",
     "description_rich": [
@@ -8866,7 +9480,9 @@
     "notes": null
   },
   "paid_dues": {
-    "gods": ["Hermes"],
+    "gods": [
+      "Hermes"
+    ],
     "name": "Paid Dues",
     "description": "Whenever you take damage, you lose Gold_Coins_Icon before you lose Health_Icon.",
     "description_rich": [
@@ -8925,7 +9541,9 @@
     "notes": null
   },
   "paralyzing": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Paralyzing",
     "description": "For the next 3-5 Encounters, whenever you take damage, you are stunned for 0.5-1.4 Sec.",
     "description_rich": [
@@ -8977,7 +9595,9 @@
     "notes": null
   },
   "passion_rush": {
-    "gods": ["Aphrodite"],
+    "gods": [
+      "Aphrodite"
+    ],
     "name": "Passion Rush",
     "description": "Rushing damages surrounding foes and inflicts Weak, and again once you stop.",
     "description_rich": [
@@ -9017,7 +9637,9 @@
     "notes": null
   },
   "pauper's": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Pauper's",
     "description": "For the next 3-5 Encounters, you cannot earn Gold_Coins_Icon.",
     "description_rich": [
@@ -9068,7 +9690,9 @@
     "notes": null
   },
   "perfect_image": {
-    "gods": ["Apollo"],
+    "gods": [
+      "Apollo"
+    ],
     "name": "Perfect Image",
     "description": "You deal more damage until you take damage. If you take no more for 15 Sec., regain this.",
     "description_rich": [
@@ -9104,7 +9728,9 @@
     "notes": null
   },
   "personal_loan": {
-    "gods": ["Dionysus"],
+    "gods": [
+      "Dionysus"
+    ],
     "name": "Personal Loan",
     "description": "Give up all your Gold_Coins_Icon now. After vanquishing the next Guardian, gain that much and more.",
     "description_rich": [
@@ -9149,7 +9775,9 @@
     "notes": null
   },
   "phalanx_shot": {
-    "gods": ["Athena"],
+    "gods": [
+      "Athena"
+    ],
     "name": "Phalanx Shot",
     "description": "Your Specials also launch a projectile ahead that can Deflect, rearming after 2 Sec.",
     "description_rich": [
@@ -9197,7 +9825,9 @@
     "notes": null
   },
   "plentiful_forage": {
-    "gods": ["Demeter"],
+    "gods": [
+      "Demeter"
+    ],
     "name": "Plentiful Forage",
     "description": "Whenever you gather resources from a Location, restore Health_Icon. Receive 1 Mystery_Seeds_Icon now.",
     "description_rich": [
@@ -9255,7 +9885,9 @@
     "notes": null
   },
   "pom_pom_pom": {
-    "gods": ["Echo"],
+    "gods": [
+      "Echo"
+    ],
     "name": "Pom Pom Pom",
     "description": "Double the Arrow_Up_Icon Lv. of a random one of your Boons whose Arrow_Up_Icon Lv. is higher than the rest.",
     "description_rich": [
@@ -9317,7 +9949,9 @@
     "notes": null
   },
   "power_surge": {
-    "gods": ["Zeus"],
+    "gods": [
+      "Zeus"
+    ],
     "name": "Power Surge",
     "description": "Whenever you use Magick_Icon, a random surrounding foe is struck by lightning.",
     "description_rich": [
@@ -9354,7 +9988,9 @@
     "notes": null
   },
   "precious_metals": {
-    "gods": ["Narcissus"],
+    "gods": [
+      "Narcissus"
+    ],
     "name": "Precious Metals",
     "description": "Receive a gift of +6 Silver and +100 Gold_Coins_Icon.",
     "description_rich": [
@@ -9410,7 +10046,9 @@
     "notes": "from Precious Metals is affected by Hermes' Quick Buck and Chaos' Affluence . from Precious Metals is not affected by Poseidon' s Buried Treasure ."
   },
   "premium_service": {
-    "gods": ["Hephaestus"],
+    "gods": [
+      "Hephaestus"
+    ],
     "name": "Premium Service",
     "description": "Your Aspect of the Nocturnal Arms is even stronger.",
     "description_rich": [
@@ -9452,15 +10090,28 @@
     "deals_olympian_damage": false,
     "prerequisites": {
       "boons": [
-        ["Volcanic Strike", "Volcanic Flourish", "Smithy Rush"],
-        ["Heavy Metal", "Trusty Shield"],
-        ["Grand Caldera", "Molten Touch", "Furnace Blast"]
+        [
+          "Volcanic Strike",
+          "Volcanic Flourish",
+          "Smithy Rush"
+        ],
+        [
+          "Heavy Metal",
+          "Trusty Shield"
+        ],
+        [
+          "Grand Caldera",
+          "Molten Touch",
+          "Furnace Blast"
+        ]
       ]
     },
     "notes": null
   },
   "pressure_points": {
-    "gods": ["Artemis"],
+    "gods": [
+      "Artemis"
+    ],
     "name": "Pressure Points",
     "description": "Any damage you deal may be Critical.",
     "description_rich": [
@@ -9496,7 +10147,9 @@
     "notes": null
   },
   "primal_psychic_connection": {
-    "gods": ["Circe"],
+    "gods": [
+      "Circe"
+    ],
     "name": "Primal Psychic Connection",
     "description": "The spiritual benefit your Animal Familiar provides is stronger this night.",
     "description_rich": [
@@ -9532,7 +10185,9 @@
     "notes": null
   },
   "profuse_bleeding": {
-    "gods": ["Ares"],
+    "gods": [
+      "Ares"
+    ],
     "name": "Profuse Bleeding",
     "description": "Whenever you inflict Wounds or collect Blood_Drop_Icon, create a falling blade over a surrounding foe.",
     "description_rich": [
@@ -9575,13 +10230,20 @@
     "deals_olympian_damage": true,
     "prerequisites": {
       "boons": [
-        ["Vicious Strike", "Vicious Flourish", "Grisly Gain", "Visceral Impact"]
+        [
+          "Vicious Strike",
+          "Vicious Flourish",
+          "Grisly Gain",
+          "Visceral Impact"
+        ]
       ]
     },
     "notes": null
   },
   "prominence_flare": {
-    "gods": ["Apollo"],
+    "gods": [
+      "Apollo"
+    ],
     "name": "Prominence Flare",
     "description": "After your Ω Cast expires, rapidly deal damage in the area for 2 Sec.",
     "description_rich": [
@@ -9623,7 +10285,9 @@
     "notes": null
   },
   "proper_upbringing": {
-    "gods": ["Hera"],
+    "gods": [
+      "Hera"
+    ],
     "name": "Proper Upbringing",
     "description": "While you have at least 2 Earth_Element_Icon Water_Element_Icon Air_Element_Icon Fire_Element_Icon Elements, all your Common Boons gain Rarity.",
     "description_rich": [
@@ -9718,7 +10382,9 @@
     "notes": null
   },
   "protective_coating": {
-    "gods": ["Icarus"],
+    "gods": [
+      "Icarus"
+    ],
     "name": "Protective Coating",
     "description": "Gain +100 Armor_Icon. The next time you lose all your Armor_Icon, become Impervious for 8 Sec.",
     "description_rich": [
@@ -9780,7 +10446,9 @@
     "notes": null
   },
   "pyro_technique": {
-    "gods": ["Hestia"],
+    "gods": [
+      "Hestia"
+    ],
     "name": "Pyro Technique",
     "description": "Your Scorch effects deal damage faster.",
     "description_rich": [
@@ -9813,12 +10481,21 @@
     },
     "deals_olympian_damage": false,
     "prerequisites": {
-      "boons": [["Flame Strike", "Flame Flourish", "Smolder Ring"]]
+      "boons": [
+        [
+          "Flame Strike",
+          "Flame Flourish",
+          "Smolder Ring"
+        ]
+      ]
     },
     "notes": null
   },
   "queen's_ransom": {
-    "gods": ["Hera", "Zeus"],
+    "gods": [
+      "Hera",
+      "Zeus"
+    ],
     "name": "Queen's Ransom",
     "description": "Give up all your Boons of Zeus. For each, raise Arrow_Up_Icon Lv. for all your Boons of Hera.",
     "description_rich": [
@@ -9896,13 +10573,19 @@
           "Nexus Rush",
           "Born Gain"
         ],
-        ["Storm Ring", "Ionic Gain", "Thunder Rush"]
+        [
+          "Storm Ring",
+          "Ionic Gain",
+          "Thunder Rush"
+        ]
       ]
     },
     "notes": null
   },
   "quick_buck": {
-    "gods": ["Hermes"],
+    "gods": [
+      "Hermes"
+    ],
     "name": "Quick Buck",
     "description": "You find Gold_Coins_Icon in greater quantities. Receive +100 Gold_Coins_Icon now, plus the bonus!",
     "description_rich": [
@@ -9952,7 +10635,9 @@
     "notes": null
   },
   "racing_thoughts": {
-    "gods": ["Hermes"],
+    "gods": [
+      "Hermes"
+    ],
     "name": "Racing Thoughts",
     "description": "Your Omega_Icon Moves are faster.",
     "description_rich": [
@@ -9992,7 +10677,9 @@
     "notes": null
   },
   "rallying_cry": {
-    "gods": ["Ares"],
+    "gods": [
+      "Ares"
+    ],
     "name": "Rallying Cry",
     "description": "While you have at least 8 Earth_Element_Icon, any of your damaging effects from Olympians are stronger.",
     "description_rich": [
@@ -10040,7 +10727,9 @@
     "notes": null
   },
   "rapture_ring": {
-    "gods": ["Aphrodite"],
+    "gods": [
+      "Aphrodite"
+    ],
     "name": "Rapture Ring",
     "description": "Your Casts inflict Weak, and damage foes while dragging them toward the center.",
     "description_rich": [
@@ -10084,7 +10773,9 @@
     "notes": null
   },
   "reckless_abandon": {
-    "gods": ["Dionysus"],
+    "gods": [
+      "Dionysus"
+    ],
     "name": "Reckless Abandon",
     "description": "Your Attacks randomly deal exactly 5, 55, or 555 damage whenever they hit.",
     "description_rich": [
@@ -10146,7 +10837,9 @@
     "notes": null
   },
   "red_citrine_divination": {
-    "gods": ["Circe"],
+    "gods": [
+      "Circe"
+    ],
     "name": "Red Citrine Divination",
     "description": "Randomly draw 1 of your inactive Arcana, and activate it this night.",
     "description_rich": [
@@ -10190,7 +10883,9 @@
     "notes": null
   },
   "rejected": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Rejected",
     "description": "The next 2-4 Boons you find have 1 fewer blessing to choose from.",
     "description_rich": [
@@ -10240,7 +10935,9 @@
     "notes": null
   },
   "renewed_faith": {
-    "gods": ["Athena"],
+    "gods": [
+      "Athena"
+    ],
     "name": "Renewed Faith",
     "description": "Replenish all spent uses of Death_Defiance_Icon Death Defiance now, and improved their potency.",
     "description_rich": [
@@ -10281,7 +10978,9 @@
     "notes": null
   },
   "revelation": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Revelation",
     "description": "Afterward, you Channel your Ω Moves X% faster.",
     "description_rich": [
@@ -10325,7 +11024,9 @@
     "notes": null
   },
   "revival": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Revival",
     "description": "Afterward, whenever you exit a location, restore Health_Icon.",
     "description_rich": [
@@ -10370,7 +11071,9 @@
     "notes": null
   },
   "reward_reward_reward": {
-    "gods": ["Echo"],
+    "gods": [
+      "Echo"
+    ],
     "name": "Reward Reward Reward",
     "description": "Manifest a copy of your most recently claimed Reward",
     "description_rich": [
@@ -10402,7 +11105,9 @@
     "notes": null
   },
   "righteous_pike": {
-    "gods": ["Athena"],
+    "gods": [
+      "Athena"
+    ],
     "name": "Righteous Pike",
     "description": "Whenever you use 90 Magick_Icon, up to 3 foe are stuck by spears from heaven.",
     "description_rich": [
@@ -10451,7 +11156,10 @@
     "notes": null
   },
   "ripple_effect": {
-    "gods": ["Hera", "Poseidon"],
+    "gods": [
+      "Hera",
+      "Poseidon"
+    ],
     "name": "Ripple Effect",
     "description": "Your effects from Fine Line and Ocean Swell have a chance to fire 2 times.",
     "description_rich": [
@@ -10501,15 +11209,31 @@
     "deals_olympian_damage": false,
     "prerequisites": {
       "boons": [
-        ["Sworn Strike", "Sworn Flourish", "Engagement Ring", "Fine Line"],
-        ["Wave Strike", "Wave Flourish", "Tidal Ring", "Ocean Swell"],
-        ["Fine Line", "Ocean Swell"]
+        [
+          "Sworn Strike",
+          "Sworn Flourish",
+          "Engagement Ring",
+          "Fine Line"
+        ],
+        [
+          "Wave Strike",
+          "Wave Flourish",
+          "Tidal Ring",
+          "Ocean Swell"
+        ],
+        [
+          "Fine Line",
+          "Ocean Swell"
+        ]
       ]
     },
     "notes": null
   },
   "romantic_spark": {
-    "gods": ["Aphrodite", "Zeus"],
+    "gods": [
+      "Aphrodite",
+      "Zeus"
+    ],
     "name": "Romantic Spark",
     "description": "Whenever you Sprint into foes with Blitz, the effect strikes right away for more damage.",
     "description_rich": [
@@ -10558,13 +11282,18 @@
           "Passion Rush",
           "Glamour Gain"
         ],
-        ["Heaven Strike", "Heaven Flourish"]
+        [
+          "Heaven Strike",
+          "Heaven Flourish"
+        ]
       ]
     },
     "notes": null
   },
   "rousing_reception": {
-    "gods": ["Hera"],
+    "gods": [
+      "Hera"
+    ],
     "name": "Rousing Reception",
     "description": "Your Casts damage any foes as they join the Encounter, wherever they appear.",
     "description_rich": [
@@ -10622,7 +11351,10 @@
     "notes": null
   },
   "rude_awakening": {
-    "gods": ["Apollo", "Hephaestus"],
+    "gods": [
+      "Apollo",
+      "Hephaestus"
+    ],
     "name": "Rude Awakening",
     "description": "Your blast effects from Hephaestus clear Daze and deal more damage if they do.",
     "description_rich": [
@@ -10664,14 +11396,25 @@
     "deals_olympian_damage": true,
     "prerequisites": {
       "boons": [
-        ["Solar Ring", "Blinding Rush", "Light Smite", "Dazzling Display"],
-        ["Volcanic Strike", "Volcanic Flourish", "Smithy Rush"]
+        [
+          "Solar Ring",
+          "Blinding Rush",
+          "Light Smite",
+          "Dazzling Display"
+        ],
+        [
+          "Volcanic Strike",
+          "Volcanic Flourish",
+          "Smithy Rush"
+        ]
       ]
     },
     "notes": null
   },
   "sanguinary_savor": {
-    "gods": ["Ares"],
+    "gods": [
+      "Ares"
+    ],
     "name": "Sanguinary Savor",
     "description": "You inflict Wounds with greater Power, and spilled Blood_Drop_Icon is drawn to you automatically.",
     "description_rich": [
@@ -10722,8 +11465,17 @@
     "deals_olympian_damage": false,
     "prerequisites": {
       "boons": [
-        ["Vicious Strike", "Vicious Flourish", "Sword Ring", "Stabbing Rush"],
-        ["Grisly Gain", "Visceral Impact", "Profuse Bleeding"],
+        [
+          "Vicious Strike",
+          "Vicious Flourish",
+          "Sword Ring",
+          "Stabbing Rush"
+        ],
+        [
+          "Grisly Gain",
+          "Visceral Impact",
+          "Profuse Bleeding"
+        ],
         [
           "Meat Grinder",
           "Grievous Blow",
@@ -10736,7 +11488,10 @@
     "notes": null
   },
   "scalding_vapor": {
-    "gods": ["Hestia", "Poseidon"],
+    "gods": [
+      "Hestia",
+      "Poseidon"
+    ],
     "name": "Scalding Vapor",
     "description": "If foes with Froth are struck by your fire effects from Hestia, they are engulfed in Steam.",
     "description_rich": [
@@ -10794,13 +11549,17 @@
           "Controlled Burn",
           "Glowing Coal"
         ],
-        ["Slippery Slope"]
+        [
+          "Slippery Slope"
+        ]
       ]
     },
     "notes": null
   },
   "sea_star": {
-    "gods": ["Poseidon"],
+    "gods": [
+      "Poseidon"
+    ],
     "name": "Sea Star",
     "description": "Whenever you claim rewards other than Boons, Daedalus_Hammer, or rare resources, a copy may appear.",
     "description_rich": [
@@ -10845,7 +11604,9 @@
     "notes": null
   },
   "secret_crush": {
-    "gods": ["Aphrodite"],
+    "gods": [
+      "Aphrodite"
+    ],
     "name": "Secret Crush",
     "description": "Your Attacks gain Power, but you Prime20 Magick_Icon.",
     "description_rich": [
@@ -10902,7 +11663,9 @@
     "notes": null
   },
   "security_system": {
-    "gods": ["Hephaestus"],
+    "gods": [
+      "Hephaestus"
+    ],
     "name": "Security System",
     "description": "At the start of each Encounter, you gain Armor_Icon that lasts for 7 Sec.",
     "description_rich": [
@@ -10951,7 +11714,10 @@
     "notes": null
   },
   "seismic_servo": {
-    "gods": ["Hephaestus", "Poseidon"],
+    "gods": [
+      "Hephaestus",
+      "Poseidon"
+    ],
     "name": "Seismic Servo",
     "description": "Any Boon effects that recharge overtime recharge faster.",
     "description_rich": [
@@ -10985,7 +11751,11 @@
     "deals_olympian_damage": false,
     "prerequisites": {
       "boons": [
-        ["Volcanic Strike", "Volcanic Flourish", "Smithy Rush"],
+        [
+          "Volcanic Strike",
+          "Volcanic Flourish",
+          "Smithy Rush"
+        ],
         [
           "Wave Strike",
           "Wave Flourish",
@@ -10998,7 +11768,9 @@
     "notes": null
   },
   "self_healing": {
-    "gods": ["Apollo"],
+    "gods": [
+      "Apollo"
+    ],
     "name": "Self Healing",
     "description": "While you have at least 3 Fire_Element_Icon, whenever you take damage, restore some Health_Icon.",
     "description_rich": [
@@ -11055,7 +11827,9 @@
     "notes": null
   },
   "shadow_pounce": {
-    "gods": ["Artemis"],
+    "gods": [
+      "Artemis"
+    ],
     "name": "Shadow Pounce",
     "description": "After you Dash, your Omega_Icon Moves may deal Critical damage for 2 Sec.",
     "description_rich": [
@@ -11115,7 +11889,9 @@
     "notes": null
   },
   "shameless_attitude": {
-    "gods": ["Aphrodite"],
+    "gods": [
+      "Aphrodite"
+    ],
     "name": "Shameless Attitude",
     "description": "You deal more damage. While you have at least 80% Health_Icon, the bonus is doubled.",
     "description_rich": [
@@ -11209,7 +11985,9 @@
     "notes": null
   },
   "shocking_loss": {
-    "gods": ["Zeus"],
+    "gods": [
+      "Zeus"
+    ],
     "name": "Shocking Loss",
     "description": "Whenever you first deal damage to susceptible foes, you may destroy them outright.",
     "description_rich": [
@@ -11242,14 +12020,25 @@
           "Thunder Rush",
           "Ionic Gain"
         ],
-        ["Static Shock", "Power Surge", "Lightning Lance", "Divine Vengeance"],
-        ["Arc Flash", "Double Strike", "Electric Overload"]
+        [
+          "Static Shock",
+          "Power Surge",
+          "Lightning Lance",
+          "Divine Vengeance"
+        ],
+        [
+          "Arc Flash",
+          "Double Strike",
+          "Electric Overload"
+        ]
       ]
     },
     "notes": null
   },
   "slippery_slope": {
-    "gods": ["Poseidon"],
+    "gods": [
+      "Poseidon"
+    ],
     "name": "Slippery Slope",
     "description": "Your splash effects from Poseidon also inflict Froth, and Froth deals more damage.",
     "description_rich": [
@@ -11298,12 +12087,19 @@
     },
     "deals_olympian_damage": false,
     "prerequisites": {
-      "boons": [["Wave Strike", "Wave Flourish"]]
+      "boons": [
+        [
+          "Wave Strike",
+          "Wave Flourish"
+        ]
+      ]
     },
     "notes": null
   },
   "slothful": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Slothful",
     "description": "For the next 3-5 Encounters, you move and Sprint 40%-60% slower.",
     "description_rich": [
@@ -11359,7 +12155,9 @@
     "notes": null
   },
   "slow_cooker": {
-    "gods": ["Hestia"],
+    "gods": [
+      "Hestia"
+    ],
     "name": "Slow Cooker",
     "description": "Your Attacks and Specials gain Power the more Fire_Element_Icon you have.",
     "description_rich": [
@@ -11427,7 +12225,9 @@
     "notes": null
   },
   "smithy_rush": {
-    "gods": ["Hephaestus"],
+    "gods": [
+      "Hephaestus"
+    ],
     "name": "Smithy Rush",
     "description": "If a foe is near after you Dash, you can cause a blast that deals 200 damage in the area.",
     "description_rich": [
@@ -11471,7 +12271,9 @@
     "notes": null
   },
   "smolder_ring": {
-    "gods": ["Hestia"],
+    "gods": [
+      "Hestia"
+    ],
     "name": "Smolder Ring",
     "description": "Your Casts repeatedly inflict Scorch on foes in the binding circle.",
     "description_rich": [
@@ -11515,7 +12317,9 @@
     "notes": null
   },
   "snow_queen": {
-    "gods": ["Demeter"],
+    "gods": [
+      "Demeter"
+    ],
     "name": "Snow Queen",
     "description": "Gain a barrier that stops 1 instance of damage in each Location, but you Prime Magick_Icon.",
     "description_rich": [
@@ -11572,7 +12376,9 @@
     "notes": null
   },
   "snuffed_candle": {
-    "gods": ["Hestia"],
+    "gods": [
+      "Hestia"
+    ],
     "name": "Snuffed Candle",
     "description": "You deal more damage to foes that are nowhere near other foes.",
     "description_rich": [
@@ -11600,7 +12406,9 @@
     "notes": null
   },
   "solar_ring": {
-    "gods": ["Apollo"],
+    "gods": [
+      "Apollo"
+    ],
     "name": "Solar Ring",
     "description": "Your Casts inflict Daze, and deal a burst of damage before they expire.",
     "description_rich": [
@@ -11644,7 +12452,9 @@
     "notes": null
   },
   "soul": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Soul",
     "description": "Afterward, gain +X Max_Health_Icon.",
     "description_rich": [
@@ -11681,7 +12491,9 @@
     "notes": null
   },
   "spiritual_affirmation": {
-    "gods": ["Aphrodite"],
+    "gods": [
+      "Aphrodite"
+    ],
     "name": "Spiritual Affirmation",
     "description": "Gain Max_Health_Icon and Max_Magick_Icon now and for the rest of this night.",
     "description_rich": [
@@ -11727,7 +12539,9 @@
     "notes": null
   },
   "stabbing_rush": {
-    "gods": ["Ares"],
+    "gods": [
+      "Ares"
+    ],
     "name": "Stabbing Rush",
     "description": "Your Dash creates a row of falling blades along your path.",
     "description_rich": [
@@ -11763,7 +12577,9 @@
     "notes": null
   },
   "stalwart_stand": {
-    "gods": ["Athena"],
+    "gods": [
+      "Athena"
+    ],
     "name": "Stalwart Stand",
     "description": "Gain +1 Death_Defiance_Icon Death Defiance that replenishes in each Location, but you Prime Magick_Icon.",
     "description_rich": [
@@ -11829,7 +12645,9 @@
     "notes": null
   },
   "static_shock": {
-    "gods": ["Zeus"],
+    "gods": [
+      "Zeus"
+    ],
     "name": "Static Shock",
     "description": "Your strikes emit chain-lightning that bounces up to 4 times, but you Prime50 Magick_Icon.",
     "description_rich": [
@@ -11878,7 +12696,9 @@
     "notes": null
   },
   "steady_growth": {
-    "gods": ["Demeter"],
+    "gods": [
+      "Demeter"
+    ],
     "name": "Steady Growth",
     "description": "Whenever you clear enough Encounters, a random Boon you have gains Rarity.",
     "description_rich": [
@@ -11932,7 +12752,9 @@
     "notes": null
   },
   "storm_ring": {
-    "gods": ["Zeus"],
+    "gods": [
+      "Zeus"
+    ],
     "name": "Storm Ring",
     "description": "Your Casts cause lightning bolts to repeatedly strike 1 foe at a time in the binding circle.",
     "description_rich": [
@@ -11976,7 +12798,9 @@
     "notes": null
   },
   "strike": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Strike",
     "description": "Afterward, your Attacks deal +X% damage.",
     "description_rich": [
@@ -12012,7 +12836,9 @@
     "notes": null
   },
   "stutter_step": {
-    "gods": ["Hermes"],
+    "gods": [
+      "Hermes"
+    ],
     "name": "Stutter Step",
     "description": "You can Dash more frequently.",
     "description_rich": [
@@ -12048,7 +12874,9 @@
     "notes": null
   },
   "success_rate": {
-    "gods": ["Hermes"],
+    "gods": [
+      "Hermes"
+    ],
     "name": "Success Rate",
     "description": "Your chance-base effects are most likely to occur, except for Dodge or Daze.",
     "description_rich": [
@@ -12113,7 +12941,9 @@
     "notes": null
   },
   "suffering_on_sight": {
-    "gods": ["Medea"],
+    "gods": [
+      "Medea"
+    ],
     "name": "Suffering on Sight",
     "description": "After a foe joins the Encounter, it randomly takes 1 to 999 damage.",
     "description_rich": [
@@ -12165,7 +12995,10 @@
     "notes": null
   },
   "sun_worshiper": {
-    "gods": ["Apollo", "Hera"],
+    "gods": [
+      "Apollo",
+      "Hera"
+    ],
     "name": "Sun Worshiper",
     "description": "In each Encounter, the first foe you slay returns to fight for you.",
     "description_rich": [
@@ -12199,14 +13032,25 @@
     "deals_olympian_damage": false,
     "prerequisites": {
       "boons": [
-        ["Solar Ring", "Blinding Rush", "Lucid Gain"],
-        ["Engagement Ring", "Nexus Rush", "Born Gain"]
+        [
+          "Solar Ring",
+          "Blinding Rush",
+          "Lucid Gain"
+        ],
+        [
+          "Engagement Ring",
+          "Nexus Rush",
+          "Born Gain"
+        ]
       ]
     },
     "notes": null
   },
   "sunny_disposition": {
-    "gods": ["Apollo", "Aphrodite"],
+    "gods": [
+      "Apollo",
+      "Aphrodite"
+    ],
     "name": "Sunny Disposition",
     "description": "Whenever you create Heartthrobs, create more.",
     "description_rich": [
@@ -12247,13 +13091,17 @@
           "Blinding Rush",
           "Lucid Gain"
         ],
-        ["Heart Breaker"]
+        [
+          "Heart Breaker"
+        ]
       ]
     },
     "notes": null
   },
   "super_nova": {
-    "gods": ["Apollo"],
+    "gods": [
+      "Apollo"
+    ],
     "name": "Super Nova",
     "description": "Your Casts expand in size until they expire.",
     "description_rich": [
@@ -12289,7 +13137,9 @@
     "notes": null
   },
   "supply_chain": {
-    "gods": ["Icarus"],
+    "gods": [
+      "Icarus"
+    ],
     "name": "Supply Chain",
     "description": "Each time you clear 7 Encounters, receive +10 Health_Restore_Icon and 2 Pom Slice.",
     "description_rich": [
@@ -12351,7 +13201,9 @@
     "notes": null
   },
   "support_fire": {
-    "gods": ["Artemis"],
+    "gods": [
+      "Artemis"
+    ],
     "name": "Support Fire",
     "description": "After you hit with your Attacks or Specials, fire a seeking arrow.",
     "description_rich": [
@@ -12395,7 +13247,9 @@
     "notes": null
   },
   "survive_survive_survive": {
-    "gods": ["Echo"],
+    "gods": [
+      "Echo"
+    ],
     "name": "Survive Survive Survive",
     "description": "Replace all spent uses of Death_Defiance_Icon with ones that restore 50% Health_Icon and Magick_Icon, then less and less.",
     "description_rich": [
@@ -12454,7 +13308,9 @@
     "notes": null
   },
   "sweet_surrender": {
-    "gods": ["Aphrodite"],
+    "gods": [
+      "Aphrodite"
+    ],
     "name": "Sweet Surrender",
     "description": "Weak -afflicted foes take more damage.",
     "description_rich": [
@@ -12483,12 +13339,20 @@
     },
     "deals_olympian_damage": false,
     "prerequisites": {
-      "boons": [["Rapture Ring", "Passion Rush", "Glamour Gain"]]
+      "boons": [
+        [
+          "Rapture Ring",
+          "Passion Rush",
+          "Glamour Gain"
+        ]
+      ]
     },
     "notes": null
   },
   "sword_ring": {
-    "gods": ["Ares"],
+    "gods": [
+      "Ares"
+    ],
     "name": "Sword Ring",
     "description": "Your Casts create a falling blade over each foe in the binding circle.",
     "description_rich": [
@@ -12524,7 +13388,9 @@
     "notes": null
   },
   "sworn_flourish": {
-    "gods": ["Hera"],
+    "gods": [
+      "Hera"
+    ],
     "name": "Sworn Flourish",
     "description": "Your Specials deal more damage and inflict Hitch.",
     "description_rich": [
@@ -12568,7 +13434,9 @@
     "notes": null
   },
   "sworn_strike": {
-    "gods": ["Hera"],
+    "gods": [
+      "Hera"
+    ],
     "name": "Sworn Strike",
     "description": "Your Attacks deal more damage and inflict Hitch.",
     "description_rich": [
@@ -12612,7 +13480,9 @@
     "notes": null
   },
   "talent": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Talent",
     "description": "Afterward, you use -X% Magick_Icon.",
     "description_rich": [
@@ -12649,7 +13519,9 @@
     "notes": null
   },
   "tall_order": {
-    "gods": ["Hermes"],
+    "gods": [
+      "Hermes"
+    ],
     "name": "Tall Order",
     "description": "While you have at least 8 Earth_Element_Icon, 8 Water_Element_Icon, 8 Air_Element_Icon, or 8 Fire_Element_Icon, you deal more damage.",
     "description_rich": [
@@ -12748,7 +13620,9 @@
     "notes": null
   },
   "task_force": {
-    "gods": ["Athena"],
+    "gods": [
+      "Athena"
+    ],
     "name": "Task Force",
     "description": "If your Hex is Godsent, that effect may activate multiple times in each Location.",
     "description_rich": [
@@ -12802,7 +13676,10 @@
     "notes": null
   },
   "thermal_dynamics": {
-    "gods": ["Hestia", "Zeus"],
+    "gods": [
+      "Hestia",
+      "Zeus"
+    ],
     "name": "Thermal Dynamics",
     "description": "Your Blitz effects also inflict Scorch whenever they deal damage.",
     "description_rich": [
@@ -12844,14 +13721,23 @@
     "deals_olympian_damage": true,
     "prerequisites": {
       "boons": [
-        ["Flame Strike", "Flame Flourish", "Smolder Ring"],
-        ["Heaven Strike", "Heaven Flourish"]
+        [
+          "Flame Strike",
+          "Flame Flourish",
+          "Smolder Ring"
+        ],
+        [
+          "Heaven Strike",
+          "Heaven Flourish"
+        ]
       ]
     },
     "notes": null
   },
   "thunder_rush": {
-    "gods": ["Zeus"],
+    "gods": [
+      "Zeus"
+    ],
     "name": "Thunder Rush",
     "description": "Dashing causes surrounding foes to be struck by lightning bolts.",
     "description_rich": [
@@ -12883,7 +13769,9 @@
     "notes": null
   },
   "tidal_ring": {
-    "gods": ["Poseidon"],
+    "gods": [
+      "Poseidon"
+    ],
     "name": "Tidal Ring",
     "description": "Your Casts also immediately hit foes with a powerful splash that inflicts Froth.",
     "description_rich": [
@@ -12927,7 +13815,9 @@
     "notes": null
   },
   "tipsy_shot": {
-    "gods": ["Dionysus"],
+    "gods": [
+      "Dionysus"
+    ],
     "name": "Tipsy Shot",
     "description": "Hold Cast to lob a large explosion. The binding circle forms there.",
     "description_rich": [
@@ -12963,7 +13853,9 @@
     "notes": null
   },
   "tough_gain": {
-    "gods": ["Hephaestus"],
+    "gods": [
+      "Hephaestus"
+    ],
     "name": "Tough Gain",
     "description": "Whenever you take damage, shrug some of it off and restore 150 Magick_Icon.",
     "description_rich": [
@@ -13004,7 +13896,9 @@
     "notes": null
   },
   "traces_of_spirit": {
-    "gods": ["Medea"],
+    "gods": [
+      "Medea"
+    ],
     "name": "Traces of Spirit",
     "description": "After each Encounter, gain +5 Max_Magick_Icon.",
     "description_rich": [
@@ -13053,7 +13947,9 @@
     "notes": null
   },
   "tranquil_gain": {
-    "gods": ["Demeter"],
+    "gods": [
+      "Demeter"
+    ],
     "name": "Tranquil Gain",
     "description": "After remaining inactive for 0.5 Sec., rapidly restores Magick_Icon until you act.",
     "description_rich": [
@@ -13098,7 +13994,9 @@
     "notes": null
   },
   "travel_deal": {
-    "gods": ["Hermes"],
+    "gods": [
+      "Hermes"
+    ],
     "name": "Travel Deal",
     "description": "Your first purchase in each Location cost less Gold_Coins_Icon, and another item appears afterwards.",
     "description_rich": [
@@ -13143,7 +14041,10 @@
     "notes": null
   },
   "tropical_cyclone": {
-    "gods": ["Apollo", "Demeter"],
+    "gods": [
+      "Apollo",
+      "Demeter"
+    ],
     "name": "Tropical Cyclone",
     "description": "While standing in a Gust, you randomly fire gales every 0.3 Sec.",
     "description_rich": [
@@ -13188,13 +14089,18 @@
           "Blinding Rush",
           "Lucid Gain"
         ],
-        ["Frigid Rush", "Arctic Gale"]
+        [
+          "Frigid Rush",
+          "Arctic Gale"
+        ]
       ]
     },
     "notes": null
   },
   "trusty_shield": {
-    "gods": ["Hephaestus"],
+    "gods": [
+      "Hephaestus"
+    ],
     "name": "Trusty Shield",
     "description": "Whenever you enter a Location, gain Armor_Icon for that Location, but you Prime30 Magick_Icon.",
     "description_rich": [
@@ -13260,7 +14166,9 @@
     "notes": null
   },
   "turning_to_a_simple_form": {
-    "gods": ["Circe"],
+    "gods": [
+      "Circe"
+    ],
     "name": "Turning to a Simple Form",
     "description": "Your Omega_Icon Moves have 15% chance to inflict Morph on a susceptible foe, 10 Sec. apart.",
     "description_rich": [
@@ -13322,7 +14230,9 @@
     "notes": null
   },
   "uncanny_fortitude": {
-    "gods": ["Hephaestus"],
+    "gods": [
+      "Hephaestus"
+    ],
     "name": "Uncanny Fortitude",
     "description": "Gain bonus Max_Health_Icon based on your Magick_Icon limit.",
     "description_rich": [
@@ -13368,7 +14278,9 @@
     "notes": null
   },
   "uncommon_grace": {
-    "gods": ["Hera"],
+    "gods": [
+      "Hera"
+    ],
     "name": "Uncommon Grace",
     "description": "While none of your other Boons are Common, deal more damage.",
     "description_rich": [
@@ -13412,7 +14324,10 @@
     "notes": null
   },
   "universal_donor": {
-    "gods": ["Ares", "Hera"],
+    "gods": [
+      "Ares",
+      "Hera"
+    ],
     "name": "Universal Donor",
     "description": "Whenever you exit a Location, keep some of your Blood_Drop_Icon bonuses.",
     "description_rich": [
@@ -13455,7 +14370,11 @@
     "deals_olympian_damage": false,
     "prerequisites": {
       "boons": [
-        ["Grisly Gain", "Visceral Impact", "Profuse Bleeding"],
+        [
+          "Grisly Gain",
+          "Visceral Impact",
+          "Profuse Bleeding"
+        ],
         [
           "Sworn Strike",
           "Sworn Flourish",
@@ -13468,7 +14387,9 @@
     "notes": null
   },
   "unseen_ire": {
-    "gods": ["Hades"],
+    "gods": [
+      "Hades"
+    ],
     "name": "Unseen Ire",
     "description": "After you take damage, go Dark and deal more damage for the duration.",
     "description_rich": [
@@ -13503,7 +14424,9 @@
     "notes": null
   },
   "verdure_sampler": {
-    "gods": ["Narcissus"],
+    "gods": [
+      "Narcissus"
+    ],
     "name": "Verdure Sampler",
     "description": "Receive a gift of +1 Pom Slice, +2 Moly and +3 Nightshade.",
     "description_rich": [
@@ -13572,7 +14495,9 @@
     "notes": null
   },
   "vicious_flourish": {
-    "gods": ["Ares"],
+    "gods": [
+      "Ares"
+    ],
     "name": "Vicious Flourish",
     "description": "Your Specials deal more damage and inflict Wounds.",
     "description_rich": [
@@ -13616,7 +14541,9 @@
     "notes": null
   },
   "vicious_strike": {
-    "gods": ["Ares"],
+    "gods": [
+      "Ares"
+    ],
     "name": "Vicious Strike",
     "description": "Your Attacks deal more damage and inflict Wounds.",
     "description_rich": [
@@ -13660,7 +14587,9 @@
     "notes": null
   },
   "visceral_impact": {
-    "gods": ["Ares"],
+    "gods": [
+      "Ares"
+    ],
     "name": "Visceral Impact",
     "description": "Afer you take damage or a foe is slain, spill Blood_Drop_Icon, sometimes twice.",
     "description_rich": [
@@ -13697,7 +14626,9 @@
     "notes": null
   },
   "vital_sign": {
-    "gods": ["Artemis"],
+    "gods": [
+      "Artemis"
+    ],
     "name": "Vital Sign",
     "description": "Foes with at least 80% Health_Icon or 80% Armor may take Critical damage.",
     "description_rich": [
@@ -13754,7 +14685,9 @@
     "notes": null
   },
   "volatile_coating": {
-    "gods": ["Icarus"],
+    "gods": [
+      "Icarus"
+    ],
     "name": "Volatile Coating",
     "description": "Gain +50 Armor_Icon. The next time you lose all your Armor_Icon, deal 4000 damage to surrounding foes.",
     "description_rich": [
@@ -13812,7 +14745,9 @@
     "notes": null
   },
   "volcanic_flourish": {
-    "gods": ["Hephaestus"],
+    "gods": [
+      "Hephaestus"
+    ],
     "name": "Volcanic Flourish",
     "description": "Your Specials can cause a blast that deals 500 damage in the area.",
     "description_rich": [
@@ -13856,7 +14791,9 @@
     "notes": null
   },
   "volcanic_strike": {
-    "gods": ["Hephaestus"],
+    "gods": [
+      "Hephaestus"
+    ],
     "name": "Volcanic Strike",
     "description": "Your Attacks can cause a blast that deals 400 damage in the area.",
     "description_rich": [
@@ -13900,7 +14837,10 @@
     "notes": null
   },
   "warm_breeze": {
-    "gods": ["Apollo", "Hestia"],
+    "gods": [
+      "Apollo",
+      "Hestia"
+    ],
     "name": "Warm Breeze",
     "description": "Whenever you Dodge or Daze causes a foe to miss, restore some Health_Icon.",
     "description_rich": [
@@ -13951,7 +14891,12 @@
     "deals_olympian_damage": false,
     "prerequisites": {
       "boons": [
-        ["Solar Ring", "Blinding Rush", "Light Smite", "Dazzling Display"],
+        [
+          "Solar Ring",
+          "Blinding Rush",
+          "Light Smite",
+          "Dazzling Display"
+        ],
         [
           "Flame Strike",
           "Flame Flourish",
@@ -13964,7 +14909,9 @@
     "notes": null
   },
   "water_fitness": {
-    "gods": ["Poseidon"],
+    "gods": [
+      "Poseidon"
+    ],
     "name": "Water Fitness",
     "description": "Gain Max_Health_Icon for each Water_Element_Icon you have.",
     "description_rich": [
@@ -14017,7 +14964,9 @@
     "notes": null
   },
   "wave_flourish": {
-    "gods": ["Poseidon"],
+    "gods": [
+      "Poseidon"
+    ],
     "name": "Wave Flourish",
     "description": "Your Specials hit foes with a splash that knocks other foes away.",
     "description_rich": [
@@ -14053,7 +15002,9 @@
     "notes": null
   },
   "wave_strike": {
-    "gods": ["Poseidon"],
+    "gods": [
+      "Poseidon"
+    ],
     "name": "Wave Strike",
     "description": "Your Attacks hit foes with a splash that knocks other foes away.",
     "description_rich": [
@@ -14089,7 +15040,9 @@
     "notes": null
   },
   "wealth_from_the_dead": {
-    "gods": ["Medea"],
+    "gods": [
+      "Medea"
+    ],
     "name": "Wealth from the Dead",
     "description": "After a foe is slain, it has 10% chance to drop +20 Gold_Coins_Icon, limit 2 per Encounter.",
     "description_rich": [
@@ -14154,7 +15107,9 @@
     "notes": null
   },
   "weed_killer": {
-    "gods": ["Demeter"],
+    "gods": [
+      "Demeter"
+    ],
     "name": "Weed Killer",
     "description": "Your Omega_Icon Attack deals more damage, but uses +10 Magick_Icon.",
     "description_rich": [
@@ -14209,7 +15164,9 @@
     "notes": null
   },
   "whispered_prayer": {
-    "gods": ["Artemis"],
+    "gods": [
+      "Artemis"
+    ],
     "name": "Whispered Prayer",
     "description": "Your Hex may deal Critical damage.",
     "description_rich": [
@@ -14255,7 +15212,9 @@
     "notes": null
   },
   "will": {
-    "gods": ["Chaos"],
+    "gods": [
+      "Chaos"
+    ],
     "name": "Will",
     "description": "Afterward, restore X Magick_Icon every 1 Sec.",
     "description_rich": [
@@ -14296,7 +15255,9 @@
     "notes": null
   },
   "winner's_circle": {
-    "gods": ["Hermes"],
+    "gods": [
+      "Hermes"
+    ],
     "name": "Winner's Circle",
     "description": "You Channel your Omega_Icon Cast faster and your Casts expire faster",
     "description_rich": [
@@ -14352,7 +15313,9 @@
     "notes": null
   },
   "winter_harvest": {
-    "gods": ["Demeter"],
+    "gods": [
+      "Demeter"
+    ],
     "name": "Winter Harvest",
     "description": "Freeze -afflicted foes shatter at 10% Health_Icon, dealing damage in the area.",
     "description_rich": [
@@ -14395,15 +15358,29 @@
     "deals_olympian_damage": false,
     "prerequisites": {
       "boons": [
-        ["Ice Strike", "Ice Flourish", "Arctic Ring"],
-        ["Plentiful Forage", "Snow Queen", "Steady Growth"],
-        ["Weed Killer", "Cold Storage", "Local Climate"]
+        [
+          "Ice Strike",
+          "Ice Flourish",
+          "Arctic Ring"
+        ],
+        [
+          "Plentiful Forage",
+          "Snow Queen",
+          "Steady Growth"
+        ],
+        [
+          "Weed Killer",
+          "Cold Storage",
+          "Local Climate"
+        ]
       ]
     },
     "notes": null
   },
   "wispy_wiles": {
-    "gods": ["Aphrodite"],
+    "gods": [
+      "Aphrodite"
+    ],
     "name": "Wispy Wiles",
     "description": "Gain a chance to Dodge for each Air_Element_Icon you have.",
     "description_rich": [
@@ -14455,7 +15432,9 @@
     "notes": null
   },
   "word_of_greater_girth": {
-    "gods": ["Circe"],
+    "gods": [
+      "Circe"
+    ],
     "name": "Word of Greater Girth",
     "description": "Grow in size so that you have +15% Max_Health_Icon and deal +15% with your Weapon.",
     "description_rich": [
@@ -14512,7 +15491,9 @@
     "notes": null
   },
   "word_of_smaller_stature": {
-    "gods": ["Circe"],
+    "gods": [
+      "Circe"
+    ],
     "name": "Word of Smaller Stature",
     "description": "Shrink in size, so that you move 10% faster and have +10% chance to Dodge.",
     "description_rich": [
@@ -14564,7 +15545,9 @@
     "notes": null
   },
   "worry_free": {
-    "gods": ["Dionysus"],
+    "gods": [
+      "Dionysus"
+    ],
     "name": "Worry Free",
     "description": "Gain a random amount of Max_Health_Icon, but how much you have becomes a mystery.",
     "description_rich": [
