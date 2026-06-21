@@ -1,6 +1,7 @@
+import { jsonLdForGodsList, withJsonLd } from "$lib/json-ld";
 import { PAGE_SEO } from "$lib/seo";
 import type { PageLoad } from "./$types";
 
 export const load: PageLoad = () => ({
-  seo: PAGE_SEO.gods,
+  seo: withJsonLd(PAGE_SEO.gods, jsonLdForGodsList()),
 });

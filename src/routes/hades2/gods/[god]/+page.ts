@@ -1,6 +1,7 @@
 import { error } from "@sveltejs/kit";
 import { loadGodImage } from "$lib/assets/godImages";
 import godsData from "$lib/data/gods.json";
+import { jsonLdForGod, withJsonLd } from "$lib/json-ld";
 import { absoluteUrl, godPageSeo } from "$lib/seo";
 import type { GodDetails } from "$lib/types/hades2";
 import type { EntryGenerator, PageLoad } from "./$types";
@@ -21,6 +22,9 @@ export const load: PageLoad = async ({ params }) => {
 
   return {
     godName,
-    seo: godPageSeo(godName, godData.title, ogImage),
+    seo: withJsonLd(
+      godPageSeo(godName, godData.title, ogImage),
+      jsonLdForGod(godName),
+    ),
   };
 };

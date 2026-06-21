@@ -1,5 +1,6 @@
 <script lang="ts">
   import { faviconImg } from "$lib/assets/faviconImage";
+  import { serializeJsonLd } from "$lib/json-ld";
   import { absoluteUrl, SITE_NAME, type SeoMeta } from "$lib/seo";
 
   let {
@@ -8,10 +9,14 @@
     canonicalPath,
     ogImage,
     noindex = false,
+    jsonLd,
   }: SeoMeta = $props();
 
   let canonical = $derived(absoluteUrl(canonicalPath));
   let image = $derived(ogImage ?? absoluteUrl(faviconImg.img.src));
+  let jsonLdSchemas = $derived(
+    jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [],
+  );
 </script>
 
 <svelte:head>
@@ -31,4 +36,7 @@
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={image} />
+  {#each jsonLdSchemas as schema, index (index)}
+    {@html `<script type="application/ld+json">${serializeJsonLd(schema)}</script>`}
+  {/each}
 </svelte:head>

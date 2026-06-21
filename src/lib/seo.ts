@@ -7,6 +7,7 @@ export type SeoMeta = {
   canonicalPath: string;
   ogImage?: string;
   noindex?: boolean;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 };
 
 export function absoluteUrl(path: string): string {
