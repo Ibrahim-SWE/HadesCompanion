@@ -41,9 +41,6 @@ export type GodKeepsakeAndCurses = {
 export type GodDetails = {
   title: string;
   type?: "god" | "character";
-  hades_1?: GodKeepsakeAndCurses | null;
-  hades_2?: GodKeepsakeAndCurses | null;
-  keepsake?: string;
-  curse?: string;
-  imageFile?: string;
+  hades_1: GodKeepsakeAndCurses | null;
+  hades_2: GodKeepsakeAndCurses | null;
 };

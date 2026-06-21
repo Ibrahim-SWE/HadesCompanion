@@ -155,67 +155,86 @@
     }
   },
   "Dionysus": {
-    "name": "Dionysus",
     "title": "God of Wine",
     "type": "god",
-    "keepsake": "Fig Leaf",
-    "imageFile": "dionysus.webp",
-    "curse": "Hangover"
+    "hades_1": null,
+    "hades_2": {
+      "keepsake": "Fig Leaf",
+      "curses": [
+        "Hangover"
+      ]
+    }
   },
   "Chaos": {
-    "name": "Chaos",
     "title": "Primordial Originator",
     "type": "god",
-    "keepsake": "Transcendent Embryo",
-    "imageFile": "chaos.webp"
+    "hades_1": null,
+    "hades_2": {
+      "keepsake": "Transcendent Embryo",
+      "curses": []
+    }
   },
   "Hades": {
-    "name": "Hades",
     "title": "Prisoner of Time",
     "type": "god",
-    "keepsake": "Jeweled Pom",
-    "imageFile": "hades.webp"
+    "hades_1": null,
+    "hades_2": {
+      "keepsake": "Jeweled Pom",
+      "curses": []
+    }
   },
   "Arachne": {
-    "name": "Arachne",
     "title": "Silk Weaver",
     "type": "character",
-    "keepsake": "Silken Sash",
-    "imageFile": "arachne.webp"
+    "hades_1": null,
+    "hades_2": {
+      "keepsake": "Silken Sash",
+      "curses": []
+    }
   },
   "Narcissus": {
-    "name": "Narcissus",
     "title": "Beautiful Flower",
     "type": "character",
-    "keepsake": "Aromatic Phial",
-    "imageFile": "narcissus.webp"
+    "hades_1": null,
+    "hades_2": {
+      "keepsake": "Aromatic Phial",
+      "curses": []
+    }
   },
   "Echo": {
-    "name": "Echo",
     "title": "Dispirited Nymph",
     "type": "character",
-    "keepsake": "Concave Stone",
-    "imageFile": "echo.webp"
+    "hades_1": null,
+    "hades_2": {
+      "keepsake": "Concave Stone",
+      "curses": []
+    }
   },
   "Medea": {
-    "name": "Medea",
     "title": "Witch of Shadows",
     "type": "character",
-    "keepsake": "Blackened Fleece",
-    "imageFile": "medea.webp"
+    "hades_1": null,
+    "hades_2": {
+      "keepsake": "Blackened Fleece",
+      "curses": []
+    }
   },
   "Circe": {
-    "name": "Circe",
     "title": "Witch of Changing",
     "type": "character",
-    "keepsake": "Crystal Figurine",
-    "imageFile": "circe.webp"
+    "hades_1": null,
+    "hades_2": {
+      "keepsake": "Crystal Figurine",
+      "curses": []
+    }
   },
   "Icarus": {
-    "name": "Icarus",
     "title": "Free Spirit",
     "type": "character",
-    "keepsake": "Experimental Hammer",
-    "imageFile": "icarus.webp"
+    "hades_1": null,
+    "hades_2": {
+      "keepsake": "Experimental Hammer",
+      "curses": []
+    }
   }
 }
