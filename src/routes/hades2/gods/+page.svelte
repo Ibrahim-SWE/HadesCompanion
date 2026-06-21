@@ -30,13 +30,13 @@
     </header>
 
     <div
-      class="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2"
+      class="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-1.5"
     >
       {#each sortedGodsArray as [god, godData] (god)}
         {@const h2 = godData.hades_2}
 
         <article
-          class="flex w-full min-w-0 flex-col gap-2.5 bg-linear-to-r from-[#0a140d] to-[#0d1c13] border border-[#1c3623] border-l-[3px] rounded-md p-2.5 sm:p-3 shadow-[0_2px_10px_rgba(0,0,0,0.5)] relative overflow-hidden transition-all hover:border-[#46f08f]/50 hover:shadow-[0_2px_14px_rgba(70,240,143,0.1)] group"
+          class="flex w-full min-w-0 flex-col gap-1.5 bg-linear-to-r from-[#0a140d] to-[#0d1c13] border border-[#1c3623] border-l-[3px] rounded-md p-2 shadow-[0_2px_10px_rgba(0,0,0,0.5)] relative overflow-hidden transition-all hover:border-[#46f08f]/50 hover:shadow-[0_2px_14px_rgba(70,240,143,0.1)] group"
           style="border-left-color: #46f08f;"
         >
           <a
@@ -57,7 +57,7 @@
               alt={god}
               class="w-full h-full object-cover object-top"
               placeholderClass="w-full h-full bg-[#0d1c13]"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 280px"
+              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, (max-width: 1280px) 25vw, 220px"
             />
             <div
               class="absolute inset-0 shadow-[inset_0_0_12px_rgba(0,0,0,0.8)] pointer-events-none rounded-lg"
@@ -65,20 +65,20 @@
           </div>
 
           <div
-            class="flex flex-1 min-w-0 flex-col gap-2 z-10 relative pointer-events-none"
+            class="flex flex-1 min-w-0 flex-col gap-1.5 z-10 relative pointer-events-none"
           >
             <div>
               <span
-                class="text-xs uppercase tracking-widest text-[#46f08f] block leading-tight mb-0.5"
+                class="text-[0.65rem] uppercase tracking-widest text-[#46f08f] block leading-tight mb-0.5"
               >
                 {getGodTypeLabel(godData)}
               </span>
               <h2
-                class="text-lg sm:text-xl font-serif text-[#ccff90] uppercase tracking-wide m-0 drop-shadow-sm leading-tight"
+                class="text-base sm:text-lg font-serif text-[#ccff90] uppercase tracking-wide m-0 drop-shadow-sm leading-tight"
               >
                 {god}
               </h2>
-              <p class="text-xs sm:text-sm text-[#b3c2b7] font-sans leading-snug mt-1">
+              <p class="text-xs sm:text-sm text-[#b3c2b7] font-sans leading-snug mt-0.5 line-clamp-2">
                 {godData.title}
               </p>
             </div>
@@ -86,11 +86,11 @@
             {#if h2 && (h2.keepsake || h2.curses.length > 0)}
               <div class="w-full h-px bg-white/5"></div>
 
-              <div class="flex flex-col gap-1.5 mt-auto pointer-events-auto">
+              <div class="flex flex-col gap-1 mt-auto pointer-events-auto">
                 {#if h2.keepsake}
                   <a
                     href={`${resolve("/hades2/keepsakes")}#keepsake-${encodeURIComponent(h2.keepsake)}`}
-                    class="flex items-center justify-between gap-2 bg-[#153320] border border-[#2d5a3c] rounded-md px-2.5 py-2 shadow-[inset_0_1px_0_rgba(70,240,143,0.1)] hover:border-[#46f08f]/60 hover:bg-[#1a3f28] transition-colors relative z-20"
+                    class="flex items-center justify-between gap-1.5 bg-[#153320] border border-[#2d5a3c] rounded px-2 py-1.5 shadow-[inset_0_1px_0_rgba(70,240,143,0.1)] hover:border-[#46f08f]/60 hover:bg-[#1a3f28] transition-colors relative z-20 min-w-0"
                   >
                     <span
                       class="text-[0.65rem] uppercase tracking-widest text-[#46f08f] font-sans font-semibold shrink-0"
@@ -98,7 +98,7 @@
                       Keepsake
                     </span>
                     <span
-                      class="text-sm text-[#ccff90] font-sans font-medium text-right leading-tight"
+                      class="text-sm text-[#ccff90] font-sans font-medium text-right leading-tight truncate"
                     >
                       {h2.keepsake}
                     </span>
@@ -107,7 +107,7 @@
 
                 {#if h2.curses.length > 0}
                   <div
-                    class="bg-[#153320] border border-[#2d5a3c] rounded-md px-2.5 py-2 shadow-[inset_0_1px_0_rgba(70,240,143,0.1)]"
+                    class="bg-[#153320] border border-[#2d5a3c] rounded px-2 py-1.5 shadow-[inset_0_1px_0_rgba(70,240,143,0.1)]"
                   >
                     <span
                       class="text-[0.65rem] uppercase tracking-widest text-[#46f08f] font-sans font-semibold block leading-tight mb-1"
@@ -120,7 +120,7 @@
                           href={resolve(
                             `/hades2/curses#curse-${encodeURIComponent(curse)}` as `/hades2/curses#${string}`,
                           )}
-                          class="text-xs text-[#ccff90] bg-black/40 border border-[#1c3623] rounded px-2 py-0.5 font-sans hover:border-[#46f08f]/50 hover:text-white transition-colors relative z-20"
+                          class="text-sm text-[#ccff90] bg-black/40 border border-[#1c3623] rounded px-2 py-0.5 font-sans hover:border-[#46f08f]/50 hover:text-white transition-colors relative z-20"
                         >
                           {curse}
                         </a>
