@@ -1,4 +1,110 @@
 {
+  "addled": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Addled",
+    "description": "For the next 3-5 Encounters, each time you use Casts, you take 3-6 Health_Icon.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "For the next "
+      },
+      {
+        "type": "range",
+        "value": "3-5",
+        "rangeStart": 3,
+        "rangeEnd": 5
+      },
+      {
+        "type": "text_bold",
+        "value": " Encounters"
+      },
+      {
+        "type": "text_normal",
+        "value": ", each time you use "
+      },
+      {
+        "type": "text_bold",
+        "value": "Casts"
+      },
+      {
+        "type": "text_normal",
+        "value": ", you take "
+      },
+      {
+        "type": "range",
+        "value": "3-6",
+        "rangeStart": 3,
+        "rangeEnd": 6
+      },
+      {
+        "type": "image",
+        "name": "Health_Icon",
+        "img_path": "health_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " damage."
+      }
+    ],
+    "effect": null,
+    "image_path": "addled.webp",
+    "element": null,
+    "type": "curse",
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "affluence": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Affluence",
+    "description": "Afterward, any Gold_Coins_Icon you gain is worth +X%.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Afterward, any "
+      },
+      {
+        "type": "image",
+        "name": "Gold_Coins_Icon",
+        "img_path": "gold_coins_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " you gain is worth +X%."
+      }
+    ],
+    "effect": null,
+    "image_path": "affluence.webp",
+    "element": null,
+    "type": "blessing",
+    "is_core": false,
+    "rarities_effect": {
+      "common": "40%–60%",
+      "rare": "80%–120%",
+      "epic": "120%–180%",
+      "heroic": "160%–240%",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "air_quality": {
     "gods": [
       "Zeus"
@@ -445,6 +551,65 @@
     },
     "notes": null
   },
+  "atrophic": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Atrophic",
+    "description": "For the next 3-5 Encounters, you have -20-29 Max_Health_Icon.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "For the next "
+      },
+      {
+        "type": "range",
+        "value": "3-5",
+        "rangeStart": 3,
+        "rangeEnd": 5
+      },
+      {
+        "type": "text_bold",
+        "value": " Encounters"
+      },
+      {
+        "type": "text_normal",
+        "value": ", you have "
+      },
+      {
+        "type": "range",
+        "value": "-20-29",
+        "rangeStart": -20,
+        "rangeEnd": -29
+      },
+      {
+        "type": "image",
+        "name": "Max_Health_Icon",
+        "img_path": "max_health_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "atrophic.webp",
+    "element": null,
+    "type": "curse",
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "azure_dress": {
     "gods": [
       "Arachne"
@@ -553,6 +718,60 @@
           "Light Smite"
         ]
       ]
+    },
+    "notes": null
+  },
+  "barren": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Barren",
+    "description": "For the next 3-6 Encounters, your Arcana Cards have no effect.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "For the next "
+      },
+      {
+        "type": "range",
+        "value": "3-6",
+        "rangeStart": 3,
+        "rangeEnd": 6
+      },
+      {
+        "type": "text_bold",
+        "value": " Encounters"
+      },
+      {
+        "type": "text_normal",
+        "value": ", your "
+      },
+      {
+        "type": "text_bold",
+        "value": "Arcana Cards"
+      },
+      {
+        "type": "text_normal",
+        "value": " have no effect."
+      }
+    ],
+    "effect": null,
+    "image_path": "barren.webp",
+    "element": null,
+    "type": "curse",
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": {
+      "condition": "Any other Chaos Boon"
     },
     "notes": null
   },
@@ -1470,6 +1689,96 @@
     },
     "notes": null
   },
+  "caustic": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Caustic",
+    "description": "For the next 3-5 Encounters, slain foes toss an Inferno-Bomb at you.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "For the next "
+      },
+      {
+        "type": "range",
+        "value": "3-5",
+        "rangeStart": 3,
+        "rangeEnd": 5
+      },
+      {
+        "type": "text_bold",
+        "value": " Encounters"
+      },
+      {
+        "type": "text_normal",
+        "value": ", slain foes toss an "
+      },
+      {
+        "type": "text_bold",
+        "value": "Inferno-Bomb"
+      },
+      {
+        "type": "text_normal",
+        "value": " at you."
+      }
+    ],
+    "effect": null,
+    "image_path": "caustic.webp",
+    "element": null,
+    "type": "curse",
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "celerity": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Celerity",
+    "description": "Afterward, you move and Sprint X% faster",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Afterward, you move and "
+      },
+      {
+        "type": "text_bold",
+        "value": "Sprint"
+      },
+      {
+        "type": "text_normal",
+        "value": "X% faster"
+      }
+    ],
+    "effect": null,
+    "image_path": "celerity.webp",
+    "element": null,
+    "type": "blessing",
+    "is_core": false,
+    "rarities_effect": {
+      "common": "30%",
+      "rare": "40%",
+      "epic": "50%",
+      "heroic": "60%",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "chain_reaction": {
     "gods": [
       "Hephaestus",
@@ -1529,6 +1838,98 @@
         ]
       ]
     },
+    "notes": null
+  },
+  "chant": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Chant",
+    "description": "Afterward, your Ω Moves deal +X% damage for the more Aether_Element_Icon you have.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Afterward, your "
+      },
+      {
+        "type": "text_bold",
+        "value": "Ω Moves"
+      },
+      {
+        "type": "text_normal",
+        "value": " deal +X% damage for the more "
+      },
+      {
+        "type": "image",
+        "name": "Aether_Element_Icon",
+        "img_path": "aether_element_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " you have."
+      }
+    ],
+    "effect": null,
+    "image_path": "chant.webp",
+    "element": null,
+    "type": "blessing",
+    "is_core": false,
+    "rarities_effect": {
+      "common": "+30%",
+      "rare": "+36%",
+      "epic": "+42%",
+      "heroic": "+48%",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": {
+      "satisfy_all": [
+        {
+          "element": "Aether",
+          "amount": 1
+        }
+      ]
+    },
+    "notes": null
+  },
+  "chasm": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Chasm",
+    "description": "Afterward, your Casts deal +X% damage.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Afterward, your "
+      },
+      {
+        "type": "text_bold",
+        "value": "Casts"
+      },
+      {
+        "type": "text_normal",
+        "value": " deal +X% damage."
+      }
+    ],
+    "effect": null,
+    "image_path": "chasm.webp",
+    "element": null,
+    "type": "blessing",
+    "is_core": false,
+    "rarities_effect": {
+      "common": "20%–50%",
+      "rare": "30%–75%",
+      "epic": "40%–100%",
+      "heroic": "50%–125%",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
     "notes": null
   },
   "cherished_heirloom": {
@@ -1842,6 +2243,81 @@
       "rare": null,
       "epic": null,
       "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "creation": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Creation",
+    "description": "Afterward, gain Earth_Element_Icon, Water_Element_Icon, Air_Element_Icon, Fire_Element_Icon, Aether_Element_Icon.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Afterward, gain "
+      },
+      {
+        "type": "image",
+        "name": "Earth_Element_Icon",
+        "img_path": "earth_element_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": ", "
+      },
+      {
+        "type": "image",
+        "name": "Water_Element_Icon",
+        "img_path": "water_element_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": ", "
+      },
+      {
+        "type": "image",
+        "name": "Air_Element_Icon",
+        "img_path": "air_element_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": ", "
+      },
+      {
+        "type": "image",
+        "name": "Fire_Element_Icon",
+        "img_path": "fire_element_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": ", "
+      },
+      {
+        "type": "image",
+        "name": "Aether_Element_Icon",
+        "img_path": "aether_element_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "creation.webp",
+    "element": null,
+    "type": "blessing",
+    "is_core": false,
+    "rarities_effect": {
+      "common": "+1",
+      "rare": "+2",
+      "epic": "+3",
+      "heroic": "+4",
       "duo": null,
       "legendary": null,
       "infusion": null
@@ -2261,6 +2737,97 @@
     "prerequisites": null,
     "notes": null
   },
+  "defiance": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Defiance",
+    "description": "Afterward, gain +1 use of Death_Defiance_Icon Death Defiance this night.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Afterward, gain +1 use of "
+      },
+      {
+        "type": "image",
+        "name": "Death_Defiance_Icon",
+        "img_path": "death_defiance_icon.webp"
+      },
+      {
+        "type": "text_bold",
+        "value": "Death Defiance"
+      },
+      {
+        "type": "text_normal",
+        "value": " this night."
+      }
+    ],
+    "effect": null,
+    "image_path": "defiance.webp",
+    "element": null,
+    "type": "blessing",
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": {
+      "condition": "Any other Chaos Boon"
+    },
+    "notes": null
+  },
+  "discovery": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Discovery",
+    "description": "Afterward, you have +X% chance to find +100% resources with your gathering tools.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Afterward, you have +X% chance to find "
+      },
+      {
+        "type": "text_bold",
+        "value": "+100%"
+      },
+      {
+        "type": "text_normal",
+        "value": " resources with your "
+      },
+      {
+        "type": "text_bold",
+        "value": "gathering tools"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "discovery.webp",
+    "element": null,
+    "type": "blessing",
+    "is_core": false,
+    "rarities_effect": {
+      "common": "56%–70%",
+      "rare": "64%–80%",
+      "epic": "72%–90%",
+      "heroic": "80%–100%",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "divine_dash": {
     "gods": [
       "Athena"
@@ -2345,6 +2912,66 @@
     "prerequisites": null,
     "notes": null
   },
+  "doomed": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Doomed",
+    "description": "If you have not cleared 2-3 Encounter(s) in 120 Sec. to clear, you take 500 damage.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "If you have not cleared "
+      },
+      {
+        "type": "range",
+        "value": "2-3",
+        "rangeStart": 2,
+        "rangeEnd": 3
+      },
+      {
+        "type": "text_bold",
+        "value": " Encounter(s)"
+      },
+      {
+        "type": "text_normal",
+        "value": " in "
+      },
+      {
+        "type": "text_bold",
+        "value": "120 Sec."
+      },
+      {
+        "type": "text_normal",
+        "value": " to clear, you take "
+      },
+      {
+        "type": "text_bold",
+        "value": "500"
+      },
+      {
+        "type": "text_normal",
+        "value": " damage."
+      }
+    ],
+    "effect": null,
+    "image_path": "doomed.webp",
+    "element": null,
+    "type": "curse",
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "double_strike": {
     "gods": [
       "Zeus"
@@ -2407,13 +3034,8 @@
         "value": "Your "
       },
       {
-        "type": "image",
-        "name": "Omega_Icon",
-        "img_path": "omega_icon.webp"
-      },
-      {
         "type": "text_bold",
-        "value": "Moves"
+        "value": "Ω Moves"
       },
       {
         "type": "text_normal",
@@ -2808,6 +3430,58 @@
     "prerequisites": null,
     "notes": null
   },
+  "enshrouded": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Enshrouded",
+    "description": "For the next 4-6 Encounters, Location Reward previews are hidden.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "For the next "
+      },
+      {
+        "type": "range",
+        "value": "4-6",
+        "rangeStart": 4,
+        "rangeEnd": 6
+      },
+      {
+        "type": "text_bold",
+        "value": " Encounters"
+      },
+      {
+        "type": "text_normal",
+        "value": ", "
+      },
+      {
+        "type": "text_bold",
+        "value": "Location Reward"
+      },
+      {
+        "type": "text_normal",
+        "value": " previews are hidden."
+      }
+    ],
+    "effect": null,
+    "image_path": "enshrouded.webp",
+    "element": null,
+    "type": "curse",
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "evade_evade_evade": {
     "gods": [
       "Echo"
@@ -2941,6 +3615,119 @@
         ]
       ]
     },
+    "notes": null
+  },
+  "excruciating": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Excruciating",
+    "description": "For the next 3-5 Encounters, you take +20%-+50% damage.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "For the next "
+      },
+      {
+        "type": "range",
+        "value": "3-5",
+        "rangeStart": 3,
+        "rangeEnd": 5
+      },
+      {
+        "type": "text_bold",
+        "value": " Encounters"
+      },
+      {
+        "type": "text_normal",
+        "value": ", you take "
+      },
+      {
+        "type": "range",
+        "value": "+20%-+50%",
+        "rangeStart": 20,
+        "rangeEnd": 50
+      },
+      {
+        "type": "text_normal",
+        "value": " damage."
+      }
+    ],
+    "effect": null,
+    "image_path": "excruciating.webp",
+    "element": null,
+    "type": "curse",
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "explosive_intent": {
+    "gods": [
+      "Icarus"
+    ],
+    "name": "Explosive Intent",
+    "description": "Your Omega_Icon Moves also deal 50 damage in an area around foes they hit, but use +10 Magick_Icon.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Your "
+      },
+      {
+        "type": "text_bold",
+        "value": "Ω Moves"
+      },
+      {
+        "type": "text_normal",
+        "value": " also deal "
+      },
+      {
+        "type": "text_bold",
+        "value": "50"
+      },
+      {
+        "type": "text_normal",
+        "value": " damage in an area around foes they hit, but use "
+      },
+      {
+        "type": "text_bold",
+        "value": "+10"
+      },
+      {
+        "type": "image",
+        "name": "Magick_Icon",
+        "img_path": "magick_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "explosive_intent.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
     "notes": null
   },
   "extended_family": {
@@ -3085,6 +3872,44 @@
     "prerequisites": {
       "condition": "Equip The Enchantress and/or The Champions Arcana Cards"
     },
+    "notes": null
+  },
+  "favor": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Favor",
+    "description": "Afterward, Boons have +X% chance to be Rare or better.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Afterward, "
+      },
+      {
+        "type": "text_bold",
+        "value": "Boons"
+      },
+      {
+        "type": "text_normal",
+        "value": " have +X% chance to be Rare or better."
+      }
+    ],
+    "effect": null,
+    "image_path": "favor.webp",
+    "element": null,
+    "type": "blessing",
+    "is_core": false,
+    "rarities_effect": {
+      "common": "40%–50%",
+      "rare": "54%–67%",
+      "epic": "67%–84%",
+      "heroic": "80%–100%",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
     "notes": null
   },
   "fight_fight_fight": {
@@ -3272,6 +4097,67 @@
     },
     "notes": null
   },
+  "fixated": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Fixated",
+    "description": "For the next 3-5 Encounters, whenever you use Magick_Icon, Prime it until this expires.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "For the next "
+      },
+      {
+        "type": "range",
+        "value": "3-5",
+        "rangeStart": 3,
+        "rangeEnd": 5
+      },
+      {
+        "type": "text_bold",
+        "value": " Encounters"
+      },
+      {
+        "type": "text_normal",
+        "value": ", whenever you use "
+      },
+      {
+        "type": "image",
+        "name": "Magick_Icon",
+        "img_path": "magick_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": ", "
+      },
+      {
+        "type": "text_bold",
+        "value": "Prime"
+      },
+      {
+        "type": "text_normal",
+        "value": " it until this expires."
+      }
+    ],
+    "effect": null,
+    "image_path": "fixated.webp",
+    "element": null,
+    "type": "curse",
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "flame_flourish": {
     "gods": [
       "Hestia"
@@ -3394,6 +4280,73 @@
     "prerequisites": null,
     "notes": null
   },
+  "flayed": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Flayed",
+    "description": "For the next 4-6 Encounters, each time you use Specials, you take 3-6 Health_Icon.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "For the next "
+      },
+      {
+        "type": "range",
+        "value": "4-6",
+        "rangeStart": 4,
+        "rangeEnd": 6
+      },
+      {
+        "type": "text_bold",
+        "value": " Encounters"
+      },
+      {
+        "type": "text_normal",
+        "value": ", each time you use "
+      },
+      {
+        "type": "text_bold",
+        "value": "Specials"
+      },
+      {
+        "type": "text_normal",
+        "value": ", you take "
+      },
+      {
+        "type": "range",
+        "value": "3-6",
+        "rangeStart": 3,
+        "rangeEnd": 6
+      },
+      {
+        "type": "image",
+        "name": "Health_Icon",
+        "img_path": "health_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " damage."
+      }
+    ],
+    "effect": null,
+    "image_path": "flayed.webp",
+    "element": null,
+    "type": "curse",
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "flood_gain": {
     "gods": [
       "Poseidon"
@@ -3437,6 +4390,44 @@
       "rare": "5 Sec.",
       "epic": "6 Sec.",
       "heroic": "7 Sec.",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "flourish": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Flourish",
+    "description": "Afterward, your Specials deal +X% damage.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Afterward, your "
+      },
+      {
+        "type": "text_bold",
+        "value": "Specials"
+      },
+      {
+        "type": "text_normal",
+        "value": " deal +X% damage."
+      }
+    ],
+    "effect": null,
+    "image_path": "flourish.webp",
+    "element": null,
+    "type": "blessing",
+    "is_core": false,
+    "rarities_effect": {
+      "common": "30%–60%",
+      "rare": "45%–90%",
+      "epic": "60%–120%",
+      "heroic": "75%–150%",
       "duo": null,
       "legendary": null,
       "infusion": null
@@ -3873,6 +4864,73 @@
         ]
       ]
     },
+    "notes": null
+  },
+  "gagged": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Gagged",
+    "description": "For the next 3-5 Encounters, each time you use Ω Moves, you take 5-8 Health_Icon.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "For the next "
+      },
+      {
+        "type": "range",
+        "value": "3-5",
+        "rangeStart": 3,
+        "rangeEnd": 5
+      },
+      {
+        "type": "text_bold",
+        "value": " Encounters"
+      },
+      {
+        "type": "text_normal",
+        "value": ", each time you use "
+      },
+      {
+        "type": "text_bold",
+        "value": "Ω Moves"
+      },
+      {
+        "type": "text_normal",
+        "value": ", you take "
+      },
+      {
+        "type": "range",
+        "value": "5-8",
+        "rangeStart": 5,
+        "rangeEnd": 8
+      },
+      {
+        "type": "image",
+        "name": "Health_Icon",
+        "img_path": "health_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " damage."
+      }
+    ],
+    "effect": null,
+    "image_path": "gagged.webp",
+    "element": null,
+    "type": "curse",
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
     "notes": null
   },
   "geyser_spout": {
@@ -4670,6 +5728,68 @@
     "prerequisites": null,
     "notes": null
   },
+  "hazard_boom": {
+    "gods": [
+      "Icarus"
+    ],
+    "name": "Hazard Boom",
+    "description": "Your Casts also blast the area after 4 Sec., dealing 500 damage to foes, but 20 to you.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Your "
+      },
+      {
+        "type": "text_bold",
+        "value": "Casts"
+      },
+      {
+        "type": "text_normal",
+        "value": " also blast the area after "
+      },
+      {
+        "type": "text_bold",
+        "value": "4 Sec."
+      },
+      {
+        "type": "text_normal",
+        "value": ", dealing "
+      },
+      {
+        "type": "text_bold",
+        "value": "500"
+      },
+      {
+        "type": "text_normal",
+        "value": " damage to foes, but "
+      },
+      {
+        "type": "text_bold",
+        "value": "20"
+      },
+      {
+        "type": "text_normal",
+        "value": " to you."
+      }
+    ],
+    "effect": null,
+    "image_path": "hazard_boom.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "healthy_rebound": {
     "gods": [
       "Aphrodite"
@@ -5409,7 +6529,7 @@
           "Ice Strike",
           "Ice Flourish",
           "Arctic Ring",
-          "Fridgid Rush",
+          "Frigid Rush",
           "Tranquil Gain"
         ]
       ]
@@ -5778,6 +6898,142 @@
         ]
       ]
     },
+    "notes": null
+  },
+  "ingenious_flourish": {
+    "gods": [
+      "Icarus"
+    ],
+    "name": "Ingenious Flourish",
+    "description": "Your Special Boon gains +3 Arrow_Up_Icon Lv., but you Prime35 Magick_Icon.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Your "
+      },
+      {
+        "type": "text_bold",
+        "value": "Special Boon"
+      },
+      {
+        "type": "text_normal",
+        "value": " gains "
+      },
+      {
+        "type": "text_bold",
+        "value": "+3"
+      },
+      {
+        "type": "image",
+        "name": "Arrow_Up_Icon",
+        "img_path": "arrow_up_icon.webp"
+      },
+      {
+        "type": "text_bold",
+        "value": "Lv."
+      },
+      {
+        "type": "text_normal",
+        "value": ", but you "
+      },
+      {
+        "type": "text_bold",
+        "value": "Prime 35"
+      },
+      {
+        "type": "image",
+        "name": "Magick_Icon",
+        "img_path": "magick_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "ingenious_flourish.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "ingenious_strike": {
+    "gods": [
+      "Icarus"
+    ],
+    "name": "Ingenious Strike",
+    "description": "Your Attack Boon gains +3 Arrow_Up_Icon Lv., but you Prime35 Magick_Icon.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Your "
+      },
+      {
+        "type": "text_bold",
+        "value": "Attack Boon"
+      },
+      {
+        "type": "text_normal",
+        "value": " gains "
+      },
+      {
+        "type": "text_bold",
+        "value": "+3"
+      },
+      {
+        "type": "image",
+        "name": "Arrow_Up_Icon",
+        "img_path": "arrow_up_icon.webp"
+      },
+      {
+        "type": "text_bold",
+        "value": "Lv."
+      },
+      {
+        "type": "text_normal",
+        "value": ", but you "
+      },
+      {
+        "type": "text_bold",
+        "value": "Prime 35"
+      },
+      {
+        "type": "image",
+        "name": "Magick_Icon",
+        "img_path": "magick_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "ingenious_strike.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
     "notes": null
   },
   "ionic_gain": {
@@ -6267,6 +7523,63 @@
     "deals_olympian_damage": false,
     "prerequisites": {
       "condition": "Have at least 1 Death Defiance (Doesn't matter if it's used or not)"
+    },
+    "notes": null
+  },
+  "latest_model": {
+    "gods": [
+      "Icarus"
+    ],
+    "name": "Latest Model",
+    "description": "Icarus chooses 1 Daedalus_Hammer of yours to upgrade to Rank II this night, improving its effects.",
+    "description_rich": [
+      {
+        "type": "text_bold",
+        "value": "Icarus"
+      },
+      {
+        "type": "text_normal",
+        "value": " chooses "
+      },
+      {
+        "type": "text_bold",
+        "value": "1"
+      },
+      {
+        "type": "image",
+        "name": "Daedalus_Hammer",
+        "img_path": "daedalus_hammer.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " of yours to upgrade to "
+      },
+      {
+        "type": "text_bold",
+        "value": "Rank II"
+      },
+      {
+        "type": "text_normal",
+        "value": " this night, improving its effects. "
+      }
+    ],
+    "effect": null,
+    "image_path": "latest_model.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": {
+      "condition": "Reach the 6th affinity rank with Icarus"
     },
     "notes": null
   },
@@ -6781,6 +8094,73 @@
     "prerequisites": null,
     "notes": null
   },
+  "maimed": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Maimed",
+    "description": "For the next 3-5 Encounters, each time you use Attacks, you take 3-6 Health_Icon.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "For the next "
+      },
+      {
+        "type": "range",
+        "value": "3-5",
+        "rangeStart": 3,
+        "rangeEnd": 5
+      },
+      {
+        "type": "text_bold",
+        "value": " Encounters"
+      },
+      {
+        "type": "text_normal",
+        "value": ", each time you use "
+      },
+      {
+        "type": "text_bold",
+        "value": "Attacks"
+      },
+      {
+        "type": "text_normal",
+        "value": ", you take "
+      },
+      {
+        "type": "range",
+        "value": "3-6",
+        "rangeStart": 3,
+        "rangeEnd": 6
+      },
+      {
+        "type": "image",
+        "name": "Health_Icon",
+        "img_path": "health_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " damage."
+      }
+    ],
+    "effect": null,
+    "image_path": "maimed.webp",
+    "element": null,
+    "type": "curse",
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "malice_in_kind": {
     "gods": [
       "Medea"
@@ -7080,6 +8460,45 @@
       "infusion": null
     },
     "deals_olympian_damage": true,
+    "prerequisites": null,
+    "notes": null
+  },
+  "mind": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Mind",
+    "description": "Afterward, gain +X Max_Magick_Icon.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Afterward, gain +X"
+      },
+      {
+        "type": "image",
+        "name": "Max_Magick_Icon",
+        "img_path": "max_magick_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "mind.webp",
+    "element": null,
+    "type": "blessing",
+    "is_core": false,
+    "rarities_effect": {
+      "common": "30–40",
+      "rare": "45–60",
+      "epic": "60–80",
+      "heroic": "75–100",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
     "prerequisites": null,
     "notes": null
   },
@@ -7501,6 +8920,73 @@
         ]
       ]
     },
+    "notes": null
+  },
+  "neurotic": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Neurotic",
+    "description": "For the next 3-5 Encounters, your Dash uses 10-20 Magick_Icon if you have enough to spare.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "For the next "
+      },
+      {
+        "type": "range",
+        "value": "3-5",
+        "rangeStart": 3,
+        "rangeEnd": 5
+      },
+      {
+        "type": "text_bold",
+        "value": " Encounters"
+      },
+      {
+        "type": "text_normal",
+        "value": ", your "
+      },
+      {
+        "type": "text_bold",
+        "value": "Dash"
+      },
+      {
+        "type": "text_normal",
+        "value": " uses "
+      },
+      {
+        "type": "range",
+        "value": "10-20",
+        "rangeStart": 10,
+        "rangeEnd": 20
+      },
+      {
+        "type": "image",
+        "name": "Magick_Icon",
+        "img_path": "magick_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " if you have enough to spare."
+      }
+    ],
+    "effect": null,
+    "image_path": "neurotic.webp",
+    "element": null,
+    "type": "curse",
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
     "notes": null
   },
   "nexus_rush": {
@@ -7941,6 +9427,58 @@
     "prerequisites": null,
     "notes": null
   },
+  "ordinary": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Ordinary",
+    "description": "The next 2-3 Boon(s) you find are limited to Common blessings.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "The next "
+      },
+      {
+        "type": "range",
+        "value": "2-3",
+        "rangeStart": 2,
+        "rangeEnd": 3
+      },
+      {
+        "type": "text_bold",
+        "value": " Boon(s)"
+      },
+      {
+        "type": "text_normal",
+        "value": " you find are limited to "
+      },
+      {
+        "type": "text_bold",
+        "value": "Common"
+      },
+      {
+        "type": "text_normal",
+        "value": " blessings."
+      }
+    ],
+    "effect": null,
+    "image_path": "ordinary.webp",
+    "element": null,
+    "type": "curse",
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "paid_dues": {
     "gods": [
       "Hermes"
@@ -8002,6 +9540,60 @@
     },
     "notes": null
   },
+  "paralyzing": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Paralyzing",
+    "description": "For the next 3-5 Encounters, whenever you take damage, you are stunned for 0.5-1.4 Sec.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "For the next "
+      },
+      {
+        "type": "range",
+        "value": "3-5",
+        "rangeStart": 3,
+        "rangeEnd": 5
+      },
+      {
+        "type": "text_bold",
+        "value": " Encounters"
+      },
+      {
+        "type": "text_normal",
+        "value": ", whenever you take damage, you are stunned for "
+      },
+      {
+        "type": "range",
+        "value": "0.5-1.4",
+        "rangeStart": 0.5,
+        "rangeEnd": 1.4
+      },
+      {
+        "type": "text_bold",
+        "value": " Sec."
+      }
+    ],
+    "effect": null,
+    "image_path": "paralyzing.webp",
+    "element": null,
+    "type": "curse",
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "passion_rush": {
     "gods": [
       "Aphrodite"
@@ -8041,6 +9633,59 @@
       "infusion": null
     },
     "deals_olympian_damage": true,
+    "prerequisites": null,
+    "notes": null
+  },
+  "pauper's": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Pauper's",
+    "description": "For the next 3-5 Encounters, you cannot earn Gold_Coins_Icon.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "For the next "
+      },
+      {
+        "type": "range",
+        "value": "3-5",
+        "rangeStart": 3,
+        "rangeEnd": 5
+      },
+      {
+        "type": "text_bold",
+        "value": " Encounters"
+      },
+      {
+        "type": "text_normal",
+        "value": ", you cannot earn "
+      },
+      {
+        "type": "image",
+        "name": "Gold_Coins_Icon",
+        "img_path": "gold_coins_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "pauper's.webp",
+    "element": null,
+    "type": "curse",
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
     "prerequisites": null,
     "notes": null
   },
@@ -8736,6 +10381,70 @@
     },
     "notes": null
   },
+  "protective_coating": {
+    "gods": [
+      "Icarus"
+    ],
+    "name": "Protective Coating",
+    "description": "Gain +100 Armor_Icon. The next time you lose all your Armor_Icon, become Impervious for 8 Sec.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Gain "
+      },
+      {
+        "type": "text_bold",
+        "value": "+100"
+      },
+      {
+        "type": "image",
+        "name": "Armor_Icon",
+        "img_path": "armor_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": ". The next time you lose all your "
+      },
+      {
+        "type": "image",
+        "name": "Armor_Icon",
+        "img_path": "armor_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": ", become "
+      },
+      {
+        "type": "text_bold",
+        "value": "Impervious"
+      },
+      {
+        "type": "text_normal",
+        "value": " for "
+      },
+      {
+        "type": "text_bold",
+        "value": "8 Sec."
+      }
+    ],
+    "effect": null,
+    "image_path": "protective_coating.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "pyro_technique": {
     "gods": [
       "Hestia"
@@ -9173,6 +10882,58 @@
     "prerequisites": null,
     "notes": null
   },
+  "rejected": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Rejected",
+    "description": "The next 2-4 Boons you find have 1 fewer blessing to choose from.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "The next "
+      },
+      {
+        "type": "range",
+        "value": "2-4",
+        "rangeStart": 2,
+        "rangeEnd": 4
+      },
+      {
+        "type": "text_bold",
+        "value": " Boons"
+      },
+      {
+        "type": "text_normal",
+        "value": " you find have "
+      },
+      {
+        "type": "text_bold",
+        "value": "1"
+      },
+      {
+        "type": "text_normal",
+        "value": " fewer blessing to choose from."
+      }
+    ],
+    "effect": null,
+    "image_path": "rejected.webp",
+    "element": null,
+    "type": "curse",
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "renewed_faith": {
     "gods": [
       "Athena"
@@ -9208,6 +10969,99 @@
       "rare": "+15%",
       "epic": "+20%",
       "heroic": "+25%",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "revelation": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Revelation",
+    "description": "Afterward, you Channel your Ω Moves X% faster.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Afterward, you "
+      },
+      {
+        "type": "text_bold",
+        "value": "Channel"
+      },
+      {
+        "type": "text_normal",
+        "value": " your "
+      },
+      {
+        "type": "text_bold",
+        "value": "Ω Moves"
+      },
+      {
+        "type": "text_normal",
+        "value": "X% faster."
+      }
+    ],
+    "effect": null,
+    "image_path": "revelation.webp",
+    "element": null,
+    "type": "blessing",
+    "is_core": false,
+    "rarities_effect": {
+      "common": "10%–15%",
+      "rare": "15%–22%",
+      "epic": "20%–30%",
+      "heroic": "25%–37%",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "revival": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Revival",
+    "description": "Afterward, whenever you exit a location, restore Health_Icon.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Afterward, whenever you exit a "
+      },
+      {
+        "type": "text_bold",
+        "value": "location"
+      },
+      {
+        "type": "text_normal",
+        "value": ", restore "
+      },
+      {
+        "type": "image",
+        "name": "Health_Icon",
+        "img_path": "health_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "revival.webp",
+    "element": null,
+    "type": "blessing",
+    "is_core": false,
+    "rarities_effect": {
+      "common": "3–4",
+      "rare": "9–12",
+      "epic": "15–20",
+      "heroic": "21–28",
       "duo": null,
       "legendary": null,
       "infusion": null
@@ -10242,6 +12096,64 @@
     },
     "notes": null
   },
+  "slothful": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Slothful",
+    "description": "For the next 3-5 Encounters, you move and Sprint 40%-60% slower.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "For the next "
+      },
+      {
+        "type": "range",
+        "value": "3-5",
+        "rangeStart": 3,
+        "rangeEnd": 5
+      },
+      {
+        "type": "text_bold",
+        "value": " Encounters"
+      },
+      {
+        "type": "text_normal",
+        "value": ", you move and "
+      },
+      {
+        "type": "text_bold",
+        "value": "Sprint "
+      },
+      {
+        "type": "range",
+        "value": "40%-60%",
+        "rangeStart": 40,
+        "rangeEnd": 60
+      },
+      {
+        "type": "text_normal",
+        "value": " slower."
+      }
+    ],
+    "effect": null,
+    "image_path": "slothful.webp",
+    "element": null,
+    "type": "curse",
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "slow_cooker": {
     "gods": [
       "Hestia"
@@ -10536,6 +12448,45 @@
       "infusion": null
     },
     "deals_olympian_damage": true,
+    "prerequisites": null,
+    "notes": null
+  },
+  "soul": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Soul",
+    "description": "Afterward, gain +X Max_Health_Icon.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Afterward, gain +X"
+      },
+      {
+        "type": "image",
+        "name": "Max_Health_Icon",
+        "img_path": "max_health_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "soul.webp",
+    "element": null,
+    "type": "blessing",
+    "is_core": false,
+    "rarities_effect": {
+      "common": "26–35",
+      "rare": "52–70",
+      "epic": "78–105",
+      "heroic": "104–140",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
     "prerequisites": null,
     "notes": null
   },
@@ -10846,6 +12797,44 @@
     "prerequisites": null,
     "notes": null
   },
+  "strike": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Strike",
+    "description": "Afterward, your Attacks deal +X% damage.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Afterward, your "
+      },
+      {
+        "type": "text_bold",
+        "value": "Attacks"
+      },
+      {
+        "type": "text_normal",
+        "value": " deal +X% damage."
+      }
+    ],
+    "effect": null,
+    "image_path": "strike.webp",
+    "element": null,
+    "type": "blessing",
+    "is_core": false,
+    "rarities_effect": {
+      "common": "20%–50%",
+      "rare": "30%–75%",
+      "epic": "40%–100%",
+      "heroic": "50%–125%",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "stutter_step": {
     "gods": [
       "Hermes"
@@ -11147,6 +13136,70 @@
     "prerequisites": null,
     "notes": null
   },
+  "supply_chain": {
+    "gods": [
+      "Icarus"
+    ],
+    "name": "Supply Chain",
+    "description": "Each time you clear 7 Encounters, receive +10 Health_Restore_Icon and 2 Pom Slice.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Each time you clear "
+      },
+      {
+        "type": "text_bold",
+        "value": "7 Encounters"
+      },
+      {
+        "type": "text_normal",
+        "value": ", receive "
+      },
+      {
+        "type": "text_bold",
+        "value": "+10"
+      },
+      {
+        "type": "image",
+        "name": "Health_Restore_Icon",
+        "img_path": "health_restore_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " and "
+      },
+      {
+        "type": "text_bold",
+        "value": "2"
+      },
+      {
+        "type": "image",
+        "name": "Pom Slice",
+        "img_path": "pom_slice.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "supply_chain.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "support_fire": {
     "gods": [
       "Artemis"
@@ -11418,6 +13471,45 @@
       "rare": "+60%",
       "epic": "+70%",
       "heroic": "+80%",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
+  "talent": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Talent",
+    "description": "Afterward, you use -X% Magick_Icon.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Afterward, you use -X%"
+      },
+      {
+        "type": "image",
+        "name": "Magick_Icon",
+        "img_path": "magick_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": "."
+      }
+    ],
+    "effect": null,
+    "image_path": "talent.webp",
+    "element": null,
+    "type": "blessing",
+    "is_core": false,
+    "rarities_effect": {
+      "common": "20%–30%",
+      "rare": "30%–45%",
+      "epic": "40%–60%",
+      "heroic": "50%–75%",
       "duo": null,
       "legendary": null,
       "infusion": null
@@ -12085,13 +14177,8 @@
         "value": "Your "
       },
       {
-        "type": "image",
-        "name": "Omega_Icon",
-        "img_path": "omega_icon.webp"
-      },
-      {
         "type": "text_bold",
-        "value": "Moves"
+        "value": "Ω Moves"
       },
       {
         "type": "text_normal",
@@ -12597,6 +14684,66 @@
     "prerequisites": null,
     "notes": null
   },
+  "volatile_coating": {
+    "gods": [
+      "Icarus"
+    ],
+    "name": "Volatile Coating",
+    "description": "Gain +50 Armor_Icon. The next time you lose all your Armor_Icon, deal 4000 damage to surrounding foes.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Gain "
+      },
+      {
+        "type": "text_bold",
+        "value": "+50"
+      },
+      {
+        "type": "image",
+        "name": "Armor_Icon",
+        "img_path": "armor_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": ". The next time you lose all your "
+      },
+      {
+        "type": "image",
+        "name": "Armor_Icon",
+        "img_path": "armor_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": ", deal "
+      },
+      {
+        "type": "text_bold",
+        "value": "4000"
+      },
+      {
+        "type": "text_normal",
+        "value": " damage to surrounding foes."
+      }
+    ],
+    "effect": null,
+    "image_path": "volatile_coating.webp",
+    "element": null,
+    "type": null,
+    "is_core": false,
+    "rarities_effect": {
+      "common": null,
+      "rare": null,
+      "epic": null,
+      "heroic": null,
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "volcanic_flourish": {
     "gods": [
       "Hephaestus"
@@ -13064,6 +15211,49 @@
     },
     "notes": null
   },
+  "will": {
+    "gods": [
+      "Chaos"
+    ],
+    "name": "Will",
+    "description": "Afterward, restore X Magick_Icon every 1 Sec.",
+    "description_rich": [
+      {
+        "type": "text_normal",
+        "value": "Afterward, restore X"
+      },
+      {
+        "type": "image",
+        "name": "Magick_Icon",
+        "img_path": "magick_icon.webp"
+      },
+      {
+        "type": "text_normal",
+        "value": " every "
+      },
+      {
+        "type": "text_bold",
+        "value": "1 Sec."
+      }
+    ],
+    "effect": null,
+    "image_path": "will.webp",
+    "element": null,
+    "type": "blessing",
+    "is_core": false,
+    "rarities_effect": {
+      "common": "4–6",
+      "rare": "8–12",
+      "epic": "12–18",
+      "heroic": "16–24",
+      "duo": null,
+      "legendary": null,
+      "infusion": null
+    },
+    "deals_olympian_damage": false,
+    "prerequisites": null,
+    "notes": null
+  },
   "winner's_circle": {
     "gods": [
       "Hermes"
@@ -13385,2211 +15575,6 @@
       "rare": "+70 ~ 100",
       "epic": "+90 ~ 120",
       "heroic": "+110 ~ 140",
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "explosive_intent": {
-    "gods": [
-      "Icarus"
-    ],
-    "name": "Explosive Intent",
-    "description": "Your Omega_Icon Moves also deal 50 damage in an area around foes they hit, but use +10 Magick_Icon.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Your "
-      },
-      {
-        "type": "image",
-        "name": "Omega_Icon",
-        "img_path": "omega_icon.webp"
-      },
-      {
-        "type": "text_bold",
-        "value": "Moves"
-      },
-      {
-        "type": "text_normal",
-        "value": " also deal "
-      },
-      {
-        "type": "text_bold",
-        "value": "50"
-      },
-      {
-        "type": "text_normal",
-        "value": " damage in an area around foes they hit, but use "
-      },
-      {
-        "type": "text_bold",
-        "value": "+10"
-      },
-      {
-        "type": "image",
-        "name": "Magick_Icon",
-        "img_path": "magick_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": "."
-      }
-    ],
-    "effect": null,
-    "image_path": "explosive_intent.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "hazard_boom": {
-    "gods": [
-      "Icarus"
-    ],
-    "name": "Hazard Boom",
-    "description": "Your Casts also blast the area after 4 Sec., dealing 500 damage to foes, but 20 to you.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Your "
-      },
-      {
-        "type": "text_bold",
-        "value": "Casts"
-      },
-      {
-        "type": "text_normal",
-        "value": " also blast the area after "
-      },
-      {
-        "type": "text_bold",
-        "value": "4 Sec."
-      },
-      {
-        "type": "text_normal",
-        "value": ", dealing "
-      },
-      {
-        "type": "text_bold",
-        "value": "500"
-      },
-      {
-        "type": "text_normal",
-        "value": " damage to foes, but "
-      },
-      {
-        "type": "text_bold",
-        "value": "20"
-      },
-      {
-        "type": "text_normal",
-        "value": " to you."
-      }
-    ],
-    "effect": null,
-    "image_path": "hazard_boom.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "ingenious_flourish": {
-    "gods": [
-      "Icarus"
-    ],
-    "name": "Ingenious Flourish",
-    "description": "Your Special Boon gains +3 Arrow_Up_Icon Lv., but you Prime35 Magick_Icon.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Your "
-      },
-      {
-        "type": "text_bold",
-        "value": "Special Boon"
-      },
-      {
-        "type": "text_normal",
-        "value": " gains "
-      },
-      {
-        "type": "text_bold",
-        "value": "+3"
-      },
-      {
-        "type": "image",
-        "name": "Arrow_Up_Icon",
-        "img_path": "arrow_up_icon.webp"
-      },
-      {
-        "type": "text_bold",
-        "value": "Lv."
-      },
-      {
-        "type": "text_normal",
-        "value": ", but you "
-      },
-      {
-        "type": "text_bold",
-        "value": "Prime 35"
-      },
-      {
-        "type": "image",
-        "name": "Magick_Icon",
-        "img_path": "magick_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": "."
-      }
-    ],
-    "effect": null,
-    "image_path": "ingenious_flourish.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "ingenious_strike": {
-    "gods": [
-      "Icarus"
-    ],
-    "name": "Ingenious Strike",
-    "description": "Your Attack Boon gains +3 Arrow_Up_Icon Lv., but you Prime35 Magick_Icon.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Your "
-      },
-      {
-        "type": "text_bold",
-        "value": "Attack Boon"
-      },
-      {
-        "type": "text_normal",
-        "value": " gains "
-      },
-      {
-        "type": "text_bold",
-        "value": "+3"
-      },
-      {
-        "type": "image",
-        "name": "Arrow_Up_Icon",
-        "img_path": "arrow_up_icon.webp"
-      },
-      {
-        "type": "text_bold",
-        "value": "Lv."
-      },
-      {
-        "type": "text_normal",
-        "value": ", but you "
-      },
-      {
-        "type": "text_bold",
-        "value": "Prime 35"
-      },
-      {
-        "type": "image",
-        "name": "Magick_Icon",
-        "img_path": "magick_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": "."
-      }
-    ],
-    "effect": null,
-    "image_path": "ingenious_strike.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "latest_model": {
-    "gods": [
-      "Icarus"
-    ],
-    "name": "Latest Model",
-    "description": "Icarus chooses 1 Daedalus_Hammer of yours to upgrade to Rank II this night, improving its effects.",
-    "description_rich": [
-      {
-        "type": "text_bold",
-        "value": "Icarus"
-      },
-      {
-        "type": "text_normal",
-        "value": " chooses "
-      },
-      {
-        "type": "text_bold",
-        "value": "1"
-      },
-      {
-        "type": "image",
-        "name": "Daedalus_Hammer",
-        "img_path": "daedalus_hammer.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": " of yours to upgrade to "
-      },
-      {
-        "type": "text_bold",
-        "value": "Rank II"
-      },
-      {
-        "type": "text_normal",
-        "value": " this night, improving its effects. "
-      }
-    ],
-    "effect": null,
-    "image_path": "latest_model.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": {
-      "condition": "Reach the 6th affinity rank with Icarus"
-    },
-    "notes": null
-  },
-  "protective_coating": {
-    "gods": [
-      "Icarus"
-    ],
-    "name": "Protective Coating",
-    "description": "Gain +100 Armor_Icon. The next time you lose all your Armor_Icon, become Impervious for 8 Sec.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Gain "
-      },
-      {
-        "type": "text_bold",
-        "value": "+100"
-      },
-      {
-        "type": "image",
-        "name": "Armor_Icon",
-        "img_path": "armor_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": ". The next time you lose all your "
-      },
-      {
-        "type": "image",
-        "name": "Armor_Icon",
-        "img_path": "armor_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": ", become "
-      },
-      {
-        "type": "text_bold",
-        "value": "Impervious"
-      },
-      {
-        "type": "text_normal",
-        "value": " for "
-      },
-      {
-        "type": "text_bold",
-        "value": "8 Sec."
-      }
-    ],
-    "effect": null,
-    "image_path": "protective_coating.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "supply_chain": {
-    "gods": [
-      "Icarus"
-    ],
-    "name": "Supply Chain",
-    "description": "Each time you clear 7 Encounters, receive +10 Health_Restore_Icon and 2 Pom Slice.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Each time you clear "
-      },
-      {
-        "type": "text_bold",
-        "value": "7 Encounters"
-      },
-      {
-        "type": "text_normal",
-        "value": ", receive "
-      },
-      {
-        "type": "text_bold",
-        "value": "+10"
-      },
-      {
-        "type": "image",
-        "name": "Health_Restore_Icon",
-        "img_path": "health_restore_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": " and "
-      },
-      {
-        "type": "text_bold",
-        "value": "2"
-      },
-      {
-        "type": "image",
-        "name": "Pom Slice",
-        "img_path": "pom_slice.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": "."
-      }
-    ],
-    "effect": null,
-    "image_path": "supply_chain.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "volatile_coating": {
-    "gods": [
-      "Icarus"
-    ],
-    "name": "Volatile Coating",
-    "description": "Gain +50 Armor_Icon. The next time you lose all your Armor_Icon, deal 4000 damage to surrounding foes.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Gain "
-      },
-      {
-        "type": "text_bold",
-        "value": "+50"
-      },
-      {
-        "type": "image",
-        "name": "Armor_Icon",
-        "img_path": "armor_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": ". The next time you lose all your "
-      },
-      {
-        "type": "image",
-        "name": "Armor_Icon",
-        "img_path": "armor_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": ", deal "
-      },
-      {
-        "type": "text_bold",
-        "value": "4000"
-      },
-      {
-        "type": "text_normal",
-        "value": " damage to surrounding foes."
-      }
-    ],
-    "effect": null,
-    "image_path": "volatile_coating.webp",
-    "element": null,
-    "type": null,
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "addled": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Addled",
-    "description": "For the next 3-5 Encounters, each time you use Casts, you take 3-6 Health_Icon.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "For the next "
-      },
-      {
-        "type": "range",
-        "value": "3-5",
-        "rangeStart": 3,
-        "rangeEnd": 5
-      },
-      {
-        "type": "text_bold",
-        "value": " Encounters"
-      },
-      {
-        "type": "text_normal",
-        "value": ", each time you use "
-      },
-      {
-        "type": "text_bold",
-        "value": "Casts"
-      },
-      {
-        "type": "text_normal",
-        "value": ", you take "
-      },
-      {
-        "type": "range",
-        "value": "3-6",
-        "rangeStart": 3,
-        "rangeEnd": 6
-      },
-      {
-        "type": "image",
-        "name": "Health_Icon",
-        "img_path": "health_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": "."
-      }
-    ],
-    "effect": null,
-    "image_path": "addled.webp",
-    "element": null,
-    "type": "curse",
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "affluence": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Affluence",
-    "description": "Afterward, any Gold_Coins_Icon you gain is worth +X%.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Afterward, any "
-      },
-      {
-        "type": "image",
-        "name": "Gold_Coins_Icon",
-        "img_path": "gold_coins_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": " you gain is worth +X%."
-      }
-    ],
-    "effect": null,
-    "image_path": "affluence.webp",
-    "element": null,
-    "type": "blessing",
-    "is_core": false,
-    "rarities_effect": {
-      "common": "40%–60%",
-      "rare": "80%–120%",
-      "epic": "120%–180%",
-      "heroic": "160%–240%",
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "atrophic": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Atrophic",
-    "description": "For the next 3-5 Encounters, you have -20-29 Max_Health_Icon.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "For the next "
-      },
-      {
-        "type": "range",
-        "value": "3-5",
-        "rangeStart": 3,
-        "rangeEnd": 5
-      },
-      {
-        "type": "text_bold",
-        "value": " Encounters"
-      },
-      {
-        "type": "text_normal",
-        "value": ", you have "
-      },
-      {
-        "type": "range",
-        "value": "-20-29",
-        "rangeStart": -20,
-        "rangeEnd": -29
-      },
-      {
-        "type": "image",
-        "name": "Max_Health_Icon",
-        "img_path": "max_health_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": "."
-      }
-    ],
-    "effect": null,
-    "image_path": "atrophic.webp",
-    "element": null,
-    "type": "curse",
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "barren": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Barren",
-    "description": "For the next 3-6 Encounters, your Arcana Cards have no effect.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "For the next "
-      },
-      {
-        "type": "range",
-        "value": "3-6",
-        "rangeStart": 3,
-        "rangeEnd": 6
-      },
-      {
-        "type": "text_bold",
-        "value": " Encounters"
-      },
-      {
-        "type": "text_normal",
-        "value": ", your "
-      },
-      {
-        "type": "text_bold",
-        "value": "Arcana Cards"
-      },
-      {
-        "type": "text_normal",
-        "value": " have no effect."
-      }
-    ],
-    "effect": null,
-    "image_path": "barren.webp",
-    "element": null,
-    "type": "curse",
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": {
-      "condition": "Any other Chaos Boon"
-    },
-    "notes": null
-  },
-  "caustic": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Caustic",
-    "description": "For the next 3-5 Encounters, slain foes toss an Inferno-Bomb at you.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "For the next "
-      },
-      {
-        "type": "range",
-        "value": "3-5",
-        "rangeStart": 3,
-        "rangeEnd": 5
-      },
-      {
-        "type": "text_bold",
-        "value": " Encounters"
-      },
-      {
-        "type": "text_normal",
-        "value": ", slain foes toss an "
-      },
-      {
-        "type": "text_bold",
-        "value": "Inferno-Bomb"
-      },
-      {
-        "type": "text_normal",
-        "value": " at you."
-      }
-    ],
-    "effect": null,
-    "image_path": "caustic.webp",
-    "element": null,
-    "type": "curse",
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "celerity": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Celerity",
-    "description": "Afterward, you move and Sprint X% faster",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Afterward, you move and "
-      },
-      {
-        "type": "text_bold",
-        "value": "Sprint"
-      },
-      {
-        "type": "text_normal",
-        "value": "X% faster"
-      }
-    ],
-    "effect": null,
-    "image_path": "celerity.webp",
-    "element": null,
-    "type": "blessing",
-    "is_core": false,
-    "rarities_effect": {
-      "common": "30%",
-      "rare": "40%",
-      "epic": "50%",
-      "heroic": "60%",
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "chant": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Chant",
-    "description": "Afterward, your Ω Moves deal +X% damage for the more Aether_Element_Icon you have.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Afterward, your "
-      },
-      {
-        "type": "text_bold",
-        "value": "Ω Moves"
-      },
-      {
-        "type": "text_normal",
-        "value": " deal +X% damage for the more "
-      },
-      {
-        "type": "image",
-        "name": "Aether_Element_Icon",
-        "img_path": "aether_element_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": " you have."
-      }
-    ],
-    "effect": null,
-    "image_path": "chant.webp",
-    "element": null,
-    "type": "blessing",
-    "is_core": false,
-    "rarities_effect": {
-      "common": "+30%",
-      "rare": "+36%",
-      "epic": "+42%",
-      "heroic": "+48%",
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": {
-      "satisfy_all": [
-        {
-          "element": "Aether",
-          "amount": 1
-        }
-      ]
-    },
-    "notes": null
-  },
-  "chasm": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Chasm",
-    "description": "Afterward, your Casts deal +X% damage.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Afterward, your "
-      },
-      {
-        "type": "text_bold",
-        "value": "Casts"
-      },
-      {
-        "type": "text_normal",
-        "value": " deal +X% damage."
-      }
-    ],
-    "effect": null,
-    "image_path": "chasm.webp",
-    "element": null,
-    "type": "blessing",
-    "is_core": false,
-    "rarities_effect": {
-      "common": "20%–50%",
-      "rare": "30%–75%",
-      "epic": "40%–100%",
-      "heroic": "50%–125%",
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "creation": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Creation",
-    "description": "Afterward, gain Earth_Element_Icon, Water_Element_Icon, Air_Element_Icon, Fire_Element_Icon, Aether_Element_Icon.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Afterward, gain "
-      },
-      {
-        "type": "image",
-        "name": "Earth_Element_Icon",
-        "img_path": "earth_element_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": ", "
-      },
-      {
-        "type": "image",
-        "name": "Water_Element_Icon",
-        "img_path": "water_element_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": ", "
-      },
-      {
-        "type": "image",
-        "name": "Air_Element_Icon",
-        "img_path": "air_element_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": ", "
-      },
-      {
-        "type": "image",
-        "name": "Fire_Element_Icon",
-        "img_path": "fire_element_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": ", "
-      },
-      {
-        "type": "image",
-        "name": "Aether_Element_Icon",
-        "img_path": "aether_element_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": "."
-      }
-    ],
-    "effect": null,
-    "image_path": "creation.webp",
-    "element": null,
-    "type": "blessing",
-    "is_core": false,
-    "rarities_effect": {
-      "common": "+1",
-      "rare": "+2",
-      "epic": "+3",
-      "heroic": "+4",
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "defiance": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Defiance",
-    "description": "Afterward, gain +1 use of Death_Defiance_Icon Death Defiance this night.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Afterward, gain +1 use of "
-      },
-      {
-        "type": "image",
-        "name": "Death_Defiance_Icon",
-        "img_path": "death_defiance_icon.webp"
-      },
-      {
-        "type": "text_bold",
-        "value": "Death Defiance"
-      },
-      {
-        "type": "text_normal",
-        "value": " this night."
-      }
-    ],
-    "effect": null,
-    "image_path": "defiance.webp",
-    "element": null,
-    "type": "blessing",
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": {
-      "condition": "Any other Chaos Boon"
-    },
-    "notes": null
-  },
-  "discovery": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Discovery",
-    "description": "Afterward, you have +X% chance to find +100% resources with your gathering tools.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Afterward, you have +X% chance to find "
-      },
-      {
-        "type": "text_bold",
-        "value": "+100%"
-      },
-      {
-        "type": "text_normal",
-        "value": " resources with your "
-      },
-      {
-        "type": "text_bold",
-        "value": "gathering tools"
-      },
-      {
-        "type": "text_normal",
-        "value": "."
-      }
-    ],
-    "effect": null,
-    "image_path": "discovery.webp",
-    "element": null,
-    "type": "blessing",
-    "is_core": false,
-    "rarities_effect": {
-      "common": "56%–70%",
-      "rare": "64%–80%",
-      "epic": "72%–90%",
-      "heroic": "80%–100%",
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "doomed": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Doomed",
-    "description": "If you have not cleared 2-3 Encounter(s) in 120 Sec. to clear, you take 500 damage.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "If you have not cleared "
-      },
-      {
-        "type": "range",
-        "value": "2-3",
-        "rangeStart": 2,
-        "rangeEnd": 3
-      },
-      {
-        "type": "text_bold",
-        "value": " Encounter(s)"
-      },
-      {
-        "type": "text_normal",
-        "value": " in "
-      },
-      {
-        "type": "text_bold",
-        "value": "120 Sec."
-      },
-      {
-        "type": "text_normal",
-        "value": " to clear, you take "
-      },
-      {
-        "type": "text_bold",
-        "value": "500"
-      },
-      {
-        "type": "text_normal",
-        "value": " damage."
-      }
-    ],
-    "effect": null,
-    "image_path": "doomed.webp",
-    "element": null,
-    "type": "curse",
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "enshrouded": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Enshrouded",
-    "description": "For the next 4-6 Encounters, Location Reward previews are hidden.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "For the next "
-      },
-      {
-        "type": "range",
-        "value": "4-6",
-        "rangeStart": 4,
-        "rangeEnd": 6
-      },
-      {
-        "type": "text_bold",
-        "value": " Encounters"
-      },
-      {
-        "type": "text_normal",
-        "value": ", "
-      },
-      {
-        "type": "text_bold",
-        "value": "Location Reward"
-      },
-      {
-        "type": "text_normal",
-        "value": " previews are hidden."
-      }
-    ],
-    "effect": null,
-    "image_path": "enshrouded.webp",
-    "element": null,
-    "type": "curse",
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "excruciating": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Excruciating",
-    "description": "For the next 3-5 Encounters, you take +20%-+50% damage.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "For the next "
-      },
-      {
-        "type": "range",
-        "value": "3-5",
-        "rangeStart": 3,
-        "rangeEnd": 5
-      },
-      {
-        "type": "text_bold",
-        "value": " Encounters"
-      },
-      {
-        "type": "text_normal",
-        "value": ", you take "
-      },
-      {
-        "type": "range",
-        "value": "+20%-+50%",
-        "rangeStart": 20,
-        "rangeEnd": 50
-      },
-      {
-        "type": "text_normal",
-        "value": " damage."
-      }
-    ],
-    "effect": null,
-    "image_path": "excruciating.webp",
-    "element": null,
-    "type": "curse",
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "favor": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Favor",
-    "description": "Afterward, Boons have +X% chance to be Rare or better.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Afterward, "
-      },
-      {
-        "type": "text_bold",
-        "value": "Boons"
-      },
-      {
-        "type": "text_normal",
-        "value": " have +X% chance to be Rare or better."
-      }
-    ],
-    "effect": null,
-    "image_path": "favor.webp",
-    "element": null,
-    "type": "blessing",
-    "is_core": false,
-    "rarities_effect": {
-      "common": "40%–50%",
-      "rare": "54%–67%",
-      "epic": "67%–84%",
-      "heroic": "80%–100%",
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "fixated": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Fixated",
-    "description": "For the next 3-5 Encounters, whenever you use Magick_Icon, Prime it until this expires.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "For the next "
-      },
-      {
-        "type": "range",
-        "value": "3-5",
-        "rangeStart": 3,
-        "rangeEnd": 5
-      },
-      {
-        "type": "text_bold",
-        "value": " Encounters"
-      },
-      {
-        "type": "text_normal",
-        "value": ", whenever you use "
-      },
-      {
-        "type": "image",
-        "name": "Magick_Icon",
-        "img_path": "magick_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": ", "
-      },
-      {
-        "type": "text_bold",
-        "value": "Prime"
-      },
-      {
-        "type": "text_normal",
-        "value": " it until this expires."
-      }
-    ],
-    "effect": null,
-    "image_path": "fixated.webp",
-    "element": null,
-    "type": "curse",
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "flayed": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Flayed",
-    "description": "For the next 4-6 Encounters, each time you use Specials, you take 3-6 Health_Icon.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "For the next "
-      },
-      {
-        "type": "range",
-        "value": "4-6",
-        "rangeStart": 4,
-        "rangeEnd": 6
-      },
-      {
-        "type": "text_bold",
-        "value": " Encounters"
-      },
-      {
-        "type": "text_normal",
-        "value": ", each time you use "
-      },
-      {
-        "type": "text_bold",
-        "value": "Specials"
-      },
-      {
-        "type": "text_normal",
-        "value": ", you take "
-      },
-      {
-        "type": "range",
-        "value": "3-6",
-        "rangeStart": 3,
-        "rangeEnd": 6
-      },
-      {
-        "type": "image",
-        "name": "Health_Icon",
-        "img_path": "health_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": "."
-      }
-    ],
-    "effect": null,
-    "image_path": "flayed.webp",
-    "element": null,
-    "type": "curse",
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "flourish": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Flourish",
-    "description": "Afterward, your Specials deal +X% damage.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Afterward, your "
-      },
-      {
-        "type": "text_bold",
-        "value": "Specials"
-      },
-      {
-        "type": "text_normal",
-        "value": " deal +X% damage."
-      }
-    ],
-    "effect": null,
-    "image_path": "flourish.webp",
-    "element": null,
-    "type": "blessing",
-    "is_core": false,
-    "rarities_effect": {
-      "common": "30%–60%",
-      "rare": "45%–90%",
-      "epic": "60%–120%",
-      "heroic": "75%–150%",
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "gagged": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Gagged",
-    "description": "For the next 3-5 Encounters, each time you use Ω Moves, you take 5-8 Health_Icon.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "For the next "
-      },
-      {
-        "type": "range",
-        "value": "3-5",
-        "rangeStart": 3,
-        "rangeEnd": 5
-      },
-      {
-        "type": "text_bold",
-        "value": " Encounters"
-      },
-      {
-        "type": "text_normal",
-        "value": ", each time you use "
-      },
-      {
-        "type": "text_bold",
-        "value": "Ω Moves"
-      },
-      {
-        "type": "text_normal",
-        "value": ", you take "
-      },
-      {
-        "type": "range",
-        "value": "5-8",
-        "rangeStart": 5,
-        "rangeEnd": 8
-      },
-      {
-        "type": "image",
-        "name": "Health_Icon",
-        "img_path": "health_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": "."
-      }
-    ],
-    "effect": null,
-    "image_path": "gagged.webp",
-    "element": null,
-    "type": "curse",
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "maimed": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Maimed",
-    "description": "For the next 3-5 Encounters, each time you use Attacks, you take 3-6 Health_Icon.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "For the next "
-      },
-      {
-        "type": "range",
-        "value": "3-5",
-        "rangeStart": 3,
-        "rangeEnd": 5
-      },
-      {
-        "type": "text_bold",
-        "value": " Encounters"
-      },
-      {
-        "type": "text_normal",
-        "value": ", each time you use "
-      },
-      {
-        "type": "text_bold",
-        "value": "Attacks"
-      },
-      {
-        "type": "text_normal",
-        "value": ", you take "
-      },
-      {
-        "type": "range",
-        "value": "3-6",
-        "rangeStart": 3,
-        "rangeEnd": 6
-      },
-      {
-        "type": "image",
-        "name": "Health_Icon",
-        "img_path": "health_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": "."
-      }
-    ],
-    "effect": null,
-    "image_path": "maimed.webp",
-    "element": null,
-    "type": "curse",
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "mind": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Mind",
-    "description": "Afterward, gain +X Max_Magick_Icon.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Afterward, gain +X"
-      },
-      {
-        "type": "image",
-        "name": "Max_Magick_Icon",
-        "img_path": "max_magick_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": "."
-      }
-    ],
-    "effect": null,
-    "image_path": "mind.webp",
-    "element": null,
-    "type": "blessing",
-    "is_core": false,
-    "rarities_effect": {
-      "common": "30–40",
-      "rare": "45–60",
-      "epic": "60–80",
-      "heroic": "75–100",
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "neurotic": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Neurotic",
-    "description": "For the next 3-5 Encounters, your Dash uses 10-20 Magick_Icon if you have enough to spare.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "For the next "
-      },
-      {
-        "type": "range",
-        "value": "3-5",
-        "rangeStart": 3,
-        "rangeEnd": 5
-      },
-      {
-        "type": "text_bold",
-        "value": " Encounters"
-      },
-      {
-        "type": "text_normal",
-        "value": ", your "
-      },
-      {
-        "type": "text_bold",
-        "value": "Dash"
-      },
-      {
-        "type": "text_normal",
-        "value": " uses "
-      },
-      {
-        "type": "range",
-        "value": "10-20",
-        "rangeStart": 10,
-        "rangeEnd": 20
-      },
-      {
-        "type": "image",
-        "name": "Magick_Icon",
-        "img_path": "magick_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": " if you have enough to spare."
-      }
-    ],
-    "effect": null,
-    "image_path": "neurotic.webp",
-    "element": null,
-    "type": "curse",
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "ordinary": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Ordinary",
-    "description": "The next 2-3 Boon(s) you find are limited to Common blessings.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "The next "
-      },
-      {
-        "type": "range",
-        "value": "2-3",
-        "rangeStart": 2,
-        "rangeEnd": 3
-      },
-      {
-        "type": "text_bold",
-        "value": " Boon(s)"
-      },
-      {
-        "type": "text_normal",
-        "value": " you find are limited to "
-      },
-      {
-        "type": "text_bold",
-        "value": "Common"
-      },
-      {
-        "type": "text_normal",
-        "value": " blessings."
-      }
-    ],
-    "effect": null,
-    "image_path": "ordinary.webp",
-    "element": null,
-    "type": "curse",
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "paralyzing": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Paralyzing",
-    "description": "For the next 3-5 Encounters, whenever you take damage, you are stunned for 0.5-1.4 Sec.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "For the next "
-      },
-      {
-        "type": "range",
-        "value": "3-5",
-        "rangeStart": 3,
-        "rangeEnd": 5
-      },
-      {
-        "type": "text_bold",
-        "value": " Encounters"
-      },
-      {
-        "type": "text_normal",
-        "value": ", whenever you take damage, you are stunned for "
-      },
-      {
-        "type": "range",
-        "value": "0.5-1.4",
-        "rangeStart": 0.5,
-        "rangeEnd": 1.4
-      },
-      {
-        "type": "text_bold",
-        "value": " Sec."
-      }
-    ],
-    "effect": null,
-    "image_path": "paralyzing.webp",
-    "element": null,
-    "type": "curse",
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "pauper's": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Pauper's",
-    "description": "For the next 3-5 Encounters, you cannot earn Gold_Coins_Icon.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "For the next "
-      },
-      {
-        "type": "range",
-        "value": "3-5",
-        "rangeStart": 3,
-        "rangeEnd": 5
-      },
-      {
-        "type": "text_bold",
-        "value": " Encounters"
-      },
-      {
-        "type": "text_normal",
-        "value": ", you cannot earn "
-      },
-      {
-        "type": "image",
-        "name": "Gold_Coins_Icon",
-        "img_path": "gold_coins_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": "."
-      }
-    ],
-    "effect": null,
-    "image_path": "pauper's.webp",
-    "element": null,
-    "type": "curse",
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "rejected": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Rejected",
-    "description": "The next 2-4 Boons you find have 1 fewer blessing to choose from.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "The next "
-      },
-      {
-        "type": "range",
-        "value": "2-4",
-        "rangeStart": 2,
-        "rangeEnd": 4
-      },
-      {
-        "type": "text_bold",
-        "value": " Boons"
-      },
-      {
-        "type": "text_normal",
-        "value": " you find have "
-      },
-      {
-        "type": "text_bold",
-        "value": "1"
-      },
-      {
-        "type": "text_normal",
-        "value": " fewer blessing to choose from."
-      }
-    ],
-    "effect": null,
-    "image_path": "rejected.webp",
-    "element": null,
-    "type": "curse",
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "revelation": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Revelation",
-    "description": "Afterward, you Channel your Ω Moves X% faster.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Afterward, you "
-      },
-      {
-        "type": "text_bold",
-        "value": "Channel"
-      },
-      {
-        "type": "text_normal",
-        "value": " your "
-      },
-      {
-        "type": "text_bold",
-        "value": "Ω Moves"
-      },
-      {
-        "type": "text_normal",
-        "value": "X% faster."
-      }
-    ],
-    "effect": null,
-    "image_path": "revelation.webp",
-    "element": null,
-    "type": "blessing",
-    "is_core": false,
-    "rarities_effect": {
-      "common": "10%–15%",
-      "rare": "15%–22%",
-      "epic": "20%–30%",
-      "heroic": "25%–37%",
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "revival": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Revival",
-    "description": "Afterward, whenever you exit a location, restore Health_Icon.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Afterward, whenever you exit a "
-      },
-      {
-        "type": "text_bold",
-        "value": "location"
-      },
-      {
-        "type": "text_normal",
-        "value": ", restore "
-      },
-      {
-        "type": "image",
-        "name": "Health_Icon",
-        "img_path": "health_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": "."
-      }
-    ],
-    "effect": null,
-    "image_path": "revival.webp",
-    "element": null,
-    "type": "blessing",
-    "is_core": false,
-    "rarities_effect": {
-      "common": "3–4",
-      "rare": "9–12",
-      "epic": "15–20",
-      "heroic": "21–28",
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "slothful": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Slothful",
-    "description": "For the next 3-5 Encounters, you move and Sprint 40%-60% slower.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "For the next "
-      },
-      {
-        "type": "range",
-        "value": "3-5",
-        "rangeStart": 3,
-        "rangeEnd": 5
-      },
-      {
-        "type": "text_bold",
-        "value": " Encounters"
-      },
-      {
-        "type": "text_normal",
-        "value": ", you move and "
-      },
-      {
-        "type": "text_bold",
-        "value": "Sprint"
-      },
-      {
-        "type": "range",
-        "value": "40%-60%",
-        "rangeStart": 40,
-        "rangeEnd": 60
-      },
-      {
-        "type": "text_normal",
-        "value": " slower."
-      }
-    ],
-    "effect": null,
-    "image_path": "slothful.webp",
-    "element": null,
-    "type": "curse",
-    "is_core": false,
-    "rarities_effect": {
-      "common": null,
-      "rare": null,
-      "epic": null,
-      "heroic": null,
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "soul": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Soul",
-    "description": "Afterward, gain +X Max_Health_Icon.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Afterward, gain +X"
-      },
-      {
-        "type": "image",
-        "name": "Max_Health_Icon",
-        "img_path": "max_health_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": "."
-      }
-    ],
-    "effect": null,
-    "image_path": "soul.webp",
-    "element": null,
-    "type": "blessing",
-    "is_core": false,
-    "rarities_effect": {
-      "common": "26–35",
-      "rare": "52–70",
-      "epic": "78–105",
-      "heroic": "104–140",
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "strike": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Strike",
-    "description": "Afterward, your Attacks deal +X% damage.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Afterward, your "
-      },
-      {
-        "type": "text_bold",
-        "value": "Attacks"
-      },
-      {
-        "type": "text_normal",
-        "value": " deal +X% damage."
-      }
-    ],
-    "effect": null,
-    "image_path": "strike.webp",
-    "element": null,
-    "type": "blessing",
-    "is_core": false,
-    "rarities_effect": {
-      "common": "20%–50%",
-      "rare": "30%–75%",
-      "epic": "40%–100%",
-      "heroic": "50%–125%",
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "talent": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Talent",
-    "description": "Afterward, you use -X% Magick_Icon.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Afterward, you use -X%"
-      },
-      {
-        "type": "image",
-        "name": "Magick_Icon",
-        "img_path": "magick_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": "."
-      }
-    ],
-    "effect": null,
-    "image_path": "talent.webp",
-    "element": null,
-    "type": "blessing",
-    "is_core": false,
-    "rarities_effect": {
-      "common": "20%–30%",
-      "rare": "30%–45%",
-      "epic": "40%–60%",
-      "heroic": "50%–75%",
-      "duo": null,
-      "legendary": null,
-      "infusion": null
-    },
-    "deals_olympian_damage": false,
-    "prerequisites": null,
-    "notes": null
-  },
-  "will": {
-    "gods": [
-      "Chaos"
-    ],
-    "name": "Will",
-    "description": "Afterward, restore X Magick_Icon every 1 Sec.",
-    "description_rich": [
-      {
-        "type": "text_normal",
-        "value": "Afterward, restore X"
-      },
-      {
-        "type": "image",
-        "name": "Magick_Icon",
-        "img_path": "magick_icon.webp"
-      },
-      {
-        "type": "text_normal",
-        "value": " every "
-      },
-      {
-        "type": "text_bold",
-        "value": "1 Sec."
-      }
-    ],
-    "effect": null,
-    "image_path": "will.webp",
-    "element": null,
-    "type": "blessing",
-    "is_core": false,
-    "rarities_effect": {
-      "common": "4–6",
-      "rare": "8–12",
-      "epic": "12–18",
-      "heroic": "16–24",
       "duo": null,
       "legendary": null,
       "infusion": null
