@@ -2,8 +2,15 @@ import type { BoonData } from "$lib/types/hades2";
 
 export const BOON_RARITY_ORDER = ["common", "rare", "epic", "heroic"] as const;
 
+/** Type used for card styling; main `type` wins over Chaos `chaosType`. */
+export function getBoonStyleType(boon: BoonData): string {
+  const mainType = (boon.type ?? "").trim();
+  if (mainType) return mainType.toLowerCase();
+  return (boon.chaosType ?? "").trim().toLowerCase();
+}
+
 export function isChaosBlessing(boon: BoonData): boolean {
-  return (boon.type ?? "").toLowerCase() === "blessing";
+  return (boon.chaosType ?? "").toLowerCase() === "blessing";
 }
 
 export function getOrderedRarityEffects(boon: BoonData): [string, string][] {

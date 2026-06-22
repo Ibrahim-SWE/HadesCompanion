@@ -4,6 +4,7 @@
   import BoonPrerequisites from "./BoonPrerequisites.svelte";
   import {
     compactRarityValue,
+    getBoonStyleType,
     getOrderedRarityEffects,
     isChaosBlessing,
   } from "$lib/boon-display";
@@ -84,7 +85,7 @@
     curse: "text-[#3d1028]",
   };
 
-  let normalizedType = $derived((boon.type ?? "").trim().toLowerCase());
+  let normalizedType = $derived(getBoonStyleType(boon));
   let accentColor = $derived(typeAccents[normalizedType] ?? "#3a3a3a");
   let cardStyle = $derived(
     typeCardStyles[normalizedType] ??
@@ -148,6 +149,18 @@
       "border-[#2a2a2a] text-white bg-[#0f0f0f]",
   );
 
+  let chaosTypeLabel = $derived.by(() => {
+    const chaosType = (boon.chaosType ?? "").trim().toLowerCase();
+    return chaosType === "blessing" || chaosType === "curse" ? chaosType : null;
+  });
+
+  let chaosBadgeStyle = $derived(
+    chaosTypeLabel
+      ? (typeBadgeStyles[chaosTypeLabel] ??
+          "border-[#2a2a2a] text-white bg-[#0f0f0f]")
+      : "",
+  );
+
   function effectValueColor(rarity: string): string {
     return rarityColors[rarity] ?? "text-[#c071ff]";
   }
@@ -194,15 +207,22 @@
     </div>
   </div>
 
-  {#if boon.type || boon.is_core || boon.deals_olympian_damage || effectsValues.length > 0 || boon.prerequisites}
+  {#if boon.type || chaosTypeLabel || boon.is_core || boon.deals_olympian_damage || effectsValues.length > 0 || boon.prerequisites}
     <div class="flex shrink-0 flex-col gap-1.5 z-10 relative">
-    {#if boon.type || boon.is_core || boon.deals_olympian_damage}
+    {#if boon.type || chaosTypeLabel || boon.is_core || boon.deals_olympian_damage}
       <div class="flex flex-wrap gap-1">
         {#if boon.type}
           <span
             class="text-[0.6rem] uppercase tracking-widest py-0.5 px-1.5 rounded-sm border {badgeStyle}"
           >
             {boon.type}
+          </span>
+        {/if}
+        {#if chaosTypeLabel}
+          <span
+            class="text-[0.6rem] uppercase tracking-widest py-0.5 px-1.5 rounded-sm border {chaosBadgeStyle}"
+          >
+            {chaosTypeLabel}
           </span>
         {/if}
         {#if boon.is_core}

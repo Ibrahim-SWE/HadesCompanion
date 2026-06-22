@@ -27,6 +27,7 @@ export type BoonData = {
   image_path: string;
   element: string | null;
   type: string | null;
+  chaosType?: "blessing" | "curse" | null;
   is_core: boolean;
   rarities_effect: Record<string, string | null>;
   deals_olympian_damage: boolean;
