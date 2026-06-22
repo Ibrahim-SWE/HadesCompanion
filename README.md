@@ -2,14 +2,16 @@
 
 A web application for Hades 2 players to easily find everything they need while playing the game.
 
-## Core Planned Features
+## Features
 
 - Browse Gods, Boons, Weapons, Keepsakes, Items, Pets, etc.
+- Boons are filterable and shareable as a link or as a social media post.
 
-## Extra Planned Features
+## Planned Features
 
-- Interactive Build Planner: Easily input your current run's build and find the possible regular boons, duo boons, or legendary boons.
-- Support for Hades 1
+- Make Arcana Cards selectable and shareable.
+- Add Incantations
+- Add Alchemy
 
 ## Developing & Contributing
 
