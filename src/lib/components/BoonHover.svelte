@@ -18,15 +18,18 @@
     boon: boonProp,
     name,
     class: className = "",
+    nested = false,
     children,
   }: {
     boon?: BoonData;
     name?: string;
     class?: string;
+    /** Use inside clickable parents — stops click propagation. */
+    nested?: boolean;
     children: Snippet;
   } = $props();
 
-  let trigger: HTMLButtonElement | undefined = $state();
+  let trigger: HTMLSpanElement | undefined = $state();
   let showPreview = $state(false);
   let previewTop = $state(0);
   let previewLeft = $state(0);
@@ -74,14 +77,7 @@
     showPreview = false;
   }
 
-  function handleKeydown(event: KeyboardEvent) {
-    if (event.key === "Escape") {
-      closePreview();
-      trigger?.blur();
-    }
-  }
-
-  function captureTrigger(): Attachment<HTMLButtonElement> {
+  function captureTrigger(): Attachment<HTMLSpanElement> {
     return (element) => {
       trigger = element;
       return () => {
@@ -89,22 +85,28 @@
       };
     };
   }
+
+  function stopParentActivation(event: Event) {
+    event.stopPropagation();
+  }
+
+  const triggerClass =
+    "inline select-text cursor-help font-inherit text-inherit underline decoration-dotted decoration-[#46f08f]/50 underline-offset-2 " +
+    className;
 </script>
 
 {#if resolvedBoon}
-  <button
-    type="button"
+  <span
     {@attach captureTrigger()}
-    class="inline cursor-help border-0 bg-transparent p-0 font-inherit text-inherit underline decoration-dotted decoration-[#46f08f]/50 underline-offset-2 {className}"
+    class={triggerClass}
     aria-describedby={showPreview ? tooltipId : undefined}
     onmouseenter={openPreview}
     onmouseleave={closePreview}
-    onfocus={openPreview}
-    onblur={closePreview}
-    onkeydown={handleKeydown}
+    onclick={nested ? stopParentActivation : undefined}
+    onmousedown={nested ? stopParentActivation : undefined}
   >
     {@render children()}
-  </button>
+  </span>
 
   {#if showPreview && browser}
     <div

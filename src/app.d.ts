@@ -8,7 +8,9 @@ declare global {
     interface PageData {
       seo?: import("$lib/seo").SeoMeta;
     }
-    // interface PageState {}
+    interface PageState {
+      arcanaCardsReset?: boolean;
+    }
     // interface Platform {}
   }
 }

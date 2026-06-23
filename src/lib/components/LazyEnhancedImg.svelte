@@ -5,6 +5,7 @@
   let {
     load,
     alt = "",
+    title,
     class: className = "",
     rootMargin = "200px",
     placeholderClass = "",
@@ -14,6 +15,7 @@
   }: {
     load: () => Promise<Picture | null>;
     alt?: string;
+    title?: string;
     class?: string;
     rootMargin?: string;
     placeholderClass?: string;
@@ -90,6 +92,7 @@
   <enhanced:img
     src={image}
     {alt}
+    {title}
     {sizes}
     class={className}
     loading={eager ? "eager" : "lazy"}

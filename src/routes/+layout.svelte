@@ -4,8 +4,10 @@
   import robotoLatin from "@fontsource-variable/roboto/files/roboto-latin-wght-normal.woff2?url";
   import { faviconImg } from "$lib/assets/faviconImage";
   import SeoHead from "$lib/components/SeoHead.svelte";
+  import { goto } from "$app/navigation";
   import { resolve } from "$app/paths";
   import { page } from "$app/state";
+  import { CARDS_PATH } from "$lib/cards-url";
   import type { Snippet } from "svelte";
 
   let { children }: { children: Snippet } = $props();
@@ -57,6 +59,17 @@
 
   function toggleMobileMenu() {
     mobileMenuOpen = !mobileMenuOpen;
+  }
+
+  function handleNavClick(e: MouseEvent, href: NavLink["href"]) {
+    if (href !== CARDS_PATH || !isActive(CARDS_PATH)) return;
+
+    e.preventDefault();
+    void goto(resolve(CARDS_PATH), {
+      replaceState: true,
+      keepFocus: true,
+      state: { arcanaCardsReset: true },
+    });
   }
 
   $effect(() => {
@@ -163,6 +176,7 @@
       {#each navLinks as link (link.href)}
         <a
           href={resolve(link.href)}
+          onclick={(e) => handleNavClick(e, link.href)}
           class="px-3 py-1.5 rounded text-xs font-mono uppercase tracking-widest transition-all duration-200 border border-transparent {isActive(
             link.href,
           )
@@ -190,7 +204,10 @@
               )
                 ? 'bg-[#153320] text-[#ccff90] border-[#46f08f]/30 shadow-[0_0_8px_rgba(70,240,143,0.1)]'
                 : 'border-[#1c3623] text-[#8da693] hover:bg-[#153320]/50 hover:text-[#ccff90]'}"
-              onclick={closeMobileMenu}
+              onclick={(e) => {
+                handleNavClick(e, link.href);
+                closeMobileMenu();
+              }}
             >
               {link.label}
             </a>
