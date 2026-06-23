@@ -1,14 +1,10 @@
-import { SITE_ORIGIN } from "$lib/seo";
+import {
+  decodeFilterMask,
+  encodeFilterMask,
+  type StructuredBoonFilters,
+} from "./boons-filter-codec.ts";
 
-export type BoonFilterState = {
-  selectedGods: string[];
-  selectedTypes: string[];
-  selectedElements: (string | null)[];
-  coreFilter: boolean | null;
-  olympDmgFilter: boolean | null;
-  duoFilter: boolean | null;
-  legendaryFilter: boolean | null;
-  infusionFilter: boolean | null;
+export type BoonFilterState = StructuredBoonFilters & {
   searchQuery: string;
 };
 
@@ -26,64 +22,20 @@ export const EMPTY_BOON_FILTER_STATE: BoonFilterState = {
 
 const BOONS_PATH = "/hades2/boons";
 
-const TRI_STATE_PARAMS = [
-  ["core", "coreFilter"],
-  ["olymp", "olympDmgFilter"],
-  ["duo", "duoFilter"],
-  ["legendary", "legendaryFilter"],
-  ["infusion", "infusionFilter"],
-] as const;
-
-function parseCommaSeparated(value: string | null): string[] {
-  if (!value) return [];
-  return value
-    .split(",")
-    .map((part) => part.trim())
-    .filter(Boolean);
-}
-
-function parseTriState(value: string | null): boolean | null {
-  if (value === "1") return true;
-  if (value === "0") return false;
-  return null;
-}
-
-function serializeTriState(value: boolean | null): string | null {
-  if (value === true) return "1";
-  if (value === false) return "0";
-  return null;
-}
-
-function serializeCommaSeparated(values: string[]): string | null {
-  if (values.length === 0) return null;
-  return values.join(",");
-}
-
-function elementToParam(element: string | null): string {
-  return element === null ? "None" : element;
-}
-
-function elementFromParam(value: string): string | null {
-  return value === "None" ? null : value;
-}
+/** Compact base36-encoded filter bitmask. */
+export const FILTER_URL_PARAM = "f";
+/** Search text. */
+export const SEARCH_URL_PARAM = "q";
 
 export function parseBoonFiltersFromSearchParams(
   params: URLSearchParams,
 ): BoonFilterState {
-  const elements = parseCommaSeparated(params.get("elements")).map(
-    elementFromParam,
-  );
+  const token = params.get(FILTER_URL_PARAM);
 
   return {
-    selectedGods: parseCommaSeparated(params.get("gods")),
-    selectedTypes: parseCommaSeparated(params.get("types")),
-    selectedElements: elements,
-    coreFilter: parseTriState(params.get("core")),
-    olympDmgFilter: parseTriState(params.get("olymp")),
-    duoFilter: parseTriState(params.get("duo")),
-    legendaryFilter: parseTriState(params.get("legendary")),
-    infusionFilter: parseTriState(params.get("infusion")),
-    searchQuery: params.get("search") ?? "",
+    ...EMPTY_BOON_FILTER_STATE,
+    ...(token ? decodeFilterMask(token) : null),
+    searchQuery: params.get(SEARCH_URL_PARAM) ?? "",
   };
 }
 
@@ -92,43 +44,13 @@ export function serializeBoonFiltersToSearchParams(
 ): URLSearchParams {
   const params = new URLSearchParams();
 
+  const code = encodeFilterMask(state);
+  if (code) params.set(FILTER_URL_PARAM, code);
+
   const search = state.searchQuery.trim();
-  if (search) params.set("search", search);
-
-  const gods = serializeCommaSeparated(state.selectedGods);
-  if (gods) params.set("gods", gods);
-
-  const types = serializeCommaSeparated(state.selectedTypes);
-  if (types) params.set("types", types);
-
-  if (state.selectedElements.length > 0) {
-    params.set(
-      "elements",
-      state.selectedElements.map(elementToParam).join(","),
-    );
-  }
-
-  for (const [param, key] of TRI_STATE_PARAMS) {
-    const value = serializeTriState(state[key]);
-    if (value !== null) params.set(param, value);
-  }
+  if (search) params.set(SEARCH_URL_PARAM, search);
 
   return params;
-}
-
-export function buildBoonFilterPath(state: BoonFilterState): string {
-  const query = serializeBoonFiltersToSearchParams(state).toString();
-  return query ? `${BOONS_PATH}?${query}` : BOONS_PATH;
-}
-
-export function buildBoonFilterUrl(
-  state: BoonFilterState,
-  currentUrl: URL,
-): URL {
-  const url = new URL(currentUrl);
-  const query = serializeBoonFiltersToSearchParams(state).toString();
-  url.search = query ? `?${query}` : "";
-  return url;
 }
 
 /** Href for replaceState — pathname-only when empty so params are actually cleared. */
@@ -138,6 +60,10 @@ export function buildBoonFilterReplaceHref(
 ): string {
   const query = serializeBoonFiltersToSearchParams(state).toString();
   return query ? `${pathname}?${query}` : pathname;
+}
+
+export function buildBoonFilterPath(state: BoonFilterState): string {
+  return buildBoonFilterReplaceHref(state, BOONS_PATH);
 }
 
 export function boonFilterUrlMatchesState(
@@ -150,10 +76,7 @@ export function boonFilterUrlMatchesState(
   );
 }
 
-export function buildShareUrl(
-  state: BoonFilterState,
-  origin: string = SITE_ORIGIN,
-): string {
+export function buildShareUrl(state: BoonFilterState, origin: string): string {
   const path = buildBoonFilterPath(state);
   return `${origin.replace(/\/$/, "")}${path}`;
 }
@@ -163,6 +86,11 @@ function triStateLabel(name: string, value: boolean | null): string | null {
   return value ? name : `not ${name}`;
 }
 
+function joinCapped(values: string[], max = 3): string {
+  if (values.length <= max) return values.join(", ");
+  return `${values.slice(0, max).join(", ")} ...`;
+}
+
 export function buildShareSummary(
   state: BoonFilterState,
   resultCount?: number,
@@ -170,14 +98,14 @@ export function buildShareSummary(
   const parts: string[] = [];
 
   if (state.selectedGods.length > 0) {
-    parts.push(state.selectedGods.join(", "));
+    parts.push(joinCapped(state.selectedGods));
   }
   if (state.selectedTypes.length > 0) {
-    parts.push(state.selectedTypes.join(", "));
+    parts.push(joinCapped(state.selectedTypes));
   }
   if (state.selectedElements.length > 0) {
     parts.push(
-      state.selectedElements.map((element) => element ?? "None").join(", "),
+      joinCapped(state.selectedElements.map((element) => element ?? "None")),
     );
   }
 
@@ -194,10 +122,10 @@ export function buildShareSummary(
   const search = state.searchQuery.trim();
   if (search) parts.push(`search: ${search}`);
 
-  const filterText = parts.length > 0 ? parts.join(" · ") : "filtered list";
+  const filterText = parts.length > 0 ? parts.join(" — ") : "filtered list";
 
   const countText =
-    resultCount !== undefined ? ` · ${resultCount} results` : "";
+    resultCount !== undefined ? ` — ${resultCount} results` : "";
 
   return `Hades 2 Boons — ${filterText}${countText}`;
 }

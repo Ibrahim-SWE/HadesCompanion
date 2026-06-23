@@ -10,6 +10,11 @@
     parseBoonFiltersFromSearchParams,
     type BoonFilterState,
   } from "$lib/boons-filter-url";
+  import {
+    BOON_ELEMENTS,
+    BOON_GODS,
+    BOON_TYPES,
+  } from "$lib/boons-filter-registry";
   import boonsData from "$lib/data/hades2/boons.json";
   import { SITE_ORIGIN } from "$lib/seo";
   import { browser } from "$app/environment";
@@ -32,17 +37,8 @@
     }),
   );
 
-  const sortedGodNames = [
-    ...new Set(boonIndex.flatMap((entry) => entry.boon.gods)),
-  ].sort();
-
-  const boonTypes = ["Attack", "Special", "Cast", "Sprint", "Magick"];
-  const boonElements = ["Earth", "Water", "Air", "Fire", "Aether", "None"];
-
-  let isBoonTypeOpen = $state(false);
-  let isGodsMenuOpen = $state(false);
-  let isElementMenuOpen = $state(false);
-  let isShareMenuOpen = $state(false);
+  type MenuKey = "gods" | "type" | "elements" | "share";
+  let openMenu = $state<MenuKey | null>(null);
   let linkCopied = $state(false);
 
   let selectedGods: string[] = $state([]);
@@ -181,29 +177,16 @@
     };
   }
 
-  function closeAllDropdowns() {
-    isGodsMenuOpen = false;
-    isBoonTypeOpen = false;
-    isElementMenuOpen = false;
-    isShareMenuOpen = false;
+  function closeMenus() {
+    openMenu = null;
   }
 
-  function toggleDropdown(menu: "gods" | "type" | "elements" | "share") {
-    const wasOpen =
-      menu === "gods"
-        ? isGodsMenuOpen
-        : menu === "type"
-          ? isBoonTypeOpen
-          : menu === "elements"
-            ? isElementMenuOpen
-            : isShareMenuOpen;
+  function closeMenu(menu: MenuKey) {
+    if (openMenu === menu) openMenu = null;
+  }
 
-    closeAllDropdowns();
-
-    if (menu === "gods") isGodsMenuOpen = !wasOpen;
-    if (menu === "type") isBoonTypeOpen = !wasOpen;
-    if (menu === "elements") isElementMenuOpen = !wasOpen;
-    if (menu === "share") isShareMenuOpen = !wasOpen;
+  function toggleMenu(menu: MenuKey) {
+    openMenu = openMenu === menu ? null : menu;
   }
 
   function getLiveShareState(): BoonFilterState {
@@ -211,43 +194,26 @@
   }
 
   async function copyShareLink() {
-    const url = buildShareUrl(getLiveShareState(), SITE_ORIGIN);
-    await navigator.clipboard.writeText(url);
+    await navigator.clipboard.writeText(
+      buildShareUrl(getLiveShareState(), SITE_ORIGIN),
+    );
     linkCopied = true;
-    closeAllDropdowns();
+    closeMenus();
     setTimeout(() => {
       linkCopied = false;
     }, 2000);
   }
 
-  function shareOnReddit() {
-    const state = getLiveShareState();
-    const url = buildShareUrl(state, SITE_ORIGIN);
-    const title = buildShareSummary(state, filteredBoons.length);
-    window.open(
-      `https://www.reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`,
-      "_blank",
-      "noopener,noreferrer",
-    );
-    closeAllDropdowns();
-  }
-
-  function shareOnX() {
+  function shareOn(target: "reddit" | "x") {
     const state = getLiveShareState();
     const url = buildShareUrl(state, SITE_ORIGIN);
     const text = buildShareSummary(state, filteredBoons.length);
-    window.open(
-      `https://twitter.com/intent/tweet?text=${encodeURIComponent(`${text} ${url}`)}`,
-      "_blank",
-      "noopener,noreferrer",
-    );
-    closeAllDropdowns();
-  }
-
-  function cycleState(currentState: boolean | null): boolean | null {
-    if (currentState === null) return true;
-    if (currentState === true) return false;
-    return null;
+    const shareUrl =
+      target === "reddit"
+        ? `https://www.reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(text)}`
+        : `https://twitter.com/intent/tweet?text=${encodeURIComponent(`${text} ${url}`)}`;
+    window.open(shareUrl, "_blank", "noopener,noreferrer");
+    closeMenus();
   }
 
   function getToggleStyles(state: boolean | null): string {
@@ -314,62 +280,153 @@
       searchQuery.trim().length > 0,
   );
 
+  function commitFilterChange(mutate: () => void) {
+    syncSearchNow();
+    mutate();
+    pushFiltersToUrl();
+  }
+
+  function toggleInList<T>(list: T[], value: T): T[] {
+    return list.includes(value)
+      ? list.filter((item) => item !== value)
+      : [...list, value];
+  }
+
   function cycleTriState(
     current: boolean | null,
     set: (value: boolean | null) => void,
   ) {
-    syncSearchNow();
-    set(cycleState(current));
-    pushFiltersToUrl();
+    commitFilterChange(() =>
+      set(current === null ? true : current === true ? false : null),
+    );
   }
 
   function clearFilters() {
-    selectedGods = [];
-    selectedTypes = [];
-    selectedElements = [];
-    coreFilter = null;
-    olympDmgFilter = null;
-    duoFilter = null;
-    legendaryFilter = null;
-    infusionFilter = null;
-    searchQuery = "";
-    syncSearchNow();
-    pushFiltersToUrl();
-    closeAllDropdowns();
+    commitFilterChange(() => {
+      selectedGods = [];
+      selectedTypes = [];
+      selectedElements = [];
+      coreFilter = null;
+      olympDmgFilter = null;
+      duoFilter = null;
+      legendaryFilter = null;
+      infusionFilter = null;
+      searchQuery = "";
+    });
+    closeMenus();
   }
 
   function addGodFilter(god: string) {
-    syncSearchNow();
-    if (!selectedGods.includes(god)) {
-      selectedGods = [...selectedGods, god];
-      pushFiltersToUrl();
-    }
+    if (selectedGods.includes(god)) return;
+    commitFilterChange(() => (selectedGods = [...selectedGods, god]));
   }
 
   function toggleGodFilter(god: string) {
-    syncSearchNow();
-    selectedGods = selectedGods.includes(god)
-      ? selectedGods.filter((g) => g !== god)
-      : [...selectedGods, god];
-    pushFiltersToUrl();
+    commitFilterChange(() => (selectedGods = toggleInList(selectedGods, god)));
   }
 
   function toggleTypeFilter(type: string) {
-    syncSearchNow();
-    selectedTypes = selectedTypes.includes(type)
-      ? selectedTypes.filter((t) => t !== type)
-      : [...selectedTypes, type];
-    pushFiltersToUrl();
+    commitFilterChange(
+      () => (selectedTypes = toggleInList(selectedTypes, type)),
+    );
   }
 
   function toggleElementFilter(element: string | null) {
-    syncSearchNow();
-    selectedElements = selectedElements.includes(element)
-      ? selectedElements.filter((e) => e !== element)
-      : [...selectedElements, element];
-    pushFiltersToUrl();
+    commitFilterChange(
+      () => (selectedElements = toggleInList(selectedElements, element)),
+    );
   }
+
+  let godOptions = $derived(
+    BOON_GODS.map((god) => ({
+      label: god,
+      checked: selectedGods.includes(god),
+      onToggle: () => toggleGodFilter(god),
+    })),
+  );
+  let typeOptions = $derived(
+    BOON_TYPES.map((type) => ({
+      label: type,
+      checked: selectedTypes.includes(type),
+      onToggle: () => toggleTypeFilter(type),
+    })),
+  );
+  let elementOptions = $derived(
+    BOON_ELEMENTS.map((element) => {
+      const value = element === "None" ? null : element;
+      return {
+        label: element,
+        checked: selectedElements.includes(value),
+        onToggle: () => toggleElementFilter(value),
+      };
+    }),
+  );
 </script>
+
+{#snippet filterMenu(
+  key: MenuKey,
+  label: string,
+  widthClass: string,
+  options: { label: string; checked: boolean; onToggle: () => void }[],
+)}
+  {@const count = options.filter((option) => option.checked).length}
+  <div class="relative" use:clickOutside={() => closeMenu(key)}>
+    <button
+      type="button"
+      onclick={() => toggleMenu(key)}
+      class="{filterChip} {count > 0
+        ? 'bg-[#153320] border-[#46f08f]/60 text-[#ccff90]'
+        : 'bg-[#0d1c13] border-[#2d5a3c] text-[#b3c2b7] hover:border-[#46f08f]/40'}"
+    >
+      <span class="text-[0.65rem] uppercase tracking-widest text-[#46f08f]"
+        >{label}</span
+      >
+      {#if count > 0}
+        <span class="text-[#ccff90]">({count})</span>
+      {/if}
+      <span class="text-[0.55rem] opacity-60">{openMenu === key ? "▲" : "▼"}</span
+      >
+    </button>
+
+    {#if openMenu === key}
+      <div
+        class="absolute left-1/2 z-30 mt-1.5 flex max-h-56 {widthClass} -translate-x-1/2 flex-col overflow-y-auto rounded-md border border-[#2d5a3c] bg-[#0a140d] p-1.5 shadow-[0_4px_24px_rgba(0,0,0,0.7)]"
+      >
+        {#each options as option (option.label)}
+          <FilterCheckbox
+            label={option.label}
+            checked={option.checked}
+            onToggle={option.onToggle}
+          />
+        {/each}
+      </div>
+    {/if}
+  </div>
+{/snippet}
+
+{#snippet triFilter(
+  label: string,
+  value: boolean | null,
+  set: (value: boolean | null) => void,
+)}
+  <button
+    type="button"
+    class="{filterChip} {getToggleStyles(value)}"
+    onclick={() => cycleTriState(value, set)}
+  >
+    <span class="text-[0.65rem] uppercase tracking-widest">{label}</span>
+  </button>
+{/snippet}
+
+{#snippet shareItem(label: string, onclick: () => void)}
+  <button
+    type="button"
+    class="rounded-md px-2 py-1.5 text-left text-sm text-[#b3c2b7] transition-colors hover:bg-[#153320] hover:text-[#e5f4e7]"
+    {onclick}
+  >
+    {label}
+  </button>
+{/snippet}
 
 <Container>
   <div class="w-full max-w-300 mx-auto text-[#e5f4e7] p-2 sm:p-3 font-serif">
@@ -392,40 +449,7 @@
         class="inline-flex max-w-full flex-wrap items-center justify-center gap-1.5 rounded-md border border-[#1c3623] border-l-[3px] bg-linear-to-r from-[#0a140d] to-[#0d1c13] p-2 shadow-[0_2px_10px_rgba(0,0,0,0.5)]"
         style="border-left-color: #46f08f;"
       >
-        <div
-          class="relative"
-          use:clickOutside={() => (isGodsMenuOpen = false)}
-        >
-          <button
-            type="button"
-            onclick={() => toggleDropdown("gods")}
-            class="{filterChip} {selectedGods.length > 0
-              ? 'bg-[#153320] border-[#46f08f]/60 text-[#ccff90]'
-              : 'bg-[#0d1c13] border-[#2d5a3c] text-[#b3c2b7] hover:border-[#46f08f]/40'}"
-          >
-            <span class="text-[0.65rem] uppercase tracking-widest text-[#46f08f]"
-              >Gods & Characters</span
-            >
-            {#if selectedGods.length > 0}
-              <span class="text-[#ccff90]">({selectedGods.length})</span>
-            {/if}
-            <span class="text-[0.55rem] opacity-60">{isGodsMenuOpen ? "▲" : "▼"}</span>
-          </button>
-
-          {#if isGodsMenuOpen}
-            <div
-              class="absolute left-1/2 z-30 mt-1.5 flex max-h-56 w-44 -translate-x-1/2 flex-col overflow-y-auto rounded-md border border-[#2d5a3c] bg-[#0a140d] p-1.5 shadow-[0_4px_24px_rgba(0,0,0,0.7)]"
-            >
-              {#each sortedGodNames as god (god)}
-                <FilterCheckbox
-                  label={god}
-                  checked={selectedGods.includes(god)}
-                  onToggle={() => toggleGodFilter(god)}
-                />
-              {/each}
-            </div>
-          {/if}
-        </div>
+        {@render filterMenu("gods", "Gods & Characters", "w-44", godOptions)}
 
         <label
           class="inline-flex min-w-28 items-center gap-2 rounded-md border border-[#2d5a3c] bg-[#153320] px-2.5 py-1.5 shadow-[inset_0_1px_0_rgba(70,240,143,0.08)] sm:min-w-40"
@@ -439,123 +463,26 @@
           />
         </label>
 
-        <div
-          class="relative"
-          use:clickOutside={() => (isBoonTypeOpen = false)}
-        >
-          <button
-            type="button"
-            onclick={() => toggleDropdown("type")}
-            class="{filterChip} {selectedTypes.length > 0
-              ? 'bg-[#153320] border-[#46f08f]/60 text-[#ccff90]'
-              : 'bg-[#0d1c13] border-[#2d5a3c] text-[#b3c2b7] hover:border-[#46f08f]/40'}"
-          >
-            <span class="text-[0.65rem] uppercase tracking-widest text-[#46f08f]"
-              >Type</span
-            >
-            {#if selectedTypes.length > 0}
-              <span class="text-[#ccff90]">({selectedTypes.length})</span>
-            {/if}
-            <span class="text-[0.55rem] opacity-60">{isBoonTypeOpen ? "▲" : "▼"}</span>
-          </button>
+        {@render filterMenu("type", "Type", "w-40", typeOptions)}
+        {@render filterMenu("elements", "Element", "w-36", elementOptions)}
 
-          {#if isBoonTypeOpen}
-            <div
-              class="absolute left-1/2 z-30 mt-1.5 flex w-40 -translate-x-1/2 flex-col rounded-md border border-[#2d5a3c] bg-[#0a140d] p-1.5 shadow-[0_4px_24px_rgba(0,0,0,0.7)]"
-            >
-              {#each boonTypes as type (type)}
-                <FilterCheckbox
-                  label={type}
-                  checked={selectedTypes.includes(type)}
-                  onToggle={() => toggleTypeFilter(type)}
-                />
-              {/each}
-            </div>
-          {/if}
-        </div>
-
-        <div
-          class="relative"
-          use:clickOutside={() => (isElementMenuOpen = false)}
-        >
-          <button
-            type="button"
-            onclick={() => toggleDropdown("elements")}
-            class="{filterChip} {selectedElements.length > 0
-              ? 'bg-[#153320] border-[#46f08f]/60 text-[#ccff90]'
-              : 'bg-[#0d1c13] border-[#2d5a3c] text-[#b3c2b7] hover:border-[#46f08f]/40'}"
-          >
-            <span class="text-[0.65rem] uppercase tracking-widest text-[#46f08f]"
-              >Element</span
-            >
-            {#if selectedElements.length > 0}
-              <span class="text-[#ccff90]">({selectedElements.length})</span>
-            {/if}
-            <span class="text-[0.55rem] opacity-60"
-              >{isElementMenuOpen ? "▲" : "▼"}</span
-            >
-          </button>
-
-          {#if isElementMenuOpen}
-            <div
-              class="absolute left-1/2 z-30 mt-1.5 flex w-36 -translate-x-1/2 flex-col rounded-md border border-[#2d5a3c] bg-[#0a140d] p-1.5 shadow-[0_4px_24px_rgba(0,0,0,0.7)]"
-            >
-              {#each boonElements as element (element)}
-                {@const elementValue = element === "None" ? null : element}
-                <FilterCheckbox
-                  label={element}
-                  checked={selectedElements.includes(elementValue)}
-                  onToggle={() => toggleElementFilter(elementValue)}
-                />
-              {/each}
-            </div>
-          {/if}
-        </div>
-
-        <button
-          type="button"
-          class="{filterChip} {getToggleStyles(duoFilter)}"
-          onclick={() => cycleTriState(duoFilter, (v) => (duoFilter = v))}
-        >
-          <span class="text-[0.65rem] uppercase tracking-widest">Duo</span>
-        </button>
-
-        <button
-          type="button"
-          class="{filterChip} {getToggleStyles(legendaryFilter)}"
-          onclick={() =>
-            cycleTriState(legendaryFilter, (v) => (legendaryFilter = v))}
-        >
-          <span class="text-[0.65rem] uppercase tracking-widest">Legendary</span>
-        </button>
-
-        <button
-          type="button"
-          class="{filterChip} {getToggleStyles(infusionFilter)}"
-          onclick={() =>
-            cycleTriState(infusionFilter, (v) => (infusionFilter = v))}
-        >
-          <span class="text-[0.65rem] uppercase tracking-widest">Infusion</span>
-        </button>
-
-        <button
-          type="button"
-          class="{filterChip} {getToggleStyles(coreFilter)}"
-          onclick={() => cycleTriState(coreFilter, (v) => (coreFilter = v))}
-        >
-          <span class="text-[0.65rem] uppercase tracking-widest">Core</span>
-        </button>
-
-        <button
-          type="button"
-          class="{filterChip} {getToggleStyles(olympDmgFilter)}"
-          onclick={() =>
-            cycleTriState(olympDmgFilter, (v) => (olympDmgFilter = v))}
-        >
-          <span class="text-[0.65rem] uppercase tracking-widest"
-            >Olympian DMG</span
-          >
-        </button>
+        {@render triFilter("Duo", duoFilter, (v) => (duoFilter = v))}
+        {@render triFilter(
+          "Legendary",
+          legendaryFilter,
+          (v) => (legendaryFilter = v),
+        )}
+        {@render triFilter(
+          "Infusion",
+          infusionFilter,
+          (v) => (infusionFilter = v),
+        )}
+        {@render triFilter("Core", coreFilter, (v) => (coreFilter = v))}
+        {@render triFilter(
+          "Olympian DMG",
+          olympDmgFilter,
+          (v) => (olympDmgFilter = v),
+        )}
 
         <button
           type="button"
@@ -568,48 +495,27 @@
           <span class="text-[0.65rem] uppercase tracking-widest">Clear</span>
         </button>
 
-        <div
-          class="relative"
-          use:clickOutside={() => (isShareMenuOpen = false)}
-        >
+        <div class="relative" use:clickOutside={() => closeMenu("share")}>
           <button
             type="button"
-            onclick={() => toggleDropdown("share")}
+            onclick={() => toggleMenu("share")}
             class="{filterChip} bg-[#0d1c13] border-[#2d5a3c] text-[#b3c2b7] hover:border-[#46f08f]/40"
           >
             <span class="text-[0.65rem] uppercase tracking-widest text-[#46f08f]"
               >{linkCopied ? "Copied!" : "Share"}</span
             >
             <span class="text-[0.55rem] opacity-60"
-              >{isShareMenuOpen ? "▲" : "▼"}</span
+              >{openMenu === "share" ? "▲" : "▼"}</span
             >
           </button>
 
-          {#if isShareMenuOpen}
+          {#if openMenu === "share"}
             <div
               class="absolute right-0 z-30 mt-1.5 flex w-44 flex-col rounded-md border border-[#2d5a3c] bg-[#0a140d] p-1.5 shadow-[0_4px_24px_rgba(0,0,0,0.7)]"
             >
-              <button
-                type="button"
-                class="rounded-md px-2 py-1.5 text-left text-sm text-[#b3c2b7] transition-colors hover:bg-[#153320] hover:text-[#e5f4e7]"
-                onclick={copyShareLink}
-              >
-                Copy link
-              </button>
-              <button
-                type="button"
-                class="rounded-md px-2 py-1.5 text-left text-sm text-[#b3c2b7] transition-colors hover:bg-[#153320] hover:text-[#e5f4e7]"
-                onclick={shareOnReddit}
-              >
-                Share on Reddit
-              </button>
-              <button
-                type="button"
-                class="rounded-md px-2 py-1.5 text-left text-sm text-[#b3c2b7] transition-colors hover:bg-[#153320] hover:text-[#e5f4e7]"
-                onclick={shareOnX}
-              >
-                Share on X
-              </button>
+              {@render shareItem("Copy link", copyShareLink)}
+              {@render shareItem("Share on Reddit", () => shareOn("reddit"))}
+              {@render shareItem("Share on X", () => shareOn("x"))}
             </div>
           {/if}
         </div>

@@ -49,7 +49,7 @@
         <a
           id="curse-{curse}"
           href={resolve(
-            `/hades2/boons?search=${encodeURIComponent(curse)}` as `/hades2/boons?${string}`,
+            `/hades2/boons?q=${encodeURIComponent(curse)}` as `/hades2/boons?${string}`,
           )}
           aria-current={highlighted ? "true" : undefined}
           class="flex flex-col h-full bg-linear-to-r from-[#0a140d] to-[#0d1c13] border border-[#1c3623] border-l-[3px] rounded-md p-2.5 shadow-[0_2px_10px_rgba(0,0,0,0.5)] relative transition-all hover:border-[#46f08f]/50 hover:shadow-[0_2px_14px_rgba(70,240,143,0.1)] group {highlighted
