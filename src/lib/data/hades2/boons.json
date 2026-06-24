@@ -4096,6 +4096,8 @@
     "prerequisites": {
       "boons": [
         [
+          "Flame Strike",
+          "Flame Flourish",
           "Smolder Ring"
         ],
         [
