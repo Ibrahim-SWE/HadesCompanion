@@ -1,0 +1,224 @@
+{
+    "shimmering_ambrosia": {
+        "name": "Shimmering Ambrosia",
+        "image_path": "shimmering_ambrosia.webp",
+        "description": "Brew +3 Ambrosia, a rare delicacy suitable for gifting.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Brew +3"
+            },
+            {
+                "type": "image",
+                "name": "Ambrosia",
+                "img_path": "ambrosia.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": ", a rare delicacy suitable for gifting."
+            }
+        ],
+        "cost": [
+            {
+                "name": "myrtle",
+                "title": "Myrtle",
+                "amount": 1,
+                "image_path": "myrtle.webp"
+            },
+            {
+                "name": "golden_apple",
+                "title": "Golden Apple",
+                "amount": 1,
+                "image_path": "golden_apple.webp"
+            },
+            {
+                "name": "iris",
+                "title": "Iris",
+                "amount": 1,
+                "image_path": "iris.webp"
+            },
+            {
+                "name": "star_dust",
+                "title": "Star Dust",
+                "amount": 1,
+                "image_path": "star_dust.webp"
+            }
+        ],
+        "preparation_time": 16
+    },
+    "sweet_nectar": {
+        "name": "Sweet Nectar",
+        "image_path": "sweet_nectar.webp",
+        "description": "Brew +6 Nectar, a delectable substance suitable for gifting.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Brew +6"
+            },
+            {
+                "type": "image",
+                "name": "Nectar",
+                "img_path": "nectar.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": ", a delectable substance suitable for gifting."
+            }
+        ],
+        "cost": [
+            {
+                "name": "golden_apple",
+                "title": "Golden Apple",
+                "amount": 1,
+                "image_path": "golden_apple.webp"
+            },
+            {
+                "name": "star_dust",
+                "title": "Star Dust",
+                "amount": 1,
+                "image_path": "star_dust.webp"
+            }
+        ],
+        "preparation_time": 8
+    },
+    "beast_loved_morsel": {
+        "name": "Beast-Loved Morsel",
+        "image_path": "beast_loved_morsel.webp",
+        "description": "Cook +3 Witch's Delight, with which to compel Animal Familiars.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Cook +3"
+            },
+            {
+                "type": "image",
+                "name": "Witch's Delight",
+                "img_path": "witch_s_delight.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": ", with which to compel Animal Familiars."
+            }
+        ],
+        "cost": [
+            {
+                "name": "nectar",
+                "title": "Nectar",
+                "amount": 1,
+                "image_path": "nectar.webp"
+            },
+            {
+                "name": "star_dust",
+                "title": "Star Dust",
+                "amount": 1,
+                "image_path": "star_dust.webp"
+            }
+        ],
+        "preparation_time": 14
+    },
+    "moonlit_essence_from_stars": {
+        "name": "Moonlit Essence from Stars",
+        "image_path": "moonlit_essence_from_stars.webp",
+        "description": "Brew +5 Moon Dust, with which to upgrade Arcana.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Brew +5"
+            },
+            {
+                "type": "image",
+                "name": "Moon Dust",
+                "img_path": "moon_dust.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": ", with which to upgrade Arcana."
+            }
+        ],
+        "cost": [
+            {
+                "name": "star_dust",
+                "title": "Star Dust",
+                "amount": 1,
+                "image_path": "star_dust.webp"
+            }
+        ],
+        "preparation_time": 4
+    },
+    "shadow_extraction": {
+        "name": "Shadow Extraction",
+        "image_path": "shadow_extraction.webp",
+        "description": "Manifest +1 Shadow, used for powerful incantations.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Manifest +1"
+            },
+            {
+                "type": "image",
+                "name": "Shadow",
+                "img_path": "shadow.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": ", used for powerful incantations."
+            }
+        ],
+        "cost": [
+            {
+                "name": "ashes",
+                "title": "Ashes",
+                "amount": 30,
+                "image_path": "ashes.webp"
+            },
+            {
+                "name": "psyche",
+                "title": "Psyche",
+                "amount": 30,
+                "image_path": "psyche.webp"
+            },
+            {
+                "name": "fate_fabric",
+                "title": "Fate Fabric",
+                "amount": 3,
+                "image_path": "fate_fabric.webp"
+            }
+        ],
+        "preparation_time": 12
+    },
+    "night_life_for_the_dead": {
+        "name": "Night Life For The Dead",
+        "image_path": "night_life_for_the_dead.webp",
+        "description": "Attempt to restore Icarus to his living form, temporarily. Grants +1 Ectoplasmic Draught.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Attempt to restore Icarus to his living form, temporarily. Grants +1"
+            },
+            {
+                "type": "image",
+                "name": "Ectoplasmic Draught",
+                "img_path": "ectoplasmic_draught.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "."
+            }
+        ],
+        "cost": [
+            {
+                "name": "shaderot",
+                "title": "Shaderot",
+                "amount": 2,
+                "image_path": "shaderot.webp"
+            },
+            {
+                "name": "shadow",
+                "title": "Shadow",
+                "amount": 1,
+                "image_path": "shadow.webp"
+            }
+        ],
+        "preparation_time": 32
+    }
+}

@@ -1,0 +1,2752 @@
+{
+    "disintegration_of_monstrosity": {
+        "name": "Disintegration of Monstrosity",
+        "image_path": "disintegration_of_monstrosity.webp",
+        "description": "Turn the boundless strength and rage of Typhon against him when he is weakened.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Turn the boundless strength and rage of Typhon against him when he is weakened."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "zodiac_sand",
+                "title": "Zodiac Sand",
+                "amount": 1,
+                "image_path": "zodiac_sand.webp"
+            },
+            {
+                "name": "void_lens",
+                "title": "Void Lens",
+                "amount": 4,
+                "image_path": "void_lens.webp"
+            },
+            {
+                "name": "gigaros",
+                "title": "Gigaros",
+                "amount": 1,
+                "image_path": "gigaros.webp"
+            }
+        ],
+        "prerequisites": "Beat Typhon many times and talk to Hecate after each fight"
+    },
+    "dissolution_of_time": {
+        "name": "Dissolution of Time",
+        "image_path": "dissolution_of_time.webp",
+        "description": "Suppress the ability for Chronos to reconstitute himself night after night.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Suppress the ability for Chronos to reconstitute himself night after night."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "zodiac_sand",
+                "title": "Zodiac Sand",
+                "amount": 7,
+                "image_path": "zodiac_sand.webp"
+            },
+            {
+                "name": "entropy",
+                "title": "Entropy",
+                "amount": 1,
+                "image_path": "entropy.webp"
+            }
+        ],
+        "prerequisites": "Beat Chronos once and talk to Hecate"
+    },
+    "unraveling_a_fateful_bond": {
+        "name": "Unraveling a Fateful Bond",
+        "image_path": "unraveling_a_fateful_bond.webp",
+        "description": "Forestall the effects of your bloodline's ancient Life-draining curse that bars you from the surface.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Forestall the effects of your bloodline's ancient Life-draining curse that bars you from the surface."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "lotus",
+                "title": "Lotus",
+                "amount": 2,
+                "image_path": "lotus.webp"
+            },
+            {
+                "name": "nightshade",
+                "title": "Nightshade",
+                "amount": 2,
+                "image_path": "nightshade.webp"
+            },
+            {
+                "name": "moss",
+                "title": "Moss",
+                "amount": 2,
+                "image_path": "moss.webp"
+            },
+            {
+                "name": "thalamus",
+                "title": "Thalamus",
+                "amount": 2,
+                "image_path": "thalamus.webp"
+            }
+        ],
+        "prerequisites": "Get Permeation of Witching-Wards first; Talk to Moros after going to the Surface"
+    },
+    "permeation_of_witching_wards": {
+        "name": "Permeation of Witching-Wards",
+        "image_path": "permeation_of_witching_wards.webp",
+        "description": "Gain the ability to traverse Warded gateways, such as the one leading to the Surface...",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Gain the ability to traverse Warded gateways, such as the one leading to the Surface..."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "moly",
+                "title": "Moly",
+                "amount": 3,
+                "image_path": "moly.webp"
+            },
+            {
+                "name": "cinder",
+                "title": "Cinder",
+                "amount": 1,
+                "image_path": "cinder.webp"
+            },
+            {
+                "name": "shadow",
+                "title": "Shadow",
+                "amount": 1,
+                "image_path": "shadow.webp"
+            }
+        ],
+        "prerequisites": "Talk to Hecate twice after learning about the plight on the Surface from Hermes"
+    },
+    "fated_intervention": {
+        "name": "Fated Intervention",
+        "image_path": "fated_intervention.webp",
+        "description": "Beseech the Three Fates to lend their aid in a time of great need.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Beseech the Three Fates to lend their aid in a time of great need."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "silver",
+                "title": "Silver",
+                "amount": 1,
+                "image_path": "silver.webp"
+            },
+            {
+                "name": "ashes",
+                "title": "Ashes",
+                "amount": 2,
+                "image_path": "ashes.webp"
+            },
+            {
+                "name": "moly",
+                "title": "Moly",
+                "amount": 2,
+                "image_path": "moly.webp"
+            }
+        ],
+        "prerequisites": "Get Night's Craftwork"
+    },
+    "doomed_beckoning": {
+        "name": "Doomed Beckoning",
+        "image_path": "doomed_beckoning.webp",
+        "description": "Beseech Moros to reappear, in accordance with the will of the Three Fates.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Beseech Moros to reappear, in accordance with the will of the Three Fates."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "nightshade",
+                "title": "Nightshade",
+                "amount": 1,
+                "image_path": "nightshade.webp"
+            },
+            {
+                "name": "fate_fabric",
+                "title": "Fate Fabric",
+                "amount": 3,
+                "image_path": "fate_fabric.webp"
+            }
+        ],
+        "prerequisites": "See the Harbinger of Doom prophecy after meeting Moros"
+    },
+    "purification_of_crystal_clarity": {
+        "name": "Purification of Crystal Clarity",
+        "image_path": "purification_of_crystal_clarity.webp",
+        "description": "Restores the water surrounding Narcissus, so that he may carry on fawning over himself",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Restores the water surrounding Narcissus, so that he may carry on fawning over himself"
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "cattail",
+                "title": "Cattail",
+                "amount": 3,
+                "image_path": "cattail.webp"
+            },
+            {
+                "name": "mandrake",
+                "title": "Mandrake",
+                "amount": 3,
+                "image_path": "mandrake.webp"
+            },
+            {
+                "name": "tears",
+                "title": "Tears",
+                "amount": 3,
+                "image_path": "tears.webp"
+            }
+        ],
+        "prerequisites": "Visit and interact with both Narcissus and Echo multiple times, then trigger a specific interaction with Nemesis ."
+    },
+    "return_of_latent_memories": {
+        "name": "Return of Latent Memories",
+        "image_path": "return_of_latent_memories.webp",
+        "description": "Compel the Shade called Dora to remember something about her long-forgotten mortal days.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Compel the Shade called Dora to remember something about her long-forgotten mortal days."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "cattail",
+                "title": "Cattail",
+                "amount": 3,
+                "image_path": "cattail.webp"
+            },
+            {
+                "name": "mandrake",
+                "title": "Mandrake",
+                "amount": 3,
+                "image_path": "mandrake.webp"
+            },
+            {
+                "name": "star_dust",
+                "title": "Star Dust",
+                "amount": 2,
+                "image_path": "star_dust.webp"
+            }
+        ],
+        "prerequisites": "Talk to Dora after confronting Prometheus; Fight Prometheus to trigger a possible conversation about Dora; Talk to Dora again; Fight Prometheus to trigger a second conversation about Dora; Talk to Dora"
+    },
+    "essence_of_sorrow": {
+        "name": "Essence of Sorrow",
+        "image_path": "essence_of_sorrow.webp",
+        "description": "Vaporize Tears to their purest form, for use in some sort of concoction by the Witch of Shadows.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Vaporize"
+            },
+            {
+                "type": "image",
+                "name": "Tears",
+                "img_path": "tears.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "to their purest form, for use in some sort of concoction by the Witch of Shadows."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "tears",
+                "title": "Tears",
+                "amount": 1,
+                "image_path": "tears.webp"
+            }
+        ],
+        "prerequisites": "Received Bitter Tears Prophecy from Medea"
+    },
+    "augmentation_of_bone_density": {
+        "name": "Augmentation of Bone Density",
+        "image_path": "augmentation_of_bone_density.webp",
+        "description": "Significantly increase how much damage Schelemeus can take before falling to pieces.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Significantly increase how much damage Schelemeus can take before falling to pieces."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "limestone",
+                "title": "Limestone",
+                "amount": 10,
+                "image_path": "limestone.webp"
+            },
+            {
+                "name": "adamant",
+                "title": "Adamant",
+                "amount": 10,
+                "image_path": "adamant.webp"
+            },
+            {
+                "name": "shadow",
+                "title": "Shadow",
+                "amount": 1,
+                "image_path": "shadow.webp"
+            },
+            {
+                "name": "nightmare",
+                "title": "Nightmare",
+                "amount": 2,
+                "image_path": "nightmare.webp"
+            }
+        ],
+        "prerequisites": "Spoke with Schelemeus after reaching the 6th Affinity"
+    },
+    "end_to_deepest_slumber": {
+        "name": "End to Deepest Slumber",
+        "image_path": "end_to_deepest_slumber.webp",
+        "description": "Attempt to stir Hypnos from his dormant state. Grants +1 Dream Vapors.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Attempt to stir Hypnos from his dormant state. Grants +1"
+            },
+            {
+                "type": "image",
+                "name": "Dream Vapors",
+                "img_path": "dream_vapors.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "moly",
+                "title": "Moly",
+                "amount": 1,
+                "image_path": "moly.webp"
+            },
+            {
+                "name": "mandrake_root",
+                "title": "Mandrake Root",
+                "amount": 2,
+                "image_path": "mandrake_root.webp"
+            },
+            {
+                "name": "poppy",
+                "title": "Poppy",
+                "amount": 3,
+                "image_path": "poppy.webp"
+            }
+        ],
+        "prerequisites": "Give at least 2 gifts to Hypnos; Gather at least 1; Then initiate conversation with Hypnos"
+    },
+    "end_to_dearest_slumber": {
+        "name": "End to Dearest Slumber",
+        "image_path": "end_to_dearest_slumber.webp",
+        "description": "Reach deep into the psyche of Hypnos to perhaps stir him from his dormant state. Grants +1 Dream Vapors.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Reach deep into the psyche of Hypnos to perhaps stir him from his dormant state. Grants +1"
+            },
+            {
+                "type": "image",
+                "name": "Dream Vapors",
+                "img_path": "dream_vapors.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "moly",
+                "title": "Moly",
+                "amount": 1,
+                "image_path": "moly.webp"
+            },
+            {
+                "name": "mandrake",
+                "title": "Mandrake",
+                "amount": 3,
+                "image_path": "mandrake.webp"
+            },
+            {
+                "name": "poppy",
+                "title": "Poppy",
+                "amount": 2,
+                "image_path": "poppy.webp"
+            }
+        ],
+        "prerequisites": "Give 1 gifts to Hypnos; Talk to Medea"
+    },
+    "end_to_dumbest_slumber": {
+        "name": "End to Dumbest Slumber",
+        "image_path": "end_to_dumbest_slumber.webp",
+        "description": "Plunge into the speechless depths of the psyche of Hypnos to try and rouse him, again. Grants +1 Dream Vapors.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Plunge into the speechless depths of the psyche of Hypnos to try and rouse him, again. Grants +1"
+            },
+            {
+                "type": "image",
+                "name": "Dream Vapors",
+                "img_path": "dream_vapors.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "shaderot",
+                "title": "Shaderot",
+                "amount": 1,
+                "image_path": "shaderot.webp"
+            },
+            {
+                "name": "poppy",
+                "title": "Poppy",
+                "amount": 2,
+                "image_path": "poppy.webp"
+            },
+            {
+                "name": "house_soot",
+                "title": "House Soot",
+                "amount": 1,
+                "image_path": "house_soot.webp"
+            }
+        ],
+        "prerequisites": "Give 2 gifts to Hypnos; Talk to Medea"
+    },
+    "aspects_of_night_and_darkness": {
+        "name": "Aspects of Night and Darkness",
+        "image_path": "aspects_of_night_and_darkness.webp",
+        "description": "Reveal Aspects within the The Silver Pool that further empower each Main Weapon.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Reveal Aspects within the The Silver Pool that further empower each Main Weapon."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "bronze",
+                "title": "Bronze",
+                "amount": 5,
+                "image_path": "bronze.webp"
+            },
+            {
+                "name": "nightshade",
+                "title": "Nightshade",
+                "amount": 1,
+                "image_path": "nightshade.webp"
+            }
+        ],
+        "prerequisites": "Beat Hecate 5 or more times; Unlock 4 of the Nocturnal Arms ( Black Coat does not count); Hecate gives this after you meet the conditions; After beating Hecate in Erebus (6 kills total needed); Do 3 runs to The Surface in a row, then talk to Hecate at The Crossroads"
+    },
+    "consecration_of_ashes": {
+        "name": "Consecration of Ashes",
+        "image_path": "consecration_of_ashes.webp",
+        "description": "Enhance the Altar of Ashes so that you can unlock the potential of your Arcana. Grants +3 Moon Dust.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Enhance the Altar of Ashes so that you can unlock the potential of your Arcana. Grants +3"
+            },
+            {
+                "type": "image",
+                "name": "Moon Dust",
+                "img_path": "moon_dust.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "fate_fabric",
+                "title": "Fate Fabric",
+                "amount": 6,
+                "image_path": "fate_fabric.webp"
+            },
+            {
+                "name": "cinder",
+                "title": "Cinder",
+                "amount": 1,
+                "image_path": "cinder.webp"
+            },
+            {
+                "name": "ashes",
+                "title": "Ashes",
+                "amount": 6,
+                "image_path": "ashes.webp"
+            }
+        ],
+        "prerequisites": "Beat Hecate 5 or more times; Have at least 20; Unlock 10 or more Arcana Cards; Get Summoning of Mercantile Fortune first"
+    },
+    "abyssal_insight": {
+        "name": "Abyssal Insight",
+        "image_path": "abyssal_insight.webp",
+        "description": "Activate the Pitch-Black Stone in the Training Grounds, then attempt its Trials for Star Dust.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Activate the Pitch-Black Stone in the Training Grounds, then attempt its Trials for"
+            },
+            {
+                "type": "image",
+                "name": "Star Dust",
+                "img_path": "star_dust.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "nightshade",
+                "title": "Nightshade",
+                "amount": 2,
+                "image_path": "nightshade.webp"
+            },
+            {
+                "name": "fate_fabric",
+                "title": "Fate Fabric",
+                "amount": 2,
+                "image_path": "fate_fabric.webp"
+            },
+            {
+                "name": "pearl",
+                "title": "Pearl",
+                "amount": 2,
+                "image_path": "pearl.webp"
+            }
+        ],
+        "prerequisites": "Get Unraveling a Fateful Bond first; Convert 3 or more Chaos Curses into Blessings, then talk to Chaos"
+    },
+    "abyssal_reflection": {
+        "name": "Abyssal Reflection",
+        "image_path": "abyssal_reflection.webp",
+        "description": "Gain the ability to re-attempt cleared Chaos Trials at the Pitch-Black Stone for modest rewards of Bones.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Gain the ability to re-attempt cleared Chaos Trials at the Pitch-Black Stone for modest rewards of"
+            },
+            {
+                "type": "image",
+                "name": "Bones",
+                "img_path": "bones.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "moly",
+                "title": "Moly",
+                "amount": 6,
+                "image_path": "moly.webp"
+            },
+            {
+                "name": "fate_fabric",
+                "title": "Fate Fabric",
+                "amount": 2,
+                "image_path": "fate_fabric.webp"
+            },
+            {
+                "name": "darkness",
+                "title": "Darkness",
+                "amount": 1,
+                "image_path": "darkness.webp"
+            }
+        ],
+        "prerequisites": "Finish at least 6 Chaos Trials or more"
+    },
+    "faith_of_familiar_spirits": {
+        "name": "Faith of Familiar Spirits",
+        "image_path": "faith_of_familiar_spirits.webp",
+        "description": "Turn trusted beasts into your Animal Familiars. Grants +3 Witch's Delight.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Turn trusted beasts into your Animal Familiars. Grants +3"
+            },
+            {
+                "type": "image",
+                "name": "Witch's Delight",
+                "img_path": "witch_s_delight.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "lotus",
+                "title": "Lotus",
+                "amount": 1,
+                "image_path": "lotus.webp"
+            },
+            {
+                "name": "nectar",
+                "title": "Nectar",
+                "amount": 2,
+                "image_path": "nectar.webp"
+            }
+        ],
+        "prerequisites": "beat Hecate 7 times; Gathered with the Crescent Pick 2 times, with the Tablet of Peace 8 times, and 1 time with the Silver Spade ."
+    },
+    "bravery_of_familiar_spirits": {
+        "name": "Bravery of Familiar Spirits",
+        "image_path": "bravery_of_familiar_spirits.webp",
+        "description": "Grow your bond with Animal Familiars, to make them stronger with each treat. Grants +3 Witch's Delight.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Grow your bond with Animal Familiars, to make them stronger with each treat. Grants +3"
+            },
+            {
+                "type": "image",
+                "name": "Witch's Delight",
+                "img_path": "witch_s_delight.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "wool",
+                "title": "Wool",
+                "amount": 1,
+                "image_path": "wool.webp"
+            },
+            {
+                "name": "wheat",
+                "title": "Wheat",
+                "amount": 3,
+                "image_path": "wheat.webp"
+            }
+        ],
+        "prerequisites": "Get Faith of Familiar Spirits first; Spend 4 or more on Animal Familiars"
+    },
+    "alteration_of_familiar_forms": {
+        "name": "Alteration of Familiar Forms",
+        "image_path": "alteration_of_familiar_forms.webp",
+        "description": "Choose from other appearances for your Animal Familiars, in exchange for Kudos.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Choose from other appearances for your Animal Familiars, in exchange for"
+            },
+            {
+                "type": "image",
+                "name": "Kudos",
+                "img_path": "kudos.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "fate_fabric",
+                "title": "Fate Fabric",
+                "amount": 6,
+                "image_path": "fate_fabric.webp"
+            },
+            {
+                "name": "wool",
+                "title": "Wool",
+                "amount": 6,
+                "image_path": "wool.webp"
+            },
+            {
+                "name": "flux",
+                "title": "Flux",
+                "amount": 1,
+                "image_path": "flux.webp"
+            }
+        ],
+        "prerequisites": "Get Have Frinos , Toula , Raki , Hecuba and Gale first; Spend 20 or more on Animal Familiars; Fully upgrade one of the Animal Familiars using; Have 30"
+    },
+    "greater_favor_of_gaia": {
+        "name": "Greater Favor of Gaia",
+        "image_path": "greater_favor_of_gaia.webp",
+        "description": "Reveal enhancements within the The Silver Pool that further empower each Gathering Tool.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Reveal enhancements within the The Silver Pool that further empower each Gathering Tool."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "glassrock",
+                "title": "Glassrock",
+                "amount": 4,
+                "image_path": "glassrock.webp"
+            },
+            {
+                "name": "iron",
+                "title": "Iron",
+                "amount": 4,
+                "image_path": "iron.webp"
+            },
+            {
+                "name": "marble",
+                "title": "Marble",
+                "amount": 4,
+                "image_path": "marble.webp"
+            }
+        ],
+        "prerequisites": "Get all Gathering Tools at the The Silver Pool; Get Divination of the Elements first"
+    },
+    "long_arm_of_the_unseen": {
+        "name": "Long Arm of the Unseen",
+        "image_path": "long_arm_of_the_unseen.webp",
+        "description": "Proclaim this encampment's notoriety throughout the realms by donating Kudos to the Spirit Mixer.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Proclaim this encampment's notoriety throughout the realms by donating"
+            },
+            {
+                "type": "image",
+                "name": "Kudos",
+                "img_path": "kudos.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "to the Spirit Mixer."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "kudos",
+                "title": "Kudos",
+                "amount": 250,
+                "image_path": "kudos.webp"
+            },
+            {
+                "name": "shadow",
+                "title": "Shadow",
+                "amount": 1,
+                "image_path": "shadow.webp"
+            }
+        ],
+        "prerequisites": "Achieve the True Ending; Get Rite of Social Solidarity first; Get Alteration of Familiar Forms first; Spent 20,000"
+    },
+    "acceptance_of_another_fate": {
+        "name": "Acceptance of Another Fate",
+        "image_path": "acceptance_of_another_fate.webp",
+        "description": "Salute the Oath of the Unseen to change your Fate prior to setting forth this night, if you wish....",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Salute the Oath of the Unseen to change your Fate prior to setting forth this night, if you wish...."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "fate_fabric",
+                "title": "Fate Fabric",
+                "amount": 7,
+                "image_path": "fate_fabric.webp"
+            },
+            {
+                "name": "zodiac_sand",
+                "title": "Zodiac Sand",
+                "amount": 7,
+                "image_path": "zodiac_sand.webp"
+            },
+            {
+                "name": "void_lens",
+                "title": "Void Lens",
+                "amount": 7,
+                "image_path": "void_lens.webp"
+            }
+        ],
+        "prerequisites": "Get Insight Into Offerings first; Get Favored of All Keepsakes first; Get Spreading of Ashes first; Obtained the second statue of the The Night's Champion , by conquering the Surface route at 12 Fear and the Underworld route at 16 Fear; beat Chronos 7 times or more; beat Typhon 7 times or more; Reach the Epilogue"
+    },
+    "night_s_craftwork": {
+        "name": "Night's Craftwork",
+        "image_path": "night_s_craftwork.webp",
+        "description": "Reveal Gathering Tools within the The Silver Pool. Unlock them to gather Silver, Psyche, and more.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Reveal Gathering Tools within the The Silver Pool. Unlock them to gather"
+            },
+            {
+                "type": "image",
+                "name": "Silver",
+                "img_path": "silver.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": ","
+            },
+            {
+                "type": "image",
+                "name": "Psyche",
+                "img_path": "psyche.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": ", and more."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "moly",
+                "title": "Moly",
+                "amount": 1,
+                "image_path": "moly.webp"
+            }
+        ],
+        "prerequisites": null
+    },
+    "divination_of_the_elements": {
+        "name": "Divination of the Elements",
+        "image_path": "divination_of_the_elements.webp",
+        "description": "Reveal hidden elemental affinities of various Boons; Olympians will offer Boons that use these.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Reveal hidden elemental affinities of various Boons; Olympians will offer Boons that use these."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "psyche",
+                "title": "Psyche",
+                "amount": 5,
+                "image_path": "psyche.webp"
+            }
+        ],
+        "prerequisites": "Fight Scylla once; Spoken to Zeus once"
+    },
+    "forget_me_not": {
+        "name": "Forget-Me-Not",
+        "image_path": "forget_me_not.webp",
+        "description": "Improve your memory. Press Y/Right Click on recipes for at-a-glance reminders for which resources you need.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Improve your memory. Press Y/Right Click on recipes for at-a-glance reminders for which resources you need."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "moly",
+                "title": "Moly",
+                "amount": 1,
+                "image_path": "moly.webp"
+            }
+        ],
+        "prerequisites": "Get Flourishing Soil first; Get Fated Intervention first"
+    },
+    "path_to_desired_blessings": {
+        "name": "Path to Desired Blessings",
+        "image_path": "path_to_desired_blessings.webp",
+        "description": "While viewing Boons in the Book of Shadows, press Y/Right Click to track any offering requirements.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "While viewing Boons in the Book of Shadows, press Y/Right Click to track any offering requirements."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "fate_fabric",
+                "title": "Fate Fabric",
+                "amount": 2,
+                "image_path": "fate_fabric.webp"
+            },
+            {
+                "name": "snake_reed",
+                "title": "Snake-Reed",
+                "amount": 2,
+                "image_path": "snake_reed.webp"
+            }
+        ],
+        "prerequisites": "Get Forget-Me-Not first; Get Insight Into Offerings first; Finish the Underworld route 2 times or more; Finish the Surface route 2 times or more"
+    },
+    "spreading_of_ashes": {
+        "name": "Spreading of Ashes",
+        "image_path": "spreading_of_ashes.webp",
+        "description": "Enhance the Altar of Ashes to preserve up to 6 different arrangements of your Arcana.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Enhance the Altar of Ashes to preserve up to 6 different arrangements of your Arcana."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "ashes",
+                "title": "Ashes",
+                "amount": 30,
+                "image_path": "ashes.webp"
+            },
+            {
+                "name": "olive",
+                "title": "Olive",
+                "amount": 2,
+                "image_path": "olive.webp"
+            }
+        ],
+        "prerequisites": "Have Arcana Cards first.; Consecration of Ashes first.; Have 28 or more; Spent at least 15 or more"
+    },
+    "favored_of_all_keepsakes": {
+        "name": "Favored of All Keepsakes",
+        "image_path": "favored_of_all_keepsakes.webp",
+        "description": "Prioritize a Keepsake to re-equip it automatically whenever you return to The Crossroads.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Prioritize a Keepsake to re-equip it automatically whenever you return to The Crossroads."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "iris",
+                "title": "Iris",
+                "amount": 2,
+                "image_path": "iris.webp"
+            },
+            {
+                "name": "shaderot",
+                "title": "Shaderot",
+                "amount": 2,
+                "image_path": "shaderot.webp"
+            }
+        ],
+        "prerequisites": "Get 22 or more Keepsakes through gifting"
+    },
+    "reagent_sensing": {
+        "name": "Reagent Sensing",
+        "image_path": "reagent_sensing.webp",
+        "description": "After Encounters, become alerted to any valuable resources in the area.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "After Encounters, become alerted to any valuable resources in the area."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "moly",
+                "title": "Moly",
+                "amount": 1,
+                "image_path": "moly.webp"
+            }
+        ],
+        "prerequisites": "Gather 5 (see Night's Craftwork )"
+    },
+    "insight_into_offerings": {
+        "name": "Insight Into Offerings",
+        "image_path": "insight_into_offerings.webp",
+        "description": "Reveal a complete list of each Olympian's Boons(among other details) in the Book of Shadows.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Reveal a complete list of each Olympian's Boons(among other details) in the Book of Shadows."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "ambrosia",
+                "title": "Ambrosia",
+                "amount": 1,
+                "image_path": "ambrosia.webp"
+            },
+            {
+                "name": "fate_fabric",
+                "title": "Fate Fabric",
+                "amount": 3,
+                "image_path": "fate_fabric.webp"
+            }
+        ],
+        "prerequisites": "Inspected the Book of Shadows; Give at least 1 gifts to each: Zeus , Hera , Poseidon , Demeter , Apollo , Aphrodite , Hephaestus , Hestia , Hermes , Chaos"
+    },
+    "summoning_of_mercantile_fortune": {
+        "name": "Summoning of Mercantile Fortune",
+        "image_path": "summoning_of_mercantile_fortune.webp",
+        "description": "Persuade the Wretched Broker to appear, with whom you may trade Bones for various resources.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Persuade the Wretched Broker to appear, with whom you may trade"
+            },
+            {
+                "type": "image",
+                "name": "Bones",
+                "img_path": "bones.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "for various resources."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "bones",
+                "title": "Bones",
+                "amount": 10,
+                "image_path": "bones.webp"
+            }
+        ],
+        "prerequisites": null
+    },
+    "deathly_fortune": {
+        "name": "Deathly Fortune",
+        "image_path": "deathly_fortune.webp",
+        "description": "Update the Wretched Broker to bestow Bones in exchange for your Rod of Fishing Rod of Fishing catches.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Update the Wretched Broker to bestow"
+            },
+            {
+                "type": "image",
+                "name": "Bones",
+                "img_path": "bones.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "in exchange for your"
+            },
+            {
+                "type": "image",
+                "name": "Rod of Fishing",
+                "img_path": "rod_of_fishing.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "Rod of Fishing catches."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "fate_fabric",
+                "title": "Fate Fabric",
+                "amount": 3,
+                "image_path": "fate_fabric.webp"
+            },
+            {
+                "name": "garlic",
+                "title": "Garlic",
+                "amount": 1,
+                "image_path": "garlic.webp"
+            }
+        ],
+        "prerequisites": "Get Summoning of Mercantile Fortune first; Get Night's Craftwork first; Get Flourishing Soil first; See the Wretched Broker 's shop screen once.; catch a fish using Rod of Fishing once."
+    },
+    "kinship_fortune": {
+        "name": "Kinship Fortune",
+        "image_path": "kinship_fortune.webp",
+        "description": "Update the Wretched Broker inventory with exotic goods suitable for gifting. Grants +1 Nectar.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Update the Wretched Broker inventory with exotic goods suitable for gifting. Grants +1"
+            },
+            {
+                "type": "image",
+                "name": "Nectar",
+                "img_path": "nectar.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "bones",
+                "title": "Bones",
+                "amount": 60,
+                "image_path": "bones.webp"
+            }
+        ],
+        "prerequisites": "Get Summoning of Mercantile Fortune first; Get Night's Craftwork first"
+    },
+    "earthly_fortune": {
+        "name": "Earthly Fortune",
+        "image_path": "earthly_fortune.webp",
+        "description": "Update the Wretched Broker to bestow Kudos in exchange for recycling most any surplus resource.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Update the Wretched Broker to bestow"
+            },
+            {
+                "type": "image",
+                "name": "Kudos",
+                "img_path": "kudos.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "in exchange for recycling most any surplus resource."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "bones",
+                "title": "Bones",
+                "amount": 100,
+                "image_path": "bones.webp"
+            }
+        ],
+        "prerequisites": "Give gifts to to Dora once; talk to Dora; Have at least 40 progression upgrades or more (e.g., Incantations, unlocking Nocturnal Arms , unlocking Familiars , Relationships.)"
+    },
+    "rivals_of_depth_and_sea": {
+        "name": "Rivals of Depth and Sea",
+        "image_path": "rivals_of_depth_and_sea.webp",
+        "description": "Reveal the next rank of the Vow of Rivals in the Oath of the Unseen to face stronger Guardians.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Reveal the next rank of the Vow of Rivals in the Oath of the Unseen to face stronger Guardians."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "pearl",
+                "title": "Pearl",
+                "amount": 2,
+                "image_path": "pearl.webp"
+            },
+            {
+                "name": "golden_apple",
+                "title": "Golden Apple",
+                "amount": 2,
+                "image_path": "golden_apple.webp"
+            }
+        ],
+        "prerequisites": "Beat Hecate and Polyphemus with the Vow of Rivals activated; Beat Charybdis one or more times; Beat Scylla three or more times; Beat Eris three or more times"
+    },
+    "rivals_of_plain_and_peak": {
+        "name": "Rivals of Plain and Peak",
+        "image_path": "rivals_of_plain_and_peak.webp",
+        "description": "Reveal the third rank of the Vow of Rivals in the Oath of the Unseen to face stronger Guardians.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Reveal the third rank of the Vow of Rivals in the Oath of the Unseen to face stronger Guardians."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "tears",
+                "title": "Tears",
+                "amount": 2,
+                "image_path": "tears.webp"
+            },
+            {
+                "name": "feather",
+                "title": "Feather",
+                "amount": 2,
+                "image_path": "feather.webp"
+            }
+        ],
+        "prerequisites": "Beat Scylla and Eris with the Vow of Rivals activated; Beat Cerberus three or more times; Beat Prometheus three or more times"
+    },
+    "rivals_of_old_and_rot": {
+        "name": "Rivals of Old and Rot",
+        "image_path": "rivals_of_old_and_rot.webp",
+        "description": "Reveal the final rank of the Vow of Rivals in the Oath of the Unseen to face stronger Guardians.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Reveal the final rank of the Vow of Rivals in the Oath of the Unseen to face stronger Guardians."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "zodiac_sand",
+                "title": "Zodiac Sand",
+                "amount": 2,
+                "image_path": "zodiac_sand.webp"
+            },
+            {
+                "name": "void_lens",
+                "title": "Void Lens",
+                "amount": 2,
+                "image_path": "void_lens.webp"
+            },
+            {
+                "name": "darkness",
+                "title": "Darkness",
+                "amount": 1,
+                "image_path": "darkness.webp"
+            }
+        ],
+        "prerequisites": "Beat Cerberus and Prometheus with the Vow of Rivals activated; Beat Chronos three or more times; Beat Typhon three or more times; After obtaining the True Ending , speak with Chronos both at the end of Mount Olympus on The Surface route, and at the end of Tartarus on The Underworld route."
+    },
+    "cleansing_of_fountain_waters": {
+        "name": "Cleansing of Fountain-Waters",
+        "image_path": "cleansing_of_fountain_waters.webp",
+        "description": "Enhance Fountains so that they restore +10% Health.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Enhance Fountains so that they restore +10%"
+            },
+            {
+                "type": "image",
+                "name": "Health",
+                "img_path": "health.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "cattail",
+                "title": "Cattail",
+                "amount": 1,
+                "image_path": "cattail.webp"
+            },
+            {
+                "name": "moly",
+                "title": "Moly",
+                "amount": 1,
+                "image_path": "moly.webp"
+            }
+        ],
+        "prerequisites": "Get Woodsy Lifespring first"
+    },
+    "purification_of_fountain_waters": {
+        "name": "Purification of Fountain-Waters",
+        "image_path": "purification_of_fountain_waters.webp",
+        "description": "Enhance Fountains so that they restore an additional +10% Health.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Enhance Fountains so that they restore an additional +10%"
+            },
+            {
+                "type": "image",
+                "name": "Health",
+                "img_path": "health.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "nightshade",
+                "title": "Nightshade",
+                "amount": 1,
+                "image_path": "nightshade.webp"
+            },
+            {
+                "name": "cattail",
+                "title": "Cattail",
+                "amount": 3,
+                "image_path": "cattail.webp"
+            }
+        ],
+        "prerequisites": "Get Cleansing of Fountain-Waters first"
+    },
+    "rise_of_stygian_wells": {
+        "name": "Rise of Stygian Wells",
+        "image_path": "rise_of_stygian_wells.webp",
+        "description": "Cause Locations in the Underworld to sometimes contain a Well of Charon",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Cause Locations in the Underworld to sometimes contain a Well of Charon"
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "moly",
+                "title": "Moly",
+                "amount": 1,
+                "image_path": "moly.webp"
+            },
+            {
+                "name": "nightshade",
+                "title": "Nightshade",
+                "amount": 2,
+                "image_path": "nightshade.webp"
+            }
+        ],
+        "prerequisites": "Earned at least 1 Obol Points; Earned 1,500"
+    },
+    "surge_of_stygian_wells": {
+        "name": "Surge of Stygian Wells",
+        "image_path": "surge_of_stygian_wells.webp",
+        "description": "Cause a Well of Charon to appear in the space between each Underworld Region.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Cause a Well of Charon to appear in the space between each Underworld Region."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "moly",
+                "title": "Moly",
+                "amount": 3,
+                "image_path": "moly.webp"
+            },
+            {
+                "name": "glassrock",
+                "title": "Glassrock",
+                "amount": 1,
+                "image_path": "glassrock.webp"
+            }
+        ],
+        "prerequisites": "Get Rise of Stygian Wells first; Get Cleansing of Fountain-Waters first; Earned 3,000; Faced Hecate once"
+    },
+    "rush_of_fresh_air": {
+        "name": "Rush of Fresh Air",
+        "image_path": "rush_of_fresh_air.webp",
+        "description": "Cause Locations on the Surface to sometimes contain a Shrine of Hermes",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Cause Locations on the Surface to sometimes contain a Shrine of Hermes"
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "fate_fabric",
+                "title": "Fate Fabric",
+                "amount": 3,
+                "image_path": "fate_fabric.webp"
+            },
+            {
+                "name": "driftwood",
+                "title": "Driftwood",
+                "amount": 2,
+                "image_path": "driftwood.webp"
+            },
+            {
+                "name": "wool",
+                "title": "Wool",
+                "amount": 1,
+                "image_path": "wool.webp"
+            }
+        ],
+        "prerequisites": "Get Rise of Stygian Wells first; Get Unraveling a Fateful Bond first; Get Summoning a Colony of Bats first; Encounter Polyphemus once"
+    },
+    "surge_of_fresh_air": {
+        "name": "Surge of Fresh Air",
+        "image_path": "surge_of_fresh_air.webp",
+        "description": "Cause a Shrine of Hermes to appear in the space between each Surface Region.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Cause a Shrine of Hermes to appear in the space between each Surface Region."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "fate_fabric",
+                "title": "Fate Fabric",
+                "amount": 2,
+                "image_path": "fate_fabric.webp"
+            },
+            {
+                "name": "garlic",
+                "title": "Garlic",
+                "amount": 2,
+                "image_path": "garlic.webp"
+            },
+            {
+                "name": "mandrake_root",
+                "title": "Mandrake Root",
+                "amount": 2,
+                "image_path": "mandrake_root.webp"
+            }
+        ],
+        "prerequisites": "Get Rush of Fresh Air first; beat Polyphemus once; Earned 6,000"
+    },
+    "revival_of_a_desecrating_pool": {
+        "name": "Revival of a Desecrating Pool",
+        "image_path": "revival_of_a_desecrating_pool.webp",
+        "description": "Reactivate the dormant Pool of Purging in the pathway leading to Tartarus.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Reactivate the dormant Pool of Purging in the pathway leading to Tartarus."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "iron",
+                "title": "Iron",
+                "amount": 1,
+                "image_path": "iron.webp"
+            },
+            {
+                "name": "shaderot",
+                "title": "Shaderot",
+                "amount": 2,
+                "image_path": "shaderot.webp"
+            }
+        ],
+        "prerequisites": "Reach Tartarus"
+    },
+    "surge_of_desecrating_pools": {
+        "name": "Surge of Desecrating Pools",
+        "image_path": "surge_of_desecrating_pools.webp",
+        "description": "Cause a Pool of Purging to always appear in the space between each Underworld Region.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Cause a Pool of Purging to always appear in the space between each Underworld Region."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "iron",
+                "title": "Iron",
+                "amount": 1,
+                "image_path": "iron.webp"
+            },
+            {
+                "name": "shaderot",
+                "title": "Shaderot",
+                "amount": 2,
+                "image_path": "shaderot.webp"
+            }
+        ],
+        "prerequisites": "Get Revival of a Desecrating Pool first; Finish the Underworld route once; Purged at least 3 Boons with Pool of Purging in the Tartarus 's resting area."
+    },
+    "woodsy_lifespring": {
+        "name": "Woodsy Lifespring",
+        "image_path": "woodsy_lifespring.webp",
+        "description": "Reveal a hidden glade in Erebus, where you may restore some Health amid the gloom.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Reveal a hidden glade in Erebus, where you may restore some"
+            },
+            {
+                "type": "image",
+                "name": "Health",
+                "img_path": "health.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "amid the gloom."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "moly",
+                "title": "Moly",
+                "amount": 1,
+                "image_path": "moly.webp"
+            },
+            {
+                "name": "silver",
+                "title": "Silver",
+                "amount": 3,
+                "image_path": "silver.webp"
+            }
+        ],
+        "prerequisites": "Get Night's Craftwork first; Get Fated Intervention first; Get Reagent Sensing first; Get Forget-Me-Not first"
+    },
+    "briny_lifespring": {
+        "name": "Briny Lifespring",
+        "image_path": "briny_lifespring.webp",
+        "description": "Reveal a hidden chamber in Oceanus, where you may restore some Health in peace.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Reveal a hidden chamber in Oceanus, where you may restore some"
+            },
+            {
+                "type": "image",
+                "name": "Health",
+                "img_path": "health.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "in peace."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "lotus",
+                "title": "Lotus",
+                "amount": 3,
+                "image_path": "lotus.webp"
+            },
+            {
+                "name": "limestone",
+                "title": "Limestone",
+                "amount": 3,
+                "image_path": "limestone.webp"
+            }
+        ],
+        "prerequisites": "Get Woodsy Lifespring first"
+    },
+    "golden_lifespring": {
+        "name": "Golden Lifespring",
+        "image_path": "golden_lifespring.webp",
+        "description": "Reveal a hidden chamber in Tartarus, where you may restore some Health and elude your foes.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Reveal a hidden chamber in Tartarus, where you may restore some"
+            },
+            {
+                "type": "image",
+                "name": "Health",
+                "img_path": "health.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "and elude your foes."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "shaderot",
+                "title": "Shaderot",
+                "amount": 3,
+                "image_path": "shaderot.webp"
+            },
+            {
+                "name": "marble",
+                "title": "Marble",
+                "amount": 3,
+                "image_path": "marble.webp"
+            }
+        ],
+        "prerequisites": "Get Briny Lifespring first; Get Deathly Fortune first; Faced Chronos once"
+    },
+    "sandy_lifespring": {
+        "name": "Sandy Lifespring",
+        "image_path": "sandy_lifespring.webp",
+        "description": "Reveal a hidden isle in the Rift of Thessaly, where you may restore Health amid the tumult.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Reveal a hidden isle in the Rift of Thessaly, where you may restore"
+            },
+            {
+                "type": "image",
+                "name": "Health",
+                "img_path": "health.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "amid the tumult."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "iron",
+                "title": "Iron",
+                "amount": 3,
+                "image_path": "iron.webp"
+            },
+            {
+                "name": "driftwood",
+                "title": "Driftwood",
+                "amount": 3,
+                "image_path": "driftwood.webp"
+            }
+        ],
+        "prerequisites": "Get Briny Lifespring first; Faced Eris once"
+    },
+    "frozen_lifespring": {
+        "name": "Frozen Lifespring",
+        "image_path": "frozen_lifespring.webp",
+        "description": "Reveal a hidden chamber within Mount Olympus, where you may restore some Health in quiet solitude.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Reveal a hidden chamber within Mount Olympus, where you may restore some"
+            },
+            {
+                "type": "image",
+                "name": "Health",
+                "img_path": "health.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "in quiet solitude."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "iris",
+                "title": "Iris",
+                "amount": 3,
+                "image_path": "iris.webp"
+            },
+            {
+                "name": "adamant",
+                "title": "Adamant",
+                "amount": 3,
+                "image_path": "adamant.webp"
+            }
+        ],
+        "prerequisites": "Get Sandy Lifespring first; Faced Prometheus once"
+    },
+    "propensity_toward_gold": {
+        "name": "Propensity Toward Gold",
+        "image_path": "propensity_toward_gold.webp",
+        "description": "Reveal Golden Urns in various Locations, which yield up to 15 Gold once shattered.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Reveal Golden Urns in various Locations, which yield up to 15"
+            },
+            {
+                "type": "image",
+                "name": "Gold",
+                "img_path": "gold.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "once shattered."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "limestone",
+                "title": "Limestone",
+                "amount": 1,
+                "image_path": "limestone.webp"
+            },
+            {
+                "name": "fate_fabric",
+                "title": "Fate Fabric",
+                "amount": 1,
+                "image_path": "fate_fabric.webp"
+            }
+        ],
+        "prerequisites": "Get Kindred Keepsakes first; Earned 2,000"
+    },
+    "summoning_a_colony_of_bats": {
+        "name": "Summoning a Colony of Bats",
+        "image_path": "summoning_a_colony_of_bats.webp",
+        "description": "Make use of All-Seeing Bats in their cages around the City of Ephyra, to better orient yourself there.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Make use of All-Seeing Bats in their cages around the City of Ephyra, to better orient yourself there."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "moss",
+                "title": "Moss",
+                "amount": 3,
+                "image_path": "moss.webp"
+            },
+            {
+                "name": "rubbish",
+                "title": "Rubbish",
+                "amount": 3,
+                "image_path": "rubbish.webp"
+            }
+        ],
+        "prerequisites": "Get Unraveling a Fateful Bond first; Clear one room in City of Ephyra and return to the square"
+    },
+    "reviving_a_mournful_husk": {
+        "name": "Reviving a Mournful Husk",
+        "image_path": "reviving_a_mournful_husk.webp",
+        "description": "Make use of Golden Boughs in the Fields of Mourning, to better orient yourself there.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Make use of Golden Boughs in the Fields of Mourning, to better orient yourself there."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "myrtle",
+                "title": "Myrtle",
+                "amount": 1,
+                "image_path": "myrtle.webp"
+            }
+        ],
+        "prerequisites": "Reach the Fields of Mourning"
+    },
+    "temporal_fluctuation": {
+        "name": "Temporal Fluctuation",
+        "image_path": "temporal_fluctuation.webp",
+        "description": "Remove immunity from Chronos to time-altering effects such as the Hex of Phase Shift.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Remove immunity from Chronos to time-altering effects such as the Hex of Phase Shift."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "moly",
+                "title": "Moly",
+                "amount": 2,
+                "image_path": "moly.webp"
+            },
+            {
+                "name": "fate_fabric",
+                "title": "Fate Fabric",
+                "amount": 7,
+                "image_path": "fate_fabric.webp"
+            },
+            {
+                "name": "shaderot",
+                "title": "Shaderot",
+                "amount": 2,
+                "image_path": "shaderot.webp"
+            }
+        ],
+        "prerequisites": "Used Phase Shift on Chronos or equipped Eternity while facing him once"
+    },
+    "power_to_pause_and_reflect": {
+        "name": "Power to Pause and Reflect",
+        "image_path": "power_to_pause_and_reflect.webp",
+        "description": "Suppress the ability for Chronos to prevent you from pausing your Vow of Rivals confrontations.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Suppress the ability for Chronos to prevent you from pausing your Vow of Rivals confrontations."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "moly",
+                "title": "Moly",
+                "amount": 3,
+                "image_path": "moly.webp"
+            },
+            {
+                "name": "zodiac_sand",
+                "title": "Zodiac Sand",
+                "amount": 3,
+                "image_path": "zodiac_sand.webp"
+            }
+        ],
+        "prerequisites": "Pause during the Vow of Rivals 4 Chronos fight."
+    },
+    "gathering_of_ancient_bones": {
+        "name": "Gathering of Ancient Bones",
+        "image_path": "gathering_of_ancient_bones.webp",
+        "description": "Cause a random Main Weapon each night to have Grave Thirst, yielding Bones in each Location.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Cause a random Main Weapon each night to have Grave Thirst, yielding"
+            },
+            {
+                "type": "image",
+                "name": "Bones",
+                "img_path": "bones.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "in each Location."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "limestone",
+                "title": "Limestone",
+                "amount": 2,
+                "image_path": "limestone.webp"
+            }
+        ],
+        "prerequisites": "Get Summoning of Mercantile Fortune first; Get the Sister Blades at the The Silver Pool; Get Reagent Sensing first"
+    },
+    "gathering_of_subterranean_riches": {
+        "name": "Gathering of Subterranean Riches",
+        "image_path": "gathering_of_subterranean_riches.webp",
+        "description": "Enhance Grave Thirst to also unearth Gemstones whenever you vanquish Guardians.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Enhance Grave Thirst to also unearth"
+            },
+            {
+                "type": "image",
+                "name": "Gemstones",
+                "img_path": "gemstones.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "whenever you vanquish Guardians."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "fate_fabric",
+                "title": "Fate Fabric",
+                "amount": 3,
+                "image_path": "fate_fabric.webp"
+            },
+            {
+                "name": "marble",
+                "title": "Marble",
+                "amount": 2,
+                "image_path": "marble.webp"
+            }
+        ],
+        "prerequisites": "Earthly Fortune first then complete 2 runs; Beat Chronos and Eris once each; Spend 100"
+    },
+    "kindred_keepsakes": {
+        "name": "Kindred Keepsakes",
+        "image_path": "kindred_keepsakes.webp",
+        "description": "Manifest your collection of Keepsakes in the spaces separating each Region.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Manifest your collection of Keepsakes in the spaces separating each Region."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "limestone",
+                "title": "Limestone",
+                "amount": 4,
+                "image_path": "limestone.webp"
+            },
+            {
+                "name": "lotus",
+                "title": "Lotus",
+                "amount": 1,
+                "image_path": "lotus.webp"
+            },
+            {
+                "name": "moly",
+                "title": "Moly",
+                "amount": 2,
+                "image_path": "moly.webp"
+            }
+        ],
+        "prerequisites": "beat Hecate once; Get Woodsy Lifespring first; Get 2 or more Keepsakes through gifting"
+    },
+    "quickening_of_sentimental_value": {
+        "name": "Quickening of Sentimental Value",
+        "image_path": "quickening_of_sentimental_value.webp",
+        "description": "Cause your equipped Keepsakes to reach the next rank 100% faster than before.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Cause your equipped Keepsakes to reach the next rank 100% faster than before."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "moss",
+                "title": "Moss",
+                "amount": 4,
+                "image_path": "moss.webp"
+            },
+            {
+                "name": "twin_lures",
+                "title": "Twin Lures",
+                "amount": 1,
+                "image_path": "twin_lures.webp"
+            }
+        ],
+        "prerequisites": "Get 23 or more Keepsakes through gifting"
+    },
+    "rage_of_the_elements": {
+        "name": "Rage of the Elements",
+        "image_path": "rage_of_the_elements.webp",
+        "description": "Re-energize the gods' statues on Mount Olympus which you may then use to repel your foe.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Re-energize the gods' statues on Mount Olympus which you may then use to repel your foe."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "serpent_scales",
+                "title": "Serpent Scales",
+                "amount": 4,
+                "image_path": "serpent_scales.webp"
+            },
+            {
+                "name": "cinder",
+                "title": "Cinder",
+                "amount": 1,
+                "image_path": "cinder.webp"
+            }
+        ],
+        "prerequisites": "Get Frozen Lifespring first; Faced Typhon once"
+    },
+    "circles_of_protection": {
+        "name": "Circles of Protection",
+        "image_path": "circles_of_protection.webp",
+        "description": "Activate Warding Circles found throughout Erebus, to then use to your advantage.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Activate Warding Circles found throughout Erebus, to then use to your advantage."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "silver",
+                "title": "Silver",
+                "amount": 2,
+                "image_path": "silver.webp"
+            },
+            {
+                "name": "iris",
+                "title": "Iris",
+                "amount": 2,
+                "image_path": "iris.webp"
+            }
+        ],
+        "prerequisites": "Faced Hecate once; Faced Polyphemus once; Get Gathering of Ancient Bones first; Get Necromantic Influence first; Get Exhumed Troves first; Get Rush of Fresh Air first; Get Surge of Fresh Air first"
+    },
+    "circles_of_the_moon": {
+        "name": "Circles of the Moon",
+        "image_path": "circles_of_the_moon.webp",
+        "description": "Whenever you activate Warding Circles, fully recharge your Hex if it's not ready.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Whenever you activate Warding Circles, fully recharge your Hex if it's not ready."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "nightshade",
+                "title": "Nightshade",
+                "amount": 4,
+                "image_path": "nightshade.webp"
+            },
+            {
+                "name": "mandrake",
+                "title": "Mandrake",
+                "amount": 1,
+                "image_path": "mandrake.webp"
+            }
+        ],
+        "prerequisites": "Received a Hex from Selene once; Circles of Protection first and complete two or more runs afterwards; Use Warding Circles 5 or more times"
+    },
+    "necromantic_influence": {
+        "name": "Necromantic Influence",
+        "image_path": "necromantic_influence.webp",
+        "description": "Gain the ability to Sprint into any Lone Shades you encounter to turn them against your foes.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Gain the ability to Sprint into any Lone Shades you encounter to turn them against your foes."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "psyche",
+                "title": "Psyche",
+                "amount": 5,
+                "image_path": "psyche.webp"
+            },
+            {
+                "name": "nightshade",
+                "title": "Nightshade",
+                "amount": 5,
+                "image_path": "nightshade.webp"
+            }
+        ],
+        "prerequisites": "Get Woodsy Lifespring first; Get Gathering of Ancient Bones first; Have 21"
+    },
+    "exhumed_troves": {
+        "name": "Exhumed Troves",
+        "image_path": "exhumed_troves.webp",
+        "description": "Cause Locations throughout the Underworld to sometimes contain an Infernal Trove.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Cause Locations throughout the Underworld to sometimes contain an Infernal Trove."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "nightshade",
+                "title": "Nightshade",
+                "amount": 1,
+                "image_path": "nightshade.webp"
+            },
+            {
+                "name": "limestone",
+                "title": "Limestone",
+                "amount": 5,
+                "image_path": "limestone.webp"
+            }
+        ],
+        "prerequisites": "Faced Hecate once; Get Summoning of Mercantile Fortune first; Get Night's Craftwork first; Get Woodsy Lifespring first; Get Kindred Keepsakes first; Get Surge of Stygian Wells first"
+    },
+    "eyes_of_night_and_darkness": {
+        "name": "Eyes of Night and Darkness",
+        "image_path": "eyes_of_night_and_darkness.webp",
+        "description": "Causes Locations to sometimes contain a Moon Monument or an Unseen Sigil.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Causes Locations to sometimes contain a Moon Monument or an Unseen Sigil."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "glassrock",
+                "title": "Glassrock",
+                "amount": 2,
+                "image_path": "glassrock.webp"
+            },
+            {
+                "name": "adamant",
+                "title": "Adamant",
+                "amount": 2,
+                "image_path": "adamant.webp"
+            }
+        ],
+        "prerequisites": "Faced Chronos once.; Faced Polyphemus once; Get Exhumed Troves first; Get Arisen Troves first"
+    },
+    "arisen_troves": {
+        "name": "Arisen Troves",
+        "image_path": "arisen_troves.webp",
+        "description": "Cause Locations upon the surface to sometimes contain an Infernal Trove.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Cause Locations upon the surface to sometimes contain an Infernal Trove."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "limestone",
+                "title": "Limestone",
+                "amount": 1,
+                "image_path": "limestone.webp"
+            },
+            {
+                "name": "iron",
+                "title": "Iron",
+                "amount": 2,
+                "image_path": "iron.webp"
+            }
+        ],
+        "prerequisites": "Faced Eris once; Get Unraveling a Fateful Bond first; Get Exhumed Troves first"
+    },
+    "bounties_of_the_infinite_abyss": {
+        "name": "Bounties of the Infinite Abyss",
+        "image_path": "bounties_of_the_infinite_abyss.webp",
+        "description": "Cause Locations in Tartarus or The Summit to sometimes contain a Gift of Night.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Cause Locations in Tartarus or The Summit to sometimes contain a Gift of Night."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "glassrock",
+                "title": "Glassrock",
+                "amount": 6,
+                "image_path": "glassrock.webp"
+            },
+            {
+                "name": "serpent_scales",
+                "title": "Serpent Scales",
+                "amount": 6,
+                "image_path": "serpent_scales.webp"
+            }
+        ],
+        "prerequisites": "Faced Chronos and Typhon once each; Clear a run of either The Surface or The Underworld with 8 or more"
+    },
+    "ashen_memories_of_life": {
+        "name": "Ashen Memories of Life",
+        "image_path": "ashen_memories_of_life.webp",
+        "description": "Whenever you claim rewards of Ashes, gain +5 Health.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Whenever you claim rewards of"
+            },
+            {
+                "type": "image",
+                "name": "Ashes",
+                "img_path": "ashes.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": ", gain +5"
+            },
+            {
+                "type": "image",
+                "name": "Health",
+                "img_path": "health.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "ashes",
+                "title": "Ashes",
+                "amount": 60,
+                "image_path": "ashes.webp"
+            },
+            {
+                "name": "cattail",
+                "title": "Cattail",
+                "amount": 4,
+                "image_path": "cattail.webp"
+            },
+            {
+                "name": "star_dust",
+                "title": "Star Dust",
+                "amount": 1,
+                "image_path": "star_dust.webp"
+            }
+        ],
+        "prerequisites": "Gather 800; Gather 7,500; Gather 50"
+    },
+    "bones_of_arcane_wisdom": {
+        "name": "Bones of Arcane Wisdom",
+        "image_path": "bones_of_arcane_wisdom.webp",
+        "description": "Whenever you claim rewards of Bones, gain +5 MagickUp.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Whenever you claim rewards of"
+            },
+            {
+                "type": "image",
+                "name": "Bones",
+                "img_path": "bones.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": ", gain +5"
+            },
+            {
+                "type": "image",
+                "name": "MagickUp",
+                "img_path": "magickup.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "wheat",
+                "title": "Wheat",
+                "amount": 2,
+                "image_path": "wheat.webp"
+            },
+            {
+                "name": "fate_fabric",
+                "title": "Fate Fabric",
+                "amount": 10,
+                "image_path": "fate_fabric.webp"
+            },
+            {
+                "name": "star_dust",
+                "title": "Star Dust",
+                "amount": 1,
+                "image_path": "star_dust.webp"
+            }
+        ],
+        "prerequisites": "Gather 800; Gather 7,500; Gather 50"
+    },
+    "nectar_of_godly_savor": {
+        "name": "Nectar of Godly Savor",
+        "image_path": "nectar_of_godly_savor.webp",
+        "description": "Whenever you claim rewards of Nectar, gain +1 RandomPom.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Whenever you claim rewards of"
+            },
+            {
+                "type": "image",
+                "name": "Nectar",
+                "img_path": "nectar.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": ", gain +1"
+            },
+            {
+                "type": "image",
+                "name": "RandomPom",
+                "img_path": "randompom.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "garlic",
+                "title": "Garlic",
+                "amount": 8,
+                "image_path": "garlic.webp"
+            },
+            {
+                "name": "nectar",
+                "title": "Nectar",
+                "amount": 2,
+                "image_path": "nectar.webp"
+            },
+            {
+                "name": "star_dust",
+                "title": "Star Dust",
+                "amount": 1,
+                "image_path": "star_dust.webp"
+            }
+        ],
+        "prerequisites": "Gather 800; Gather 7,500; Gather 50"
+    },
+    "rite_of_social_solidarity": {
+        "name": "Rite of Social Solidarity",
+        "image_path": "rite_of_social_solidarity.webp",
+        "description": "Restore the Crossroads Taverna, where Shades and others rest and recover. Grants +1 Ambrosia.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Restore the Crossroads Taverna, where Shades and others rest and recover. Grants +1"
+            },
+            {
+                "type": "image",
+                "name": "Ambrosia",
+                "img_path": "ambrosia.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "nectar",
+                "title": "Nectar",
+                "amount": 2,
+                "image_path": "nectar.webp"
+            },
+            {
+                "name": "garlic",
+                "title": "Garlic",
+                "amount": 2,
+                "image_path": "garlic.webp"
+            }
+        ],
+        "prerequisites": "Give gifts to 12 or more"
+    },
+    "rite_of_vapor_cleansing": {
+        "name": "Rite of Vapor-Cleansing",
+        "image_path": "rite_of_vapor_cleansing.webp",
+        "description": "Restore the Crossroads Hot Springs, so they may be used (min. two guests at a time). Grants +1 Bath Salts.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Restore the Crossroads Hot Springs, so they may be used (min. two guests at a time). Grants +1"
+            },
+            {
+                "type": "image",
+                "name": "Bath Salts",
+                "img_path": "bath_salts.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "moly",
+                "title": "Moly",
+                "amount": 2,
+                "image_path": "moly.webp"
+            },
+            {
+                "name": "lotus",
+                "title": "Lotus",
+                "amount": 2,
+                "image_path": "lotus.webp"
+            },
+            {
+                "name": "nightshade",
+                "title": "Nightshade",
+                "amount": 2,
+                "image_path": "nightshade.webp"
+            }
+        ],
+        "prerequisites": "Arrival of Moros at the Crossroads; Give gifts to 6 or more; Give gifts to 2 or more to any one of: Hecate , Odysseus , Nemesis , Eris , Moros , Dora , or Icarus"
+    },
+    "rite_of_river_fording": {
+        "name": "Rite of River-Fording",
+        "image_path": "rite_of_river_fording.webp",
+        "description": "Restore the Crossroads Fishing Pier, so it may be used (min. two guests at a time). Grants +1 Twin Lures.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Restore the Crossroads Fishing Pier, so it may be used (min. two guests at a time). Grants +1"
+            },
+            {
+                "type": "image",
+                "name": "Twin Lures",
+                "img_path": "twin_lures.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "cattail",
+                "title": "Cattail",
+                "amount": 2,
+                "image_path": "cattail.webp"
+            },
+            {
+                "name": "driftwood",
+                "title": "Driftwood",
+                "amount": 4,
+                "image_path": "driftwood.webp"
+            }
+        ],
+        "prerequisites": "Give gifts to 12 or more; Rod of Fishing first (see Night's Craftwork )"
+    },
+    "flourishing_soil": {
+        "name": "Flourishing Soil",
+        "image_path": "flourishing_soil.webp",
+        "description": "Create two Soil Plots, for growing Nightshade and other plants. Grants +1 Nightshade Seeds.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Create two Soil Plots, for growing"
+            },
+            {
+                "type": "image",
+                "name": "Nightshade",
+                "img_path": "nightshade.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "and other plants. Grants +1"
+            },
+            {
+                "type": "image",
+                "name": "Nightshade Seeds",
+                "img_path": "nightshade_seeds.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "moly",
+                "title": "Moly",
+                "amount": 1,
+                "image_path": "moly.webp"
+            }
+        ],
+        "prerequisites": "Gather 6 or more"
+    },
+    "rich_soil": {
+        "name": "Rich Soil",
+        "image_path": "rich_soil.webp",
+        "description": "Create two Soil Plots in the space next to the others near the grove.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Create two Soil Plots in the space next to the others near the grove."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "cattail",
+                "title": "Cattail",
+                "amount": 3,
+                "image_path": "cattail.webp"
+            }
+        ],
+        "prerequisites": "Get Flourishing Soil first; Harvested at least 4 , 1 and 1 ."
+    },
+    "verdant_soil": {
+        "name": "Verdant Soil",
+        "image_path": "verdant_soil.webp",
+        "description": "Create two Soil Plots in the remaining space next to the others near the grove..",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Create two Soil Plots in the remaining space next to the others near the grove.."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "wheat",
+                "title": "Wheat",
+                "amount": 1,
+                "image_path": "wheat.webp"
+            },
+            {
+                "name": "garlic",
+                "title": "Garlic",
+                "amount": 1,
+                "image_path": "garlic.webp"
+            }
+        ],
+        "prerequisites": "Get Rich Soil first; Harvested at least 4 , 4 , 4 and 1 ."
+    },
+    "observance_of_gaia_s_secrets": {
+        "name": "Observance of Gaia's Secrets",
+        "image_path": "observance_of_gaia_s_secrets.webp",
+        "description": "Gain +35% chance to find +1 Seed for whatever you gather from Soil Plots whenever you harvest.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Gain +35% chance to find +1 Seed for whatever you gather from Soil Plots whenever you harvest."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "moss",
+                "title": "Moss",
+                "amount": 4,
+                "image_path": "moss.webp"
+            },
+            {
+                "name": "wheat",
+                "title": "Wheat",
+                "amount": 4,
+                "image_path": "wheat.webp"
+            }
+        ],
+        "prerequisites": "Get all Gathering Tools at the The Silver Pool; Get Greater Favor of Gaia first; Get Verdant Soil first"
+    },
+    "green_hand_of_gaia": {
+        "name": "Green Hand of Gaia",
+        "image_path": "green_hand_of_gaia.webp",
+        "description": "Improve gathering from Soil Plots so that you harvest all flourished Soil Plots at once.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Improve gathering from Soil Plots so that you harvest all flourished Soil Plots at once."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "wheat",
+                "title": "Wheat",
+                "amount": 2,
+                "image_path": "wheat.webp"
+            },
+            {
+                "name": "snake_reed",
+                "title": "Snake-Reed",
+                "amount": 1,
+                "image_path": "snake_reed.webp"
+            }
+        ],
+        "prerequisites": "Get Verdant Soil first; Get Observance of Gaia's Secrets first; Plant 90 Seeds"
+    },
+    "greater_sowing_of_gardens": {
+        "name": "Greater Sowing of Gardens",
+        "image_path": "greater_sowing_of_gardens.webp",
+        "description": "Gain the ability to plant multiples of the same type of seed in all available Soil Plots at once.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Gain the ability to plant multiples of the same type of seed in all available Soil Plots at once."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "olive",
+                "title": "Olive",
+                "amount": 2,
+                "image_path": "olive.webp"
+            },
+            {
+                "name": "poppy",
+                "title": "Poppy",
+                "amount": 1,
+                "image_path": "poppy.webp"
+            }
+        ],
+        "prerequisites": "Get Verdant Soil first; Get Observance of Gaia's Secrets first; Plant 90 Seeds"
+    },
+    "greatest_gift_of_gaia": {
+        "name": "Greatest Gift of Gaia",
+        "image_path": "greatest_gift_of_gaia.webp",
+        "description": "Gain the power to automatically harvest any resource in each Location whenever you exit.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Gain the power to automatically harvest any resource in each Location whenever you exit."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "olive",
+                "title": "Olive",
+                "amount": 3,
+                "image_path": "olive.webp"
+            },
+            {
+                "name": "snake_reed",
+                "title": "Snake-Reed",
+                "amount": 3,
+                "image_path": "snake_reed.webp"
+            },
+            {
+                "name": "moon_dust",
+                "title": "Moon Dust",
+                "amount": 3,
+                "image_path": "moon_dust.webp"
+            }
+        ],
+        "prerequisites": "Use 30 Witch's Delight; Collect all seeds, flora, ores and fish, including chaos variants; Use the Silver Spade and Crescent Pick over 100 times each; Use Tablet of Peace and Rod of Fishing over 50 times each"
+    },
+    "empath_s_intuition": {
+        "name": "Empath's Intuition",
+        "image_path": "empath_s_intuition.webp",
+        "description": "Update the Book of Shadows with insight into relationship status with one's acquaintances.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Update the Book of Shadows with insight into relationship status with one's acquaintances."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "myrtle",
+                "title": "Myrtle",
+                "amount": 3,
+                "image_path": "myrtle.webp"
+            },
+            {
+                "name": "fate_fabric",
+                "title": "Fate Fabric",
+                "amount": 1,
+                "image_path": "fate_fabric.webp"
+            }
+        ],
+        "prerequisites": "Get Book of Shadows first; Get 9 or more Keepsakes through gifting; Gather 4 or more; Give gifts to 2 or more to any one NPC"
+    },
+    "summoning_of_musical_rhapsody": {
+        "name": "Summoning of Musical Rhapsody",
+        "image_path": "summoning_of_musical_rhapsody.webp",
+        "description": "Persuade the Music Maker to appear, who can perform a variety of renowned melodies.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Persuade the Music Maker to appear, who can perform a variety of renowned melodies."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "tears",
+                "title": "Tears",
+                "amount": 1,
+                "image_path": "tears.webp"
+            },
+            {
+                "name": "lotus",
+                "title": "Lotus",
+                "amount": 2,
+                "image_path": "lotus.webp"
+            }
+        ],
+        "prerequisites": "Get Rite of Social Solidarity first; Crossroads Renewal Project first talk to Dora; Spent 500"
+    },
+    "shuffling_of_noted_ballads": {
+        "name": "Shuffling of Noted Ballads",
+        "image_path": "shuffling_of_noted_ballads.webp",
+        "description": "Induce the Music Maker to optionally choose which melodies to play based on whim alone.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Induce the Music Maker to optionally choose which melodies to play based on whim alone."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "shaderot",
+                "title": "Shaderot",
+                "amount": 1,
+                "image_path": "shaderot.webp"
+            },
+            {
+                "name": "fangs",
+                "title": "Fangs",
+                "amount": 1,
+                "image_path": "fangs.webp"
+            },
+            {
+                "name": "mystery_seed",
+                "title": "Mystery Seed",
+                "amount": 2,
+                "image_path": "mystery_seed.webp"
+            }
+        ],
+        "prerequisites": "Get Summoning of Musical Rhapsody first; Purchased 5 or more songs with Music Maker"
+    },
+    "summoning_of_historic_travails": {
+        "name": "Summoning of Historic Travails",
+        "image_path": "summoning_of_historic_travails.webp",
+        "description": "Persuade the Learned Sage to appear, with whom you may review the outcomes of your every night.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Persuade the Learned Sage to appear, with whom you may review the outcomes of your every night."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "marble",
+                "title": "Marble",
+                "amount": 1,
+                "image_path": "marble.webp"
+            },
+            {
+                "name": "zodiac_sand",
+                "title": "Zodiac Sand",
+                "amount": 1,
+                "image_path": "zodiac_sand.webp"
+            }
+        ],
+        "prerequisites": "Get Summoning of Mercantile Fortune first; Get Rite of Social Solidarity first; beat Polyphemus once; beat Chronos once"
+    },
+    "summoning_of_personal_insights": {
+        "name": "Summoning of Personal Insights",
+        "image_path": "summoning_of_personal_insights.webp",
+        "description": "Persuade the Record Keeper to appear, from whom you may learn enlightening statistical details.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Persuade the Record Keeper to appear, from whom you may learn enlightening statistical details."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "fate_fabric",
+                "title": "Fate Fabric",
+                "amount": 4,
+                "image_path": "fate_fabric.webp"
+            },
+            {
+                "name": "shaderot",
+                "title": "Shaderot",
+                "amount": 1,
+                "image_path": "shaderot.webp"
+            }
+        ],
+        "prerequisites": "Get Summoning of Mercantile Fortune first; Get Rite of Social Solidarity first; beat Chronos twice"
+    },
+    "returning_to_a_real_possibility": {
+        "name": "Returning to a Real Possibility",
+        "image_path": "returning_to_a_real_possibility.webp",
+        "description": "Reminisce at the Fountain of the Dead to return to the earliest point in your journey, if you wish.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Reminisce at the Fountain of the Dead to return to the earliest point in your journey, if you wish."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "fate_fabric",
+                "title": "Fate Fabric",
+                "amount": 3,
+                "image_path": "fate_fabric.webp"
+            },
+            {
+                "name": "star_dust",
+                "title": "Star Dust",
+                "amount": 1,
+                "image_path": "star_dust.webp"
+            }
+        ],
+        "prerequisites": "Achieve the True Ending"
+    },
+    "greater_removal_of_rubbish": {
+        "name": "Greater Removal of Rubbish",
+        "image_path": "greater_removal_of_rubbish.webp",
+        "description": "Make it so whenever you collect Rubbish, you automatically collect the rest in the vicinity.",
+        "description_rich": [
+            {
+                "type": "text_normal",
+                "value": "Make it so whenever you collect"
+            },
+            {
+                "type": "image",
+                "name": "Rubbish",
+                "img_path": "rubbish.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": ", you automatically collect the rest in the vicinity."
+            }
+        ],
+        "unlock_requirements": [
+            {
+                "name": "moss",
+                "title": "Moss",
+                "amount": 3,
+                "image_path": "moss.webp"
+            },
+            {
+                "name": "garlic",
+                "title": "Garlic",
+                "amount": 3,
+                "image_path": "garlic.webp"
+            }
+        ],
+        "prerequisites": "Bought the Basket, Rubbish decoration from the Crossroads Renewal Project; Give 2 gifts to Eris; Gather 40"
+    }
+}
