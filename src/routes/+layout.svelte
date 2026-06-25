@@ -2,8 +2,8 @@
   import "./layout.css";
   import "$lib/fonts/roboto.css";
   import robotoLatin from "@fontsource-variable/roboto/files/roboto-latin-wght-normal.woff2?url";
-  import { faviconImg } from "$lib/assets/faviconImage";
   import SeoHead from "$lib/components/SeoHead.svelte";
+  import { FAVICON_PATH } from "$lib/seo";
   import { goto } from "$app/navigation";
   import { resolve } from "$app/paths";
   import { page } from "$app/state";
@@ -85,7 +85,7 @@
 {/if}
 
 <svelte:head>
-  <link rel="icon" href={faviconImg.img.src} />
+  <link rel="icon" href={FAVICON_PATH} type="image/png" />
   <link
     rel="preload"
     href={robotoLatin}
@@ -119,9 +119,11 @@
           <div
             class="absolute inset-0 bg-[#46f08f] rounded-full blur-sm opacity-0 group-hover:opacity-40 transition-opacity"
           ></div>
-          <enhanced:img
-            src={faviconImg}
+          <img
+            src={FAVICON_PATH}
             alt=""
+            width="24"
+            height="24"
             class="w-full h-full relative z-10"
           />
         </div>

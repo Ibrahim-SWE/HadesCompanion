@@ -1,5 +1,6 @@
 export const SITE_ORIGIN = "https://hadescompanion.com";
 export const SITE_NAME = "Hades 2 Companion";
+export const FAVICON_PATH = "/favicon.png";
 
 export type SeoMeta = {
   title: string;

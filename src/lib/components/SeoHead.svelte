@@ -1,7 +1,11 @@
 <script lang="ts">
-  import { faviconImg } from "$lib/assets/faviconImage";
   import { serializeJsonLd } from "$lib/json-ld";
-  import { absoluteUrl, SITE_NAME, type SeoMeta } from "$lib/seo";
+  import {
+    absoluteUrl,
+    FAVICON_PATH,
+    SITE_NAME,
+    type SeoMeta,
+  } from "$lib/seo";
 
   let {
     title,
@@ -13,7 +17,7 @@
   }: SeoMeta = $props();
 
   let canonical = $derived(absoluteUrl(canonicalPath));
-  let image = $derived(ogImage ?? absoluteUrl(faviconImg.img.src));
+  let image = $derived(ogImage ?? absoluteUrl(FAVICON_PATH));
   let jsonLdSchemas = $derived(
     jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [],
   );
