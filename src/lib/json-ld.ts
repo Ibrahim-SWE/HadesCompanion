@@ -1,4 +1,6 @@
 import boonsData from "$lib/data/hades2/boons.json";
+import alchemyData from "$lib/data/hades2/alchemy.json";
+import incantationsData from "$lib/data/hades2/incantations.json";
 import arcanaCardsData from "$lib/data/hades2/arcana_cards.json";
 import cursesData from "$lib/data/hades2/curses.json";
 import keepsakesData from "$lib/data/hades2/keepsakes.json";
@@ -223,6 +225,28 @@ export function jsonLdForToolsList(): JsonLd[] {
       description: PAGE_SEO.tools.description,
     },
     items,
+  );
+}
+
+export function jsonLdForCauldronList(): JsonLd[] {
+  const alchemyItems = Object.values(
+    alchemyData as Record<string, { name: string }>,
+  )
+    .map((recipe) => ({ name: recipe.name }))
+    .sort((a, b) => a.name.localeCompare(b.name));
+
+  const incantationItems = Object.values(
+    incantationsData as Record<string, { name: string }>,
+  ).map((incantation) => ({ name: incantation.name }));
+
+  return listPageJsonLd(
+    {
+      breadcrumbName: "The Cauldron",
+      path: "/hades2/cauldron",
+      title: "The Cauldron",
+      description: PAGE_SEO.cauldron.description,
+    },
+    [...alchemyItems, ...incantationItems],
   );
 }
 

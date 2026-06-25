@@ -29,7 +29,12 @@
                 "image_path": "gigaros.webp"
             }
         ],
-        "prerequisites": "Beat Typhon many times and talk to Hecate after each fight"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Beat Typhon many times and talk to Hecate after each fight"
+            }
+        ]
     },
     "dissolution_of_time": {
         "name": "Dissolution of Time",
@@ -55,7 +60,12 @@
                 "image_path": "entropy.webp"
             }
         ],
-        "prerequisites": "Beat Chronos once and talk to Hecate"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Beat Chronos once and talk to Hecate"
+            }
+        ]
     },
     "unraveling_a_fateful_bond": {
         "name": "Unraveling a Fateful Bond",
@@ -93,7 +103,20 @@
                 "image_path": "thalamus.webp"
             }
         ],
-        "prerequisites": "Get Permeation of Witching-Wards first; Talk to Moros after going to the Surface"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Permeation of Witching-Wards first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Talk to Moros after going to the Surface"
+            }
+        ]
     },
     "permeation_of_witching_wards": {
         "name": "Permeation of Witching-Wards",
@@ -125,7 +148,12 @@
                 "image_path": "shadow.webp"
             }
         ],
-        "prerequisites": "Talk to Hecate twice after learning about the plight on the Surface from Hermes"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Talk to Hecate twice after learning about the plight on the Surface from Hermes"
+            }
+        ]
     },
     "fated_intervention": {
         "name": "Fated Intervention",
@@ -157,7 +185,12 @@
                 "image_path": "moly.webp"
             }
         ],
-        "prerequisites": "Get Night's Craftwork"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Night's Craftwork"
+            }
+        ]
     },
     "doomed_beckoning": {
         "name": "Doomed Beckoning",
@@ -183,7 +216,12 @@
                 "image_path": "fate_fabric.webp"
             }
         ],
-        "prerequisites": "See the Harbinger of Doom prophecy after meeting Moros"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "See the Harbinger of Doom prophecy after meeting Moros"
+            }
+        ]
     },
     "purification_of_crystal_clarity": {
         "name": "Purification of Crystal Clarity",
@@ -215,7 +253,12 @@
                 "image_path": "tears.webp"
             }
         ],
-        "prerequisites": "Visit and interact with both Narcissus and Echo multiple times, then trigger a specific interaction with Nemesis ."
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Visit and interact with both Narcissus and Echo multiple times, then trigger a specific interaction with Nemesis"
+            }
+        ]
     },
     "return_of_latent_memories": {
         "name": "Return of Latent Memories",
@@ -247,7 +290,44 @@
                 "image_path": "star_dust.webp"
             }
         ],
-        "prerequisites": "Talk to Dora after confronting Prometheus; Fight Prometheus to trigger a possible conversation about Dora; Talk to Dora again; Fight Prometheus to trigger a second conversation about Dora; Talk to Dora"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Talk to Dora after confronting Prometheus"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Fight Prometheus to trigger a possible conversation about Dora"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Talk to Dora again"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Fight Prometheus to trigger a second conversation about Dora"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Talk to Dora"
+            }
+        ]
     },
     "essence_of_sorrow": {
         "name": "Essence of Sorrow",
@@ -276,7 +356,12 @@
                 "image_path": "tears.webp"
             }
         ],
-        "prerequisites": "Received Bitter Tears Prophecy from Medea"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Received Bitter TearsProphecy from Medea"
+            }
+        ]
     },
     "augmentation_of_bone_density": {
         "name": "Augmentation of Bone Density",
@@ -314,7 +399,12 @@
                 "image_path": "nightmare.webp"
             }
         ],
-        "prerequisites": "Spoke with Schelemeus after reaching the 6th Affinity"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Talk to Schelemeus after reaching the 6th Affinity"
+            }
+        ]
     },
     "end_to_deepest_slumber": {
         "name": "End to Deepest Slumber",
@@ -355,7 +445,42 @@
                 "image_path": "poppy.webp"
             }
         ],
-        "prerequisites": "Give at least 2 gifts to Hypnos; Gather at least 1; Then initiate conversation with Hypnos"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Give at least 2"
+            },
+            {
+                "type": "image",
+                "name": "Nectar",
+                "img_path": "nectar.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "to Hypnos"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Gather at least 1"
+            },
+            {
+                "type": "image",
+                "name": "Poppy",
+                "img_path": "poppy.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Then talk to Hypnos"
+            }
+        ]
     },
     "end_to_dearest_slumber": {
         "name": "End to Dearest Slumber",
@@ -396,7 +521,29 @@
                 "image_path": "poppy.webp"
             }
         ],
-        "prerequisites": "Give 1 gifts to Hypnos; Talk to Medea"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Give 1"
+            },
+            {
+                "type": "image",
+                "name": "Dream Vapors",
+                "img_path": "dream_vapors.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "to Hypnos"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Talk to Medea"
+            }
+        ]
     },
     "end_to_dumbest_slumber": {
         "name": "End to Dumbest Slumber",
@@ -437,7 +584,29 @@
                 "image_path": "house_soot.webp"
             }
         ],
-        "prerequisites": "Give 2 gifts to Hypnos; Talk to Medea"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Give 2"
+            },
+            {
+                "type": "image",
+                "name": "Dream Vapors",
+                "img_path": "dream_vapors.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "to Hypnos"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Talk to Medea"
+            }
+        ]
     },
     "aspects_of_night_and_darkness": {
         "name": "Aspects of Night and Darkness",
@@ -463,7 +632,44 @@
                 "image_path": "nightshade.webp"
             }
         ],
-        "prerequisites": "Beat Hecate 5 or more times; Unlock 4 of the Nocturnal Arms ( Black Coat does not count); Hecate gives this after you meet the conditions; After beating Hecate in Erebus (6 kills total needed); Do 3 runs to The Surface in a row, then talk to Hecate at The Crossroads"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Beat Hecate 5 or more times"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Unlock 4 of the Nocturnal Arms (Black Coat does not count)"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Hecate gives this after you meet the conditions"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "After beating Hecate in Erebus (6 kills total needed)"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Do 3 runs to The Surface in a row, then talk to Hecate at The Crossroads"
+            }
+        ]
     },
     "consecration_of_ashes": {
         "name": "Consecration of Ashes",
@@ -504,7 +710,49 @@
                 "image_path": "ashes.webp"
             }
         ],
-        "prerequisites": "Beat Hecate 5 or more times; Have at least 20; Unlock 10 or more Arcana Cards; Get Summoning of Mercantile Fortune first"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Hecate gives this after you meet the conditions"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Beat Hecate 5 or more times"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Have at least 20"
+            },
+            {
+                "type": "image",
+                "name": "Grasp",
+                "img_path": "grasp.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Unlock 10 or more Arcana Cards"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Summoning of Mercantile Fortune first"
+            }
+        ]
     },
     "abyssal_insight": {
         "name": "Abyssal Insight",
@@ -545,7 +793,20 @@
                 "image_path": "pearl.webp"
             }
         ],
-        "prerequisites": "Get Unraveling a Fateful Bond first; Convert 3 or more Chaos Curses into Blessings, then talk to Chaos"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Unraveling a Fateful Bond first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Convert 3+ Chaos Curses into Blessings, then talk to Chaos"
+            }
+        ]
     },
     "abyssal_reflection": {
         "name": "Abyssal Reflection",
@@ -586,7 +847,12 @@
                 "image_path": "darkness.webp"
             }
         ],
-        "prerequisites": "Finish at least 6 Chaos Trials or more"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Finish at least 6 Chaos Trials or more"
+            }
+        ]
     },
     "faith_of_familiar_spirits": {
         "name": "Faith of Familiar Spirits",
@@ -621,7 +887,20 @@
                 "image_path": "nectar.webp"
             }
         ],
-        "prerequisites": "beat Hecate 7 times; Gathered with the Crescent Pick 2 times, with the Tablet of Peace 8 times, and 1 time with the Silver Spade ."
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "beat Hecate7 times"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Gathered with the Crescent Pick2 times, with the Tablet of Peace8 times, and 1 time with the Silver Spade"
+            }
+        ]
     },
     "bravery_of_familiar_spirits": {
         "name": "Bravery of Familiar Spirits",
@@ -656,7 +935,29 @@
                 "image_path": "wheat.webp"
             }
         ],
-        "prerequisites": "Get Faith of Familiar Spirits first; Spend 4 or more on Animal Familiars"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Faith of Familiar Spirits first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Spend 4"
+            },
+            {
+                "type": "image",
+                "name": "Witch's Delight",
+                "img_path": "witch_s_delight.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "or more on Animal Familiars"
+            }
+        ]
     },
     "alteration_of_familiar_forms": {
         "name": "Alteration of Familiar Forms",
@@ -697,7 +998,63 @@
                 "image_path": "flux.webp"
             }
         ],
-        "prerequisites": "Get Have Frinos , Toula , Raki , Hecuba and Gale first; Spend 20 or more on Animal Familiars; Fully upgrade one of the Animal Familiars using; Have 30"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Circe gives this after you meet the conditions"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Have Frinos, Toula, Raki, Hecuba and Gale first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Spend 20"
+            },
+            {
+                "type": "image",
+                "name": "Witch's Delight",
+                "img_path": "witch_s_delight.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "or more on Animal Familiars"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Fully upgrade one of the Animal Familiars using"
+            },
+            {
+                "type": "image",
+                "name": "Witch's Delight",
+                "img_path": "witch_s_delight.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Have 30"
+            },
+            {
+                "type": "image",
+                "name": "Grasp",
+                "img_path": "grasp.webp"
+            }
+        ]
     },
     "greater_favor_of_gaia": {
         "name": "Greater Favor of Gaia",
@@ -729,7 +1086,20 @@
                 "image_path": "marble.webp"
             }
         ],
-        "prerequisites": "Get all Gathering Tools at the The Silver Pool; Get Divination of the Elements first"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get all Gathering Tools at the The Silver Pool"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Divination of the Elements first"
+            }
+        ]
     },
     "long_arm_of_the_unseen": {
         "name": "Long Arm of the Unseen",
@@ -764,7 +1134,41 @@
                 "image_path": "shadow.webp"
             }
         ],
-        "prerequisites": "Achieve the True Ending; Get Rite of Social Solidarity first; Get Alteration of Familiar Forms first; Spent 20,000"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get the True Ending"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Rite of Social Solidarity first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Alteration of Familiar Forms first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Spend 20,000"
+            },
+            {
+                "type": "image",
+                "name": "Kudos",
+                "img_path": "kudos.webp"
+            }
+        ]
     },
     "acceptance_of_another_fate": {
         "name": "Acceptance of Another Fate",
@@ -796,7 +1200,78 @@
                 "image_path": "void_lens.webp"
             }
         ],
-        "prerequisites": "Get Insight Into Offerings first; Get Favored of All Keepsakes first; Get Spreading of Ashes first; Obtained the second statue of the The Night's Champion , by conquering the Surface route at 12 Fear and the Underworld route at 16 Fear; beat Chronos 7 times or more; beat Typhon 7 times or more; Reach the Epilogue"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Insight Into Offerings first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Favored of All Keepsakes first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Spreading of Ashes first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get the second The Night's Champion, by conquering the Surface route at 12"
+            },
+            {
+                "type": "image",
+                "name": "Fear",
+                "img_path": "fear.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "Fear and the Underworld route at 16"
+            },
+            {
+                "type": "image",
+                "name": "Fear",
+                "img_path": "fear.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "Fear"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "beat Chronos 7 times or more"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "beat Typhon 7 times or more"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Reach the Epilogue"
+            }
+        ]
     },
     "night_s_craftwork": {
         "name": "Night's Craftwork",
@@ -834,7 +1309,7 @@
                 "image_path": "moly.webp"
             }
         ],
-        "prerequisites": null
+        "prerequisites_rich": null
     },
     "divination_of_the_elements": {
         "name": "Divination of the Elements",
@@ -854,7 +1329,20 @@
                 "image_path": "psyche.webp"
             }
         ],
-        "prerequisites": "Fight Scylla once; Spoken to Zeus once"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Fight Scylla once"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Spoken to Zeus once"
+            }
+        ]
     },
     "forget_me_not": {
         "name": "Forget-Me-Not",
@@ -874,7 +1362,20 @@
                 "image_path": "moly.webp"
             }
         ],
-        "prerequisites": "Get Flourishing Soil first; Get Fated Intervention first"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Flourishing Soil first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Fated Intervention first"
+            }
+        ]
     },
     "path_to_desired_blessings": {
         "name": "Path to Desired Blessings",
@@ -900,7 +1401,36 @@
                 "image_path": "snake_reed.webp"
             }
         ],
-        "prerequisites": "Get Forget-Me-Not first; Get Insight Into Offerings first; Finish the Underworld route 2 times or more; Finish the Surface route 2 times or more"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Forget-Me-Not first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Insight Into Offerings first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Finish the Underworld route 2 times or more"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Finish the Surface route 2 times or more"
+            }
+        ]
     },
     "spreading_of_ashes": {
         "name": "Spreading of Ashes",
@@ -926,7 +1456,54 @@
                 "image_path": "olive.webp"
             }
         ],
-        "prerequisites": "Have Arcana Cards first.; Consecration of Ashes first.; Have 28 or more; Spent at least 15 or more"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Have Arcana Cards first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Consecration of Ashes first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Have 28"
+            },
+            {
+                "type": "image",
+                "name": "Grasp",
+                "img_path": "grasp.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "or more"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Spend at least 15"
+            },
+            {
+                "type": "image",
+                "name": "Moon Dust",
+                "img_path": "moon_dust.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "or more"
+            }
+        ]
     },
     "favored_of_all_keepsakes": {
         "name": "Favored of All Keepsakes",
@@ -952,7 +1529,17 @@
                 "image_path": "shaderot.webp"
             }
         ],
-        "prerequisites": "Get 22 or more Keepsakes through gifting"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get 22 or more Keepsakes through gifting"
+            },
+            {
+                "type": "image",
+                "name": "Nectar",
+                "img_path": "nectar.webp"
+            }
+        ]
     },
     "reagent_sensing": {
         "name": "Reagent Sensing",
@@ -972,7 +1559,21 @@
                 "image_path": "moly.webp"
             }
         ],
-        "prerequisites": "Gather 5 (see Night's Craftwork )"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Gather 5"
+            },
+            {
+                "type": "image",
+                "name": "Silver",
+                "img_path": "silver.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "(see Night's Craftwork)"
+            }
+        ]
     },
     "insight_into_offerings": {
         "name": "Insight Into Offerings",
@@ -998,7 +1599,29 @@
                 "image_path": "fate_fabric.webp"
             }
         ],
-        "prerequisites": "Inspected the Book of Shadows; Give at least 1 gifts to each: Zeus , Hera , Poseidon , Demeter , Apollo , Aphrodite , Hephaestus , Hestia , Hermes , Chaos"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Inspected the Book of Shadows"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Give at least 1"
+            },
+            {
+                "type": "image",
+                "name": "Nectar",
+                "img_path": "nectar.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "to each:Zeus, Hera, Poseidon, Demeter, Apollo, Aphrodite, Hephaestus, Hestia, Hermes, Chaos"
+            }
+        ]
     },
     "summoning_of_mercantile_fortune": {
         "name": "Summoning of Mercantile Fortune",
@@ -1027,7 +1650,7 @@
                 "image_path": "bones.webp"
             }
         ],
-        "prerequisites": null
+        "prerequisites_rich": null
     },
     "deathly_fortune": {
         "name": "Deathly Fortune",
@@ -1071,7 +1694,44 @@
                 "image_path": "garlic.webp"
             }
         ],
-        "prerequisites": "Get Summoning of Mercantile Fortune first; Get Night's Craftwork first; Get Flourishing Soil first; See the Wretched Broker 's shop screen once.; catch a fish using Rod of Fishing once."
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Summoning of Mercantile Fortune first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Night's Craftwork first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Flourishing Soil first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "See the Wretched Broker's shop screen once"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "catch a fish using Rod of Fishing once"
+            }
+        ]
     },
     "kinship_fortune": {
         "name": "Kinship Fortune",
@@ -1100,7 +1760,20 @@
                 "image_path": "bones.webp"
             }
         ],
-        "prerequisites": "Get Summoning of Mercantile Fortune first; Get Night's Craftwork first"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Summoning of Mercantile Fortune first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Night's Craftwork first"
+            }
+        ]
     },
     "earthly_fortune": {
         "name": "Earthly Fortune",
@@ -1129,7 +1802,37 @@
                 "image_path": "bones.webp"
             }
         ],
-        "prerequisites": "Give gifts to to Dora once; talk to Dora; Have at least 40 progression upgrades or more (e.g., Incantations, unlocking Nocturnal Arms , unlocking Familiars , Relationships.)"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Give"
+            },
+            {
+                "type": "image",
+                "name": "Nectar",
+                "img_path": "nectar.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "to Dora once"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "talk to Dora"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Have at least 40 progression upgrades or more (e.g., Incantations, unlocking Nocturnal Arms, unlocking Familiars, Relationships.)"
+            }
+        ]
     },
     "rivals_of_depth_and_sea": {
         "name": "Rivals of Depth and Sea",
@@ -1155,7 +1858,36 @@
                 "image_path": "golden_apple.webp"
             }
         ],
-        "prerequisites": "Beat Hecate and Polyphemus with the Vow of Rivals activated; Beat Charybdis one or more times; Beat Scylla three or more times; Beat Eris three or more times"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Beat Hecate and Polyphemus with the Vow of Rivals activated"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Beat Charybdis one or more times"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Beat Scylla three or more times"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Beat Eris three or more times"
+            }
+        ]
     },
     "rivals_of_plain_and_peak": {
         "name": "Rivals of Plain and Peak",
@@ -1181,7 +1913,28 @@
                 "image_path": "feather.webp"
             }
         ],
-        "prerequisites": "Beat Scylla and Eris with the Vow of Rivals activated; Beat Cerberus three or more times; Beat Prometheus three or more times"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Beat Scylla and Eris with the Vow of Rivals activated"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Beat Cerberus three or more times"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Beat Prometheus three or more times"
+            }
+        ]
     },
     "rivals_of_old_and_rot": {
         "name": "Rivals of Old and Rot",
@@ -1213,7 +1966,36 @@
                 "image_path": "darkness.webp"
             }
         ],
-        "prerequisites": "Beat Cerberus and Prometheus with the Vow of Rivals activated; Beat Chronos three or more times; Beat Typhon three or more times; After obtaining the True Ending , speak with Chronos both at the end of Mount Olympus on The Surface route, and at the end of Tartarus on The Underworld route."
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Beat Cerberus and Prometheus with the Vow of Rivals activated"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Beat Chronos three or more times"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Beat Typhon three or more times"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "After obtaining the True Ending, speak with Chronos both at the end of Mount Olympus on The Surface route, and at the end of Tartarus on The Underworld route"
+            }
+        ]
     },
     "cleansing_of_fountain_waters": {
         "name": "Cleansing of Fountain-Waters",
@@ -1248,7 +2030,12 @@
                 "image_path": "moly.webp"
             }
         ],
-        "prerequisites": "Get Woodsy Lifespring first"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Woodsy Lifespring first"
+            }
+        ]
     },
     "purification_of_fountain_waters": {
         "name": "Purification of Fountain-Waters",
@@ -1283,7 +2070,12 @@
                 "image_path": "cattail.webp"
             }
         ],
-        "prerequisites": "Get Cleansing of Fountain-Waters first"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Cleansing of Fountain-Waters first"
+            }
+        ]
     },
     "rise_of_stygian_wells": {
         "name": "Rise of Stygian Wells",
@@ -1309,7 +2101,25 @@
                 "image_path": "nightshade.webp"
             }
         ],
-        "prerequisites": "Earned at least 1 Obol Points; Earned 1,500"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Earned at least 1 Obol Points"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Earned 1,500"
+            },
+            {
+                "type": "image",
+                "name": "Gold",
+                "img_path": "gold.webp"
+            }
+        ]
     },
     "surge_of_stygian_wells": {
         "name": "Surge of Stygian Wells",
@@ -1335,7 +2145,41 @@
                 "image_path": "glassrock.webp"
             }
         ],
-        "prerequisites": "Get Rise of Stygian Wells first; Get Cleansing of Fountain-Waters first; Earned 3,000; Faced Hecate once"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Rise of Stygian Wells first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Cleansing of Fountain-Waters first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Earned 3,000"
+            },
+            {
+                "type": "image",
+                "name": "Gold",
+                "img_path": "gold.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Faced Hecate once"
+            }
+        ]
     },
     "rush_of_fresh_air": {
         "name": "Rush of Fresh Air",
@@ -1367,7 +2211,36 @@
                 "image_path": "wool.webp"
             }
         ],
-        "prerequisites": "Get Rise of Stygian Wells first; Get Unraveling a Fateful Bond first; Get Summoning a Colony of Bats first; Encounter Polyphemus once"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Rise of Stygian Wells first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Unraveling a Fateful Bond first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Summoning a Colony of Bats first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Encounter Polyphemus once"
+            }
+        ]
     },
     "surge_of_fresh_air": {
         "name": "Surge of Fresh Air",
@@ -1399,7 +2272,33 @@
                 "image_path": "mandrake_root.webp"
             }
         ],
-        "prerequisites": "Get Rush of Fresh Air first; beat Polyphemus once; Earned 6,000"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Rush of Fresh Air first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "beat Polyphemus once"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Earned 6,000"
+            },
+            {
+                "type": "image",
+                "name": "Gold",
+                "img_path": "gold.webp"
+            }
+        ]
     },
     "revival_of_a_desecrating_pool": {
         "name": "Revival of a Desecrating Pool",
@@ -1425,7 +2324,12 @@
                 "image_path": "shaderot.webp"
             }
         ],
-        "prerequisites": "Reach Tartarus"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Reach Tartarus"
+            }
+        ]
     },
     "surge_of_desecrating_pools": {
         "name": "Surge of Desecrating Pools",
@@ -1451,7 +2355,28 @@
                 "image_path": "shaderot.webp"
             }
         ],
-        "prerequisites": "Get Revival of a Desecrating Pool first; Finish the Underworld route once; Purged at least 3 Boons with Pool of Purging in the Tartarus 's resting area."
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Revival of a Desecrating Pool first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Finish the Underworld route once"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Purged at least 3 Boons with Pool of Purging in the Tartarus's resting area"
+            }
+        ]
     },
     "woodsy_lifespring": {
         "name": "Woodsy Lifespring",
@@ -1486,7 +2411,36 @@
                 "image_path": "silver.webp"
             }
         ],
-        "prerequisites": "Get Night's Craftwork first; Get Fated Intervention first; Get Reagent Sensing first; Get Forget-Me-Not first"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Night's Craftwork first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Fated Intervention first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Reagent Sensing first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Forget-Me-Not first"
+            }
+        ]
     },
     "briny_lifespring": {
         "name": "Briny Lifespring",
@@ -1521,7 +2475,12 @@
                 "image_path": "limestone.webp"
             }
         ],
-        "prerequisites": "Get Woodsy Lifespring first"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Woodsy Lifespring first"
+            }
+        ]
     },
     "golden_lifespring": {
         "name": "Golden Lifespring",
@@ -1556,7 +2515,28 @@
                 "image_path": "marble.webp"
             }
         ],
-        "prerequisites": "Get Briny Lifespring first; Get Deathly Fortune first; Faced Chronos once"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Briny Lifespring first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Deathly Fortune first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Faced Chronos once"
+            }
+        ]
     },
     "sandy_lifespring": {
         "name": "Sandy Lifespring",
@@ -1591,7 +2571,20 @@
                 "image_path": "driftwood.webp"
             }
         ],
-        "prerequisites": "Get Briny Lifespring first; Faced Eris once"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Briny Lifespring first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Faced Eris once"
+            }
+        ]
     },
     "frozen_lifespring": {
         "name": "Frozen Lifespring",
@@ -1626,7 +2619,20 @@
                 "image_path": "adamant.webp"
             }
         ],
-        "prerequisites": "Get Sandy Lifespring first; Faced Prometheus once"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Sandy Lifespring first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Faced Prometheus once"
+            }
+        ]
     },
     "propensity_toward_gold": {
         "name": "Propensity Toward Gold",
@@ -1661,7 +2667,25 @@
                 "image_path": "fate_fabric.webp"
             }
         ],
-        "prerequisites": "Get Kindred Keepsakes first; Earned 2,000"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Kindred Keepsakes first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Earned 2,000"
+            },
+            {
+                "type": "image",
+                "name": "Gold",
+                "img_path": "gold.webp"
+            }
+        ]
     },
     "summoning_a_colony_of_bats": {
         "name": "Summoning a Colony of Bats",
@@ -1687,7 +2711,20 @@
                 "image_path": "rubbish.webp"
             }
         ],
-        "prerequisites": "Get Unraveling a Fateful Bond first; Clear one room in City of Ephyra and return to the square"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Unraveling a Fateful Bond first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Clear one room in City of Ephyra and return to the square"
+            }
+        ]
     },
     "reviving_a_mournful_husk": {
         "name": "Reviving a Mournful Husk",
@@ -1707,7 +2744,12 @@
                 "image_path": "myrtle.webp"
             }
         ],
-        "prerequisites": "Reach the Fields of Mourning"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Reach the Fields of Mourning"
+            }
+        ]
     },
     "temporal_fluctuation": {
         "name": "Temporal Fluctuation",
@@ -1739,7 +2781,12 @@
                 "image_path": "shaderot.webp"
             }
         ],
-        "prerequisites": "Used Phase Shift on Chronos or equipped Eternity while facing him once"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Used Phase Shift on Chronos or equipped Eternity while facing him once"
+            }
+        ]
     },
     "power_to_pause_and_reflect": {
         "name": "Power to Pause and Reflect",
@@ -1765,7 +2812,12 @@
                 "image_path": "zodiac_sand.webp"
             }
         ],
-        "prerequisites": "Pause during the Vow of Rivals 4 Chronos fight."
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Pause during the Vow of Rivals 4 Chronos fight"
+            }
+        ]
     },
     "gathering_of_ancient_bones": {
         "name": "Gathering of Ancient Bones",
@@ -1794,7 +2846,28 @@
                 "image_path": "limestone.webp"
             }
         ],
-        "prerequisites": "Get Summoning of Mercantile Fortune first; Get the Sister Blades at the The Silver Pool; Get Reagent Sensing first"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Summoning of Mercantile Fortune first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get the Sister Blades at the The Silver Pool"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Reagent Sensing first"
+            }
+        ]
     },
     "gathering_of_subterranean_riches": {
         "name": "Gathering of Subterranean Riches",
@@ -1829,7 +2902,33 @@
                 "image_path": "marble.webp"
             }
         ],
-        "prerequisites": "Earthly Fortune first then complete 2 runs; Beat Chronos and Eris once each; Spend 100"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Earthly Fortune first then complete 2 runs"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Beat Chronos and Eris once each"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Spend 100"
+            },
+            {
+                "type": "image",
+                "name": "Kudos",
+                "img_path": "kudos.webp"
+            }
+        ]
     },
     "kindred_keepsakes": {
         "name": "Kindred Keepsakes",
@@ -1861,7 +2960,33 @@
                 "image_path": "moly.webp"
             }
         ],
-        "prerequisites": "beat Hecate once; Get Woodsy Lifespring first; Get 2 or more Keepsakes through gifting"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "beat Hecate once"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Woodsy Lifespring first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get 2 or more Keepsakes through gifting"
+            },
+            {
+                "type": "image",
+                "name": "Nectar",
+                "img_path": "nectar.webp"
+            }
+        ]
     },
     "quickening_of_sentimental_value": {
         "name": "Quickening of Sentimental Value",
@@ -1887,7 +3012,17 @@
                 "image_path": "twin_lures.webp"
             }
         ],
-        "prerequisites": "Get 23 or more Keepsakes through gifting"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get 23 or more Keepsakes through gifting"
+            },
+            {
+                "type": "image",
+                "name": "Nectar",
+                "img_path": "nectar.webp"
+            }
+        ]
     },
     "rage_of_the_elements": {
         "name": "Rage of the Elements",
@@ -1913,7 +3048,20 @@
                 "image_path": "cinder.webp"
             }
         ],
-        "prerequisites": "Get Frozen Lifespring first; Faced Typhon once"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Frozen Lifespring first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Faced Typhon once"
+            }
+        ]
     },
     "circles_of_protection": {
         "name": "Circles of Protection",
@@ -1939,7 +3087,60 @@
                 "image_path": "iris.webp"
             }
         ],
-        "prerequisites": "Faced Hecate once; Faced Polyphemus once; Get Gathering of Ancient Bones first; Get Necromantic Influence first; Get Exhumed Troves first; Get Rush of Fresh Air first; Get Surge of Fresh Air first"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Faced Hecate once"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Faced Polyphemus once"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Gathering of Ancient Bones first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Necromantic Influence first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Exhumed Troves first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Rush of Fresh Air first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Surge of Fresh Air first"
+            }
+        ]
     },
     "circles_of_the_moon": {
         "name": "Circles of the Moon",
@@ -1965,7 +3166,28 @@
                 "image_path": "mandrake.webp"
             }
         ],
-        "prerequisites": "Received a Hex from Selene once; Circles of Protection first and complete two or more runs afterwards; Use Warding Circles 5 or more times"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Received a Hex from Selene once"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Circles of Protection first and complete two or more runs afterwards"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Use Warding Circles 5 or more times"
+            }
+        ]
     },
     "necromantic_influence": {
         "name": "Necromantic Influence",
@@ -1991,7 +3213,33 @@
                 "image_path": "nightshade.webp"
             }
         ],
-        "prerequisites": "Get Woodsy Lifespring first; Get Gathering of Ancient Bones first; Have 21"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Woodsy Lifespring first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Gathering of Ancient Bones first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Have 21"
+            },
+            {
+                "type": "image",
+                "name": "Grasp",
+                "img_path": "grasp.webp"
+            }
+        ]
     },
     "exhumed_troves": {
         "name": "Exhumed Troves",
@@ -2017,7 +3265,52 @@
                 "image_path": "limestone.webp"
             }
         ],
-        "prerequisites": "Faced Hecate once; Get Summoning of Mercantile Fortune first; Get Night's Craftwork first; Get Woodsy Lifespring first; Get Kindred Keepsakes first; Get Surge of Stygian Wells first"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Faced Hecate once"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Summoning of Mercantile Fortune first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Night's Craftwork first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Woodsy Lifespring first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Kindred Keepsakes first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Surge of Stygian Wells first"
+            }
+        ]
     },
     "eyes_of_night_and_darkness": {
         "name": "Eyes of Night and Darkness",
@@ -2043,7 +3336,36 @@
                 "image_path": "adamant.webp"
             }
         ],
-        "prerequisites": "Faced Chronos once.; Faced Polyphemus once; Get Exhumed Troves first; Get Arisen Troves first"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Faced Chronos once"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Faced Polyphemus once"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Exhumed Troves first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Arisen Troves first"
+            }
+        ]
     },
     "arisen_troves": {
         "name": "Arisen Troves",
@@ -2069,7 +3391,28 @@
                 "image_path": "iron.webp"
             }
         ],
-        "prerequisites": "Faced Eris once; Get Unraveling a Fateful Bond first; Get Exhumed Troves first"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Faced Eris once"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Unraveling a Fateful Bond first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Exhumed Troves first"
+            }
+        ]
     },
     "bounties_of_the_infinite_abyss": {
         "name": "Bounties of the Infinite Abyss",
@@ -2095,7 +3438,25 @@
                 "image_path": "serpent_scales.webp"
             }
         ],
-        "prerequisites": "Faced Chronos and Typhon once each; Clear a run of either The Surface or The Underworld with 8 or more"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Faced Chronos and Typhon once each"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Clear a run of either The Surface or The Underworld with 8 or more"
+            },
+            {
+                "type": "image",
+                "name": "Fear",
+                "img_path": "fear.webp"
+            }
+        ]
     },
     "ashen_memories_of_life": {
         "name": "Ashen Memories of Life",
@@ -2145,7 +3506,43 @@
                 "image_path": "star_dust.webp"
             }
         ],
-        "prerequisites": "Gather 800; Gather 7,500; Gather 50"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Gather 800"
+            },
+            {
+                "type": "image",
+                "name": "Ashes",
+                "img_path": "ashes.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Gather 7,500"
+            },
+            {
+                "type": "image",
+                "name": "Bones",
+                "img_path": "bones.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Gather 50"
+            },
+            {
+                "type": "image",
+                "name": "Nectar",
+                "img_path": "nectar.webp"
+            }
+        ]
     },
     "bones_of_arcane_wisdom": {
         "name": "Bones of Arcane Wisdom",
@@ -2195,7 +3592,43 @@
                 "image_path": "star_dust.webp"
             }
         ],
-        "prerequisites": "Gather 800; Gather 7,500; Gather 50"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Gather 800"
+            },
+            {
+                "type": "image",
+                "name": "Ashes",
+                "img_path": "ashes.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Gather 7,500"
+            },
+            {
+                "type": "image",
+                "name": "Bones",
+                "img_path": "bones.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Gather 50"
+            },
+            {
+                "type": "image",
+                "name": "Nectar",
+                "img_path": "nectar.webp"
+            }
+        ]
     },
     "nectar_of_godly_savor": {
         "name": "Nectar of Godly Savor",
@@ -2245,7 +3678,43 @@
                 "image_path": "star_dust.webp"
             }
         ],
-        "prerequisites": "Gather 800; Gather 7,500; Gather 50"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Gather 800"
+            },
+            {
+                "type": "image",
+                "name": "Ashes",
+                "img_path": "ashes.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Gather 7,500"
+            },
+            {
+                "type": "image",
+                "name": "Bones",
+                "img_path": "bones.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Gather 50"
+            },
+            {
+                "type": "image",
+                "name": "Nectar",
+                "img_path": "nectar.webp"
+            }
+        ]
     },
     "rite_of_social_solidarity": {
         "name": "Rite of Social Solidarity",
@@ -2280,7 +3749,17 @@
                 "image_path": "garlic.webp"
             }
         ],
-        "prerequisites": "Give gifts to 12 or more"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Give 12 or more"
+            },
+            {
+                "type": "image",
+                "name": "Nectar",
+                "img_path": "nectar.webp"
+            }
+        ]
     },
     "rite_of_vapor_cleansing": {
         "name": "Rite of Vapor-Cleansing",
@@ -2321,7 +3800,42 @@
                 "image_path": "nightshade.webp"
             }
         ],
-        "prerequisites": "Arrival of Moros at the Crossroads; Give gifts to 6 or more; Give gifts to 2 or more to any one of: Hecate , Odysseus , Nemesis , Eris , Moros , Dora , or Icarus"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Arrival of Moros at the Crossroads"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Give 6 or more"
+            },
+            {
+                "type": "image",
+                "name": "Nectar",
+                "img_path": "nectar.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Give 2 or more"
+            },
+            {
+                "type": "image",
+                "name": "Nectar",
+                "img_path": "nectar.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "to any one of: Hecate, Odysseus, Nemesis, Eris, Moros, Dora, or Icarus"
+            }
+        ]
     },
     "rite_of_river_fording": {
         "name": "Rite of River-Fording",
@@ -2356,7 +3870,25 @@
                 "image_path": "driftwood.webp"
             }
         ],
-        "prerequisites": "Give gifts to 12 or more; Rod of Fishing first (see Night's Craftwork )"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Give 12 or more"
+            },
+            {
+                "type": "image",
+                "name": "Nectar",
+                "img_path": "nectar.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Rod of Fishing first (see Night's Craftwork)"
+            }
+        ]
     },
     "flourishing_soil": {
         "name": "Flourishing Soil",
@@ -2394,7 +3926,17 @@
                 "image_path": "moly.webp"
             }
         ],
-        "prerequisites": "Gather 6 or more"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Gather 6 or more"
+            },
+            {
+                "type": "image",
+                "name": "Moly",
+                "img_path": "moly.webp"
+            }
+        ]
     },
     "rich_soil": {
         "name": "Rich Soil",
@@ -2414,7 +3956,43 @@
                 "image_path": "cattail.webp"
             }
         ],
-        "prerequisites": "Get Flourishing Soil first; Harvested at least 4 , 1 and 1 ."
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Flourishing Soil first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Harvested at least 4"
+            },
+            {
+                "type": "image",
+                "name": "Nightshade",
+                "img_path": "nightshade.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "1"
+            },
+            {
+                "type": "image",
+                "name": "Cattail",
+                "img_path": "cattail.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "and 1"
+            },
+            {
+                "type": "image",
+                "name": "Wheat",
+                "img_path": "wheat.webp"
+            }
+        ]
     },
     "verdant_soil": {
         "name": "Verdant Soil",
@@ -2440,7 +4018,52 @@
                 "image_path": "garlic.webp"
             }
         ],
-        "prerequisites": "Get Rich Soil first; Harvested at least 4 , 4 , 4 and 1 ."
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Rich Soil first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Harvested at least 4"
+            },
+            {
+                "type": "image",
+                "name": "Poppy",
+                "img_path": "poppy.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "4"
+            },
+            {
+                "type": "image",
+                "name": "Garlic",
+                "img_path": "garlic.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "4"
+            },
+            {
+                "type": "image",
+                "name": "Mandrake",
+                "img_path": "mandrake.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "and 1"
+            },
+            {
+                "type": "image",
+                "name": "Olive",
+                "img_path": "olive.webp"
+            }
+        ]
     },
     "observance_of_gaia_s_secrets": {
         "name": "Observance of Gaia's Secrets",
@@ -2466,7 +4089,28 @@
                 "image_path": "wheat.webp"
             }
         ],
-        "prerequisites": "Get all Gathering Tools at the The Silver Pool; Get Greater Favor of Gaia first; Get Verdant Soil first"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get all Gathering Tools at the The Silver Pool"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Greater Favor of Gaia first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Verdant Soil first"
+            }
+        ]
     },
     "green_hand_of_gaia": {
         "name": "Green Hand of Gaia",
@@ -2492,7 +4136,28 @@
                 "image_path": "snake_reed.webp"
             }
         ],
-        "prerequisites": "Get Verdant Soil first; Get Observance of Gaia's Secrets first; Plant 90 Seeds"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Verdant Soil first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Observance of Gaia's Secrets first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Plant 90 Seeds"
+            }
+        ]
     },
     "greater_sowing_of_gardens": {
         "name": "Greater Sowing of Gardens",
@@ -2518,7 +4183,28 @@
                 "image_path": "poppy.webp"
             }
         ],
-        "prerequisites": "Get Verdant Soil first; Get Observance of Gaia's Secrets first; Plant 90 Seeds"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Verdant Soil first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Observance of Gaia's Secrets first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Plant 90 Seeds"
+            }
+        ]
     },
     "greatest_gift_of_gaia": {
         "name": "Greatest Gift of Gaia",
@@ -2550,7 +4236,36 @@
                 "image_path": "moon_dust.webp"
             }
         ],
-        "prerequisites": "Use 30 Witch's Delight; Collect all seeds, flora, ores and fish, including chaos variants; Use the Silver Spade and Crescent Pick over 100 times each; Use Tablet of Peace and Rod of Fishing over 50 times each"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Use 30 Witch's Delight"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Collect all seeds, flora, ores and fish, including chaos variants"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Use the Silver Spade and Crescent Pick over 100 times each"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Use Tablet of Peace and Rod of Fishing over 50 times each"
+            }
+        ]
     },
     "empath_s_intuition": {
         "name": "Empath's Intuition",
@@ -2576,7 +4291,55 @@
                 "image_path": "fate_fabric.webp"
             }
         ],
-        "prerequisites": "Get Book of Shadows first; Get 9 or more Keepsakes through gifting; Gather 4 or more; Give gifts to 2 or more to any one NPC"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Book of Shadows first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get 9 or more Keepsakes through gifting"
+            },
+            {
+                "type": "image",
+                "name": "Nectar",
+                "img_path": "nectar.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Gather 4 or more"
+            },
+            {
+                "type": "image",
+                "name": "Myrtle",
+                "img_path": "myrtle.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Give 2 or more"
+            },
+            {
+                "type": "image",
+                "name": "Nectar",
+                "img_path": "nectar.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "to any one NPC"
+            }
+        ]
     },
     "summoning_of_musical_rhapsody": {
         "name": "Summoning of Musical Rhapsody",
@@ -2602,7 +4365,33 @@
                 "image_path": "lotus.webp"
             }
         ],
-        "prerequisites": "Get Rite of Social Solidarity first; Crossroads Renewal Project first talk to Dora; Spent 500"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Rite of Social Solidarity first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Crossroads Renewal Project first talk to Dora"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Spend 500"
+            },
+            {
+                "type": "image",
+                "name": "Kudos",
+                "img_path": "kudos.webp"
+            }
+        ]
     },
     "shuffling_of_noted_ballads": {
         "name": "Shuffling of Noted Ballads",
@@ -2634,7 +4423,20 @@
                 "image_path": "mystery_seed.webp"
             }
         ],
-        "prerequisites": "Get Summoning of Musical Rhapsody first; Purchased 5 or more songs with Music Maker"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Summoning of Musical Rhapsody first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Purchased 5 or more songs with Music Maker"
+            }
+        ]
     },
     "summoning_of_historic_travails": {
         "name": "Summoning of Historic Travails",
@@ -2660,7 +4462,36 @@
                 "image_path": "zodiac_sand.webp"
             }
         ],
-        "prerequisites": "Get Summoning of Mercantile Fortune first; Get Rite of Social Solidarity first; beat Polyphemus once; beat Chronos once"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Summoning of Mercantile Fortune first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Rite of Social Solidarity first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "beat Polyphemus once"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "beat Chronos once"
+            }
+        ]
     },
     "summoning_of_personal_insights": {
         "name": "Summoning of Personal Insights",
@@ -2686,7 +4517,28 @@
                 "image_path": "shaderot.webp"
             }
         ],
-        "prerequisites": "Get Summoning of Mercantile Fortune first; Get Rite of Social Solidarity first; beat Chronos twice"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get Summoning of Mercantile Fortune first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Get Rite of Social Solidarity first"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "beat Chronos twice"
+            }
+        ]
     },
     "returning_to_a_real_possibility": {
         "name": "Returning to a Real Possibility",
@@ -2712,7 +4564,12 @@
                 "image_path": "star_dust.webp"
             }
         ],
-        "prerequisites": "Achieve the True Ending"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Get the True Ending"
+            }
+        ]
     },
     "greater_removal_of_rubbish": {
         "name": "Greater Removal of Rubbish",
@@ -2747,6 +4604,41 @@
                 "image_path": "garlic.webp"
             }
         ],
-        "prerequisites": "Bought the Basket, Rubbish decoration from the Crossroads Renewal Project; Give 2 gifts to Eris; Gather 40"
+        "prerequisites_rich": [
+            {
+                "type": "text_normal",
+                "value": "Bought the Basket, Rubbish decoration from the Crossroads Renewal Project"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Give 2"
+            },
+            {
+                "type": "image",
+                "name": "Ambrosia",
+                "img_path": "ambrosia.webp"
+            },
+            {
+                "type": "text_normal",
+                "value": "to Eris"
+            },
+            {
+                "type": "text_normal",
+                "value": "; "
+            },
+            {
+                "type": "text_normal",
+                "value": "Gather 40"
+            },
+            {
+                "type": "image",
+                "name": "Rubbish",
+                "img_path": "rubbish.webp"
+            }
+        ]
     }
 }

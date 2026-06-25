@@ -78,6 +78,12 @@ export const PAGE_SEO = {
       "Unlock and upgrade gathering tools in Hades 2 to collect resources from the Underworld and Surface.",
     canonicalPath: "/hades2/tools",
   },
+  cauldron: {
+    title: seoTitle("The Cauldron"),
+    description:
+      "Alchemy recipes and incantations at the Crossroads in Hades 2. See costs, effects, unlock requirements, and prerequisites.",
+    canonicalPath: "/hades2/cauldron",
+  },
   notFound: {
     title: seoTitle("Page Not Found"),
     description:

@@ -21,6 +21,11 @@
   {:else if part.type === "range"}
     <span class={rangeClass}>{part.value}</span>
   {:else if part.type === "image"}
-    <LazyMiscImg file={part.img_path} alt={part.name} class={imageClass} />
+    <LazyMiscImg
+      file={part.img_path}
+      alt={part.name}
+      title={part.name}
+      class={imageClass}
+    />
   {/if}
 {/each}

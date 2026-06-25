@@ -24,7 +24,8 @@
       | "/hades2/keepsakes"
       | "/hades2/curses"
       | "/hades2/animals"
-      | "/hades2/tools";
+      | "/hades2/tools"
+      | "/hades2/cauldron";
     label: string;
     shortLabel?: string;
   };
@@ -33,8 +34,8 @@
     { href: "/", label: "Home" },
     { href: "/hades2/gods", label: "Gods & Characters", shortLabel: "Gods & Chars" },
     { href: "/hades2/boons", label: "Boons" },
-    { href: "/hades2/weapons", label: "Weapons" },
     { href: "/hades2/cards", label: "Arcana Cards", shortLabel: "Cards" },
+    { href: "/hades2/weapons", label: "Weapons" },
     { href: "/hades2/keepsakes", label: "Keepsakes" },
     { href: "/hades2/curses", label: "Curses" },
     {
@@ -43,6 +44,7 @@
       shortLabel: "Familiars",
     },
     { href: "/hades2/tools", label: "Gathering Tools", shortLabel: "Tools" },
+    { href: "/hades2/cauldron", label: "The Cauldron", shortLabel: "Cauldron" },
   ];
 
   let mobileMenuOpen = $state(false);
@@ -130,10 +132,12 @@
         </span>
       </a>
 
-      <div class="flex items-center shrink-0">
+      <div class="flex items-center gap-2 shrink-0">
+        <!-- Future: Hades 1/2 toggle, dark/light theme toggle -->
+
         <button
           type="button"
-          class="md:hidden flex items-center justify-center w-8 h-8 rounded-md border border-[#1c3623] bg-[#0a140d] text-[#8da693] hover:bg-[#153320] hover:text-[#ccff90] hover:border-[#46f08f] transition-all"
+          class="lg:hidden flex items-center justify-center w-8 h-8 rounded-md border border-[#1c3623] bg-[#0a140d] text-[#8da693] hover:bg-[#153320] hover:text-[#ccff90] hover:border-[#46f08f] transition-all"
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={mobileMenuOpen}
           onclick={toggleMobileMenu}
@@ -170,29 +174,28 @@
     </div>
 
     <nav
-      class="desktopNav hidden md:flex items-center justify-center gap-1.5 px-3 py-2 border-t border-[#1c3623] max-w-300 mx-auto w-full overflow-x-auto"
+      class="desktopNav hidden lg:flex flex-wrap xl:flex-nowrap items-center justify-center gap-x-1 gap-y-1 px-3 py-2 border-t border-[#1c3623] w-full max-w-300 mx-auto"
       aria-label="Main navigation"
     >
       {#each navLinks as link (link.href)}
         <a
           href={resolve(link.href)}
           onclick={(e) => handleNavClick(e, link.href)}
-          class="px-3 py-1.5 rounded text-xs font-mono uppercase tracking-widest transition-all duration-200 border border-transparent {isActive(
+          class="shrink-0 whitespace-nowrap px-2.5 xl:px-3 py-1.5 text-[0.65rem] xl:text-xs font-mono uppercase tracking-widest transition-colors duration-200 rounded-sm {isActive(
             link.href,
           )
-            ? 'bg-[#153320] text-[#ccff90] border-[#46f08f]/30 shadow-[0_0_10px_rgba(70,240,143,0.1)]'
-            : 'text-[#8da693] hover:bg-[#153320]/50 hover:text-[#ccff90]'}"
-          title={link.shortLabel ? link.label : undefined}
+            ? 'text-[#ccff90] bg-[#153320]/60'
+            : 'text-[#8da693] hover:text-[#ccff90] hover:bg-[#153320]/30'}"
         >
-          <span class="hidden xl:inline">{link.label}</span>
           <span class="xl:hidden">{link.shortLabel ?? link.label}</span>
+          <span class="hidden xl:inline">{link.label}</span>
         </a>
       {/each}
     </nav>
 
     {#if mobileMenuOpen}
       <nav
-        class="md:hidden border-t border-[#1c3623] bg-[#0a140d]/98 px-3 py-3 backdrop-blur-lg shadow-xl"
+        class="lg:hidden border-t border-[#1c3623] bg-[#0a140d]/98 px-3 py-3 backdrop-blur-lg shadow-xl max-w-300 mx-auto w-full"
         aria-label="Main navigation"
       >
         <div class="grid grid-cols-2 gap-2 sm:grid-cols-3">
@@ -209,7 +212,7 @@
                 closeMobileMenu();
               }}
             >
-              {link.label}
+              {link.shortLabel ?? link.label}
             </a>
           {/each}
         </div>

@@ -45,3 +45,28 @@ export type GodDetails = {
   hades_1: GodKeepsakeAndCurses | null;
   hades_2: GodKeepsakeAndCurses | null;
 };
+
+export type ResourceCost = {
+  name: string;
+  title: string;
+  amount: number;
+  image_path: string;
+};
+
+export type AlchemyRecipe = {
+  name: string;
+  image_path: string;
+  description: string;
+  description_rich: DescriptionPart[];
+  cost: ResourceCost[];
+  preparation_time: number;
+};
+
+export type Incantation = {
+  name: string;
+  image_path: string;
+  description: string;
+  description_rich: DescriptionPart[];
+  unlock_requirements: ResourceCost[];
+  prerequisites_rich: DescriptionPart[] | null;
+};

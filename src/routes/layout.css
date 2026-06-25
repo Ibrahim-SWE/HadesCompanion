@@ -43,9 +43,3 @@ picture:has(> img) {
   }
 }
 
-.desktopNav {
-  scrollbar-width: none;
-}
-.desktopNav::-webkit-scrollbar {
-  display: none;
-}

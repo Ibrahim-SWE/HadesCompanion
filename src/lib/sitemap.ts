@@ -19,6 +19,7 @@ export const SITEMAP_PATHS = [
   "/hades2/curses",
   "/hades2/animals",
   "/hades2/tools",
+  "/hades2/cauldron",
 ] as const;
 
 export function buildSitemapXml(): string {
