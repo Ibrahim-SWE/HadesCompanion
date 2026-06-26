@@ -5,7 +5,7 @@
       "bondName": "Life Bond",
       "imageFile": "life_bond.webp",
       "description_rich": [
-        { "type": "text_normal", "value": "While together, gain " },
+        { "type": "text_normal", "value": "While together, gain +10 " },
         { "type": "effect_values" },
         { "type": "image", "image_file": "max_health_icon.webp" }
       ],
@@ -15,7 +15,7 @@
       "bondName": "Soul Bond",
       "imageFile": "soul_bond.webp",
       "description_rich": [
-        { "type": "text_normal", "value": "While together, you are " },
+        { "type": "text_normal", "value": "While together, you are +20% " },
         { "type": "effect_values" },
         { "type": "text_normal", "value": " more likely to find Lost Shades." }
       ],
@@ -40,21 +40,25 @@
       "description_rich": [
         {
           "type": "text_normal",
-          "value": "Gain 1 Death Defiance from Toula, "
+          "value": "Gain 1 "
+        },
+        {
+          "type": "text_normal",
+          "value": "Death Defiance from Toula, "
         },
         { "type": "image", "image_file": "death_defiance_icon.webp" },
-        { "type": "text_normal", "value": " effects restore " },
+        { "type": "text_normal", "value": " effects restore +20 " },
         { "type": "effect_values" },
         { "type": "image", "image_file": "health_icon.webp" }
       ],
       "effects": ["+40", "+60", "+80"],
-      "note": "Primal Psychic Connection boon from Circe grants an extra Death Defiance"
+      "note": "Heroic Rank through Primal Psychic Connection boon grants an extra Death Defiance"
     },
     "bond2": {
       "bondName": "Sense Bond",
       "imageFile": "sense_bond.webp",
       "description_rich": [
-        { "type": "text_normal", "value": "While together, you are " },
+        { "type": "text_normal", "value": "While together, you are +20% " },
         { "type": "effect_values" },
         {
           "type": "text_normal",
@@ -67,12 +71,11 @@
       "bondName": "Claw Bond",
       "imageFile": "claw_bond.webp",
       "description_rich": [
-        { "type": "text_normal", "value": "Toula claws at surrounding foes " },
+        { "type": "text_normal", "value": "Toula claws at surrounding foes 4  " },
         { "type": "effect_values" },
         { "type": "text_normal", "value": " time(s) prior to losing interest." }
       ],
-      "effects": ["6", "8", "10"],
-      "note": "The claw strike deals 99 damage"
+      "effects": ["6", "8", "10"]
     }
   },
   "Raki": {
@@ -83,7 +86,7 @@
       "description_rich": [
         {
           "type": "text_normal",
-          "value": "While together, gain an additional "
+          "value": "While together, gain an additional +1% "
         },
         { "type": "effect_values" },
         {
@@ -98,7 +101,7 @@
       "bondName": "Stone Bond",
       "imageFile": "stone_bond.webp",
       "description_rich": [
-        { "type": "text_normal", "value": "While together, you are " },
+        { "type": "text_normal", "value": "While together, you are +20% " },
         { "type": "effect_values" },
         { "type": "text_normal", "value": " more likely to find Outcroppings." }
       ],
@@ -124,7 +127,7 @@
       "bondName": "Spirit Bond",
       "imageFile": "spirit_bond.webp",
       "description_rich": [
-        { "type": "text_normal", "value": "While together, you have " },
+        { "type": "text_normal", "value": "While together, you have +15 " },
         { "type": "effect_values" },
         { "type": "text_normal", "value": " " },
         { "type": "image", "image_file": "max_magick_icon.webp" }
@@ -135,15 +138,14 @@
       "bondName": "Earth Bond",
       "imageFile": "earth_bond.webp",
       "description_rich": [
-        { "type": "text_normal", "value": "While together, you are " },
+        { "type": "text_normal", "value": "While together, you are +20% " },
         { "type": "effect_values" },
         {
           "type": "text_normal",
           "value": " more likely to find Digging Spots."
         }
       ],
-      "effects": ["+30%", "+40%", "+50%"],
-      "note": "Digging Spots can also give a healing item that heals +10 or an item that restores 100 Magick"
+      "effects": ["+30%", "+40%", "+50%"]
     },
     "bond3": {
       "bondName": "Guard Bond",
@@ -164,7 +166,7 @@
       "bondName": "Veil Bond",
       "imageFile": "veil_bond.webp",
       "description_rich": [
-        { "type": "text_normal", "value": "While together, you have " },
+        { "type": "text_normal", "value": "While together, you have +3% " },
         { "type": "effect_values" },
         { "type": "text_normal", "value": " Dodge chance and move speed." }
       ],
@@ -174,7 +176,7 @@
       "bondName": "Nature Bond",
       "imageFile": "nature_bond.webp",
       "description_rich": [
-        { "type": "text_normal", "value": "While together, you are " },
+        { "type": "text_normal", "value": "While together, you are +20% " },
         { "type": "effect_values" },
         { "type": "text_normal", "value": " more likely to find Flora." }
       ],
@@ -184,14 +186,15 @@
       "bondName": "Wild Bond",
       "imageFile": "wild_bond.webp",
       "description_rich": [
-        { "type": "text_normal", "value": "Gale deals " },
+        { "type": "text_normal", "value": "Gale deals 250 " },
         { "type": "effect_values" },
         {
           "type": "text_normal",
           "value": " damage when scratching foes in retaliation."
         }
       ],
-      "effects": ["300", "350", "400"]
+      "effects": ["300", "350", "400"],
+      "note": "30 seconds cooldown between strikes, 3 strikes per region"
     }
   }
 }
