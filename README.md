@@ -11,8 +11,9 @@ A web application for Hades 2 players to easily find everything they need while 
 ## Planned Features
 
 - ~~Make Arcana Cards selectable and shareable.~~
-- Add Incantations
-- Add Alchemy
+- ~~Add Incantations~~
+- ~~Add Alchemy~~
+- Add Light & Dark theme toggle
 
 ## Developing & Contributing
 
