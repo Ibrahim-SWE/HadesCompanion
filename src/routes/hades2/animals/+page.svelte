@@ -283,24 +283,6 @@
       <p class="text-[0.7rem] sm:text-xs text-[#a4bea9] font-sans mt-0.5 tracking-wide leading-snug">
         Click an animal if unlocked. Click a bond to upgrade it.
       </p>
-      <div class="mt-2 flex items-center gap-2.5">
-        <div
-          class="flex-1 h-2 rounded-full bg-[#0a140d] border border-[#1c3623] overflow-hidden"
-          role="progressbar"
-          aria-valuenow={unlockedPetCount}
-          aria-valuemin="0"
-          aria-valuemax={totalPetCount}
-          aria-label="Animals unlocked progress"
-        >
-          <div
-            class="h-full transition-all duration-500"
-            style="width: {petProgressPercent}%; background: linear-gradient(to right, hsl(140 {50 + petProgressPercent * 0.4}% {22 + petProgressPercent * 0.3}%), hsl(140 {65 + petProgressPercent * 0.3}% {35 + petProgressPercent * 0.35}%)); box-shadow: 0 0 {2 + petProgressPercent * 0.4}px hsla(140, 90%, 55%, {petProgressPercent * 0.006});"
-          ></div>
-        </div>
-        <span class="text-[0.7rem] font-sans text-[#a4bea9] tabular-nums whitespace-nowrap tracking-wide">
-          {unlockedPetCount} / {totalPetCount} unlocked ({petProgressPercent}%)
-        </span>
-      </div>
     </header>
 
     <nav class="flex gap-1.5 mb-2 flex-wrap justify-center" aria-label="Filter familiars">
@@ -343,6 +325,25 @@
         Reset Bond Levels
       </button>
     </nav>
+
+    <div class="flex items-center gap-2.5 mb-2">
+      <div
+        class="flex-1 h-2 rounded-full bg-[#0a140d] border border-[#1c3623] overflow-hidden"
+        role="progressbar"
+        aria-valuenow={unlockedPetCount}
+        aria-valuemin="0"
+        aria-valuemax={totalPetCount}
+        aria-label="Animals unlocked progress"
+      >
+        <div
+          class="h-full transition-all duration-500"
+          style="width: {petProgressPercent}%; background: linear-gradient(to right, hsl(140 {50 + petProgressPercent * 0.4}% {22 + petProgressPercent * 0.3}%), hsl(140 {65 + petProgressPercent * 0.3}% {35 + petProgressPercent * 0.35}%)); box-shadow: 0 0 {2 + petProgressPercent * 0.4}px hsla(140, 90%, 55%, {petProgressPercent * 0.006});"
+        ></div>
+      </div>
+      <span class="text-[0.7rem] font-sans text-[#a4bea9] tabular-nums whitespace-nowrap tracking-wide">
+        {unlockedPetCount} / {totalPetCount} unlocked ({petProgressPercent}%)
+      </span>
+    </div>
 
     <div class="flex flex-col gap-2">
       {#each pets as [petKey, pet] (petKey)}
