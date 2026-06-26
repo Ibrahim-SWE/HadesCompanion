@@ -69,8 +69,19 @@
     }
   }
 
-  function resetProgress() {
+  let showResetConfirm = $state(false);
+
+  function requestReset() {
+    showResetConfirm = true;
+  }
+
+  function confirmReset() {
     unlockedKeepsakes = [];
+    showResetConfirm = false;
+  }
+
+  function cancelReset() {
+    showResetConfirm = false;
   }
 
   function handleKeepsakeKeydown(event: KeyboardEvent, name: string) {
@@ -248,7 +259,7 @@
         {/each}
         <button
           type="button"
-          onclick={resetProgress}
+          onclick={requestReset}
           class="px-2.5 py-1 rounded border border-[#ff5e7e]/40 text-[0.7rem] uppercase tracking-widest font-sans bg-[#2a0d12] text-[#ff8aa0] transition-all hover:border-[#ff5e7e] hover:text-[#ffadb8] hover:shadow-[0_0_10px_rgba(255,94,126,0.25)]"
         >
           Reset Progress
@@ -369,7 +380,94 @@
   </div>
 </Container>
 
+<svelte:window
+  onkeydown={(e) => {
+    if (showResetConfirm && e.key === "Escape") cancelReset();
+  }}
+/>
+
+{#if showResetConfirm}
+  <div
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-sm p-4 animate-[fade-in_0.15s_ease-out]"
+    role="presentation"
+    onclick={cancelReset}
+    onkeydown={(e) => {
+      if (e.key === "Escape") cancelReset();
+    }}
+  >
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="reset-confirm-title"
+      aria-describedby="reset-confirm-body"
+      tabindex="-1"
+      class="bg-linear-to-b from-[#0a140d] to-[#0d1c13] border border-[#ff5e7e]/40 rounded-lg p-4 sm:p-5 max-w-sm w-full shadow-[0_0_30px_rgba(255,94,126,0.25),0_8px_30px_rgba(0,0,0,0.6)] animate-[pop-in_0.18s_ease-out] focus:outline-none"
+      onclick={(e) => e.stopPropagation()}
+      onkeydown={(e) => {
+        if (e.key === "Escape") cancelReset();
+      }}
+    >
+      <div class="flex items-start gap-3 mb-3">
+        <div
+          class="w-9 h-9 shrink-0 rounded-full border border-[#ff5e7e]/50 bg-[#2a0d12] flex items-center justify-center text-[#ff8aa0] text-lg font-serif"
+          aria-hidden="true"
+        >
+          !
+        </div>
+        <div class="min-w-0">
+          <h2
+            id="reset-confirm-title"
+            class="text-[#ffadb8] font-serif text-base sm:text-lg uppercase tracking-widest m-0 leading-tight"
+          >
+            Are you sure?
+          </h2>
+          <p
+            id="reset-confirm-body"
+            class="text-[#a4bea9] font-sans text-xs sm:text-sm leading-snug m-0 mt-1"
+          >
+            This will clear all unlocked keepsakes. This cannot be undone.
+          </p>
+        </div>
+      </div>
+      <div class="flex justify-end gap-2 mt-4">
+        <button
+          type="button"
+          onclick={cancelReset}
+          class="px-3 py-1.5 rounded border border-[#1c3623] text-[0.7rem] uppercase tracking-widest font-sans bg-[#0a140d] text-[#8da693] cursor-pointer transition-all hover:border-[#46f08f]/50 hover:text-[#ccff90]"
+        >
+          Cancel
+        </button>
+        <button
+          type="button"
+          onclick={confirmReset}
+          class="px-3 py-1.5 rounded border border-[#ff5e7e] text-[0.7rem] uppercase tracking-widest font-sans bg-[#2a0d12] text-[#ffadb8] cursor-pointer transition-all hover:bg-[#3a1018] hover:shadow-[0_0_12px_rgba(255,94,126,0.4)]"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+  </div>
+{/if}
+
 <style>
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes pop-in {
+    from {
+      opacity: 0;
+      transform: scale(0.94);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
   .highlighted-card {
     animation: keepsake-highlight-pulse 2s ease-in-out infinite;
   }
