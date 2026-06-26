@@ -123,6 +123,7 @@
 
   function resetUnlockedPets() {
     unlockedPets = [];
+    bondLevels = {};
   }
 
   function resetBondLevels() {
